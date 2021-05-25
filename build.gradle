@@ -22,6 +22,13 @@ dependencies {
     testImplementation group: 'com.belerweb', name: 'pinyin4j', version: '2.5.1'
     testImplementation 'org.apache.lucene:lucene-core:8.8.2'
     testImplementation 'org.apache.lucene:lucene-highlighter:8.8.2'
+
+    // webservice + springboot
+    implementation 'org.springframework.boot:spring-boot-starter-web-services:2.5.0'
+    implementation 'org.apache.cxf:cxf-rt-frontend-jaxws:3.4.3'
+    implementation 'org.apache.cxf:cxf-rt-transports-http:3.4.3'
+
+    // 其他
     implementation 'net.sourceforge:pinyin4j:2.5.0'
     implementation 'org.openjdk.jol:jol-core:0.9'
     implementation 'com.alibaba:fastjson:1.2.61'
