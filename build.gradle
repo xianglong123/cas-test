@@ -29,7 +29,7 @@ dependencies {
     implementation 'org.apache.cxf:cxf-rt-transports-http:3.4.3'
 
     // 其他
-    implementation 'net.sourceforge:pinyin4j:2.5.0'
+//    implementation 'net.sourceforge:pinyin4j:2.5.0'
     implementation 'org.openjdk.jol:jol-core:0.9'
     implementation 'com.alibaba:fastjson:1.2.61'
     implementation 'org.springframework.boot:spring-boot-starter-web'

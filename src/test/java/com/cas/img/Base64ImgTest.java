@@ -1,12 +1,10 @@
 package com.cas.img;
 
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.util.Base64;
 
 /**
  * @author: xianglong[1391086179@qq.com]
@@ -24,14 +22,16 @@ public class Base64ImgTest {
         byte[] buffer = new byte[(int) file.length()];
         inputFile.read(buffer);
         inputFile.close();
-        return new BASE64Encoder().encode(buffer);
+        Base64.Encoder encoder = Base64.getEncoder();
+        return encoder.encodeToString(buffer);
     }
 
     /**
      * <p>将base64字符解码保存文件</p>
      */
     public static void decoderBase64File(String base64Code, String targetPath) throws Exception {
-        byte[] buffer = new BASE64Decoder().decodeBuffer(base64Code);
+        Base64.Decoder decoder = Base64.getDecoder();
+        byte[] buffer = decoder.decode(base64Code);
         FileOutputStream out = new FileOutputStream(targetPath);
         out.write(buffer);
         out.close();
