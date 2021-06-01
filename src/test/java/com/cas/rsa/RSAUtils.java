@@ -35,6 +35,12 @@ public class RSAUtils {
     public static final String PLAIN_TEXT = "test string";
 
 
+    static Map<String, String> map = new HashMap<String, String>() {{
+        put(PUBLIC_KEY, "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCU+BBycGcMDasYBrLH6FZlTKJFSs1G6xX88KRWZAwepNz4MOEQtZOEbdQTun99AabjON2puO9Wb34sXEZ32zPZULgL9Ab+PTqjanyoZmdF44E0aPxo/ohybu2s6vSq33xV3RN/CN37vEf5SY8h60j3H2qrenh3f+0NbPyJ7dqtGwIDAQAB");
+        put(PRIVATE_KEY, "MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAJT4EHJwZwwNqxgGssfoVmVMokVKzUbrFfzwpFZkDB6k3Pgw4RC1k4Rt1BO6f30BpuM43am471ZvfixcRnfbM9lQuAv0Bv49OqNqfKhmZ0XjgTRo/Gj+iHJu7azq9KrffFXdE38I3fu8R/lJjyHrSPcfaqt6eHd/7Q1s/Int2q0bAgMBAAECgYAyuIuRC2hqmDTLB2zT1+2irAcMJL3kCaMA7kZmC8Z8oJGEB9B5yfkiO+rblMJXo7pY30HJyefjvC5vmDN+F6p9K7+bwdNUPKyq/pTUzZN+lQjDD9bRumuW/xmIvxZhPZd1EYA2SKcHLjv+xCYlLZGbxQMUAqFVvPM0eUSq38GH8QJBANrdDWf8AIeAr6GzBNgBwIxwCiqypDCv3oKSXzNh0X3HYLEah9dvetTMYIPFNV1vjJ3xm1McctSowkvG0+8W+i8CQQCuPvMO110R+pHit7+o03j9UBRqXgjMrwH70M7SotaVKj8FgGnuqz3SIVd4BFPPme8lIa0Ins6+k2pOjzf5nrzVAkEAnGQEpl8uSaUs2xC+z1NBMZkFysjoBlpFV2wcVuz48zW65BKfKtRgIxr/hGkw3tlM07fHU7YqX8dPPzKOUnRKxQJAJRpMYTWkoMZtOAyOaCGXmsDph/i8APGnB3rf/2QjMyIKx14fsG2QPWVSHcE2I3eQv6RbFwHR3iy/rzi535JYfQJBAK13cnyqVDN0KEbhw5Whg261btM/nkj7m4eXsqD04639+Z/I9lXRHhZWHxRRYwFl++0jgLNCXY+TZy2Uh8ld3cI=");
+    }};
+
+
     /**
      * 生成密钥对
      *
@@ -148,12 +154,10 @@ public class RSAUtils {
             messageDigest = MessageDigest.getInstance(ENCODE_ALGORITHM);
             messageDigest.update(plain_text.getBytes());
             byte[] outputDigest_sign = messageDigest.digest();
-            System.out.println("SHA-256加密后-----》" +bytesToHexString(outputDigest_sign));
             Signature Sign = Signature.getInstance(SIGNATURE_ALGORITHM);
             Sign.initSign(privateKey);
             Sign.update(outputDigest_sign);
             signed = Sign.sign();
-            System.out.println("SHA256withRSA签名后-----》" + bytesToHexString(signed));
         } catch (NoSuchAlgorithmException | InvalidKeyException | SignatureException e) {
             e.printStackTrace();
         }
@@ -178,13 +182,10 @@ public class RSAUtils {
             messageDigest = MessageDigest.getInstance(ENCODE_ALGORITHM);
             messageDigest.update(plain_text.getBytes());
             byte[] outputDigest_verify = messageDigest.digest();
-            System.out.println("SHA-256加密后-----》" +bytesToHexString(outputDigest_verify));
             Signature verifySign = Signature.getInstance(SIGNATURE_ALGORITHM);
             verifySign.initVerify(publicKey);
             verifySign.update(outputDigest_verify);
             SignedSuccess = verifySign.verify(signed);
-            System.out.println("验证成功？---" + SignedSuccess);
-
         } catch (NoSuchAlgorithmException | InvalidKeyException | SignatureException e) {
             e.printStackTrace();
         }
@@ -217,15 +218,64 @@ public class RSAUtils {
 
     // --------------------------------------------------------------3、分割线------------------------------------------------------------------------------
 
-    public static void main(String[] args) {
-        // 测试密钥文件获取私钥和公钥
-        testFile();
+    /**
+     * String 转 PublicKey
+     * @param key
+     * @return
+     * @throws Exception
+     */
+    public static PublicKey getPublicKey(String key) throws Exception {
+        Base64.Decoder decoder = Base64.getDecoder();
+        byte[] keyBytes = decoder.decode(key);
+        X509EncodedKeySpec keySpec = new X509EncodedKeySpec(keyBytes);
+        KeyFactory keyFactory = KeyFactory.getInstance("RSA");
+        return keyFactory.generatePublic(keySpec);
+    }
 
-        // 测试java程序生成密钥对
-        testJava();
+    /**
+     * String 转 PrivateKey
+     * @param key
+     * @return
+     * @throws Exception
+     */
+    public static PrivateKey getPrivateKey(String key) throws Exception {
+        Base64.Decoder decoder = Base64.getDecoder();
+        byte[] keyBytes = decoder.decode(key);
+        PKCS8EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(keyBytes);
+        KeyFactory keyFactory = KeyFactory.getInstance("RSA");
+        return keyFactory.generatePrivate(keySpec);
+    }
 
-        //
-        test();
+    // --------------------------------------------------------------4、分割线------------------------------------------------------------------------------
+
+
+    public static void main(String[] args) throws Exception{
+        // 1、测试密钥文件获取私钥和公钥
+//        testFile();
+
+        // 2、测试java程序生成密钥对
+        //testJava();
+
+        // 3、简单测试
+        //test();
+
+        // 4、我自己写的测试完整性代码
+        testVerifySign();
+    }
+
+    private static void testVerifySign() throws Exception {
+        String sj = "test";
+        String publicKey = map.get(PUBLIC_KEY);
+        String privateKey = map.get(PRIVATE_KEY);
+        byte[] sign = sign(getPrivateKey(privateKey), sj);
+        // 验证正确性
+        boolean b = verifySign(getPublicKey(publicKey), sj, sign);
+
+        System.out.println(String.format("[公钥] %s", publicKey));
+        System.out.println(String.format("[私钥] %s", privateKey));
+        System.out.println(String.format("[正确性] %s", b));
+
+
     }
 
     /**
