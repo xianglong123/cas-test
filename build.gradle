@@ -35,6 +35,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation "org.projectlombok:lombok:1.18.12"
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // 国密
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.54'
 }
 
 test {

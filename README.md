@@ -136,3 +136,6 @@
 [webservice服务端接口](./src/main/java/com/cas/controller/webservice/WebServiceI.java)  
 [webservice客户端](./src/test/java/com/cas/webservice/TestHelloWrold.java)  
 [RSA工具类](./src/test/java/com/cas/rsa/RSAUtils.java)
+[SM4工具类](./src/test/java/com/cas/sm4/Sm4Util.java)  
+
+[SM4工具类](./src/test/java/com/cas/sm4/Sm4Util.java)
