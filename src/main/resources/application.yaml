@@ -1,2 +1,8 @@
 server:
   port: 8088
+dim:
+  k1:
+    value: 101112131415161718191A1B1C1D1E1F
+  k2:
+    value: E0E1E2E3E4E5E6E7E8E9EAEBECEDEEEF
+

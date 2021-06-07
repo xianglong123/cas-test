@@ -38,6 +38,9 @@ dependencies {
 
     // 国密
     implementation 'org.bouncycastle:bcprov-jdk15on:1.54'
+    implementation 'org.apache.commons:commons-lang3:3.7'
+    implementation 'org.apache.directory.studio:org.apache.commons.codec:1.8'
+    implementation 'org.jdom:com.springsource.org.jdom:2.0.1'
 }
 
 test {

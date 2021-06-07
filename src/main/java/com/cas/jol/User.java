@@ -25,6 +25,15 @@ public class User {
         this.val = val;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "flag=" + flag +
+                ", name='" + name + '\'' +
+                ", val='" + val + '\'' +
+                '}';
+    }
+
     public String getVal() {
         return null;
     }

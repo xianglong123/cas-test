@@ -1,9 +1,7 @@
-package com.cas.rsa;
+package com.cas.tsm.utils;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.security.*;
-import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 import java.security.interfaces.RSAPrivateKey;
@@ -11,9 +9,7 @@ import java.security.interfaces.RSAPublicKey;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
-import java.util.Base64;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author: xianglong[1391086179@qq.com]
@@ -33,13 +29,6 @@ public class RSAUtils {
     public static final String SIGNATURE_ALGORITHM = "SHA256withRSA";
     public static final String ENCODE_ALGORITHM = "SHA-256";
     public static final String PLAIN_TEXT = "test string";
-
-    // 可行数据
-    static Map<String, String> map = new HashMap<String, String>() {{
-        put(PUBLIC_KEY, "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCU+BBycGcMDasYBrLH6FZlTKJFSs1G6xX88KRWZAwepNz4MOEQtZOEbdQTun99AabjON2puO9Wb34sXEZ32zPZULgL9Ab+PTqjanyoZmdF44E0aPxo/ohybu2s6vSq33xV3RN/CN37vEf5SY8h60j3H2qrenh3f+0NbPyJ7dqtGwIDAQAB");
-        put(PRIVATE_KEY, "MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAJT4EHJwZwwNqxgGssfoVmVMokVKzUbrFfzwpFZkDB6k3Pgw4RC1k4Rt1BO6f30BpuM43am471ZvfixcRnfbM9lQuAv0Bv49OqNqfKhmZ0XjgTRo/Gj+iHJu7azq9KrffFXdE38I3fu8R/lJjyHrSPcfaqt6eHd/7Q1s/Int2q0bAgMBAAECgYAyuIuRC2hqmDTLB2zT1+2irAcMJL3kCaMA7kZmC8Z8oJGEB9B5yfkiO+rblMJXo7pY30HJyefjvC5vmDN+F6p9K7+bwdNUPKyq/pTUzZN+lQjDD9bRumuW/xmIvxZhPZd1EYA2SKcHLjv+xCYlLZGbxQMUAqFVvPM0eUSq38GH8QJBANrdDWf8AIeAr6GzBNgBwIxwCiqypDCv3oKSXzNh0X3HYLEah9dvetTMYIPFNV1vjJ3xm1McctSowkvG0+8W+i8CQQCuPvMO110R+pHit7+o03j9UBRqXgjMrwH70M7SotaVKj8FgGnuqz3SIVd4BFPPme8lIa0Ins6+k2pOjzf5nrzVAkEAnGQEpl8uSaUs2xC+z1NBMZkFysjoBlpFV2wcVuz48zW65BKfKtRgIxr/hGkw3tlM07fHU7YqX8dPPzKOUnRKxQJAJRpMYTWkoMZtOAyOaCGXmsDph/i8APGnB3rf/2QjMyIKx14fsG2QPWVSHcE2I3eQv6RbFwHR3iy/rzi535JYfQJBAK13cnyqVDN0KEbhw5Whg261btM/nkj7m4eXsqD04639+Z/I9lXRHhZWHxRRYwFl++0jgLNCXY+TZy2Uh8ld3cI=");
-    }};
-
 
     /**
      * 生成密钥对
@@ -143,53 +132,26 @@ public class RSAUtils {
      *
      * @param privateKey
      *            私钥
-     * @param plain_text
      *            明文
      * @return
      */
-    public static byte[] sign(PrivateKey privateKey, String plain_text) {
-        MessageDigest messageDigest;
-        byte[] signed = null;
-        try {
-            messageDigest = MessageDigest.getInstance(ENCODE_ALGORITHM);
-            messageDigest.update(plain_text.getBytes());
-            byte[] outputDigest_sign = messageDigest.digest();
-            Signature Sign = Signature.getInstance(SIGNATURE_ALGORITHM);
-            Sign.initSign(privateKey);
-            Sign.update(outputDigest_sign);
-            signed = Sign.sign();
-        } catch (NoSuchAlgorithmException | InvalidKeyException | SignatureException e) {
-            e.printStackTrace();
-        }
-        return signed;
+    public static String sign(PrivateKey privateKey, String message) throws Exception {
+        Signature sign = Signature.getInstance("SHA1withRSA");
+        sign.initSign(privateKey);
+        sign.update(message.getBytes("UTF-8"));
+        return new String(Base64.getEncoder().encodeToString(sign.sign()));
     }
 
     /**
      * 验签
      *
      * @param publicKey
-     *            公钥
-     * @param plain_text
-     *            明文
-     * @param signed
-     *            签名
      */
-    public static boolean verifySign(PublicKey publicKey, String plain_text, byte[] signed) {
-
-        MessageDigest messageDigest;
-        boolean SignedSuccess=false;
-        try {
-            messageDigest = MessageDigest.getInstance(ENCODE_ALGORITHM);
-            messageDigest.update(plain_text.getBytes());
-            byte[] outputDigest_verify = messageDigest.digest();
-            Signature verifySign = Signature.getInstance(SIGNATURE_ALGORITHM);
-            verifySign.initVerify(publicKey);
-            verifySign.update(outputDigest_verify);
-            SignedSuccess = verifySign.verify(signed);
-        } catch (NoSuchAlgorithmException | InvalidKeyException | SignatureException e) {
-            e.printStackTrace();
-        }
-        return SignedSuccess;
+    public static boolean verify(PublicKey publicKey, String message, String signature)throws Exception {
+        Signature sign = Signature.getInstance("SHA1withRSA");
+        sign.initVerify(publicKey);
+        sign.update(message.getBytes("UTF-8"));
+        return sign.verify(Base64.getDecoder().decode(signature));
     }
 
 
@@ -265,38 +227,57 @@ public class RSAUtils {
 
     private static void testVerifySign() throws Exception {
         String sj = "test";
-        String publicKey = map.get(PUBLIC_KEY);
-        String privateKey = map.get(PRIVATE_KEY);
-        byte[] sign = sign(getPrivateKey(privateKey), sj);
-        // 验证正确性
-        boolean b = verifySign(getPublicKey(publicKey), sj, sign);
+        //  privateKey:
+        //  publicSignKey:
 
-        System.out.println(String.format("[公钥] %s", publicKey));
-        System.out.println(String.format("[私钥] %s", privateKey));
-        System.out.println(String.format("[正确性] %s", b));
+        List<Map<String, String>> list = new ArrayList<>();
 
+        Map<String, String> map = new HashMap<String, String>() {{
+            put(PUBLIC_KEY, "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCU+BBycGcMDasYBrLH6FZlTKJFSs1G6xX88KRWZAwepNz4MOEQtZOEbdQTun99AabjON2puO9Wb34sXEZ32zPZULgL9Ab+PTqjanyoZmdF44E0aPxo/ohybu2s6vSq33xV3RN/CN37vEf5SY8h60j3H2qrenh3f+0NbPyJ7dqtGwIDAQAB");
+            put(PRIVATE_KEY, "MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAJT4EHJwZwwNqxgGssfoVmVMokVKzUbrFfzwpFZkDB6k3Pgw4RC1k4Rt1BO6f30BpuM43am471ZvfixcRnfbM9lQuAv0Bv49OqNqfKhmZ0XjgTRo/Gj+iHJu7azq9KrffFXdE38I3fu8R/lJjyHrSPcfaqt6eHd/7Q1s/Int2q0bAgMBAAECgYAyuIuRC2hqmDTLB2zT1+2irAcMJL3kCaMA7kZmC8Z8oJGEB9B5yfkiO+rblMJXo7pY30HJyefjvC5vmDN+F6p9K7+bwdNUPKyq/pTUzZN+lQjDD9bRumuW/xmIvxZhPZd1EYA2SKcHLjv+xCYlLZGbxQMUAqFVvPM0eUSq38GH8QJBANrdDWf8AIeAr6GzBNgBwIxwCiqypDCv3oKSXzNh0X3HYLEah9dvetTMYIPFNV1vjJ3xm1McctSowkvG0+8W+i8CQQCuPvMO110R+pHit7+o03j9UBRqXgjMrwH70M7SotaVKj8FgGnuqz3SIVd4BFPPme8lIa0Ins6+k2pOjzf5nrzVAkEAnGQEpl8uSaUs2xC+z1NBMZkFysjoBlpFV2wcVuz48zW65BKfKtRgIxr/hGkw3tlM07fHU7YqX8dPPzKOUnRKxQJAJRpMYTWkoMZtOAyOaCGXmsDph/i8APGnB3rf/2QjMyIKx14fsG2QPWVSHcE2I3eQv6RbFwHR3iy/rzi535JYfQJBAK13cnyqVDN0KEbhw5Whg261btM/nkj7m4eXsqD04639+Z/I9lXRHhZWHxRRYwFl++0jgLNCXY+TZy2Uh8ld3cI=");
+        }};
 
+        Map<String, String> map1 = new HashMap<String, String>() {{
+            put(PUBLIC_KEY, "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCDN70NRLHpbemf3wDwBqgVi7oClnERyel6nGXBd6ng8MNMDyWc8DG3QPgbGhbWikN8559rlzXPkowqx2ZqQUfLWcMSZ0YqMh7wdT25uQfjmQJ2t5lZt5ZjsWuJit5mjIyDaQgymBaB3Lnvk+5Z6WFhrkNg0zSVs10JusXwiDhS3wIDAQAB");
+            put(PRIVATE_KEY, "MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAK6AIkez1lshkXQltwAaqkJl4CgRS6LJyaSVI37YA05hnCoQPTHlk2FlV0mA6miDjoK7h42Vy8sj2rUXv93H8216WrpvJdmWkQg4yaAWjbbOz/61DGKl0DYNZFgBKcZ1La25MthQpSid0dJvQRDKQb3WZD0FRDfwQVXEyfq9ZbANAgMBAAECgYBRnWRrHNWY8e5R4IHi7pXLUFKy6sPxc2d4LrjXTrjdJBIiKk401CdGWluk6UK5dy5kPsl7kyAp9q8IG/+E/0v+lcJHN0skr/RXe38M4Esc5UH6qRjeh+XaG+rcu8WDqQp/aSd0EoDFYJ22xT5l3OO1185hD1KKFgHxHz+P8At7gQJBAOdizmf6uUi+C9O1b+uPJenGFM2RCKNSmdRqxjcLyEovrRaO68fS8XC1joEdNU+C4XsNPP66afszXQ1WjlynZgkCQQDBEDNwjHmkgelA+lPrUflbLSAqVW/8PYSwZdZJLf/qzH02xxdyTC+/isghrYC3xHvY4e8KWZ6UxklrLSQnlprlAkBzP/i1O+H8BIUZjz7O4r8soLgN6BaYWvU6I3DVTC4YHYUmPkvcfQo7bIMtdmHuV699vgtKiYluUJgho6JHLi4ZAkANy6WRVkhe6/WJ8hlLCGmEDV5uB/rfkFnJ7Qz537KYyZHs9x8CyNTkn/sbBPXcq8qZvdNB7xN42A5o/SnHNmjNAkAyLZ/H+hMMQ/ry/SB7NBrbxTmU/YazgWE9nC410JwB9gmtb5Vp5pShh/hkVLsIjQtG5AS3QQvY/l3Kvv+XpAlI");
+        }};
+
+        list.add(map);
+        list.add(map1);
+
+        for (int i = 0; i < list.size(); i ++) {
+            Map<String, String> resMap = list.get(0);
+            String publicKey = resMap.get(PUBLIC_KEY);
+            String privateKey = resMap.get(PRIVATE_KEY);
+            String sign = sign(getPrivateKey(privateKey), sj);
+            // 验证正确性
+            boolean b = verify(getPublicKey(publicKey), sj, sign);
+            System.out.println(String.format("[公钥] %s", publicKey));
+            System.out.println(String.format("[私钥] %s", privateKey));
+            System.out.println(String.format("[第%s组正确性] %s", i + 1, b));
+
+        }
     }
 
     /**
      * 简单java生成公私钥对，测试可行性
      */
-    private static void test() {
+    private static void test() throws Exception {
         Map<String, byte[]> keyMap = generateKeyBytes();
         PublicKey publicKey = restorePublicKey(keyMap.get(PUBLIC_KEY));
         PrivateKey privateKey = restorePrivateKey(keyMap.get(PRIVATE_KEY));
         // 签名
-        byte[] sing_byte = sign(privateKey, PLAIN_TEXT);
+        String sign = sign(privateKey, PLAIN_TEXT);
         // 验签
-        verifySign(publicKey, PLAIN_TEXT, sing_byte);
+        verify(publicKey, PLAIN_TEXT, sign);
     }
 
     private static void testFile() {
         // 这里会有一个问题就是路径太长或者是这个项目的问题，导致用长的路径会报错，源对应文件在[/Users/xianglong/IdeaProjects/cas-test/src/main/resources/static/**]
-        String rootPath = "/Users/xianglong/Desktop/";
+        String rootPath = "/Users/xianglong/Desktop/bip/other/";
         Base64.Encoder encoder = Base64.getEncoder();
-        System.out.println(encoder.encodeToString(publicCrt(rootPath + "test.crt").getEncoded()));
-        System.out.println(encoder.encodeToString(privateCrt(rootPath + "test.p12", "szsfkey", "test").getEncoded()));
+        System.out.println(encoder.encodeToString(publicCrt(rootPath + "baserelease.crt").getEncoded()));
+//        System.out.println(encoder.encodeToString(privateCrt(rootPath + "test.p12", "szsfkey", "test").getEncoded()));
     }
 
     /**
