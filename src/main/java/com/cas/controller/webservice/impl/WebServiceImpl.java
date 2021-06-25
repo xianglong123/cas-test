@@ -2,7 +2,6 @@ package com.cas.controller.webservice.impl;
 
 import com.cas.controller.webservice.WebServiceI;
 
-import javax.jws.WebParam;
 import javax.jws.WebService;
 
 /**

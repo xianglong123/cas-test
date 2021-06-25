@@ -227,8 +227,6 @@ public class RSAUtils {
 
     private static void testVerifySign() throws Exception {
         String sj = "test";
-        //  privateKey:
-        //  publicSignKey:
 
         List<Map<String, String>> list = new ArrayList<>();
 
@@ -238,15 +236,20 @@ public class RSAUtils {
         }};
 
         Map<String, String> map1 = new HashMap<String, String>() {{
-            put(PUBLIC_KEY, "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCDN70NRLHpbemf3wDwBqgVi7oClnERyel6nGXBd6ng8MNMDyWc8DG3QPgbGhbWikN8559rlzXPkowqx2ZqQUfLWcMSZ0YqMh7wdT25uQfjmQJ2t5lZt5ZjsWuJit5mjIyDaQgymBaB3Lnvk+5Z6WFhrkNg0zSVs10JusXwiDhS3wIDAQAB");
-            put(PRIVATE_KEY, "MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAK6AIkez1lshkXQltwAaqkJl4CgRS6LJyaSVI37YA05hnCoQPTHlk2FlV0mA6miDjoK7h42Vy8sj2rUXv93H8216WrpvJdmWkQg4yaAWjbbOz/61DGKl0DYNZFgBKcZ1La25MthQpSid0dJvQRDKQb3WZD0FRDfwQVXEyfq9ZbANAgMBAAECgYBRnWRrHNWY8e5R4IHi7pXLUFKy6sPxc2d4LrjXTrjdJBIiKk401CdGWluk6UK5dy5kPsl7kyAp9q8IG/+E/0v+lcJHN0skr/RXe38M4Esc5UH6qRjeh+XaG+rcu8WDqQp/aSd0EoDFYJ22xT5l3OO1185hD1KKFgHxHz+P8At7gQJBAOdizmf6uUi+C9O1b+uPJenGFM2RCKNSmdRqxjcLyEovrRaO68fS8XC1joEdNU+C4XsNPP66afszXQ1WjlynZgkCQQDBEDNwjHmkgelA+lPrUflbLSAqVW/8PYSwZdZJLf/qzH02xxdyTC+/isghrYC3xHvY4e8KWZ6UxklrLSQnlprlAkBzP/i1O+H8BIUZjz7O4r8soLgN6BaYWvU6I3DVTC4YHYUmPkvcfQo7bIMtdmHuV699vgtKiYluUJgho6JHLi4ZAkANy6WRVkhe6/WJ8hlLCGmEDV5uB/rfkFnJ7Qz537KYyZHs9x8CyNTkn/sbBPXcq8qZvdNB7xN42A5o/SnHNmjNAkAyLZ/H+hMMQ/ry/SB7NBrbxTmU/YazgWE9nC410JwB9gmtb5Vp5pShh/hkVLsIjQtG5AS3QQvY/l3Kvv+XpAlI");
+            put(PUBLIC_KEY, "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCp9cj5YvlL9UT54b0fr0hytEyXQDEGPbhllHmhk+KlB1lq35ueJ0lkv3AL0rDcD7XBAJhfO7J9U/eScS+eN12ObHZeuTzzmH7kv0Wlyt68t1ykflzpD3yfzGQaZD8GC37Ub4l4jk8RPDlUbNJ8tXkpgMFOvBFgdc3J6Pf5s0H+gQIDAQAB");
+            put(PRIVATE_KEY, "MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAKn1yPli+Uv1RPnhvR+vSHK0TJdAMQY9uGWUeaGT4qUHWWrfm54nSWS/cAvSsNwPtcEAmF87sn1T95JxL543XY5sdl65PPOYfuS/RaXK3ry3XKR+XOkPfJ/MZBpkPwYLftRviXiOTxE8OVRs0ny1eSmAwU68EWB1zcno9/mzQf6BAgMBAAECgYBthwE/BbNWafdLeVghpRnxIZQCHNH7DadZfvdrUxxJ8ZSENRnaL8Myc9RHKj3jcxRUDogjRxtdfNEcxGhFc7SL1yjOypGLahgOomg8Iq/Ok4VjgVaZvshsA9UhO4d/VGNtfYFqaDr94qf1PFcuqSfnc3EvOySDIBGL+Z0ZWi0waQJBAOu/xfNuy9ajvqXn+zgw6WZA6/5uQvCwZU+UdWIQoVPDwjdFVgyiFFIAUVh6dN9zkDPACMXI/VqRVmQJJWKPLYcCQQC4j0hK1AXdHJJnDnbBA2GoAXTJ6vgWUqSJlO0+vjPc61huH3OJ03QMlH4KY26mCS78k9wXKWY37VMYc02MiLW3AkBN/LLPROfJqYF4ALXqcMPFP9TR5kfet3vMR6BNQJMd0rR89ELzCusN9WzziA8BnIknlW9RfpvRSiL6FMx5PkQhAkEAqJElxEKXAHdiOIJ7cJr4DQ0XcH0ODsV4xrihYBc1I2hJInvTeWUKr5rI7BAZNclZgxRBh14moJpAtSpLADq1TQJBAJouzTcwuZkG4cwCkA8clAO/ldRZgCibqZAZJKsCe2y3Or8Ab5Iveh29DYPipo1E05qUF0KVV0Z21By0v5qDD4g=");
         }};
 
+        Map<String, String> map2 = new HashMap<String, String>() {{
+            put(PUBLIC_KEY, "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCXGZ6plGYbnpci4rgn/7z3Ik8u+lkdpvEt4F8SsZYqnop5TQp2/eDPYEmdEr0Bf9uCVatm8M4IqHHo/RLI6Wtr48dv4jCZQfeh1WxUZ+BSrHjeRm1My4mSxbgd0mvQg6Bnwx/6oOV3vC9g6EqmFgxRxCSGCNZEe4sMV/aeLTKx3wIDAQAB");
+            put(PRIVATE_KEY, "MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAIH9xfmMgFTVSWwWTPt5rZ5nam6zOAek46IZxt1988sAzjxtd9DHBPx4Jbn25FinXzXI4ZhoGAVwJzxDLfLYnCaGsd9RKeCeN36d5Qc+BgZQe3zPg45LffrqDWTrp5vMhB+ceSqUQCHBh4626GowRX5dQ6sz5cofQRmU6vH0ggsNAgMBAAECgYAi5joPrIwLupOSxE34ugtF2uf1PoKNctR2gcslThp05wt3p8AiOjx5d9xRGBroPk9Ohlci7td8JkcyY6rjZwpM36eZkqP9DpgP+gBirlSIcd/Q0YKSWJg9k2Vb14HQvEanX0hqQdfyy71NlAtyWf94BEiWj6kMdTMKnO0QDyRzgQJBALlkTLVYh5J9Owzxto1B3sRomSR+EJayfQDHUD7Y1YCp4z+frCzTcDCJZWHHxqiU3/XJSyq6qE8YLFdGrvgoHq0CQQCzf+zt01wuF4wuqae+rCpdJcd3WaXgDoxksuiBIoS8CefFtijViGpz2Trf0FV3DDzAQDVJFysXl1EyagFdNwnhAkEAqT37GQH8oapZIfP3JvUfHEYwp7O+CRRgMTnC89yW66IrpoVpdHKBVI3ZU25A2N0vpv1f9V35EFuM/w+z4y8c8QJBAK14rBkLcsJ4r1lJTHvRFv/+Ss7lLJFkffmzjU9/dJflWsCQUtZKh9Z90ZALXw02HmANrXF9mn+qFSaLm9XiIwECQQCorfZUitLnb3groHPKTM7xKBbHMpvB/O5oXJeQDl7USvkNq4Mdjb9bdcPUEgzGPkaZIEDWjdkoUAVHLvSkmh5Q");
+        }};
         list.add(map);
         list.add(map1);
+        list.add(map2);
 
         for (int i = 0; i < list.size(); i ++) {
-            Map<String, String> resMap = list.get(0);
+            Map<String, String> resMap = list.get(i);
             String publicKey = resMap.get(PUBLIC_KEY);
             String privateKey = resMap.get(PRIVATE_KEY);
             String sign = sign(getPrivateKey(privateKey), sj);
@@ -268,16 +271,17 @@ public class RSAUtils {
         PrivateKey privateKey = restorePrivateKey(keyMap.get(PRIVATE_KEY));
         // 签名
         String sign = sign(privateKey, PLAIN_TEXT);
+        System.out.println(sign);
         // 验签
         verify(publicKey, PLAIN_TEXT, sign);
     }
 
     private static void testFile() {
         // 这里会有一个问题就是路径太长或者是这个项目的问题，导致用长的路径会报错，源对应文件在[/Users/xianglong/IdeaProjects/cas-test/src/main/resources/static/**]
-        String rootPath = "/Users/xianglong/Desktop/bip/other/";
+        String rootPath = "/Users/xianglong/Desktop/bip/other/key/";
         Base64.Encoder encoder = Base64.getEncoder();
-        System.out.println(encoder.encodeToString(publicCrt(rootPath + "baserelease.crt").getEncoded()));
-//        System.out.println(encoder.encodeToString(privateCrt(rootPath + "test.p12", "szsfkey", "test").getEncoded()));
+        System.out.println(encoder.encodeToString(publicCrt(rootPath + "dim2Test_uat.crt").getEncoded()));
+        System.out.println(encoder.encodeToString(privateCrt(rootPath + "dim2Test.p12", "apdu123", "apdu").getEncoded()));
     }
 
     /**

@@ -1,6 +1,5 @@
 package com.cas.controller.webservice;
 
-import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 /**
