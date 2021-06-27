@@ -1,10 +1,7 @@
-package com.cas.io.nio.buffer;
+package com.cas.io.netty.nio.buffer;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 

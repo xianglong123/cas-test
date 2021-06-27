@@ -1,6 +1,5 @@
-package com.cas.io.nio.buffer;
+package com.cas.io.netty.nio.buffer;
 
-import java.io.FileNotFoundException;
 import java.io.RandomAccessFile;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
