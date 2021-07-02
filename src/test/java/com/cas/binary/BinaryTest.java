@@ -1,8 +1,11 @@
 package com.cas.binary;
 
 import com.cas.des.DesEncTest;
+import org.bouncycastle.util.encoders.Hex;
 import org.junit.Test;
 
+import java.nio.Buffer;
+import java.nio.ByteBuffer;
 import java.util.Arrays;
 
 /**
@@ -41,6 +44,10 @@ public class BinaryTest {
         System.out.println(str.startsWith("TSMR"));
     }
 
+    /**
+     * 测试System.arraycopy能力
+     * @throws Exception
+     */
     @Test
     public void test4() throws Exception {
         String seid = "2100000E103003528819";
@@ -50,15 +57,37 @@ public class BinaryTest {
         System.arraycopy(bytes, bytes.length - 8, q4, 8, 8);
         String decrypt = DesEncTest.encrypt("101112131415161718191A1B1C1D1E1F", Arrays.toString(q4));
         System.out.println(decrypt);
+    }
 
-//        byte[] bytes1 = encryptDESByByteBuf(q4, "101112131415161718191A1B1C1D1E1F".getBytes());
-//        System.out.println(bytes1);
-        // 50 49 48 48 48 48 48 69 48 51 53 50 56 56 49 57
-        //src：byte源数组
-        //srcPos：截取源byte数组起始位置（0位置有效）
-        //dest,：byte目的数组（截取后存放的数组）
-        //destPos：截取后存放的数组起始位置（0位置有效）
-        //length：截取的数据长度
+    /**
+     * 测试java.nio.ByteBuffer中getChar的计算过程
+     * 结论：取两个字节，计算公式：count = 255 * index1 + （index1 + index2)
+     */
+    @Test
+    public void test5() {
+//        String data = "2100000E103003528819";
+//        byte[] payload = data.getBytes();
+        ByteBuffer buffer = ByteBuffer.wrap(new byte[16]);
+        buffer.put((byte)3);
+        buffer.put((byte)42);//296 = 255 + 41
+        buffer.flip(); // count = 255 * index1 + index2
+        System.out.println((int)buffer.getChar());
+        // getChar的计算过程
+        // 3:42 = 810 = 255 * 3 + 42 + 3 = 765 + 45 = 810
+    }
+
+
+    /**
+     * 研究string和bute的转换关系
+     * 16进制字符串其实就是ASCii码对应16进制的表示的字符表示，16进制字符串转换成byte[]数组，是每两个字符转换成十进制数据
+     * 比如：101282 = [16,18,-128]
+     * -128是因为7F是127， 80是-128， 81是-127
+     */
+    @Test
+    public void test6() {
+        String data = "10128201284377726E4255352F454A5A5676714E35667365746D3941733077367866684F7076347A693045505350754D6E4D4441774D4445784D4455794D4449784D4459794D7A49774D6A45784D6A497A4D5145414141454271526F784536614630662F6E3730544875686C4F67326476616A526A373475696B6248564D63564E6171354454564C4E46586366737135484142485433784852565A466B64585862444539356557626F32543142626E466A565841433350446B5730493259313338746B4E44525441794E5445794D4555434951433953596C565977557737444558396E6130782F65477857554F517A332F4A74716C6856473049625967656749674439375574574A2B5178594A6A73483462765444614A5635752B74556C743061493150486475374237476B411301001412353030323337313939393037313437383732150100160100174042383742424546394438423345304243424630303136343641464531373142374645333834323244323631454245313842384338443742343944454142393836A76D26A280000000000000000000000000000000";
+        System.out.println(Arrays.toString(Hex.decode("10")));
+        // [16,18,-128,1,40]
     }
 
 
