@@ -4,7 +4,6 @@ import com.cas.des.DesEncTest;
 import org.bouncycastle.util.encoders.Hex;
 import org.junit.Test;
 
-import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
@@ -19,8 +18,8 @@ public class BinaryTest {
     @Test
     public void test() {
         int i = 1;
-        System.out.println(i >> 2);
-        System.out.println(i << 2);
+        System.out.println(i >> 2); // i 的幂数 - 1
+        System.out.println(i << 2); // i 的幂数 + 1
     }
 
 
@@ -78,7 +77,7 @@ public class BinaryTest {
 
 
     /**
-     * 研究string和bute的转换关系
+     * 研究string和byte的转换关系
      * 16进制字符串其实就是ASCii码对应16进制的表示的字符表示，16进制字符串转换成byte[]数组，是每两个字符转换成十进制数据
      * 比如：101282 = [16,18,-128]
      * -128是因为7F是127， 80是-128， 81是-127
@@ -86,8 +85,19 @@ public class BinaryTest {
     @Test
     public void test6() {
         String data = "10128201284377726E4255352F454A5A5676714E35667365746D3941733077367866684F7076347A693045505350754D6E4D4441774D4445784D4455794D4449784D4459794D7A49774D6A45784D6A497A4D5145414141454271526F784536614630662F6E3730544875686C4F67326476616A526A373475696B6248564D63564E6171354454564C4E46586366737135484142485433784852565A466B64585862444539356557626F32543142626E466A565841433350446B5730493259313338746B4E44525441794E5445794D4555434951433953596C565977557737444558396E6130782F65477857554F517A332F4A74716C6856473049625967656749674439375574574A2B5178594A6A73483462765444614A5635752B74556C743061493150486475374237476B411301001412353030323337313939393037313437383732150100160100174042383742424546394438423345304243424630303136343641464531373142374645333834323244323631454245313842384338443742343944454142393836A76D26A280000000000000000000000000000000";
-        System.out.println(Arrays.toString(Hex.decode("10")));
+        System.out.println(Arrays.toString(Hex.decode("10"))); //Hex.decode()就是16进制转成10进制
         // [16,18,-128,1,40]
+    }
+
+    /**
+     * Hex.decode是【16进制 -> 10进制】
+     * Hex.encode是【10进制 -> 16进制】
+     */
+    @Test
+    public void test7() {
+        String data = "500237199907147872";
+        System.out.println(new String(Hex.decode(Hex.encode("10".getBytes()))));
+        System.out.println(Arrays.toString(Hex.encode(data.getBytes())));
     }
 
 
