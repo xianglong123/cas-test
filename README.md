@@ -132,12 +132,11 @@
   
     
 [数据签名和验签](./src/test/java/com/cas/rsa/SHA256withRSATest.java)  
-[webservice服务端配置](./src/main/java/com/cas/controller/webservice/config/CxfConfig.java)  
-[webservice服务端接口](./src/main/java/com/cas/controller/webservice/WebServiceI.java)  
+[webservice服务端配置](./src/main/java/com/cas/webservice/config/CxfConfig.java)  
+[webservice服务端接口](./src/main/java/com/cas/webservice/WebServiceI.java)  
 [webservice客户端](./src/test/java/com/cas/webservice/TestHelloWrold.java)  
 [RSA工具类](./src/test/java/com/cas/rsa/RSAUtils.java)
 [SM4工具类](./src/test/java/com/cas/sm4/Sm4Util.java)  
 [SM4工具类](./src/test/java/com/cas/sm4/Sm4Util.java)
 
 [BASE64图片转换](./src/test/java/com/cas/img/Base64ImgTest.java)
-[]
