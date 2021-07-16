@@ -20,7 +20,7 @@ import javax.jws.soap.SOAPBinding;
         targetNamespace = Constants.TSM_URL // 命名空间，一般是接口的包名
 )
 public interface WebServiceI {
-    
+
     @WebMethod(operationName = "preOperations")
     @WebResult(name = "PreOperationsReqResponse", targetNamespace = Constants.TSM_URL)
     @SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
