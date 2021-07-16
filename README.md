@@ -138,3 +138,6 @@
 [RSA工具类](./src/test/java/com/cas/rsa/RSAUtils.java)
 [SM4工具类](./src/test/java/com/cas/sm4/Sm4Util.java)  
 [SM4工具类](./src/test/java/com/cas/sm4/Sm4Util.java)
+
+[BASE64图片转换](./src/test/java/com/cas/img/Base64ImgTest.java)
+[]

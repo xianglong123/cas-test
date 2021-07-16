@@ -5,7 +5,9 @@ import org.bouncycastle.util.encoders.Hex;
 import org.junit.Test;
 
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author: xianglong[1391086179@qq.com]
@@ -98,6 +100,14 @@ public class BinaryTest {
         String data = "500237199907147872";
         System.out.println(new String(Hex.decode(Hex.encode("10".getBytes()))));
         System.out.println(Arrays.toString(Hex.encode(data.getBytes())));
+    }
+
+
+    @Test
+    public void test8() {
+        List<String> list = new ArrayList<>();
+        list.add("a");
+        System.out.println(list.get(1));
     }
 
 

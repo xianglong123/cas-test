@@ -2,6 +2,7 @@ package com.cas.link;
 
 /**
  * 手写个单链表数据结构
+ *
  * @param <T>
  */
 public class LinkedNode<T> {
@@ -25,6 +26,7 @@ public class LinkedNode<T> {
 
         /**
          * 单链表结点类
+         *
          * @param value
          */
         public Node(T value) {
@@ -43,6 +45,7 @@ public class LinkedNode<T> {
 
     /**
      * 头部插入结点
+     *
      * @param value
      */
     public void addHead(T value) {
@@ -64,7 +67,7 @@ public class LinkedNode<T> {
         Node newNode = new Node(value);
         if (head == null) {
             head = newNode;
-            return ;
+            return;
         }
 
         Node last = head;
@@ -192,7 +195,6 @@ public class LinkedNode<T> {
 
         System.out.println("delete:" + list);
     }
-
 
 
 }
