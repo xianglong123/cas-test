@@ -1,8 +1,12 @@
 package com.cas;
 
+import com.cas.autoconfiguration.MyService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author: xianglong[1391086179@qq.com]
@@ -11,8 +15,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @review:
  */
 @Slf4j
-@SpringBootApplication(scanBasePackages = "com.cas")
+@SpringBootApplication
+@RestController
 public class TestApplication {
+    @Autowired
+    MyService myService;
+
+    @GetMapping("/")
+    String testStarter(){
+        return myService.getName()+":"+myService.getAge();
+    }
 
     public static void main(String[] args) {
         try{
@@ -22,4 +34,5 @@ public class TestApplication {
             System.out.println("测试环境启动失败！！！！");
         }
     }
+
 }
