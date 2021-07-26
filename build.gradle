@@ -41,7 +41,7 @@ dependencies {
     implementation 'org.jdom:com.springsource.org.jdom:2.0.1'
 
     // 本地jar
-    implementation 'com.cas:cas-springboot-starter:0.0.4-SNAPSHOT'
+    implementation 'com.cas:cas-springboot-starter:0.0.5-SNAPSHOT'
 
 }
 

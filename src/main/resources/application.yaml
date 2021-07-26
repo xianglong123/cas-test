@@ -3,5 +3,5 @@ server:
 cas:
   service:
     my-properties:
+      author: xl
       age: 23
-      author:
