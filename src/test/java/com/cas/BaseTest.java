@@ -1,6 +1,7 @@
 package com.cas;
 
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -15,4 +16,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = ApplicationTest.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class BaseTest {
+
+    private static ThreadLocal<String> threadLocal = new ThreadLocal<>();
+
+    @Test
+    public void tes(){
+        threadLocal.set("name");
+        System.out.println(threadLocal.get());
+        threadLocal.remove();
+    }
 }
