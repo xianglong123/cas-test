@@ -1,4 +1,4 @@
-package com.cas.设计模式.模版模式;
+package com.cas.设计模式.模版模式.normal;
 
 /**
  * @author xiang_long

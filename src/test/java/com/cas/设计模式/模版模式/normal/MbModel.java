@@ -1,7 +1,7 @@
-package com.cas.设计模式.模版模式;
+package com.cas.设计模式.模版模式.normal;
 
-import com.cas.设计模式.模版模式.impl.XiaoHong;
-import com.cas.设计模式.模版模式.impl.XiaoMing;
+import com.cas.设计模式.模版模式.normal.impl.XiaoHong;
+import com.cas.设计模式.模版模式.normal.impl.XiaoMing;
 
 /**
  * @author xiang_long

@@ -1,6 +1,6 @@
-package com.cas.设计模式.模版模式.impl;
+package com.cas.设计模式.模版模式.normal.impl;
 
-import com.cas.设计模式.模版模式.Person;
+import com.cas.设计模式.模版模式.normal.Person;
 
 /**
  * @author xiang_long
@@ -8,16 +8,16 @@ import com.cas.设计模式.模版模式.Person;
  * @date 2021/8/4 2:53 下午
  * @desc
  */
-public class XiaoMing extends Person {
+public class XiaoHong extends Person {
 
     @Override
     protected void getup() {
-        System.out.println("小明2点钟起床～");
+        System.out.println("小红2点钟起床～");
     }
 
     @Override
     protected void eatFood() {
-        System.out.println("然后吃了一个包子");
+        System.out.println("然后啥也没吃");
     }
 
     @Override
