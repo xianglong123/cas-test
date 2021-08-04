@@ -6,7 +6,6 @@ import java.util.Arrays;
 
 public class ByteTest {
 
-
     @Test
     public void test() {
         byte a1 = '8';
@@ -15,6 +14,4 @@ public class ByteTest {
         byte[] c1 = {'a', 'b', 'c'};
         System.out.println(Arrays.toString(c1));
     }
-
-
 }
