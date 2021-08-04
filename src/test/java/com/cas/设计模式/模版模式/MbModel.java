@@ -1,7 +1,7 @@
 package com.cas.设计模式.模版模式;
 
-import com.cas.设计模式.模版模式.Impl.XiaoHong;
-import com.cas.设计模式.模版模式.Impl.XiaoMing;
+import com.cas.设计模式.模版模式.impl.XiaoHong;
+import com.cas.设计模式.模版模式.impl.XiaoMing;
 
 /**
  * @author xiang_long
