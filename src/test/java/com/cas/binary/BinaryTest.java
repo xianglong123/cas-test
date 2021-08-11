@@ -18,6 +18,11 @@ import java.util.List;
 public class BinaryTest {
 
     @Test
+    public void test9() {
+        System.out.println(Arrays.toString("00000000".getBytes()));
+    }
+
+    @Test
     public void test() {
         int i = 1;
         System.out.println(i >> 2); // i 的幂数 - 1

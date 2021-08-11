@@ -33,14 +33,6 @@ public class TestApplication {
     public static void main(String[] args) {
         try{
             SpringApplication.run(TestApplication.class, args);
-            byte[] macSessionKey = HexConverter.hexString2ByteArray("404142434445464748494A4B4C4D4E4F");
-            byte[] kap = ByteUtil.subArray(macSessionKey, 0, 8);
-            byte[] kbp = ByteUtil.subArray(macSessionKey, 8, 16);
-            byte[] key = ByteUtil.contactArray(kap, kbp);
-            key = ByteUtil.contactArray(key, kap);
-            System.out.println(HexConverter.byteArray2HexString(HexConverter.encryptDES(HexConverter.hexString2ByteArray("500001759720F0012050000175970F01"), key)));
-            System.out.println(HexConverter.byteArray2HexString(HexConverter.encryptDES(HexConverter.hexString2ByteArray("500001759720F0022050000175970F02"), key)));
-            System.out.println(HexConverter.byteArray2HexString(HexConverter.encryptDES(HexConverter.hexString2ByteArray("500001759720F0032050000175970F03"), key)));
             System.out.println("测试环境启动成功！！！！");
         } catch (Exception e) {
             System.out.println("测试环境启动失败！！！！");
