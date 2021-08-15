@@ -5,3 +5,6 @@ cas:
     my-properties:
       author: xl
       age: 23
+spring:
+  aop:
+    auto: true

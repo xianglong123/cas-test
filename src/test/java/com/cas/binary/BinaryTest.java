@@ -5,6 +5,10 @@ import org.bouncycastle.util.encoders.Hex;
 import org.junit.Test;
 
 import java.nio.ByteBuffer;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -16,6 +20,15 @@ import java.util.List;
  * @review: 二进制操作测试
  */
 public class BinaryTest {
+
+    @Test
+    public void test10() {
+        LocalDate today = LocalDate.now();
+        LocalDate nextWeek = today.minus(1, ChronoUnit.WEEKS);
+        System.out.println(nextWeek.format(DateTimeFormatter.ofPattern("yyyyMMdd")));
+        String name = today.format(DateTimeFormatter.ofPattern("yyyyMMdd")) + "-" + today.minus(1, ChronoUnit.WEEKS).format(DateTimeFormatter.ofPattern("yyyyMMdd"));
+        System.out.println(name);
+    }
 
     @Test
     public void test9() {

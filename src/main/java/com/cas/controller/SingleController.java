@@ -1,9 +1,20 @@
 package com.cas.controller;
 
-import com.cas.service.Impl.XiangMing;
+import cn.hutool.core.util.StrUtil;
+import com.alibaba.excel.EasyExcel;
+import com.cas.po.DemoData;
+import com.cas.service.Impl.CommonServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.*;
 
 /**
  * @author xiang_long
@@ -15,11 +26,45 @@ import org.springframework.web.bind.annotation.RestController;
 public class SingleController {
 
     @Autowired
-    private XiangMing xiangMing;
+    private CommonServiceImpl commonService;
 
     @GetMapping("single")
     public void single() throws InterruptedException {
-        xiangMing.say();
+        commonService.say();
+    }
+
+
+    @GetMapping("export")
+    public void export(HttpServletResponse response) throws IOException {
+        LocalDate today = LocalDate.now();
+        String name = today.minus(1, ChronoUnit.WEEKS).format(DateTimeFormatter.ofPattern("yyyyMMdd")) + "-" +today.format(DateTimeFormatter.ofPattern("yyyyMMdd"))
+                + "-Dial_Test";
+        response.setContentType("application/vnd.ms-excel");
+        response.setCharacterEncoding("utf-8");
+        // 这里URLEncoder.encode可以防止中文乱码 当然和easyexcel没有关系
+        ServletOutputStream out = null;
+        try {
+            out = response.getOutputStream();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        response.setHeader("Content-disposition", "attachment;filename=" + name + ".xlsx");
+        EasyExcel.write(out, DemoData.class)
+                .sheet("近一周拨测数据统计")
+                .doWrite(data());
+    }
+
+
+    private List<DemoData> data() {
+        List<DemoData> list = new ArrayList<DemoData>();
+        for (int i = 0; i < 10; i++) {
+            DemoData data = new DemoData();
+            data.setString("字符串" + i);
+            data.setDate(new Date());
+            data.setDoubleData(0.56);
+            list.add(data);
+        }
+        return list;
     }
 
 }

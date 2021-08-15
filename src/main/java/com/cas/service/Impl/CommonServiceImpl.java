@@ -12,7 +12,7 @@ import java.util.Date;
  * @desc
  */
 @Service
-public class XiangMing extends CommonService {
+public class CommonServiceImpl extends CommonService {
 
     @Override
     public void say() throws InterruptedException {

@@ -48,6 +48,13 @@ dependencies {
     //hutool
     implementation("cn.hutool:hutool-all:5.7.7")
 
+    // excel
+    implementation 'com.alibaba:easyexcel:2.2.9'
+
+    // aop
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+
+
 }
 
 test {
