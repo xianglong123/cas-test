@@ -2,9 +2,16 @@ package com.cas.easyExcel.bean;
 
 import com.alibaba.excel.annotation.ExcelIgnore;
 import com.alibaba.excel.annotation.ExcelProperty;
+import com.alibaba.excel.annotation.write.style.ColumnWidth;
+import com.alibaba.excel.annotation.write.style.ContentStyle;
+import com.alibaba.excel.annotation.write.style.HeadStyle;
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
 
 import java.util.Date;
 
+@HeadStyle(horizontalAlignment = HorizontalAlignment.CENTER, fillForegroundColor = 41)//表头样式
+@ContentStyle(horizontalAlignment = HorizontalAlignment.CENTER)//内容样式
+@ColumnWidth(20)
 public class DemoData {
     @ExcelProperty("字符串标题")
     private String string;
