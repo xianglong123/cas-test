@@ -6,12 +6,12 @@ import org.junit.Test;
 
 import java.nio.ByteBuffer;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 
 /**
  * @author: xianglong[1391086179@qq.com]
@@ -20,6 +20,17 @@ import java.util.List;
  * @review: 二进制操作测试
  */
 public class BinaryTest {
+
+    /**
+     * 进行异或运行
+     */
+    @Test
+    public void test11() {
+        String a = "";
+        String b = "12";
+//        System.out.println(a ^ b);
+
+    }
 
     @Test
     public void test10() {
@@ -32,6 +43,7 @@ public class BinaryTest {
 
     @Test
     public void test9() {
+        byte level = (byte) (Integer.valueOf("03").intValue() & 0x0F);
         System.out.println(Arrays.toString("00000000".getBytes()));
     }
 

@@ -4,8 +4,11 @@ import cn.hutool.core.util.StrUtil;
 import com.alibaba.excel.EasyExcel;
 import com.cas.po.DemoData;
 import com.cas.service.Impl.CommonServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.ServletOutputStream;
@@ -24,6 +27,8 @@ import java.util.*;
  */
 @RestController
 public class SingleController {
+
+    private static final Logger log = LoggerFactory.getLogger(SingleController.class);
 
     @Autowired
     private CommonServiceImpl commonService;
@@ -65,6 +70,15 @@ public class SingleController {
             list.add(data);
         }
         return list;
+    }
+
+    @GetMapping("print/{data}")
+    public String print(@PathVariable("data") String data) {
+        log.info(data);
+        log.warn(data);
+        log.debug(data);
+        log.error(data);
+        return data;
     }
 
 }

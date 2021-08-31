@@ -8,3 +8,6 @@ cas:
 spring:
   aop:
     auto: true
+# 日志配置
+logging:
+  config: classpath:logback-spring.xml
