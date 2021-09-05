@@ -4,6 +4,7 @@ import cn.hutool.core.util.StrUtil;
 import com.alibaba.excel.EasyExcel;
 import com.cas.po.DemoData;
 import com.cas.service.Impl.CommonServiceImpl;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,13 +73,18 @@ public class SingleController {
         return list;
     }
 
+    /**
+     * 获取环境变量
+     * @param data
+     * @return
+     */
     @GetMapping("print/{data}")
     public String print(@PathVariable("data") String data) {
-        log.info(data);
-        log.warn(data);
-        log.debug(data);
-        log.error(data);
-        return data;
+        String property = System.getProperty(data);
+        if (StringUtils.isBlank(property)) {
+            return data + " is not found";
+        }
+        return property;
     }
 
 }

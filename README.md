@@ -140,3 +140,77 @@
 [SM4工具类](./src/test/java/com/cas/sm4/Sm4Util.java)
 
 [BASE64图片转换](./src/test/java/com/cas/img/Base64ImgTest.java)
+
+
+# Arthas指令教程
+`sc: search Class` : 查询已加载的类
+`sm：search Method`: 查询已加载类的方法
+`jad: 反编译class文件` : jad --source-only com.cas.controller.SingleController 可以加 --source-only 只打印编译出来的源代码
+
+### 监控方法【watch】
+    watch com.cas.controller.SingleController * '{params, returnObj}' -x 2
+    支持的参数：
+    loader
+    clazz
+    method
+    target
+    params
+    returnObj
+    throwExp
+    isBefore
+    isThrow
+    isReturn
+    
+    当异常捕获：watch com.cas.controller.SingleController * "{params[0], throwExp}" -e
+    按照耗时进行过滤：watch com.cas.controller.SingleController * '{params, returnObj}' '#cost>200'
+
+## 代码热部署
+```bash
+[arthas@29829]$ java --source-only com.cas.controller.SingleController > /tem/SingleController.java
+java.lang.IllegalArgumentException: java: command not found
+[arthas@29829]$ watch com.cas.controller.SingleController * '{params, returnObj, isReturn}' -x 2
+[arthas@29829]$ jad --source-only com.cas.controller.SingleController > /tem/SingleController.java
+java.io.FileNotFoundException: /tem/SingleController.java (No such file or directory)
+[arthas@29829]$ ls
+java.lang.IllegalArgumentException: ls: command not found
+[arthas@29829]$ ls
+[arthas@29829]$ jad --source-only com.cas.controller.SingleController > /tmp/SingleController.java
+[arthas@29829]$ sc -d *SingleController | grep classLoaderHash
+ classLoaderHash   18b4aac2
+[arthas@29829]$ mc --classLoaderClass org.springframework.boot.loader.LaunchedURLClassLoader /tmp/SingleController.java -d /tmp
+Can not find classloader by class name: org.springframework.boot.loader.LaunchedURLClassLoader.
+[arthas@29829]$ sc -d *SingleController 
+ class-info        com.cas.controller.SingleController                                                                                                                                                                  
+ code-source       /Users/xianglong/IdeaProjects/cas-test/build/classes/java/main/                                                                                                                                      
+ name              com.cas.controller.SingleController                                                                                                                                                                  
+ isInterface       false                                                                                                                                                                                                
+ isAnnotation      false                                                                                                                                                                                                
+ isEnum            false                                                                                                                                                                                                
+ isAnonymousClass  false                                                                                                                                                                                                
+ isArray           false                                                                                                                                                                                                
+ isLocalClass      false                                                                                                                                                                                                
+ isMemberClass     false                                                                                                                                                                                                
+ isPrimitive       false                                                                                                                                                                                                
+ isSynthetic       false                                                                                                                                                                                                
+ simple-name       SingleController                                                                                                                                                                                     
+ modifier          public                                                                                                                                                                                               
+ annotation        org.springframework.web.bind.annotation.RestController                                                                                                                                               
+ interfaces                                                                                                                                                                                                             
+ super-class       +-java.lang.Object                                                                                                                                                                                   
+ class-loader      +-sun.misc.Launcher$AppClassLoader@18b4aac2                                                                                                                                                          
+                     +-sun.misc.Launcher$ExtClassLoader@4909b8da                                                                                                                                                        
+ classLoaderHash   18b4aac2                                                                                                                                                                                             
+
+Affect(row-cnt:1) cost in 15 ms.
+[arthas@29829]$ mc --classLoaderClass sun.misc.Launcher$AppClassLoader /tmp/SingleController.java -d /tmp
+Memory compiler output:
+/tmp/com/cas/controller/SingleController.class
+Affect(row-cnt:1) cost in 12932 ms.
+[arthas@29829]$ re
+redefine    retransform reset       
+[arthas@29829]$ redefine /tmp/com/cas/controller/SingleController.class
+redefine success, size: 1, classes:
+com.cas.controller.SingleController
+```
+    
+    

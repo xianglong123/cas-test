@@ -26,9 +26,7 @@ public class BinaryTest {
      */
     @Test
     public void test11() {
-        String a = "";
-        String b = "12";
-//        System.out.println(a ^ b);
+        System.out.println(System.currentTimeMillis());
 
     }
 
