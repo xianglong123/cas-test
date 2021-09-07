@@ -26,7 +26,8 @@ public class BinaryTest {
      */
     @Test
     public void test11() {
-        System.out.println(System.currentTimeMillis());
+        String string = "e8ce315a31e92fd89c00ab98000000009000";
+        System.out.println(string.substring(0,32));
 
     }
 

@@ -4,6 +4,7 @@ import cn.hutool.crypto.SecureUtil;
 import cn.hutool.crypto.asymmetric.Sign;
 import cn.hutool.crypto.asymmetric.SignAlgorithm;
 import org.apache.commons.codec.binary.Base64;
+import org.junit.Test;
 
 /**
  * @author: xianglong[1391086179@qq.com]
@@ -34,5 +35,10 @@ public class SHA256withRSATest {
     }
 // 5fbac1ee203b41c9f13f46bd81f99f572732a56fe6d3b96d038589f730b43a91115ce04e76ae6ebdfe14c0d49d148cc294af530236bf4a4c849bcef42245bba8df018c86151da80e507c4ea6578e6a3481bb406dce98d98998435746b1c1358ee7f4f2c3c105d4e9ffc4936e08d0dc5b3b530c8d0e6ccee2652249cd727c6090
 
+
+    @Test
+    public void test() {
+//        SM4-CBC
+    }
 
 }
