@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @review:
  */
 @Slf4j
-@SpringBootApplication(scanBasePackages = "com.cas")
+@SpringBootApplication(scanBasePackages = {"com.cas", "cn.hutool"})
 public class ApplicationTest {
 
     public static void main(String[] args) {
