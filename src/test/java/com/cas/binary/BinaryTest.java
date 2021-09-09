@@ -8,9 +8,7 @@ import java.nio.ByteBuffer;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 
 /**
@@ -26,9 +24,17 @@ public class BinaryTest {
      */
     @Test
     public void test11() {
-        String string = "e8ce315a31e92fd89c00ab98000000009000";
-        System.out.println(string.substring(0,32));
-
+        String[] data = {"a", "b", "c", "d", "e", "f", "g", "1", "2", "3", "4", "5", "6", "7"};
+        int n = 15;
+        Map<String, String> map = new HashMap<>();
+        for (String str : data) {
+            map.put(str, str);
+            int h = str.hashCode();
+            // 显示二进制计算规则
+            int hash = h ^ (h >>> 16);
+            System.out.println(String.format("h:[%s] === h>>>16:[%s] === hash:[%s] === 摸:[%s] === index:[%s]",
+                    Integer.toBinaryString(h), Integer.toBinaryString(h >>> 16), Integer.toBinaryString(hash), Integer.toBinaryString(n), Integer.toBinaryString(n & hash)));
+        }
     }
 
     @Test
