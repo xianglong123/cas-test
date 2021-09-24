@@ -36,13 +36,18 @@ public class GroupChatServer {
         try {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
 
+            // 1、设置rector模型的两个线程池，没有其他作用了
             serverBootstrap.group(bossGroup, workGroup)
+                    // 2、设置了一个通道
                     .channel(NioServerSocketChannel.class)
+                    // backlog 指定了内核为此套接口排队的最大连接个数；
                     .option(ChannelOption.SO_BACKLOG, 128)
+                    // 保持活动状态
                     .childOption(ChannelOption.SO_KEEPALIVE, true)
+                    //
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
-                        protected void initChannel(SocketChannel ch) throws Exception {
+                        protected void initChannel(SocketChannel ch) {
                             // 获取到pipeline
                             ChannelPipeline pipeline = ch.pipeline();
                             // 向pipeline 加入解码器
@@ -55,6 +60,7 @@ public class GroupChatServer {
                     });
 
             System.out.println(" netty 服务器启动");
+
             ChannelFuture channelFuture = serverBootstrap.bind(port).sync();
 
             // 监听关闭

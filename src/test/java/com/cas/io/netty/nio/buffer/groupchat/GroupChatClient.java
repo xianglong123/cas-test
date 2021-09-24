@@ -103,7 +103,6 @@ public class GroupChatClient {
                 chatClient.readInfo();
                 try {
                     Thread.currentThread().sleep(3000);
-
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

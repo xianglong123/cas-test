@@ -31,14 +31,12 @@ public class FileInputStreamTest {
         // 创建文件输入流
         try (FileInputStream fis = new FileInputStream(path);) {
             StringBuilder stb = new StringBuilder();
-            int n = 0;
-            while (n != -1) {
+            int n;
+            while ((n = fis.read()) != -1) {
                 // 读取字节，但是字节是8位二进制，所以这里转成十进制
-                n = fis.read();
                 // 这里是通过ASCII码转换获取字符
-                char by = (char) n;
                 //h 104, e 101, ....
-                stb.append(by);
+                stb.append((char) n);
             }
             System.out.println(stb.toString());
         } catch (IOException e) {

@@ -42,7 +42,7 @@ public class GroupChatClient {
                     .channel(NioSocketChannel.class)
                     .handler(new ChannelInitializer<SocketChannel>() {
                         @Override
-                        protected void initChannel(SocketChannel ch) throws Exception {
+                        protected void initChannel(SocketChannel ch) {
 
                             // 得到pipeline
                             ChannelPipeline pipeline = ch.pipeline();
