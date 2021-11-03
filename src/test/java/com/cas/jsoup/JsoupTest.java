@@ -5,8 +5,12 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.junit.Test;
 
 import java.io.IOException;
+import java.net.URL;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 
 /**
  * @author xiang_long
@@ -33,8 +37,12 @@ public class JsoupTest {
             System.out.println(price);
             System.out.println(title);
         }
+    }
 
-
+    @Test
+    public void test() {
+        String string = "%E5%8D%8E%E4%B8%BA%EF%BC%88HUAWEI%EF%BC%89%5E";
+        System.out.println(URLDecoder.decode(string));
     }
 
 }

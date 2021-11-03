@@ -51,11 +51,11 @@ public class Base64ImgTest {
     public static void main(String[] args) {
         try {
             // base64加密
-            String base64Code = encodeBase64File("/Users/xianglong/IdeaProjects/cas-test/src/test/java/com/cas/img/1.png");
+            String base64Code = encodeBase64File("/Users/xianglong/IdeaProjects/cas-test/src/test/java/com/cas/img/2.jpeg");
             System.out.println(base64Code);
             // base64解密
-            decoderBase64File(base64Code, "/Users/xianglong/IdeaProjects/cas-test/src/test/java/com/cas/img/解密.jpg");
-            // 密文保存
+            decoderBase64File(base64Code, "/Users/xianglong/IdeaProjects/cas-test/src/test/java/com/cas/img/22.jpg");
+            // 密文保存R
             toFile(base64Code, "/Users/xianglong/IdeaProjects/cas-test/src/test/java/com/cas/img/base64.txt");
         } catch (Exception e) {
             e.printStackTrace();
