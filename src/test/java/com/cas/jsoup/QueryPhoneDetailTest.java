@@ -21,6 +21,7 @@ import java.util.*;
  * @version 1.0
  * @date 2021/7/27 10:19 下午
  * @desc 解析前端
+ * 可以搜索一页京东数据，并解析
  */
 public class QueryPhoneDetailTest {
 
