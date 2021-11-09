@@ -1,6 +1,8 @@
 package com.cas.binary;
 
+import cn.hutool.core.util.RandomUtil;
 import com.cas.des.DesEncTest;
+import com.cas.util.HexConverter;
 import org.bouncycastle.util.encoders.Hex;
 import org.junit.Test;
 
@@ -143,6 +145,13 @@ public class BinaryTest {
         List<String> list = new ArrayList<>();
         list.add("a");
         System.out.println(list.get(1));
+    }
+
+    @Test
+    public void test91() {
+//        System.out.println(RandomUtil.randomNumbers(32));
+        String x = RandomUtil.randomString(16);
+        System.out.println(HexConverter.byteArray2HexString(x.getBytes()));
     }
 
 
