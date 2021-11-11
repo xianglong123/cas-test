@@ -283,6 +283,19 @@ com.cas.controller.SingleController
 ### SM2 和 RSA算法性能对比
     SM2算法和RSA算法都属于公钥加密算法，但两者分别基于不通的数学理论基础，于RSA算法相比，SM2算法具有抗攻击性强，CPU占用少，内容使用少，网络消耗低，加密速度快等特点。
                 
-
+### 三种填充模式的区别(PKCS7Padding/PKCS5Padding/ZeroPadding)
+    ZeroPadding，数据长度不对齐时使用0填充，否则不填充。
+    PKCS7Padding，假设数据长度需要填充n(n>0)个字节才对齐，那么填充n个字节，每个字节都是n;如果数据本身就已经对齐了，则填充一块长度为块大小的数据，每个字节都是块大小。
+    PKCS5Padding，PKCS7Padding的子集，块大小固定为8字节。
     
+    注意：由于使用PKCS7Padding/PKCS5Padding填充时，最后一个字节肯定为填充数据的长度，所以在解密后可以准确删除填充的数据，而使用ZeroPadding填充时，没办法区分真实数据与填充数据，所以只适合以\0结尾的字符串加解密。
+    
+### ECB 和 CBC 工作模式比较  
+    ECB   电子密码本模式：Electronic codebook  每块堵路加密 
+        优点：分块处理 并行处理
+        缺点：同样的原文得到相同的密文  容易被攻击
+    CBC 密码分组链接：Cipher-block chaining  每块加密依赖前一块的密文
+        优点：同样的原文得到不同的密文  原文微下的改变影响后面全部密文
+        缺点：加密需要串行处理  误差传递
+
 [HashMap底层原理剖析](https://blog.csdn.net/qq_36005199/article/details/120214711)
