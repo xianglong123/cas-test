@@ -1,4 +1,4 @@
-package com.cas.sm3;
+package com.cas.encryption.sm3;
 
 import cn.hutool.crypto.SmUtil;
 import org.junit.Test;

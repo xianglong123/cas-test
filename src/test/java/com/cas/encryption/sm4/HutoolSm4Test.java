@@ -1,4 +1,4 @@
-package com.cas.sm4;
+package com.cas.encryption.sm4;
 
 import cn.hutool.core.util.CharsetUtil;
 import cn.hutool.core.util.HexUtil;
@@ -22,7 +22,6 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 import java.security.*;
-import java.util.HashMap;
 
 /**
  * @author xiang_long

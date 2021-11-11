@@ -1,4 +1,4 @@
-package com.cas.rsa;
+package com.cas.encryption.rsa;
 
 import cn.hutool.crypto.SecureUtil;
 import cn.hutool.crypto.asymmetric.Sign;

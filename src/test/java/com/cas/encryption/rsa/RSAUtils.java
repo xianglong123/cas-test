@@ -1,4 +1,6 @@
-package com.cas.tsm.utils;
+package com.cas.encryption.rsa;
+
+import com.cas.des.des3_ecb.HexConverter;
 
 import java.io.FileInputStream;
 import java.security.*;
@@ -27,6 +29,7 @@ public class RSAUtils {
     public static final String PRIVATE_KEY = "privateKey";
     public static final int KEY_SIZE = 2048;
     public static final String SIGNATURE_ALGORITHM = "SHA256withRSA";
+    public static final String SHA1withRSA = "SHA1withRSA";
     public static final String ENCODE_ALGORITHM = "SHA-256";
     public static final String PLAIN_TEXT = "test string";
 
@@ -44,7 +47,7 @@ public class RSAUtils {
             KeyPair keyPair = keyPairGenerator.generateKeyPair();
             RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
             RSAPrivateKey privateKey = (RSAPrivateKey) keyPair.getPrivate();
-            Map<String, byte[]> keyMap = new HashMap<String, byte[]>();
+            Map<String, byte[]> keyMap = new HashMap<>();
             keyMap.put(PUBLIC_KEY, publicKey.getEncoded());
             keyMap.put(PRIVATE_KEY, privateKey.getEncoded());
             return keyMap;
@@ -135,8 +138,8 @@ public class RSAUtils {
      *            明文
      * @return
      */
-    public static String sign(PrivateKey privateKey, String message) throws Exception {
-        Signature sign = Signature.getInstance("SHA1withRSA");
+    public static String sign(PrivateKey privateKey, String message, String algorithm) throws Exception {
+        Signature sign = Signature.getInstance(algorithm);
         sign.initSign(privateKey);
         sign.update(message.getBytes("UTF-8"));
         return new String(Base64.getEncoder().encodeToString(sign.sign()));
@@ -147,8 +150,8 @@ public class RSAUtils {
      *
      * @param publicKey
      */
-    public static boolean verify(PublicKey publicKey, String message, String signature)throws Exception {
-        Signature sign = Signature.getInstance("SHA1withRSA");
+    public static boolean verify(PublicKey publicKey, String message, String signature, String algorithm)throws Exception {
+        Signature sign = Signature.getInstance(algorithm);
         sign.initVerify(publicKey);
         sign.update(message.getBytes("UTF-8"));
         return sign.verify(Base64.getDecoder().decode(signature));
@@ -244,20 +247,28 @@ public class RSAUtils {
             put(PUBLIC_KEY, "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCXGZ6plGYbnpci4rgn/7z3Ik8u+lkdpvEt4F8SsZYqnop5TQp2/eDPYEmdEr0Bf9uCVatm8M4IqHHo/RLI6Wtr48dv4jCZQfeh1WxUZ+BSrHjeRm1My4mSxbgd0mvQg6Bnwx/6oOV3vC9g6EqmFgxRxCSGCNZEe4sMV/aeLTKx3wIDAQAB");
             put(PRIVATE_KEY, "MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAIH9xfmMgFTVSWwWTPt5rZ5nam6zOAek46IZxt1988sAzjxtd9DHBPx4Jbn25FinXzXI4ZhoGAVwJzxDLfLYnCaGsd9RKeCeN36d5Qc+BgZQe3zPg45LffrqDWTrp5vMhB+ceSqUQCHBh4626GowRX5dQ6sz5cofQRmU6vH0ggsNAgMBAAECgYAi5joPrIwLupOSxE34ugtF2uf1PoKNctR2gcslThp05wt3p8AiOjx5d9xRGBroPk9Ohlci7td8JkcyY6rjZwpM36eZkqP9DpgP+gBirlSIcd/Q0YKSWJg9k2Vb14HQvEanX0hqQdfyy71NlAtyWf94BEiWj6kMdTMKnO0QDyRzgQJBALlkTLVYh5J9Owzxto1B3sRomSR+EJayfQDHUD7Y1YCp4z+frCzTcDCJZWHHxqiU3/XJSyq6qE8YLFdGrvgoHq0CQQCzf+zt01wuF4wuqae+rCpdJcd3WaXgDoxksuiBIoS8CefFtijViGpz2Trf0FV3DDzAQDVJFysXl1EyagFdNwnhAkEAqT37GQH8oapZIfP3JvUfHEYwp7O+CRRgMTnC89yW66IrpoVpdHKBVI3ZU25A2N0vpv1f9V35EFuM/w+z4y8c8QJBAK14rBkLcsJ4r1lJTHvRFv/+Ss7lLJFkffmzjU9/dJflWsCQUtZKh9Z90ZALXw02HmANrXF9mn+qFSaLm9XiIwECQQCorfZUitLnb3groHPKTM7xKBbHMpvB/O5oXJeQDl7USvkNq4Mdjb9bdcPUEgzGPkaZIEDWjdkoUAVHLvSkmh5Q");
         }};
+
+//        Map<String, String> map3 = new HashMap<String, String>() {{
+//            put(PUBLIC_KEY, "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmvwBOF7x+2ihVYCKdNbpxgY9n2P8kQudkDZOdJBSnA7OOqVf0HZVjx/Sl+e+/uqPv3bGc0iO49uTGuOIXU7/O6IaPbYnOBEG04bCWyFlmTIbMsTp+lZ4zIuqdy3Usm+QPG9CeWp7gnSVOUf8+Pf46MLmLMCtT1t9UrM0XQA88J0d/E19yq5Bs3mXIHBJOWDBWSc13R6LKR6pcjCIW8ov/LWVKSXQj5mp0EUsRgvR7NhcJTG5xdjG5dir/2i850pkWn7ouSNRE3GdkXH9zKf7z4Mhdsodh374knijWALV/JV4Es6BJ3A+9bBEazDvUoD4o7ctasOz85N78+IaHyCbYwIDAQAB");
+//            put(PRIVATE_KEY, "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBANxPy7GrqwyX24grpA0e6HKbQuEcDok/Ru1l7FSfUNuw69B2pUfU7U1vnjfjV5k+JCxGUd0Ltaz4vCkQd7owF9AgXCzAACfU+CazVYoXLr7WVi2jAIUW6LEJd69o2u0fJw7DHBtSu047rf9kBB3uU24GfF7gkQkJn7WejfdyjvW5AgMBAAECgYAgkUszQIVQn0I8pvbhWahTCNCiJlufvlLl1SNSfxqc31J8xo04SSmrQMzKxji01pLSWLLRUmHQ6BQond6VD3b1bvhlubZrzKIaJfCTWQghWBj/jSeLWxSTbaR6cHc2/fqnoAzHWkb5UkSnNMyfhuBWUnJAhuuG7pcL8pTZGZrBgQJBAP0CbY3N4A70TY3kFqYlJxtMewiT6iwwhCrGfDGSMD4qJbEQJk3OINvOnW2X1Btsj2EDBlq8wrzGY6O0PZX7RLUCQQDe6m3Ax2FFisAzUsO6uPz7qbu99mvq7sE2AEKEZlj2gbrqMB8cpaFl2F4efKm0dudzkcoC3kRXeNtYDg4JtrN1AkB2MuEtg0WultF4fVtbaTX42eUMn9WhqVTFiw7QNcSV9ii/rJTIeoj9R2xim7C60x+0qa4ZS+AKQwCfpP+0hruVAkEAkmpcaHEM/QZjs9I66Vw0HoCf5egDfi4QDg4hoqEu8crIIKY26TQJTMHPICs1tGkdIRWzICsprGKff7jLk6nDOQJAeLR13DsD+TNVFSJhcbfXU7PTbsnPkzM6MbLxyrBdVkb0LTpVI/Sw/VuZ/GJ35X5d4JsvUoyJ9OYvjENTyCRoKw==");
+//        }};
         list.add(map);
         list.add(map1);
         list.add(map2);
+//        list.add(map3);
 
         for (int i = 0; i < list.size(); i ++) {
             Map<String, String> resMap = list.get(i);
             String publicKey = resMap.get(PUBLIC_KEY);
             String privateKey = resMap.get(PRIVATE_KEY);
-            String sign = sign(getPrivateKey(privateKey), sj);
+            String sign = sign(getPrivateKey(privateKey), sj, SHA1withRSA);
             // 验证正确性
-            boolean b = verify(getPublicKey(publicKey), sj, sign);
+            boolean b = verify(getPublicKey(publicKey), sj, sign, SHA1withRSA);
             System.out.println(String.format("[公钥] %s", publicKey));
             System.out.println(String.format("[私钥] %s", privateKey));
             System.out.println(String.format("[第%s组正确性] %s", i + 1, b));
+
+            System.out.println(HexConverter.byteArray2HexString(publicKey.getBytes()));
 
         }
     }
@@ -270,10 +281,10 @@ public class RSAUtils {
         PublicKey publicKey = restorePublicKey(keyMap.get(PUBLIC_KEY));
         PrivateKey privateKey = restorePrivateKey(keyMap.get(PRIVATE_KEY));
         // 签名
-        String sign = sign(privateKey, PLAIN_TEXT);
+        String sign = sign(privateKey, PLAIN_TEXT, SHA1withRSA);
         System.out.println(sign);
         // 验签
-        verify(publicKey, PLAIN_TEXT, sign);
+        verify(publicKey, PLAIN_TEXT, sign, SHA1withRSA);
     }
 
     private static void testFile() {

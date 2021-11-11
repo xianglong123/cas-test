@@ -1,4 +1,4 @@
-package com.cas.sm2;
+package com.cas.encryption.sm2;
 
 import cn.hutool.core.util.HexUtil;
 import cn.hutool.core.util.StrUtil;

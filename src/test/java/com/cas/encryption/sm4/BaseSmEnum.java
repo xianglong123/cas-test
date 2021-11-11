@@ -1,4 +1,4 @@
-package com.cas.sm4;
+package com.cas.encryption.sm4;
 
 
 public enum BaseSmEnum {

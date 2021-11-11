@@ -212,5 +212,77 @@ redefine    retransform reset
 redefine success, size: 1, classes:
 com.cas.controller.SingleController
 ```
+
+### 算法的种类和特点
+    对称加密：
+        AES（目前最安全的加密方式）
+        DES （数据加密标准，现在用的比较少，因为加密强度不够，可以暴力破解）
+        3DES （原理和DES几乎一样，只是对相同的数据执行了三次加密，增强加密强度）
+        SM4
+    非对称加密：
+        SM2：
+        特点：
+        
+        RSA
+        特点：
+        1、算法强度复杂，安全性依赖于算法于密钥
+        2、加密解密速度慢
+    哈希函数：
+        1、MD5
+            特点：
+            1. 不可逆运算
+            2. 对不同的数据加密的结果是定长的32位字符（不管文件多大都一样）
+            3. 对相同的数据加密，得到的结果是一样的（也就是复制，hash不可变性）
+            4. 抗修改性：信息"指纹"，对元数据进行任何改动，哪怕只修改一个字节，所得到的MD5值都有很大的区别
+            5. 弱抗碰撞：已知原数据和其MD5值，想找到一个具有相同MD5的值的数据（即伪造数据）是非常困难的
+            6. 强抗碰撞：想找到两个不同数据，使他们具有相同的MD5值，是非常困难的
+        MD5 应用：
+        一致性验证：MD5将整个文件当作一个大文本信息，通过不可逆的字符串变换算法，产生一个唯一的MD5信息摘要，就像每个人
+        都有自己独一无二的指纹，MD5对任何文件产生一个独一无二的数字指纹。
+        
+        那么问题来了，你觉得这个MD5加密安全吗？其实是不安全的，不信的话可以到这个网站试试：md5破解网站。可以说嗖地一下就破解了你的MD5加密！！！
+        
+        2、SHA1
+            特点：
+            1. 不可以从消息摘要中复原信息；两个不同的消息不会产生同样的消息摘要。
+            加盐：就是原始数据多拼接一些数据，让暴力破解更难
+        3、HMacSHA1
+            特点：
+            1. 需要一个密钥和一个输入
+     加签验签算法：
+        1、SHA1WithRSA：用SHA1对数据做散列运算，用RSA对散列结果做非对称加密处理
+        其他：
+        // The RSA signature algorithm
+        NONEwithRSA
+        
+        // The MD2/MD5 with RSA Encryption signature algorithm
+        MD2withRSA
+        MD5withRSA
+        
+        // The signature algorithm with SHA-* and the RSA
+        SHA1withRSA
+        SHA256withRSA
+        SHA384withRSA
+        SHA512withRSA
+        
+        // The Digital Signature Algorithm
+        NONEwithDSA
+        
+        // The DSA with SHA-1 signature algorithm
+        SHA1withDSA
+        
+        // The ECDSA signature algorithms
+        NONEwithECDSA
+        SHA1withECDSA
+        SHA256withECDSA
+        SHA384withECDSA
+        SHA512withECDSA
+### SM2 和 RSA算法对比
+    SM2算法是一种更先进安全的算法，在安全性能，速度性能等方面都优于RSA算法，国家密码管理局于2010年12月17日发布SM2算法，并要求现有的基于RSA算法的电子认证系统，密钥管理系统，应用系统进行升级改造，采用SM2算法。
+    
+### SM2 和 RSA算法性能对比
+    SM2算法和RSA算法都属于公钥加密算法，但两者分别基于不通的数学理论基础，于RSA算法相比，SM2算法具有抗攻击性强，CPU占用少，内容使用少，网络消耗低，加密速度快等特点。
+                
+
     
 [HashMap底层原理剖析](https://blog.csdn.net/qq_36005199/article/details/120214711)

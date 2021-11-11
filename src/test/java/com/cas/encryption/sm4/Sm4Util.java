@@ -1,4 +1,4 @@
-package com.cas.sm4;
+package com.cas.encryption.sm4;
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.pqc.math.linearalgebra.ByteUtils;
