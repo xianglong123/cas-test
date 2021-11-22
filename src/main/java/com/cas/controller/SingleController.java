@@ -7,11 +7,13 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -32,6 +34,14 @@ public class SingleController {
 
     @Autowired
     private CommonServiceImpl commonService;
+
+    public void ms(HttpServletResponse response) {
+        String data_cookie = "aa";
+        data_cookie = "a";
+        System.out.println(data_cookie);
+        response.addCookie();
+    }
+
 
     @GetMapping("single")
     public void single() throws InterruptedException {
