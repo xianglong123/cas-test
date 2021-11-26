@@ -35,13 +35,6 @@ public class SingleController {
     @Autowired
     private CommonServiceImpl commonService;
 
-    public void ms(HttpServletResponse response) {
-        String data_cookie = "aa";
-        data_cookie = "a";
-        System.out.println(data_cookie);
-        response.addCookie();
-    }
-
 
     @GetMapping("single")
     public void single() throws InterruptedException {

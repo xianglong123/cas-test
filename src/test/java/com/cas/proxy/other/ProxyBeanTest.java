@@ -1,6 +1,10 @@
-package com.cas.proxy;
+package com.cas.proxy.other;
 
 import com.cas.BaseTest;
+import com.cas.proxy.HelloProxy;
+import com.cas.proxy.HelloProxyImpl;
+import com.cas.proxy.MyInterceptor;
+import com.cas.proxy.ProxyBean;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Proxy;
@@ -16,7 +20,7 @@ public class ProxyBeanTest extends BaseTest {
     @Test
     public void test() {
         HelloProxy helloProxy = new HelloProxyImpl();
-        HelloProxy proxy = (HelloProxy)ProxyBean.getProxyBean(helloProxy, new MyInterceptor());
+        HelloProxy proxy = (HelloProxy) ProxyBean.getProxyBean(helloProxy, new MyInterceptor());
         proxy.say();
     }
 

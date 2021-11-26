@@ -19,7 +19,7 @@ public class CommonServiceImpl extends CommonService {
         Date date = new Date();
         list.add(date.toString());
         System.out.println("say() is sleep start...");
-        Thread.sleep(100000);
+        Thread.sleep(1000);
         System.out.println("say() is sleep end.....");
     }
 }

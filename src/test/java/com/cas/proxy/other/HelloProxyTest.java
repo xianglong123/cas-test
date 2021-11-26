@@ -1,7 +1,11 @@
-package com.cas.proxy;
+package com.cas.proxy.other;
 
 
 import com.cas.BaseTest;
+import com.cas.proxy.HelloProxy;
+import com.cas.proxy.HelloProxyImpl;
+import com.cas.proxy.MyInterceptor;
+import com.cas.proxy.ProxyBean;
 
 /**
  * @author xiang_long
@@ -14,7 +18,7 @@ class HelloProxyTest extends BaseTest {
     public static void main(String[] args) {
         System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles","true");
         HelloProxy helloProxy = new HelloProxyImpl();
-        HelloProxy proxy = (HelloProxy)ProxyBean.getProxyBean(helloProxy, new MyInterceptor());
+        HelloProxy proxy = (HelloProxy) ProxyBean.getProxyBean(helloProxy, new MyInterceptor());
         proxy.say();
     }
 
