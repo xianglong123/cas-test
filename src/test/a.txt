@@ -1,7 +1,0 @@
-        location ~ /gitbook/(.*(\.(css|js|html|png|jpg|jpeg)))$ {
-            alias /root/blog/_site/$1;
-        }
-
-
-http://xianglong.vip/gitbook/theme.js
-http://xianglong.vip/gitbook/style.css

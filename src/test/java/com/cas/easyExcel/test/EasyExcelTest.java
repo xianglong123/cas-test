@@ -31,6 +31,9 @@ public class EasyExcelTest {
             data.setString("字符串" + i);
             data.setDate(new Date());
             data.setDoubleData(0.56);
+            data.setNum1(23);
+            data.setNum2(24);
+            data.setNum3(25);
             list.add(data);
         }
         return list;

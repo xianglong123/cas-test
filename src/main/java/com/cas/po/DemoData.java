@@ -9,8 +9,8 @@ import org.apache.poi.ss.usermodel.HorizontalAlignment;
 
 import java.util.Date;
 
-@HeadStyle(horizontalAlignment = HorizontalAlignment.CENTER, fillForegroundColor = 41)//表头样式
-@ContentStyle(horizontalAlignment = HorizontalAlignment.CENTER)//内容样式
+@HeadStyle//表头样式
+@ContentStyle//内容样式
 @ColumnWidth(20)
 public class DemoData {
     @ExcelProperty("字符串标题")

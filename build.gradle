@@ -49,11 +49,16 @@ dependencies {
     testImplementation 'org.bouncycastle:bcprov-jdk15to18:1.69'
 
     // excel
-    implementation 'com.alibaba:easyexcel:2.2.9'
+    implementation 'com.alibaba:easyexcel:3.0.5'
 
     // aop
     implementation 'org.springframework.boot:spring-boot-starter-aop'
 
+    // easypoi
+    testImplementation group: 'cn.afterturn', name: 'easypoi', version: '4.0.0'
+    testImplementation group: 'cn.afterturn', name: 'easypoi-base', version: '4.0.0'
+    testImplementation group: 'cn.afterturn', name: 'easypoi-annotation', version: '4.0.0'
+    testImplementation group: 'cn.afterturn', name: 'easypoi-web', version: '4.0.0'
 
 }
 
