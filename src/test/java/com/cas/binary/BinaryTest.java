@@ -3,14 +3,19 @@ package com.cas.binary;
 import cn.hutool.core.util.RandomUtil;
 import com.cas.des.DesEncTest;
 import com.cas.util.HexConverter;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.bouncycastle.util.encoders.Hex;
 import org.junit.Test;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.nio.ByteBuffer;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 /**
@@ -84,6 +89,7 @@ public class BinaryTest {
 
     /**
      * 测试System.arraycopy能力
+     *
      * @throws Exception
      */
     @Test
@@ -106,10 +112,10 @@ public class BinaryTest {
 //        String data = "2100000E103003528819";
 //        byte[] payload = data.getBytes();
         ByteBuffer buffer = ByteBuffer.wrap(new byte[16]);
-        buffer.put((byte)3);
-        buffer.put((byte)42);//296 = 255 + 41
+        buffer.put((byte) 3);
+        buffer.put((byte) 42);//296 = 255 + 41
         buffer.flip(); // count = 255 * index1 + index2
-        System.out.println((int)buffer.getChar());
+        System.out.println((int) buffer.getChar());
         // getChar的计算过程
         // 3:42 = 810 = 255 * 3 + 42 + 3 = 765 + 45 = 810
     }
@@ -152,6 +158,32 @@ public class BinaryTest {
 //        System.out.println(RandomUtil.randomNumbers(32));
         String x = RandomUtil.randomString(16);
         System.out.println(HexConverter.byteArray2HexString(x.getBytes()));
+    }
+
+    @Test
+    public void test12() {
+        String string = RandomUtil.randomString(6);
+        System.out.println(string.toUpperCase());
+    }
+
+
+    @Test
+    public void test13() {
+        String data = "1391086179xl1638586081442440049";
+        String string = DigestUtils.sha1Hex(data);
+        System.out.println(string);
+    }
+
+
+    @Test
+    public void test14() {
+        String[] data = {"file.exe***888", "a.png", "b.jpg", "c.bas"};
+        String strExp = "(?=\\.hello|\\.exe|\\.png|\\.jpg2)";
+        Pattern pattern = Pattern.compile(strExp);
+        Arrays.stream(data).forEach((a) -> {
+            Matcher matcher = pattern.matcher(a);
+            System.out.println(String.format("%s 是否匹配上  %s", a, matcher.find()));
+        });
     }
 
 
