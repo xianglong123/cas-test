@@ -1,1 +1,12 @@
-file.exe***888
+
+
+
+@Test
+    public void test14() {
+        String[] data = {"file.exe***888", "a.png", "b.jpg", "c.bas"};
+        String strExp = "(?=\\.hello|\\.exe|\\.png|\\.jpg2)";
+        Pattern pattern = Pattern.compile(strExp);
+        Arrays.stream(data).forEach((a) -> {
+            Matcher matcher = pattern.matcher(a);
+            System.out.println(String.format("%s 是否匹配上  %s", a, matcher.find()));
+        });3.1

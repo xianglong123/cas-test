@@ -177,6 +177,7 @@ public class BinaryTest {
 
     @Test
     public void test14() {
+        // \. 匹配任意字符 \?
         String[] data = {"file.exe***888", "a.png", "b.jpg", "c.bas"};
         String strExp = "(?=\\.hello|\\.exe|\\.png|\\.jpg2)";
         Pattern pattern = Pattern.compile(strExp);
@@ -184,6 +185,17 @@ public class BinaryTest {
             Matcher matcher = pattern.matcher(a);
             System.out.println(String.format("%s 是否匹配上  %s", a, matcher.find()));
         });
+    }
+
+
+    @Test
+    public void test15() {
+        String fl1 = "B838C4547FBD3C641AA2BCB3CF9C4111";
+        String fl2 = "C111AA10BD3C4FCC37A3CAF5ECC12BA4";
+        String jyz = "56138966";
+
+        System.out.println();
+
     }
 
 

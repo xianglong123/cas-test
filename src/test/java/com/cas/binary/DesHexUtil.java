@@ -1,18 +1,19 @@
 package com.cas.binary;
 
 import org.apache.commons.codec.binary.Hex;
-import org.junit.Test;
 
 import java.nio.ByteBuffer;
 
+/**
+ * 卡应用数据转码
+ */
 public class DesHexUtil {
 
-    @Test
-    public void test() {
-        String data = "";
+    public static void main(String[] args) {
+        // 有计数器的数据
+        String data = "01128201284332773073637063653464716F727A6739537356364142306436426F30496B4F7A45757A347753666845644D4D4441774D4445784D4455794D4449784D5449794D4449774D6A49774E6A49774D5145414141454271526F784536614630662F6E3730532B4843532B6A6E535136584A6D306B6C4C70554D424676716B6C566E6A422F575852596574483137415538657A306C4D50633858476D75727A74357941496374414E305A385872504F786F53496542557A704770506F433761456A67324E6A457A4F5559774D4559434951443245497643314A2B79794F6C4F70746452512F62346151596363534C6735417A4650757A7A3352714452674968414947317A46537A613551707A386C434556303548386C65376679364951767352464B6B424C314564544336130100140100150100160100174034374435384439393946313346333135463638313539373037303836324546314639433838463034333731344544313038343338414333354545353631344142D73789F980";
         System.out.println(decodeSimIdInfo(data).toString());
     }
-
 
     /**
      * 数字身份信息解码
@@ -81,11 +82,12 @@ public class DesHexUtil {
                         simIdCardInfo.setPid(new String(tagInfo));
                         break;
                     default:
-                        throw new RuntimeException();
+                        System.out.println("error");
+//                        throw  new RuntimeException();
                 }
             }
         } catch (Exception e) {
-            throw new RuntimeException();
+//            throw  new RuntimeException();
         }
         return simIdCardInfo;
     }
