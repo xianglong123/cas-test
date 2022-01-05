@@ -2,20 +2,23 @@ package com.cas.binary;
 
 import cn.hutool.core.util.RandomUtil;
 import com.cas.des.DesEncTest;
+import com.cas.io.byteIO.I.User;
 import com.cas.util.HexConverter;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.bouncycastle.util.encoders.Hex;
 import org.junit.Test;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.nio.ByteBuffer;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Stream;
 
 
 /**
@@ -188,15 +191,74 @@ public class BinaryTest {
     }
 
 
+    /**
+     * anyMatch 任意一个满足为true， 全部不满足为false
+     * allMatch 判断条件里的元素，所有的都是，返回true
+     * noneMatch 与allMatch相反，判断条件里的元素，所有的都不是，返回true
+     * count 类似list.size()
+     */
     @Test
     public void test15() {
-        String fl1 = "B838C4547FBD3C641AA2BCB3CF9C4111";
-        String fl2 = "C111AA10BD3C4FCC37A3CAF5ECC12BA4";
-        String jyz = "56138966";
-
-        System.out.println();
-
+        List<User> users = Arrays.asList(new User("xl", "24"), new User("xl", "25"), new User("xl", "26"), new User("xl", "27"));
+        boolean anyMatch = users.stream().anyMatch(user -> Integer.parseInt(user.getAge()) < 24);
+        boolean allMatch = users.stream().allMatch(user -> Integer.parseInt(user.getAge()) < 24);
+        boolean noneMatch = users.stream().noneMatch(user -> Integer.parseInt(user.getAge()) < 24);
+        long count = users.stream().count();
+        System.out.println(anyMatch);
+        System.out.println(allMatch);
+        System.out.println(noneMatch);
+        System.out.println(count);
     }
 
+    /**
+     * distinct 比较通过equal 和 hashcode
+     */
+    @Test
+    public void test16() {
+        List<User> users = Arrays.asList(new User("xl", "24"), new User("xl", "24"), new User("xl", "26"), new User("xl", "27"));
+        long count = users.stream().distinct().count();
+        System.out.println(count);
+    }
+
+    /**
+     * 利用filter通过单一字段去重
+     * 例如：将name重复的去掉
+     */
+    @Test
+    public void test17() {
+        ArrayList<User> list = getUsers();
+        list.stream().filter(distinctByKey(User::getName))
+                .forEach(b -> System.out.println(b.getName()+ "," + b.getAge()));
+    }
+
+    private ArrayList<User> getUsers() {
+        ArrayList<User> list = new ArrayList<>();
+        {
+            list.add(new User("xl", "18"));
+            list.add(new User("xl", "19"));
+            list.add(new User("tt", "17"));
+            list.add(new User("ttz", "18"));
+            list.add(new User("ttzz", "20"));
+        }
+        return list;
+    }
+
+    private static <T> Predicate<T> distinctByKey(Function<? super T, ?> keyExtractor) {
+        Map<Object, Boolean> seen = new ConcurrentHashMap<>();
+        return t -> seen.putIfAbsent(keyExtractor.apply(t), Boolean.TRUE) == null;
+    }
+
+    /**
+     * 如果所指定的 key 已经在 HashMap 中存在，返回和这个 key 值对应的 value, 如果所指定的 key 不在 HashMap 中存在，则返回 null。
+     * 注意：如果指定 key 之前已经和一个 null 值相关联了 ，则该方法也返回 null。
+     */
+    @Test
+    public void test18() {
+        Map<Object, Boolean> seen = new ConcurrentHashMap<>();
+        Boolean a = seen.putIfAbsent("a", Boolean.TRUE);
+        Boolean b = seen.putIfAbsent("a", Boolean.TRUE);
+        System.out.println(a);
+        System.out.println(b);
+    }
 
 }

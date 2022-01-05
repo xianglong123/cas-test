@@ -40,4 +40,24 @@ public class User implements Serializable {
                 ", age='" + age + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(final Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        final User user = (User) obj;
+        if (this == user) {
+            return true;
+        } else {
+            return this.age.equals(user.getAge()) && this.name.equals(user.getName());
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        int hashno = 7;
+        hashno = 13 * hashno + (name == null ? 0 : name.hashCode());
+        return hashno;
+    }
 }
