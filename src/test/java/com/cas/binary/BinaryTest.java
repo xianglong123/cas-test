@@ -18,6 +18,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
@@ -259,6 +260,26 @@ public class BinaryTest {
         Boolean b = seen.putIfAbsent("a", Boolean.TRUE);
         System.out.println(a);
         System.out.println(b);
+    }
+
+    /**
+     * java 1.8 stream
+     */
+    @Test
+    public void test19() {
+        /**
+         * 过滤
+         */
+        ArrayList<User> users = getUsers();
+        List<User> collect = users.stream().filter(a -> "xl".equals(a.getName())).collect(Collectors.toList());
+        collect.forEach(System.out::println);
+
+        /**
+         * 排序
+         */
+        List<User> collect1 = users.stream().sorted(Comparator.comparingInt(s -> Integer.parseInt(s.getAge()))).collect(Collectors.toList());
+        collect1.forEach(System.out::println);
+
     }
 
 }
