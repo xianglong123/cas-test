@@ -1,0 +1,3227 @@
+Testing started at 5:00 下午 ...
+
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources UP-TO-DATE
+> Task :testClasses UP-TO-DATE
+> Task :test
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+BC: KeyGenerator.HMACDSTU7564-512 -> org.bouncycastle.jcajce.provider.digest.DSTU7564$KeyGenerator512
+  aliases: [HMAC-DSTU7564-512, HMAC/DSTU7564-512, 1.2.804.2.1.1.1.1.2.2.6]
+
+BC: Cipher.OID.2.16.840.1.101.3.4.1.22 -> org.bouncycastle.jcajce.provider.symmetric.AES$CBC
+
+BC: Cipher.OID.2.16.840.1.101.3.4.1.23 -> org.bouncycastle.jcajce.provider.symmetric.AES$OFB
+
+BC: Cipher.OID.2.16.840.1.101.3.4.1.24 -> org.bouncycastle.jcajce.provider.symmetric.AES$CFB
+
+BC: Cipher.AESWRAP -> org.bouncycastle.jcajce.provider.symmetric.AES$Wrap
+  aliases: [2.16.840.1.101.3.4.1.5, OID.2.16.840.1.101.3.4.1.5, 2.16.840.1.101.3.4.1.25, OID.2.16.840.1.101.3.4.1.25, 2.16.840.1.101.3.4.1.45, OID.2.16.840.1.101.3.4.1.45, AESKW]
+  attributes: {SupportedKeyFormats=RAW, SupportedKeyClasses=javax.crypto.SecretKey}
+
+BC: SecretKeyFactory.TLS12WITHSHA256KDF -> org.bouncycastle.jcajce.provider.symmetric.TLSKDF$TLS12withSHA256
+
+BC: Mac.DESMAC64WITHISO7816-4PADDING -> org.bouncycastle.jcajce.provider.symmetric.DES$DES64with7816d4
+  aliases: [DES64WITHISO7816-4PADDING, DESISO9797ALG1MACWITHISO7816-4PADDING, DESISO9797ALG1WITHISO7816-4PADDING]
+
+BC: Cipher.OID.2.16.840.1.101.3.4.1.21 -> org.bouncycastle.jcajce.provider.symmetric.AES$ECB
+
+BC: Mac.HMACSM3 -> org.bouncycastle.jcajce.provider.digest.SM3$HashMac
+  aliases: [HMAC-SM3, HMAC/SM3, 1.2.156.10197.1.401.2]
+
+BC: AlgorithmParameters.PBKDF1 -> org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF1$AlgParams
+  aliases: [1.2.840.113549.1.5.1, 1.2.840.113549.1.5.3, 1.2.840.113549.1.5.6, 1.2.840.113549.1.5.10, 1.2.840.113549.1.5.11]
+
+BC: KeyGenerator.Grain128 -> org.bouncycastle.jcajce.provider.symmetric.Grain128$KeyGen
+
+BC: Cipher.GCM -> org.bouncycastle.jcajce.provider.symmetric.AES$GCM
+  aliases: [2.16.840.1.101.3.4.1.6, OID.2.16.840.1.101.3.4.1.6, 2.16.840.1.101.3.4.1.26, OID.2.16.840.1.101.3.4.1.26, 2.16.840.1.101.3.4.1.46, OID.2.16.840.1.101.3.4.1.46]
+  attributes: {SupportedKeyFormats=RAW, SupportedKeyClasses=javax.crypto.SecretKey}
+
+BC: Cipher.CCM -> org.bouncycastle.jcajce.provider.symmetric.AES$CCM
+  aliases: [2.16.840.1.101.3.4.1.7, OID.2.16.840.1.101.3.4.1.7, 2.16.840.1.101.3.4.1.27, OID.2.16.840.1.101.3.4.1.27, 2.16.840.1.101.3.4.1.47, OID.2.16.840.1.101.3.4.1.47, 1.2.410.200046.1.1.37, OID.1.2.410.200046.1.1.37, 1.2.410.200046.1.1.38, OID.1.2.410.200046.1.1.38, 1.2.410.200046.1.1.39, OID.1.2.410.200046.1.1.39]
+  attributes: {SupportedKeyFormats=RAW, SupportedKeyClasses=javax.crypto.SecretKey}
+
+BC: Cipher.AESWRAPPAD -> org.bouncycastle.jcajce.provider.symmetric.AES$WrapPad
+  aliases: [2.16.840.1.101.3.4.1.8, OID.2.16.840.1.101.3.4.1.8, 2.16.840.1.101.3.4.1.28, OID.2.16.840.1.101.3.4.1.28, 2.16.840.1.101.3.4.1.48, OID.2.16.840.1.101.3.4.1.48, AESKWP]
+  attributes: {SupportedKeyFormats=RAW, SupportedKeyClasses=javax.crypto.SecretKey}
+
+BC: Mac.PBEWITHHMACSHA512 -> org.bouncycastle.jcajce.provider.digest.SHA512$HashMac
+
+BC: SecretKeyFactory.PBEWITHSHAAND3-KEYTRIPLEDES-CBC -> org.bouncycastle.jcajce.provider.symmetric.DESede$PBEWithSHAAndDES3KeyFactory
+  aliases: [PBEWITHSHA1ANDDESEDE, PBE, 1.2.840.113549.1.12.1.3, PBEWithSHAAnd3KeyTripleDES]
+
+BC: Signature.SHA3-384WITHECDDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDetDSASha3_384
+
+BC: KeyGenerator.HMACSkein-256-160 -> org.bouncycastle.jcajce.provider.digest.Skein$HMacKeyGenerator_256_160
+  aliases: [HMAC-Skein-256-160, HMAC/Skein-256-160]
+
+BC: KeyPairGenerator.DSTU4145 -> org.bouncycastle.jcajce.provider.asymmetric.dstu.KeyPairGeneratorSpi
+  aliases: [1.2.804.2.1.1.1.1.3.1.1, 1.2.804.2.1.1.1.1.3.1.1.1.1, DSTU-4145, DSTU-4145-2002]
+
+BC: SecretKeyFactory.PBEWITHSHAAND128BITAES-CBC-BC -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithSHAAnd128BitAESBC
+  aliases: [PBEWITHSHA1AND128BITAES-CBC-BC, PBEWITHSHA-1AND128BITAES-CBC-BC, 1.3.6.1.4.1.22554.1.1.2.1.2, OID.1.3.6.1.4.1.22554.1.1.2.1.2]
+
+BC: Cipher.PBEWITHSHAAND40BITRC2-CBC -> org.bouncycastle.jcajce.provider.symmetric.RC2$PBEWithSHAAnd40BitRC2
+  aliases: [1.2.840.113549.1.12.1.6, OID.1.2.840.113549.1.12.1.6, PBEWITHSHA1AND40BITRC2-CBC]
+
+BC: Signature.DSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$stdDSA
+  aliases: [SHA/DSA, SHA1withDSA, SHA1WITHDSA, 1.3.14.3.2.26with1.2.840.10040.4.1, 1.3.14.3.2.26with1.2.840.10040.4.3, DSAwithSHA1, DSAWITHSHA1, SHA1WithDSA, DSAWithSHA1, 1.2.840.10040.4.1, 1.3.14.3.2.27, 1.2.840.10040.4.3]
+
+BC: KeyGenerator.HMACDSTU7564-256 -> org.bouncycastle.jcajce.provider.digest.DSTU7564$KeyGenerator256
+  aliases: [HMAC-DSTU7564-256, HMAC/DSTU7564-256, 1.2.804.2.1.1.1.1.2.2.4]
+
+BC: KeyGenerator.HMACDSTU7564-384 -> org.bouncycastle.jcajce.provider.digest.DSTU7564$KeyGenerator384
+  aliases: [HMAC-DSTU7564-384, HMAC/DSTU7564-384, 1.2.804.2.1.1.1.1.2.2.5]
+
+BC: KeyGenerator.Skein-MAC-512-224 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMacKeyGenerator_512_224
+  aliases: [Skein-MAC512/224]
+
+BC: Mac.HMACRIPEMD320 -> org.bouncycastle.jcajce.provider.digest.RIPEMD320$HashMac
+  aliases: [HMAC-RIPEMD320, HMAC/RIPEMD320]
+
+BC: AlgorithmParameters.PKCS12PBE -> org.bouncycastle.jcajce.provider.symmetric.PBEPKCS12$AlgParams
+  aliases: [PBEWITHSHAAND128BITAES-CBC-BC, PBEWITHSHAAND192BITAES-CBC-BC, PBEWITHSHAAND256BITAES-CBC-BC, PBEWITHSHA256AND128BITAES-CBC-BC, PBEWITHSHA256AND192BITAES-CBC-BC, PBEWITHSHA256AND256BITAES-CBC-BC, PBEWITHSHA1AND128BITAES-CBC-BC, PBEWITHSHA1AND192BITAES-CBC-BC, PBEWITHSHA1AND256BITAES-CBC-BC, PBEWITHSHA-1AND128BITAES-CBC-BC, PBEWITHSHA-1AND192BITAES-CBC-BC, PBEWITHSHA-1AND256BITAES-CBC-BC, PBEWITHSHA-256AND128BITAES-CBC-BC, PBEWITHSHA-256AND192BITAES-CBC-BC, PBEWITHSHA-256AND256BITAES-CBC-BC, 1.3.6.1.4.1.22554.1.1.2.1.2, 1.3.6.1.4.1.22554.1.1.2.1.22, 1.3.6.1.4.1.22554.1.1.2.1.42, 1.3.6.1.4.1.22554.1.2.1.2.1.2, 1.3.6.1.4.1.22554.1.2.1.2.1.22, 1.3.6.1.4.1.22554.1.2.1.2.1.42, 1.2.840.113549.1.12.1.1, 1.2.840.113549.1.12.1.2, PBEWITHSHAAND40BITRC4, PBEWITHSHAAND128BITRC4, PBEWITHSHAANDRC4, PBEWITHSHAAND3-KEYTRIPLEDES, PBEWITHSHAAND2-KEYTRIPLEDES, PBEWITHSHAAND3-KEYTRIPLEDES-CBC, PBEWITHSHAAND2-KEYTRIPLEDES-CBC, PBEWITHSHAANDDES3KEY-CBC, PBEWITHSHAANDDES2KEY-CBC, 1.2.840.113549.1.12.1.3, 1.2.840.113549.1.12.1.4, PBEWITHSHAANDIDEA, PBEWITHSHAANDIDEA-CBC, 1.2.840.113549.1.12.1.5, 1.2.840.113549.1.12.1.6, PBEWithSHAAnd3KeyTripleDES, PBEWITHSHA1ANDRC2, PBEWITHSHAANDRC2, PBEWITHSHA1ANDRC2-CBC, PBEWITHSHAAND40BITRC2-CBC, PBEWITHSHAAND128BITRC2-CBC, PBEWITHSHAANDTWOFISH, PBEWITHSHAANDTWOFISH-CBC]
+
+BC: Mac.AES-GMAC -> org.bouncycastle.jcajce.provider.symmetric.AES$AESGMAC
+  aliases: [AESGMAC]
+
+BC: Mac.ZUC-256 -> org.bouncycastle.jcajce.provider.symmetric.Zuc$ZucMac256
+  aliases: [ZUC-256-128]
+
+BC: Signature.SHA224WITHCVC-ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecCVCDSA224
+  aliases: [SHA224withCVC-ECDSA, SHA224WithCVC-ECDSA, SHA224/CVC-ECDSA, 0.4.0.127.0.7.2.2.2.2.2, OID.0.4.0.127.0.7.2.2.2.2.2]
+
+BC: Signature.SHA512WITHECDDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDetDSA512
+  aliases: [SHA512WITHDETECDSA]
+
+BC: KeyGenerator.OID.1.2.392.200011.61.1.1.3.2 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$KeyGen128
+
+BC: KeyGenerator.OID.1.2.392.200011.61.1.1.3.3 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$KeyGen192
+
+BC: KeyAgreement.X448WITHSHA256CKDF -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$X448withSHA256CKDF
+
+BC: KeyGenerator.OID.1.2.392.200011.61.1.1.3.4 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$KeyGen256
+
+BC: Signature.SHA224WITHRSAANDMGF1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA224withRSA
+  aliases: [SHA224withRSA/PSS, SHA224WithRSA/PSS, SHA224withRSASSA-PSS, SHA224WithRSASSA-PSS, SHA224WITHRSASSA-PSS, SHA224withRSAandMGF1, SHA224WithRSAAndMGF1]
+
+BC: Signature.SHA3-512WITHRSAANDSHAKE256 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA3_512withRSAandSHAKE256
+  aliases: [SHA3-512withRSAandSHAKE256, SHA3-512WithRSAAndSHAKE256]
+
+BC: AlgorithmParameters.DESEDE -> org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters
+  aliases: [TDEA, 1.2.840.113549.3.7]
+
+BC: Signature.GOST3411WITHECGOST3410 -> org.bouncycastle.jcajce.provider.asymmetric.ecgost.SignatureSpi
+  aliases: [GOST3411withECGOST3410, GOST3411WithECGOST3410, GOST3411/ECGOST3410, 1.2.643.2.2.3, OID.1.2.643.2.2.3]
+
+BC: Signature.GOST3410 -> org.bouncycastle.jcajce.provider.asymmetric.gost.SignatureSpi
+  aliases: [GOST-3410, GOST-3410-94, GOST3411withGOST3410, GOST3411WITHGOST3410, GOST3411WithGOST3410, 1.2.643.2.2.4]
+
+BC: Signature.SHA512(256)WITHRSAANDSHAKE128 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA512_256withRSAandSHAKE128
+  aliases: [SHA512(256)withRSAandSHAKE128, SHA512(256)WithRSAAndSHAKE128]
+
+BC: Signature.RMD160WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$RIPEMD160
+  aliases: [RMD160withRSA, RMD160WithRSA, RMD160WITHRSAENCRYPTION, RMD160withRSAEncryption, RMD160WithRSAEncryption, RMD160/RSA]
+
+BC: Mac.HMACSkein-256-224 -> org.bouncycastle.jcajce.provider.digest.Skein$HashMac_256_224
+  aliases: [HMAC-Skein-256-224, HMAC/Skein-256-224]
+
+BC: Mac.HMACKECCAK384 -> org.bouncycastle.jcajce.provider.digest.Keccak$HashMac384
+  aliases: [HMAC-KECCAK384, HMAC/KECCAK384]
+
+BC: Signature.RAWRSASSA-PSS -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$nonePSS
+  aliases: [RAWRSAPSS, NONEWITHRSAPSS, NONEWITHRSASSA-PSS, NONEWITHRSAANDMGF1]
+
+BC: Cipher.OID.2.16.840.1.101.3.4.1.44 -> org.bouncycastle.jcajce.provider.symmetric.AES$CFB
+
+BC: Cipher.OID.2.16.840.1.101.3.4.1.41 -> org.bouncycastle.jcajce.provider.symmetric.AES$ECB
+
+BC: Cipher.OID.2.16.840.1.101.3.4.1.42 -> org.bouncycastle.jcajce.provider.symmetric.AES$CBC
+
+BC: Cipher.OID.2.16.840.1.101.3.4.1.43 -> org.bouncycastle.jcajce.provider.symmetric.AES$OFB
+
+BC: Cipher.PBEWITHSHAAND128BITAES-CBC-BC -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithSHA1AESCBC128
+  aliases: [1.3.6.1.4.1.22554.1.1.2.1.2, OID.1.3.6.1.4.1.22554.1.1.2.1.2, PBEWITHSHA1AND128BITAES-CBC-BC, PBEWITHSHA-1AND128BITAES-CBC-BC, PBEWITHSHAAND128BITAES-BC, PBEWITHSHA1AND128BITAES-BC, PBEWITHSHA-1AND128BITAES-BC]
+
+BC: Mac.RC5MAC/CFB8 -> org.bouncycastle.jcajce.provider.symmetric.RC5$CFB8Mac32
+  aliases: [RC5/CFB8]
+
+BC: MessageDigest.HARAKA-256 -> org.bouncycastle.jcajce.provider.digest.Haraka$Digest256
+
+BC: Mac.HMACGOST3411-2012-512 -> org.bouncycastle.jcajce.provider.digest.GOST3411$HashMac2012_512
+  aliases: [HMAC-GOST3411-2012-512, HMAC/GOST3411-2012-512, 1.2.643.7.1.1.4.2]
+
+BC: Mac.DESEDEMAC64WITHISO7816-4PADDING -> org.bouncycastle.jcajce.provider.symmetric.DESede$DESede64with7816d4
+  aliases: [DESEDE64WITHISO7816-4PADDING, DESEDEISO9797ALG1MACWITHISO7816-4PADDING, DESEDEISO9797ALG1WITHISO7816-4PADDING]
+
+BC: KeyGenerator.HMACKECCAK256 -> org.bouncycastle.jcajce.provider.digest.Keccak$KeyGenerator256
+  aliases: [HMAC-KECCAK256, HMAC/KECCAK256]
+
+BC: KeyAgreement.ECGOST3410 -> org.bouncycastle.jcajce.provider.asymmetric.ecgost.KeyAgreementSpi$ECVKO
+  aliases: [1.2.643.2.2.19, GOST-3410-2001, 1.2.643.2.2.96]
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.7.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen512
+
+BC: SecretKeyFactory.CAMELLIA -> org.bouncycastle.jcajce.provider.symmetric.Camellia$KeyFactory
+  aliases: [1.2.392.200011.61.1.1.1.2, OID.1.2.392.200011.61.1.1.1.2, 1.2.392.200011.61.1.1.1.3, OID.1.2.392.200011.61.1.1.1.3, 1.2.392.200011.61.1.1.1.4, OID.1.2.392.200011.61.1.1.1.4]
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.7.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen256
+
+BC: Mac.HMACSkein-256-256 -> org.bouncycastle.jcajce.provider.digest.Skein$HashMac_256_256
+  aliases: [HMAC-Skein-256-256, HMAC/Skein-256-256]
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.7.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen128
+
+BC: Signature.SHA1WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$SHA1
+  aliases: [SHA1withRSA, SHA1WithRSA, SHA1WITHRSAENCRYPTION, SHA1withRSAEncryption, SHA1WithRSAEncryption, SHA1/RSA, 1.2.840.113549.1.1.5, OID.1.2.840.113549.1.1.5, 1.3.14.3.2.29, OID.1.3.14.3.2.29]
+
+BC: Signature.SHA512(256)WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$SHA512_256
+  aliases: [SHA512(256)withRSA, SHA512(256)WithRSA, SHA512(256)WITHRSAENCRYPTION, SHA512(256)withRSAEncryption, SHA512(256)WithRSAEncryption, SHA512(256)/RSA, 1.2.840.113549.1.1.16, OID.1.2.840.113549.1.1.16]
+
+BC: Mac.HMACMD4 -> org.bouncycastle.jcajce.provider.digest.MD4$HashMac
+  aliases: [HMAC-MD4, HMAC/MD4]
+
+BC: Signature.RIPEMD256WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$RIPEMD256
+  aliases: [RIPEMD256withRSA, RIPEMD256WithRSA, RIPEMD256WITHRSAENCRYPTION, RIPEMD256withRSAEncryption, RIPEMD256WithRSAEncryption, RIPEMD256/RSA, 1.3.36.3.3.1.4, OID.1.3.36.3.3.1.4]
+
+BC: SecretKeyFactory.PBKDF2 -> org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF2$PBKDF2withUTF8
+  aliases: [PBKDF2WITHHMACSHA1, PBKDF2WITHHMACSHA1ANDUTF8, 1.2.840.113549.1.5.12]
+
+BC: Mac.HMACMD5 -> org.bouncycastle.jcajce.provider.digest.MD5$HashMac
+  aliases: [HMAC-MD5, HMAC/MD5, 1.3.6.1.5.5.8.1.1]
+
+BC: Cipher.RSA/ISO9796-1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.CipherSpi$ISO9796d1Padding
+  aliases: [RSA//ISO9796-1PADDING]
+
+BC: KeyGenerator.HMACSkein-256-128 -> org.bouncycastle.jcajce.provider.digest.Skein$HMacKeyGenerator_256_128
+  aliases: [HMAC-Skein-256-128, HMAC/Skein-256-128]
+
+BC: Cipher.IES -> org.bouncycastle.jcajce.provider.asymmetric.dh.IESCipher$IES
+
+BC: Cipher.PBEWITHSHA256AND256BITAES-CBC-BC -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithSHA256AESCBC256
+  aliases: [1.3.6.1.4.1.22554.1.2.1.2.1.42, OID.1.3.6.1.4.1.22554.1.2.1.2.1.42, PBEWITHSHA-256AND256BITAES-CBC-BC, PBEWITHSHA256AND256BITAES-BC, PBEWITHSHA-256AND256BITAES-BC]
+
+BC: Signature.SHA3-256WITHRSAANDMGF1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA3_256withRSA
+  aliases: [SHA3-256withRSA/PSS, SHA3-256WithRSA/PSS, SHA3-256withRSASSA-PSS, SHA3-256WithRSASSA-PSS, SHA3-256WITHRSASSA-PSS, SHA3-256withRSAandMGF1, SHA3-256WithRSAAndMGF1]
+
+BC: Signature.SHA512WITHECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDSA512
+  aliases: [SHA512withECDSA, SHA512WithECDSA, SHA512/ECDSA, 1.2.840.10045.4.3.4, OID.1.2.840.10045.4.3.4]
+
+BC: Mac.HMACMD2 -> org.bouncycastle.jcajce.provider.digest.MD2$HashMac
+  aliases: [HMAC-MD2, HMAC/MD2]
+
+BC: Mac.HMACSHA1 -> org.bouncycastle.jcajce.provider.digest.SHA1$HashMac
+  aliases: [HMAC-SHA1, HMAC/SHA1, 1.2.840.113549.2.7, 1.3.6.1.5.5.8.1.2]
+
+BC: Mac.HMACSHA224 -> org.bouncycastle.jcajce.provider.digest.SHA224$HashMac
+  aliases: [HMAC-SHA224, HMAC/SHA224, 1.2.840.113549.2.8]
+
+BC: Mac.HMACSHA256 -> org.bouncycastle.jcajce.provider.digest.SHA256$HashMac
+  aliases: [HMAC-SHA256, HMAC/SHA256, 1.2.840.113549.2.9, 2.16.840.1.101.3.4.2.1]
+
+BC: Mac.RC2MAC/CFB8 -> org.bouncycastle.jcajce.provider.symmetric.RC2$CFB8MAC
+  aliases: [RC2/CFB8]
+
+BC: KeyGenerator.2.16.840.1.101.3.4.2 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: KeyAgreement.DH -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi
+  aliases: [DIFFIEHELLMAN]
+  attributes: {SupportedKeyFormats=PKCS#8|X.509, SupportedKeyClasses=javax.crypto.interfaces.DHPublicKey|javax.crypto.interfaces.DHPrivateKey}
+
+BC: Signature.SHA384WITHDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$dsa384
+  aliases: [SHA384withDSA, SHA384WithDSA, SHA384/DSA, 2.16.840.1.101.3.4.3.3, OID.2.16.840.1.101.3.4.3.3]
+
+BC: MessageDigest.SHAKE128-256 -> org.bouncycastle.jcajce.provider.digest.SHA3$DigestShake128_256
+  aliases: [SHAKE128]
+
+BC: KeyFactory.DH -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyFactorySpi
+  aliases: [DIFFIEHELLMAN, 1.2.840.113549.1.3.1, 1.2.840.10046.2.1]
+
+BC: AlgorithmParameterGenerator.1.3.6.1.4.1.188.7.1.1.2 -> org.bouncycastle.jcajce.provider.symmetric.IDEA$AlgParamGen
+
+BC: KeyGenerator.HMACRIPEMD256 -> org.bouncycastle.jcajce.provider.digest.RIPEMD256$KeyGenerator
+  aliases: [HMAC-RIPEMD256, HMAC/RIPEMD256]
+
+BC: Cipher.SM2WITHSHA384 -> org.bouncycastle.jcajce.provider.asymmetric.ec.GMCipherSpi$SM2withSha384
+  aliases: [1.2.156.10197.1.301.3.2.5]
+
+BC: SecretKeyFactory.PBEWITHHMACTIGER -> org.bouncycastle.jcajce.provider.digest.Tiger$PBEWithMacKeyFactory
+
+BC: SecretKeyFactory.PBEWITHSHAAND192BITAES-CBC-BC -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithSHAAnd192BitAESBC
+  aliases: [PBEWITHSHA1AND192BITAES-CBC-BC, PBEWITHSHA-1AND192BITAES-CBC-BC, 1.3.6.1.4.1.22554.1.1.2.1.22, OID.1.3.6.1.4.1.22554.1.1.2.1.22]
+
+BC: Signature.SHA256WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$SHA256
+  aliases: [SHA256withRSA, SHA256WithRSA, SHA256WITHRSAENCRYPTION, SHA256withRSAEncryption, SHA256WithRSAEncryption, SHA256/RSA, 1.2.840.113549.1.1.11, OID.1.2.840.113549.1.1.11]
+
+BC: Signature.RSASSA-PSS -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$PSSwithRSA
+  aliases: [RSAPSS]
+
+BC: Signature.SHA256WITHCVC-ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecCVCDSA256
+  aliases: [SHA256withCVC-ECDSA, SHA256WithCVC-ECDSA, SHA256/CVC-ECDSA, 0.4.0.127.0.7.2.2.2.2.3, OID.0.4.0.127.0.7.2.2.2.2.3]
+
+BC: KeyGenerator.Skein-MAC-1024-1024 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMacKeyGenerator_1024_1024
+  aliases: [Skein-MAC1024/1024]
+
+BC: Mac.HMACSHA512/224 -> org.bouncycastle.jcajce.provider.digest.SHA512$HashMacT224
+  aliases: [HMAC-SHA512/224, HMAC/SHA512/224]
+
+BC: KeyPairGenerator.X448 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyPairGeneratorSpi$X448
+
+BC: KeyGenerator.HMACSkein-1024-384 -> org.bouncycastle.jcajce.provider.digest.Skein$HMacKeyGenerator_1024_384
+  aliases: [HMAC-Skein-1024-384, HMAC/Skein-1024-384]
+
+BC: SecretKeyFactory.PBEWITHHMACSHA256 -> org.bouncycastle.jcajce.provider.digest.SHA256$PBEWithMacKeyFactory
+  aliases: [PBEWITHHMACSHA-256, 2.16.840.1.101.3.4.2.1]
+
+BC: KeyGenerator.Skein-MAC-512-160 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMacKeyGenerator_512_160
+  aliases: [Skein-MAC512/160]
+
+BC: KeyGenerator.HMACKECCAK224 -> org.bouncycastle.jcajce.provider.digest.Keccak$KeyGenerator224
+  aliases: [HMAC-KECCAK224, HMAC/KECCAK224]
+
+BC: KeyGenerator.Skein-MAC-512-256 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMacKeyGenerator_512_256
+  aliases: [Skein-MAC512/256]
+
+BC: Signature.SHA224WITHDETDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$detDSA224
+
+BC: AlgorithmParameterGenerator.GCM -> org.bouncycastle.jcajce.provider.symmetric.AES$AlgParamGenGCM
+  aliases: [2.16.840.1.101.3.4.1.6, 2.16.840.1.101.3.4.1.26, 2.16.840.1.101.3.4.1.46]
+
+BC: Cipher.PBEWITHMD5ANDRC2 -> org.bouncycastle.jcajce.provider.symmetric.RC2$PBEWithMD5AndRC2
+  aliases: [1.2.840.113549.1.5.6, OID.1.2.840.113549.1.5.6, PBEWITHMD5ANDRC2-CBC]
+
+BC: Signature.SHA3-224WITHDDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$detDSASha3_224
+
+BC: AlgorithmParameterGenerator.CCM -> org.bouncycastle.jcajce.provider.symmetric.AES$AlgParamGenCCM
+  aliases: [2.16.840.1.101.3.4.1.7, 2.16.840.1.101.3.4.1.27, 2.16.840.1.101.3.4.1.47]
+
+BC: AlgorithmParameterGenerator.AES -> org.bouncycastle.jcajce.provider.symmetric.AES$AlgParamGen
+  aliases: [2.16.840.1.101.3.4.2, 2.16.840.1.101.3.4.22, 2.16.840.1.101.3.4.42, 2.16.840.1.101.3.4.1.2, 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.42]
+
+BC: Signature.SHA384WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$SHA384
+  aliases: [SHA384withRSA, SHA384WithRSA, SHA384WITHRSAENCRYPTION, SHA384withRSAEncryption, SHA384WithRSAEncryption, SHA384/RSA, 1.2.840.113549.1.1.12, OID.1.2.840.113549.1.1.12]
+
+BC: Mac.HMACSHA512/256 -> org.bouncycastle.jcajce.provider.digest.SHA512$HashMacT256
+  aliases: [HMAC-SHA512/256, HMAC/SHA512/256]
+
+BC: MessageDigest.SHA-1 -> org.bouncycastle.jcajce.provider.digest.SHA1$Digest
+  aliases: [SHA1, SHA, 1.3.14.3.2.26]
+
+BC: AlgorithmParameterGenerator.ARIACCM -> org.bouncycastle.jcajce.provider.symmetric.ARIA$AlgParamGen
+  aliases: [1.2.410.200046.1.1.37, 1.2.410.200046.1.1.38, 1.2.410.200046.1.1.39]
+
+BC: Mac.HMACSkein-512-128 -> org.bouncycastle.jcajce.provider.digest.Skein$HashMac_512_128
+  aliases: [HMAC-Skein-512-128, HMAC/Skein-512-128]
+
+BC: Cipher.PBEWITHSHAAND2-KEYTRIPLEDES-CBC -> org.bouncycastle.jcajce.provider.symmetric.DESede$PBEWithSHAAndDES2Key
+  aliases: [1.2.840.113549.1.12.1.4, OID.1.2.840.113549.1.12.1.4, PBEWITHSHA1AND2-KEYTRIPLEDES-CBC, PBEWITHSHAAND2-KEYDESEDE-CBC, PBEWITHSHA1AND2-KEYDESEDE-CBC]
+
+BC: Cipher.PBEWITHSHAAND3-KEYTRIPLEDES-CBC -> org.bouncycastle.jcajce.provider.symmetric.DESede$PBEWithSHAAndDES3Key
+  aliases: [1.2.840.113549.1.12.1.3, OID.1.2.840.113549.1.12.1.3, PBEWITHSHA1ANDDESEDE, PBEWITHSHA1AND3-KEYTRIPLEDES-CBC, PBEWITHSHAAND3-KEYDESEDE-CBC, PBEWITHSHA1AND3-KEYDESEDE-CBC, PBEWITHSHA1ANDDESEDE-CBC, PBEWithSHAAnd3KeyTripleDES]
+
+BC: Cipher.PBEWITHSHAAND128BITRC2-CBC -> org.bouncycastle.jcajce.provider.symmetric.RC2$PBEWithSHAAnd128BitRC2
+  aliases: [1.2.840.113549.1.12.1.5, OID.1.2.840.113549.1.12.1.5, PBEWITHSHA1AND128BITRC2-CBC]
+
+BC: SecretKeyFactory.PBEWITHSHAAND128BITRC4 -> org.bouncycastle.jcajce.provider.symmetric.ARC4$PBEWithSHAAnd128BitKeyFactory
+  aliases: [1.2.840.113549.1.12.1.1, OID.1.2.840.113549.1.12.1.1]
+
+BC: Cipher.1.2.410.200004.1.4 -> org.bouncycastle.jcajce.provider.symmetric.SEED$CBC
+
+BC: Mac.IDEAMAC/CFB8 -> org.bouncycastle.jcajce.provider.symmetric.IDEA$CFB8Mac
+  aliases: [IDEA/CFB8]
+
+BC: KeyGenerator.HC256 -> org.bouncycastle.jcajce.provider.symmetric.HC256$KeyGen
+
+BC: Cipher.PBEWITHSHAAND40BITRC4 -> org.bouncycastle.jcajce.provider.symmetric.ARC4$PBEWithSHAAnd40Bit
+  aliases: [PBEWITHSHA1AND40BITRC4, 1.2.840.113549.1.12.1.2, OID.1.2.840.113549.1.12.1.2]
+
+BC: SecretKeyFactory.PBKDF2WITHHMACSHA256 -> org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF2$PBKDF2withSHA256
+
+BC: Cipher.PBEWITHSHAAND128BITRC4 -> org.bouncycastle.jcajce.provider.symmetric.ARC4$PBEWithSHAAnd128Bit
+  aliases: [PBEWITHSHA1AND128BITRC4, 1.2.840.113549.1.12.1.1, OID.1.2.840.113549.1.12.1.1]
+
+BC: Signature.RMD128WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$RIPEMD128
+  aliases: [RMD128withRSA, RMD128WithRSA, RMD128WITHRSAENCRYPTION, RMD128withRSAEncryption, RMD128WithRSAEncryption, RMD128/RSA]
+
+BC: KeyGenerator.POLY1305-ARIA -> org.bouncycastle.jcajce.provider.symmetric.ARIA$Poly1305KeyGen
+  aliases: [POLY1305ARIA]
+
+BC: Signature.ECGOST3410 -> org.bouncycastle.jcajce.provider.asymmetric.ecgost.SignatureSpi
+  aliases: [ECGOST-3410, GOST-3410-2001]
+
+BC: KeyGenerator.HMACRIPEMD320 -> org.bouncycastle.jcajce.provider.digest.RIPEMD320$KeyGenerator
+  aliases: [HMAC-RIPEMD320, HMAC/RIPEMD320]
+
+BC: Cipher.PBEWITHSHA256AND128BITAES-CBC-BC -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithSHA256AESCBC128
+  aliases: [1.3.6.1.4.1.22554.1.2.1.2.1.2, OID.1.3.6.1.4.1.22554.1.2.1.2.1.2, PBEWITHSHA-256AND128BITAES-CBC-BC, PBEWITHSHA256AND128BITAES-BC, PBEWITHSHA-256AND128BITAES-BC]
+
+BC: Mac.ARIA-GMAC -> org.bouncycastle.jcajce.provider.symmetric.ARIA$GMAC
+  aliases: [ARIAGMAC]
+
+BC: Cipher.1.3.14.3.2.7 -> org.bouncycastle.jcajce.provider.symmetric.DES$CBC
+
+BC: Cipher.PBEWITHSHAAND192BITAES-CBC-BC -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithSHA1AESCBC192
+  aliases: [1.3.6.1.4.1.22554.1.1.2.1.22, OID.1.3.6.1.4.1.22554.1.1.2.1.22, PBEWITHSHA1AND192BITAES-CBC-BC, PBEWITHSHA-1AND192BITAES-CBC-BC, PBEWITHSHAAND192BITAES-BC, PBEWITHSHA1AND192BITAES-BC, PBEWITHSHA-1AND192BITAES-BC]
+
+BC: Cipher.SHACAL-2 -> org.bouncycastle.jcajce.provider.symmetric.Shacal2$ECB
+
+BC: KeyGenerator.OID.1.2.410.200004.1.4 -> org.bouncycastle.jcajce.provider.symmetric.SEED$KeyGen
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.3.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CFB128
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.3.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CFB256
+
+BC: SecretKeyFactory.PBKDF2WITHASCII -> org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF2$PBKDF2with8BIT
+  aliases: [PBKDF2WITH8BIT, PBKDF2WITHHMACSHA1AND8BIT]
+
+BC: KeyGenerator.POLY1305-SERPENT -> org.bouncycastle.jcajce.provider.symmetric.Serpent$Poly1305KeyGen
+  aliases: [POLY1305SERPENT]
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.3.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CFB512
+
+BC: KeyFactory.DSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.KeyFactorySpi
+  aliases: [1.2.840.10040.4.1, 1.3.14.3.2.27, 1.2.840.10040.4.3]
+
+BC: KeyGenerator.GOST3412-2015 -> org.bouncycastle.jcajce.provider.symmetric.GOST3412_2015$KeyGen
+
+BC: Signature.SHA3-384WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$SHA3_384
+  aliases: [SHA3-384withRSA, SHA3-384WithRSA, SHA3-384WITHRSAENCRYPTION, SHA3-384withRSAEncryption, SHA3-384WithRSAEncryption, SHA3-384/RSA, 2.16.840.1.101.3.4.3.15, OID.2.16.840.1.101.3.4.3.15]
+
+BC: AlgorithmParameters.OAEP -> org.bouncycastle.jcajce.provider.asymmetric.rsa.AlgorithmParametersSpi$OAEP
+  aliases: [1.2.840.113549.1.1.7]
+
+BC: Signature.SHA3-384WITHRSAANDMGF1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA3_384withRSA
+  aliases: [SHA3-384withRSA/PSS, SHA3-384WithRSA/PSS, SHA3-384withRSASSA-PSS, SHA3-384WithRSASSA-PSS, SHA3-384WITHRSASSA-PSS, SHA3-384withRSAandMGF1, SHA3-384WithRSAAndMGF1]
+
+BC: Cipher.ARC4 -> org.bouncycastle.jcajce.provider.symmetric.ARC4$Base
+  aliases: [1.2.840.113549.3.4, OID.1.2.840.113549.3.4, ARCFOUR, RC4]
+
+BC: KeyGenerator.HMACGOST3411 -> org.bouncycastle.jcajce.provider.digest.GOST3411$KeyGenerator
+  aliases: [HMAC-GOST3411, HMAC/GOST3411, 1.2.643.2.2.9]
+
+BC: Cipher.OID.1.2.840.113549.3.2 -> org.bouncycastle.jcajce.provider.symmetric.RC2$CBC
+
+BC: KeyAgreement.ECCDHUWITHSHA512CKDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHUwithSHA512CKDF
+
+BC: MessageDigest.SHA-512/256 -> org.bouncycastle.jcajce.provider.digest.SHA512$DigestT256
+  aliases: [SHA512/256, SHA512256, SHA-512(256), SHA512(256), 2.16.840.1.101.3.4.2.6]
+
+BC: KeyAgreement.ECMQVWITHSHA1KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$MQVwithSHA1KDF
+
+BC: Cipher.1.2.643.2.2.13.0 -> org.bouncycastle.jcajce.provider.symmetric.GOST28147$GostWrap
+
+BC: Cipher.1.2.643.2.2.13.1 -> org.bouncycastle.jcajce.provider.symmetric.GOST28147$CryptoProWrap
+
+BC: Signature.SHA224WITHECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDSA224
+  aliases: [SHA224withECDSA, SHA224WithECDSA, SHA224/ECDSA, 1.2.840.10045.4.3.1, OID.1.2.840.10045.4.3.1]
+
+BC: AlgorithmParameters.Threefish-256 -> org.bouncycastle.jcajce.provider.symmetric.Threefish$AlgParams_256
+
+BC: KeyGenerator.HMACSHA1 -> org.bouncycastle.jcajce.provider.digest.SHA1$KeyGenerator
+  aliases: [HMAC-SHA1, HMAC/SHA1, 1.2.840.113549.2.7, 1.3.6.1.5.5.8.1.2]
+
+BC: KeyGenerator.Skein-MAC-512-128 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMacKeyGenerator_512_128
+  aliases: [Skein-MAC512/128]
+
+BC: Cipher.OID.1.2.840.113549.3.7 -> org.bouncycastle.jcajce.provider.symmetric.DESede$CBC
+
+BC: Signature.SHA1WITHDDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$detDSA
+
+BC: SecretKeyFactory.PBEWITHSHAAND256BITAES-CBC-BC -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithSHAAnd256BitAESBC
+  aliases: [PBEWITHSHA1AND256BITAES-CBC-BC, PBEWITHSHA-1AND256BITAES-CBC-BC, 1.3.6.1.4.1.22554.1.1.2.1.42, OID.1.3.6.1.4.1.22554.1.1.2.1.42]
+
+BC: KeyPairGenerator.X25519 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyPairGeneratorSpi$X25519
+
+BC: SecretKeyFactory.PBKDF2WITHHMACSHA224 -> org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF2$PBKDF2withSHA224
+
+BC: Signature.SHA1WITHECNR -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecNR
+
+BC: Cipher.ARIAWRAPPAD -> org.bouncycastle.jcajce.provider.symmetric.ARIA$WrapPad
+  aliases: [1.2.410.200046.1.1.43, OID.1.2.410.200046.1.1.43, 1.2.410.200046.1.1.44, OID.1.2.410.200046.1.1.44, 1.2.410.200046.1.1.45, OID.1.2.410.200046.1.1.45, ARIAKWP]
+
+BC: KeyGenerator.HMACSkein-256-256 -> org.bouncycastle.jcajce.provider.digest.Skein$HMacKeyGenerator_256_256
+  aliases: [HMAC-Skein-256-256, HMAC/Skein-256-256]
+
+BC: Cipher.ELGAMAL -> org.bouncycastle.jcajce.provider.asymmetric.elgamal.CipherSpi$NoPadding
+  aliases: [ELGAMAL/NONE/NOPADDING]
+
+BC: SecureRandom.NONCEANDIV -> org.bouncycastle.jcajce.provider.drbg.DRBG$NonceAndIV
+
+BC: AlgorithmParameters.PSS -> org.bouncycastle.jcajce.provider.asymmetric.rsa.AlgorithmParametersSpi$PSS
+  aliases: [RSAPSS, RSASSA-PSS, SHA224withRSA/PSS, SHA256withRSA/PSS, SHA384withRSA/PSS, SHA512withRSA/PSS, SHA224WITHRSAANDMGF1, SHA256WITHRSAANDMGF1, SHA384WITHRSAANDMGF1, SHA512WITHRSAANDMGF1, SHA3-224WITHRSAANDMGF1, SHA3-256WITHRSAANDMGF1, SHA3-384WITHRSAANDMGF1, SHA3-512WITHRSAANDMGF1, RAWRSAPSS, NONEWITHRSAPSS, NONEWITHRSASSA-PSS, NONEWITHRSAANDMGF1, 1.2.840.113549.1.1.10, SHA1withRSA/PSS, SHA1WITHRSAANDMGF1]
+
+BC: Mac.HMACSkein-512-160 -> org.bouncycastle.jcajce.provider.digest.Skein$HashMac_512_160
+  aliases: [HMAC-Skein-512-160, HMAC/Skein-512-160]
+
+BC: KeyAgreement.X25519 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$X25519
+
+BC: KeyGenerator.HMACMD5 -> org.bouncycastle.jcajce.provider.digest.MD5$KeyGenerator
+  aliases: [HMAC-MD5, HMAC/MD5, 1.3.6.1.5.5.8.1.1]
+
+BC: KeyFactory.EC -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyFactorySpi$EC
+  aliases: [1.2.840.10045.2.1, 1.3.133.16.840.63.0.3, 1.3.132.1.11.0, 1.3.132.1.14.0, 1.3.132.1.11.1, 1.3.132.1.14.1, 1.3.132.1.11.2, 1.3.132.1.14.2, 1.3.132.1.11.3, 1.3.132.1.14.3, 1.3.133.16.840.63.0.2]
+
+BC: KeyGenerator.HMACMD2 -> org.bouncycastle.jcajce.provider.digest.MD2$KeyGenerator
+  aliases: [HMAC-MD2, HMAC/MD2]
+
+BC: SecretKeyFactory.PBEWITHHMACRIPEMD160 -> org.bouncycastle.jcajce.provider.digest.RIPEMD160$PBEWithHmacKeyFactory
+
+BC: KeyGenerator.HMACMD4 -> org.bouncycastle.jcajce.provider.digest.MD4$KeyGenerator
+  aliases: [HMAC-MD4, HMAC/MD4]
+
+BC: MessageDigest.SHA-256 -> org.bouncycastle.jcajce.provider.digest.SHA256$Digest
+  aliases: [SHA256, 2.16.840.1.101.3.4.2.1]
+
+BC: KeyGenerator.GOST28147 -> org.bouncycastle.jcajce.provider.symmetric.GOST28147$KeyGen
+  aliases: [GOST, GOST-28147, 1.2.643.2.2.21]
+
+BC: MessageDigest.BLAKE2S-160 -> org.bouncycastle.jcajce.provider.digest.Blake2s$Blake2s160
+  aliases: [1.3.6.1.4.1.1722.12.2.2.5]
+
+BC: KeyGenerator.Skein-MAC-1024-384 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMacKeyGenerator_1024_384
+  aliases: [Skein-MAC1024/384]
+
+BC: MessageDigest.BLAKE2S-128 -> org.bouncycastle.jcajce.provider.digest.Blake2s$Blake2s128
+  aliases: [1.3.6.1.4.1.1722.12.2.2.4]
+
+BC: Signature.SHA224WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$SHA224
+  aliases: [SHA224withRSA, SHA224WithRSA, SHA224WITHRSAENCRYPTION, SHA224withRSAEncryption, SHA224WithRSAEncryption, SHA224/RSA, 1.2.840.113549.1.1.14, OID.1.2.840.113549.1.1.14]
+
+BC: MessageDigest.BLAKE2S-256 -> org.bouncycastle.jcajce.provider.digest.Blake2s$Blake2s256
+  aliases: [1.3.6.1.4.1.1722.12.2.2.8]
+
+BC: MessageDigest.BLAKE2S-224 -> org.bouncycastle.jcajce.provider.digest.Blake2s$Blake2s224
+  aliases: [1.3.6.1.4.1.1722.12.2.2.7]
+
+BC: SecretKeyFactory.PBEWITHMD2ANDDES -> org.bouncycastle.jcajce.provider.symmetric.DES$PBEWithMD2KeyFactory
+  aliases: [PBEWITHMD2ANDDES-CBC, 1.2.840.113549.1.5.1]
+
+BC: Cipher.ELGAMAL/PKCS1 -> org.bouncycastle.jcajce.provider.asymmetric.elgamal.CipherSpi$PKCS1v1_5Padding
+  aliases: [ELGAMAL/ECB/PKCS1PADDING, ELGAMAL/NONE/PKCS1PADDING]
+
+BC: KeyGenerator.SEED-GMAC -> org.bouncycastle.jcajce.provider.symmetric.SEED$KeyGen
+  aliases: [SEEDGMAC]
+
+BC: Signature.SHAKE256WITHRSAPSS -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHAKE256WithRSAPSS
+  aliases: [SHAKE256withRSA/PSS, SHAKE256WithRSA/PSS, SHAKE256withRSASSA-PSS, SHAKE256WithRSASSA-PSS, SHAKE256WITHRSASSA-PSS]
+
+BC: MessageDigest.GOST3411-2012-512 -> org.bouncycastle.jcajce.provider.digest.GOST3411$Digest2012_512
+  aliases: [GOST-2012-512, GOST-3411-2012-512, 1.2.643.7.1.1.2.3]
+
+BC: KeyAgreement.DHUWITHSHA256CKDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHUwithSHA256CKDF
+
+BC: SecretKeyFactory.PBEWITHSHA1ANDRC2 -> org.bouncycastle.jcajce.provider.symmetric.RC2$PBEWithSHA1KeyFactory
+  aliases: [PBEWITHSHA1ANDRC2-CBC, 1.2.840.113549.1.5.11, OID.1.2.840.113549.1.5.11]
+
+BC: KeyGenerator.HMACSHA384 -> org.bouncycastle.jcajce.provider.digest.SHA384$KeyGenerator
+  aliases: [HMAC-SHA384, HMAC/SHA384, 1.2.840.113549.2.10]
+
+BC: KeyGenerator.2.16.840.1.101.3.4.22 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: Signature.RSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$noneRSA
+  aliases: [RAWRSA, NONEWITHRSA]
+
+BC: Mac.Twofish-GMAC -> org.bouncycastle.jcajce.provider.symmetric.Twofish$GMAC
+  aliases: [TwofishGMAC]
+
+BC: Mac.TNEPRES-GMAC -> org.bouncycastle.jcajce.provider.symmetric.Serpent$TSerpentGMAC
+  aliases: [TNEPRESGMAC]
+
+BC: KeyFactory.RSASSA-PSS -> org.bouncycastle.jcajce.provider.asymmetric.rsa.KeyFactorySpi
+
+BC: KeyAgreement.ECKAEGWITHSHA256KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithSHA256KDF
+
+BC: KeyFactory.ED25519 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyFactorySpi$Ed25519
+
+BC: Signature.GOST3411-2012-512WITHECGOST3410-2012-512 -> org.bouncycastle.jcajce.provider.asymmetric.ecgost12.ECGOST2012SignatureSpi512
+  aliases: [GOST3411-2012-512withECGOST3410-2012-512, GOST3411-2012-512WithECGOST3410-2012-512, GOST3411-2012-512/ECGOST3410-2012-512, 1.2.643.7.1.1.3.3, OID.1.2.643.7.1.1.3.3]
+
+BC: Signature.GOST3411-2012-256WITHECGOST3410-2012-256 -> org.bouncycastle.jcajce.provider.asymmetric.ecgost12.ECGOST2012SignatureSpi256
+  aliases: [GOST3411-2012-256withECGOST3410-2012-256, GOST3411-2012-256WithECGOST3410-2012-256, GOST3411-2012-256/ECGOST3410-2012-256, 1.2.643.7.1.1.3.2, OID.1.2.643.7.1.1.3.2]
+
+BC: Mac.Skein-MAC-512-224 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMac_512_224
+  aliases: [Skein-MAC512/224]
+
+BC: Cipher.PBEWITHSHA1ANDDES -> org.bouncycastle.jcajce.provider.symmetric.DES$PBEWithSHA1
+  aliases: [1.2.840.113549.1.5.10, OID.1.2.840.113549.1.5.10, PBEWITHSHA1ANDDES-CBC]
+
+BC: SecretKeyFactory.PBEWITHSHAAND128BITRC2-CBC -> org.bouncycastle.jcajce.provider.symmetric.RC2$PBEWithSHAAnd128BitKeyFactory
+  aliases: [1.2.840.113549.1.12.1.5]
+
+BC: KeyAgreement.MQVWITHSHA512CKDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$MQVwithSHA512CKDF
+
+BC: Mac.SIPHASH128-2-4 -> org.bouncycastle.jcajce.provider.symmetric.SipHash128$Mac24
+  aliases: [SIPHASH128]
+
+BC: KeyGenerator.Skein-MAC-1024-512 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMacKeyGenerator_1024_512
+  aliases: [Skein-MAC1024/512]
+
+BC: Mac.HMACSHA3-256 -> org.bouncycastle.jcajce.provider.digest.SHA3$HashMac256
+  aliases: [HMAC-SHA3-256, HMAC/SHA3-256, 2.16.840.1.101.3.4.2.14]
+
+BC: KeyGenerator.CHACHA7539 -> org.bouncycastle.jcajce.provider.symmetric.ChaCha$KeyGen7539
+  aliases: [CHACHA20, CHACHA20-POLY1305, 1.2.840.113549.1.9.16.3.18]
+
+BC: AlgorithmParameterGenerator.ARIAGCM -> org.bouncycastle.jcajce.provider.symmetric.ARIA$AlgParamGen
+  aliases: [1.2.410.200046.1.1.34, 1.2.410.200046.1.1.35, 1.2.410.200046.1.1.36]
+
+BC: KeyAgreement.ECKAEGWITHSHA224KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithSHA224KDF
+
+BC: Mac.AESCCMMAC -> org.bouncycastle.jcajce.provider.symmetric.AES$AESCCMMAC
+  aliases: [2.16.840.1.101.3.4.1.7, 2.16.840.1.101.3.4.1.27, 2.16.840.1.101.3.4.1.47]
+
+BC: KeyGenerator.RC5-64 -> org.bouncycastle.jcajce.provider.symmetric.RC5$KeyGen64
+
+BC: KeyGenerator.CAST5 -> org.bouncycastle.jcajce.provider.symmetric.CAST5$KeyGen
+  aliases: [1.2.840.113533.7.66.10, OID.1.2.840.113533.7.66.10]
+
+BC: KeyAgreement.OID.1.3.132.1.11.0 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA224KDFAndSharedInfo
+
+BC: KeyFactory.ECGOST3410 -> org.bouncycastle.jcajce.provider.asymmetric.ecgost.KeyFactorySpi
+  aliases: [GOST-3410-2001, ECGOST-3410, 1.2.643.2.2.19, 1.2.643.2.2.98]
+
+BC: MessageDigest.SHA-512 -> org.bouncycastle.jcajce.provider.digest.SHA512$Digest
+  aliases: [SHA512, 2.16.840.1.101.3.4.2.3]
+
+BC: Cipher.PBEWITHSHAAND256BITAES-CBC-BC -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithSHA1AESCBC256
+  aliases: [1.3.6.1.4.1.22554.1.1.2.1.42, OID.1.3.6.1.4.1.22554.1.1.2.1.42, PBEWITHSHA1AND256BITAES-CBC-BC, PBEWITHSHA-1AND256BITAES-CBC-BC, PBEWITHSHAAND256BITAES-BC, PBEWITHSHA1AND256BITAES-BC, PBEWITHSHA-1AND256BITAES-BC]
+
+BC: KeyGenerator.CAST6 -> org.bouncycastle.jcajce.provider.symmetric.CAST6$KeyGen
+
+BC: KeyGenerator.2.16.840.1.101.3.4.42 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: Mac.OLDHMACSHA384 -> org.bouncycastle.jcajce.provider.digest.SHA384$OldSHA384
+
+BC: KeyAgreement.OID.1.3.132.1.11.3 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA512KDFAndSharedInfo
+
+BC: KeyAgreement.OID.1.3.132.1.11.2 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA384KDFAndSharedInfo
+
+BC: KeyAgreement.OID.1.3.132.1.11.1 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA256KDFAndSharedInfo
+
+BC: MessageDigest.DSTU7564-384 -> org.bouncycastle.jcajce.provider.digest.DSTU7564$Digest384
+
+BC: KeyFactory.GOST3410 -> org.bouncycastle.jcajce.provider.asymmetric.gost.KeyFactorySpi
+  aliases: [GOST-3410, GOST-3410-94, 1.2.643.2.2.20]
+
+BC: Signature.SHA3-224WITHPLAIN-ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecCVCDSA3_224
+  aliases: [SHA3-224withPLAIN-ECDSA, SHA3-224WithPLAIN-ECDSA, SHA3-224/PLAIN-ECDSA, 0.4.0.127.0.7.1.1.4.1.8, OID.0.4.0.127.0.7.1.1.4.1.8]
+
+BC: Signature.SHA3-256WITHPLAIN-ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecCVCDSA3_256
+  aliases: [SHA3-256withPLAIN-ECDSA, SHA3-256WithPLAIN-ECDSA, SHA3-256/PLAIN-ECDSA, 0.4.0.127.0.7.1.1.4.1.9, OID.0.4.0.127.0.7.1.1.4.1.9]
+
+BC: Signature.SHA384WITHPLAIN-ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecCVCDSA384
+  aliases: [SHA384withPLAIN-ECDSA, SHA384WithPLAIN-ECDSA, SHA384/PLAIN-ECDSA, 0.4.0.127.0.7.1.1.4.1.4, OID.0.4.0.127.0.7.1.1.4.1.4]
+
+BC: Signature.SHA256WITHPLAIN-ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecCVCDSA256
+  aliases: [SHA256withPLAIN-ECDSA, SHA256WithPLAIN-ECDSA, SHA256/PLAIN-ECDSA, 0.4.0.127.0.7.1.1.4.1.3, OID.0.4.0.127.0.7.1.1.4.1.3]
+
+BC: Signature.RIPEMD160WITHPLAIN-ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecPlainDSARP160
+  aliases: [RIPEMD160withPLAIN-ECDSA, RIPEMD160WithPLAIN-ECDSA, RIPEMD160/PLAIN-ECDSA, 0.4.0.127.0.7.1.1.4.1.6, OID.0.4.0.127.0.7.1.1.4.1.6]
+
+BC: KeyGenerator.RC5 -> org.bouncycastle.jcajce.provider.symmetric.RC5$KeyGen32
+  aliases: [RC5-32]
+
+BC: Signature.SHA512WITHPLAIN-ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecCVCDSA512
+  aliases: [SHA512withPLAIN-ECDSA, SHA512WithPLAIN-ECDSA, SHA512/PLAIN-ECDSA, 0.4.0.127.0.7.1.1.4.1.5, OID.0.4.0.127.0.7.1.1.4.1.5]
+
+BC: Signature.SHA224WITHPLAIN-ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecCVCDSA224
+  aliases: [SHA224withPLAIN-ECDSA, SHA224WithPLAIN-ECDSA, SHA224/PLAIN-ECDSA, 0.4.0.127.0.7.1.1.4.1.2, OID.0.4.0.127.0.7.1.1.4.1.2]
+
+BC: Signature.SHA1WITHPLAIN-ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecCVCDSA
+  aliases: [SHA1withPLAIN-ECDSA, SHA1WithPLAIN-ECDSA, SHA1/PLAIN-ECDSA, 0.4.0.127.0.7.1.1.4.1.1, OID.0.4.0.127.0.7.1.1.4.1.1]
+
+BC: KeyGenerator.SERPENT-GMAC -> org.bouncycastle.jcajce.provider.symmetric.Serpent$KeyGen
+  aliases: [SERPENTGMAC]
+
+BC: Cipher.OID.1.2.410.200046.1.1.4 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$OFB
+
+BC: Cipher.OID.1.2.410.200046.1.1.2 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$CBC
+
+BC: Cipher.OID.1.2.410.200046.1.1.3 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$CFB
+
+BC: Cipher.OID.1.2.410.200046.1.1.8 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$CFB
+
+BC: AlgorithmParameterGenerator.CAMELLIA -> org.bouncycastle.jcajce.provider.symmetric.Camellia$AlgParamGen
+  aliases: [1.2.392.200011.61.1.1.1.2, OID.1.2.392.200011.61.1.1.1.2, 1.2.392.200011.61.1.1.1.3, OID.1.2.392.200011.61.1.1.1.3, 1.2.392.200011.61.1.1.1.4, OID.1.2.392.200011.61.1.1.1.4]
+
+BC: Cipher.GOST28147 -> org.bouncycastle.jcajce.provider.symmetric.GOST28147$ECB
+  aliases: [GOST, GOST-28147]
+
+BC: Cipher.OID.1.2.410.200046.1.1.9 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$OFB
+
+BC: Cipher.OID.1.2.410.200046.1.1.6 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$ECB
+
+BC: Cipher.OID.1.2.410.200046.1.1.7 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$CBC
+
+BC: Mac.POLY1305 -> org.bouncycastle.jcajce.provider.symmetric.Poly1305$Mac
+
+BC: Cipher.OID.1.2.410.200046.1.1.1 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$ECB
+
+BC: KeyStore.PKCS12-DEF-3DES-40RC2 -> org.bouncycastle.jcajce.provider.keystore.pkcs12.PKCS12KeyStoreSpi$DefPKCS12KeyStore
+
+BC: Signature.SHA512(224)WITHRSA/ISO9796-2 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.ISOSignatureSpi$SHA512_224WithRSAEncryption
+  aliases: [SHA512(224)withRSA/ISO9796-2, SHA512(224)WithRSA/ISO9796-2]
+
+BC: AlgorithmParameterGenerator.ARIA -> org.bouncycastle.jcajce.provider.symmetric.ARIA$AlgParamGen
+  aliases: [1.2.410.200046.1.1.2, OID.1.2.410.200046.1.1.2, 1.2.410.200046.1.1.7, OID.1.2.410.200046.1.1.7, 1.2.410.200046.1.1.12, OID.1.2.410.200046.1.1.12, 1.2.410.200046.1.1.4, OID.1.2.410.200046.1.1.4, 1.2.410.200046.1.1.9, OID.1.2.410.200046.1.1.9, 1.2.410.200046.1.1.14, OID.1.2.410.200046.1.1.14, 1.2.410.200046.1.1.3, OID.1.2.410.200046.1.1.3, 1.2.410.200046.1.1.8, OID.1.2.410.200046.1.1.8, 1.2.410.200046.1.1.13, OID.1.2.410.200046.1.1.13]
+
+BC: Mac.Skein-MAC-512-256 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMac_512_256
+  aliases: [Skein-MAC512/256]
+
+BC: AlgorithmParameters.ZUC-128 -> org.bouncycastle.jcajce.provider.symmetric.Zuc$AlgParams
+
+BC: Mac.HMACSkein-1024-384 -> org.bouncycastle.jcajce.provider.digest.Skein$HashMac_1024_384
+  aliases: [HMAC-Skein-1024-384, HMAC/Skein-1024-384]
+
+BC: MessageDigest.SHA3-224 -> org.bouncycastle.jcajce.provider.digest.SHA3$Digest224
+
+BC: SecretKeyFactory.PBKDF2WITHHMACSHA3-384 -> org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF2$PBKDF2withSHA3_384
+
+BC: KeyGenerator.ZUC-256 -> org.bouncycastle.jcajce.provider.symmetric.Zuc$KeyGen256
+
+BC: KeyPairGenerator.RSASSA-PSS -> org.bouncycastle.jcajce.provider.asymmetric.rsa.KeyPairGeneratorSpi$PSS
+
+BC: KeyStore.PKCS12-DEF-3DES-3DES -> org.bouncycastle.jcajce.provider.keystore.pkcs12.PKCS12KeyStoreSpi$DefPKCS12KeyStore3DES
+
+BC: SecretKeyFactory.PBEWITHMD5ANDRC2 -> org.bouncycastle.jcajce.provider.symmetric.RC2$PBEWithMD5KeyFactory
+  aliases: [PBEWITHMD5ANDRC2-CBC, 1.2.840.113549.1.5.6, OID.1.2.840.113549.1.5.6]
+
+BC: SecretKeyFactory.PBKDF2WITHHMACGOST3411 -> org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF2$PBKDF2withGOST3411
+
+BC: Signature.SHAKE256WITHECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDSAShake256
+  aliases: [SHAKE256withECDSA, SHAKE256WithECDSA, SHAKE256/ECDSA, 1.3.6.1.5.5.7.6.33, OID.1.3.6.1.5.5.7.6.33]
+
+BC: KeyAgreement.MQVWITHSHA384CKDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$MQVwithSHA384CKDF
+
+BC: Signature.SHAKE128WITHECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDSAShake128
+  aliases: [SHAKE128withECDSA, SHAKE128WithECDSA, SHAKE128/ECDSA, 1.3.6.1.5.5.7.6.32, OID.1.3.6.1.5.5.7.6.32]
+
+BC: Signature.1.3.6.1.5.5.7.6.31 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHAKE256WithRSAPSS
+
+BC: KeyFactory.ECGOST3410-2012 -> org.bouncycastle.jcajce.provider.asymmetric.ecgost12.KeyFactorySpi
+  aliases: [GOST-3410-2012, ECGOST-3410-2012, 1.2.643.7.1.1.1.1, 1.2.643.7.1.1.6.1, 1.2.643.7.1.1.1.2, 1.2.643.7.1.1.6.2]
+
+BC: Signature.1.3.6.1.5.5.7.6.30 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHAKE128WithRSAPSS
+
+BC: Mac.HMACRIPEMD128 -> org.bouncycastle.jcajce.provider.digest.RIPEMD128$HashMac
+  aliases: [HMAC-RIPEMD128, HMAC/RIPEMD128]
+
+BC: KeyPairGenerator.DH -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyPairGeneratorSpi
+  aliases: [DIFFIEHELLMAN, 1.2.840.113549.1.3.1, 1.2.840.10046.2.1]
+
+BC: Mac.HMACDSTU7564-512 -> org.bouncycastle.jcajce.provider.digest.DSTU7564$HashMac512
+  aliases: [HMAC-DSTU7564-512, HMAC/DSTU7564-512, 1.2.804.2.1.1.1.1.2.2.6]
+
+BC: Signature.SHA512WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$SHA512
+  aliases: [SHA512withRSA, SHA512WithRSA, SHA512WITHRSAENCRYPTION, SHA512withRSAEncryption, SHA512WithRSAEncryption, SHA512/RSA, 1.2.840.113549.1.1.13, OID.1.2.840.113549.1.1.13]
+
+BC: Mac.HMACSHA3-384 -> org.bouncycastle.jcajce.provider.digest.SHA3$HashMac384
+  aliases: [HMAC-SHA3-384, HMAC/SHA3-384, 2.16.840.1.101.3.4.2.15]
+
+BC: KeyGenerator.CAST6-GMAC -> org.bouncycastle.jcajce.provider.symmetric.CAST6$KeyGen
+  aliases: [CAST6GMAC]
+
+BC: KeyGenerator.1.2.410.200046.1.1.9 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen192
+
+BC: KeyGenerator.1.2.410.200046.1.1.8 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen192
+
+BC: KeyPairGenerator.ECGOST3410 -> org.bouncycastle.jcajce.provider.asymmetric.ecgost.KeyPairGeneratorSpi
+  aliases: [1.2.643.2.2.19, 1.2.643.2.2.98, ECGOST-3410, GOST-3410-2001]
+
+BC: KeyGenerator.1.2.410.200046.1.1.7 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen192
+
+BC: KeyFactory.X.509 -> org.bouncycastle.jcajce.provider.asymmetric.x509.KeyFactory
+  aliases: [X509]
+
+BC: KeyAgreement.MQVWITHSHA384KDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$MQVwithSHA384KDF
+
+BC: Mac.HMACGOST3411 -> org.bouncycastle.jcajce.provider.digest.GOST3411$HashMac
+  aliases: [HMAC-GOST3411, HMAC/GOST3411, 1.2.643.2.2.9]
+
+BC: KeyGenerator.1.2.410.200046.1.1.2 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen128
+
+BC: Mac.HMACSHA3-224 -> org.bouncycastle.jcajce.provider.digest.SHA3$HashMac224
+  aliases: [HMAC-SHA3-224, HMAC/SHA3-224, 2.16.840.1.101.3.4.2.13]
+
+BC: KeyGenerator.1.2.410.200046.1.1.1 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen128
+
+BC: Signature.RIPEMD160WITHECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDSARipeMD160
+  aliases: [RIPEMD160withECDSA, RIPEMD160WithECDSA, RIPEMD160/ECDSA, 1.3.36.3.3.2.2, OID.1.3.36.3.3.2.2]
+
+BC: KeyGenerator.1.2.410.200046.1.1.6 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen192
+
+BC: KeyGenerator.1.2.410.200046.1.1.4 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen128
+
+BC: KeyGenerator.1.2.410.200046.1.1.3 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen128
+
+BC: Signature.SHA512(224)WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$SHA512_224
+  aliases: [SHA512(224)withRSA, SHA512(224)WithRSA, SHA512(224)WITHRSAENCRYPTION, SHA512(224)withRSAEncryption, SHA512(224)WithRSAEncryption, SHA512(224)/RSA, 1.2.840.113549.1.1.15, OID.1.2.840.113549.1.1.15]
+
+BC: Signature.SHA256WITHRSAANDSHAKE256 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA256withRSAandSHAKE256
+  aliases: [SHA256withRSAandSHAKE256, SHA256WithRSAAndSHAKE256]
+
+BC: Cipher.PBEWITHSHA256AND192BITAES-CBC-BC -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithSHA256AESCBC192
+  aliases: [1.3.6.1.4.1.22554.1.2.1.2.1.22, OID.1.3.6.1.4.1.22554.1.2.1.2.1.22, PBEWITHSHA-256AND192BITAES-CBC-BC, PBEWITHSHA256AND192BITAES-BC, PBEWITHSHA-256AND192BITAES-BC]
+
+BC: Signature.SHA224WITHDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$dsa224
+  aliases: [SHA224withDSA, SHA224WithDSA, SHA224/DSA, 2.16.840.1.101.3.4.3.1, OID.2.16.840.1.101.3.4.3.1]
+
+BC: Cipher.PBEWITHSHA1ANDRC2 -> org.bouncycastle.jcajce.provider.symmetric.RC2$PBEWithSHA1AndRC2
+  aliases: [1.2.840.113549.1.5.11, OID.1.2.840.113549.1.5.11, PBEWITHSHAANDRC2-CBC, PBEWITHSHA1ANDRC2-CBC]
+
+BC: KeyGenerator.Skein-MAC-512-512 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMacKeyGenerator_512_512
+  aliases: [Skein-MAC512/512]
+
+BC: Mac.POLY1305-CAMELLIA -> org.bouncycastle.jcajce.provider.symmetric.Camellia$Poly1305
+  aliases: [POLY1305CAMELLIA]
+
+BC: KeyFactory.RSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.KeyFactorySpi
+  aliases: [1.2.840.113549.1.1.1, 2.5.8.1.1, 1.2.840.113549.1.1.7, 1.2.840.113549.1.1.10]
+
+BC: Mac.Skein-MAC-256-160 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMac_256_160
+  aliases: [Skein-MAC256/160]
+
+BC: Cipher.ECIESwithSHA384andAES-CBC -> org.bouncycastle.jcajce.provider.asymmetric.ec.IESCipher$ECIESwithSHA384andAESCBC
+
+BC: KeyPairGenerator.GOST3410 -> org.bouncycastle.jcajce.provider.asymmetric.gost.KeyPairGeneratorSpi
+  aliases: [GOST-3410, GOST-3410-94, 1.2.643.2.2.20]
+
+BC: Cipher.PBEWITHMD2ANDDES -> org.bouncycastle.jcajce.provider.symmetric.DES$PBEWithMD2
+  aliases: [1.2.840.113549.1.5.1, OID.1.2.840.113549.1.5.1, PBEWITHMD2ANDDES-CBC]
+
+BC: Cipher.PBEWITHMD5ANDDES -> org.bouncycastle.jcajce.provider.symmetric.DES$PBEWithMD5
+  aliases: [1.2.840.113549.1.5.3, OID.1.2.840.113549.1.5.3, PBEWITHMD5ANDDES-CBC]
+
+BC: KeyAgreement.MQVWITHSHA256KDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$MQVwithSHA256KDF
+
+BC: KeyPairGenerator.DSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.KeyPairGeneratorSpi
+  aliases: [1.2.840.10040.4.1, 1.3.14.3.2.27, 1.2.840.10040.4.3]
+
+BC: Mac.HMACDSTU7564-384 -> org.bouncycastle.jcajce.provider.digest.DSTU7564$HashMac384
+  aliases: [HMAC-DSTU7564-384, HMAC/DSTU7564-384, 1.2.804.2.1.1.1.1.2.2.5]
+
+BC: Cipher.DSTU7624KW -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$Wrap
+  aliases: [DSTU7624WRAP]
+
+BC: Cipher.Grainv1 -> org.bouncycastle.jcajce.provider.symmetric.Grainv1$Base
+
+BC: Mac.Threefish-256CMAC -> org.bouncycastle.jcajce.provider.symmetric.Threefish$CMAC_256
+
+BC: KeyGenerator.POLY1305-SEED -> org.bouncycastle.jcajce.provider.symmetric.SEED$Poly1305KeyGen
+  aliases: [POLY1305SEED]
+
+BC: Cipher.AES -> org.bouncycastle.jcajce.provider.symmetric.AES$ECB
+  aliases: [2.16.840.1.101.3.4.2, 2.16.840.1.101.3.4.22, 2.16.840.1.101.3.4.42]
+  attributes: {SupportedKeyFormats=RAW, SupportedKeyClasses=javax.crypto.SecretKey}
+
+BC: Mac.Skein-MAC-256-224 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMac_256_224
+  aliases: [Skein-MAC256/224]
+
+BC: Cipher.1.2.643.2.2.21 -> org.bouncycastle.jcajce.provider.symmetric.GOST28147$GCFB
+
+BC: KeyGenerator.HMACSkein-512-256 -> org.bouncycastle.jcajce.provider.digest.Skein$HMacKeyGenerator_512_256
+  aliases: [HMAC-Skein-512-256, HMAC/Skein-512-256]
+
+BC: AlgorithmParameters.SALSA20 -> org.bouncycastle.jcajce.provider.symmetric.Salsa20$AlgParams
+
+BC: MessageDigest.GOST3411 -> org.bouncycastle.jcajce.provider.digest.GOST3411$Digest
+  aliases: [GOST, GOST-3411, 1.2.643.2.2.9]
+
+BC: Cipher.OID.1.2.392.200011.61.1.1.1.3 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$CBC
+
+BC: Cipher.OID.1.2.392.200011.61.1.1.1.4 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$CBC
+
+BC: MessageDigest.RIPEMD256 -> org.bouncycastle.jcajce.provider.digest.RIPEMD256$Digest
+  aliases: [1.3.36.3.2.3]
+
+BC: Signature.SHA3-384WITHDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$dsaSha3_384
+  aliases: [SHA3-384withDSA, SHA3-384WithDSA, SHA3-384/DSA, 2.16.840.1.101.3.4.3.7, OID.2.16.840.1.101.3.4.3.7]
+
+BC: Signature.SHA3-512WITHDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$dsaSha3_512
+  aliases: [SHA3-512withDSA, SHA3-512WithDSA, SHA3-512/DSA, 2.16.840.1.101.3.4.3.8, OID.2.16.840.1.101.3.4.3.8]
+
+BC: Signature.SHA3-224WITHECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDSASha3_224
+  aliases: [SHA3-224withECDSA, SHA3-224WithECDSA, SHA3-224/ECDSA, 2.16.840.1.101.3.4.3.9, OID.2.16.840.1.101.3.4.3.9]
+
+BC: Signature.SHA384WITHCVC-ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecCVCDSA384
+  aliases: [SHA384withCVC-ECDSA, SHA384WithCVC-ECDSA, SHA384/CVC-ECDSA, 0.4.0.127.0.7.2.2.2.2.4, OID.0.4.0.127.0.7.2.2.2.2.4]
+
+BC: X509Store.ATTRIBUTECERTIFICATE/COLLECTION -> org.bouncycastle.jce.provider.X509StoreAttrCertCollection
+
+BC: KeyPairGenerator.ECGOST3410-2012 -> org.bouncycastle.jcajce.provider.asymmetric.ecgost12.KeyPairGeneratorSpi
+  aliases: [1.2.643.7.1.1.1.1, 1.2.643.7.1.1.6.1, 1.2.643.7.1.1.1.2, 1.2.643.7.1.1.6.2, ECGOST3410-2012, GOST-3410-2012]
+
+BC: AlgorithmParameters.CAST5 -> org.bouncycastle.jcajce.provider.symmetric.CAST5$AlgParams
+  aliases: [1.2.840.113533.7.66.10]
+
+BC: Signature.SHA512WITHDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$dsa512
+  aliases: [SHA512withDSA, SHA512WithDSA, SHA512/DSA, 2.16.840.1.101.3.4.3.4, OID.2.16.840.1.101.3.4.3.4]
+
+BC: Signature.SHA3-224WITHDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$dsaSha3_224
+  aliases: [SHA3-224withDSA, SHA3-224WithDSA, SHA3-224/DSA, 2.16.840.1.101.3.4.3.5, OID.2.16.840.1.101.3.4.3.5]
+
+BC: AlgorithmParameters.AES -> org.bouncycastle.jcajce.provider.symmetric.AES$AlgParams
+  aliases: [2.16.840.1.101.3.4.2, 2.16.840.1.101.3.4.22, 2.16.840.1.101.3.4.42, 2.16.840.1.101.3.4.1.2, 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.42]
+
+BC: Signature.SHA3-256WITHDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$dsaSha3_256
+  aliases: [SHA3-256withDSA, SHA3-256WithDSA, SHA3-256/DSA, 2.16.840.1.101.3.4.3.6, OID.2.16.840.1.101.3.4.3.6]
+
+BC: Signature.SHA512WITHRSAANDSHAKE256 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA512withRSAandSHAKE256
+  aliases: [SHA512withRSAandSHAKE256, SHA512WithRSAAndSHAKE256]
+
+BC: KeyFactory.ED448 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyFactorySpi$Ed448
+
+BC: Cipher.OID.1.2.392.200011.61.1.1.1.2 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$CBC
+
+BC: KeyGenerator.HMACSkein-512-224 -> org.bouncycastle.jcajce.provider.digest.Skein$HMacKeyGenerator_512_224
+  aliases: [HMAC-Skein-512-224, HMAC/Skein-512-224]
+
+BC: Signature.SHA256WITHDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$dsa256
+  aliases: [SHA256withDSA, SHA256WithDSA, SHA256/DSA, 2.16.840.1.101.3.4.3.2, OID.2.16.840.1.101.3.4.3.2]
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.6.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$OFB256
+
+BC: Mac.DESMAC64 -> org.bouncycastle.jcajce.provider.symmetric.DES$DES64
+  aliases: [DES64]
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.6.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$OFB128
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.6.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$OFB512
+
+BC: KeyAgreement.X25519UWITHSHA256KDF -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$X25519UwithSHA256KDF
+
+BC: Mac.PBEWITHHMACSHA1 -> org.bouncycastle.jcajce.provider.digest.SHA1$SHA1Mac
+
+BC: KeyGenerator.DSTU7624 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen
+
+BC: MessageDigest.Skein-1024-512 -> org.bouncycastle.jcajce.provider.digest.Skein$Digest_1024_512
+
+BC: MessageDigest.SHA-224 -> org.bouncycastle.jcajce.provider.digest.SHA224$Digest
+  aliases: [SHA224, 2.16.840.1.101.3.4.2.4]
+
+BC: Signature.MD5WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$MD5
+  aliases: [MD5withRSA, MD5WithRSA, MD5WITHRSAENCRYPTION, MD5withRSAEncryption, MD5WithRSAEncryption, MD5/RSA, 1.2.840.113549.1.1.4, OID.1.2.840.113549.1.1.4]
+
+BC: Mac.CAMELLIA-GMAC -> org.bouncycastle.jcajce.provider.symmetric.Camellia$GMAC
+  aliases: [CAMELLIAGMAC]
+
+BC: KeyGenerator.1.2.392.200011.61.1.1.1.4 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$KeyGen256
+
+BC: KeyAgreement.ECGOST3410-2012-512 -> org.bouncycastle.jcajce.provider.asymmetric.ecgost12.KeyAgreementSpi$ECVKO512
+  aliases: [1.2.643.7.1.1.6.2, 1.2.643.7.1.1.1.2]
+
+BC: KeyGenerator.BLOWFISH -> org.bouncycastle.jcajce.provider.symmetric.Blowfish$KeyGen
+  aliases: [1.3.6.1.4.1.3029.1.1.2, OID.1.3.6.1.4.1.3029.1.1.2]
+
+BC: Signature.SHA3-256WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$SHA3_256
+  aliases: [SHA3-256withRSA, SHA3-256WithRSA, SHA3-256WITHRSAENCRYPTION, SHA3-256withRSAEncryption, SHA3-256WithRSAEncryption, SHA3-256/RSA, 2.16.840.1.101.3.4.3.14, OID.2.16.840.1.101.3.4.3.14]
+
+BC: KeyGenerator.1.2.392.200011.61.1.1.1.2 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$KeyGen128
+
+BC: KeyGenerator.1.2.392.200011.61.1.1.1.3 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$KeyGen192
+
+BC: Mac.Skein-MAC-256-128 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMac_256_128
+  aliases: [Skein-MAC256/128]
+
+BC: Signature.SHA256WITHECDDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDetDSA256
+  aliases: [SHA256WITHDETECDSA]
+
+BC: Cipher.RC5 -> org.bouncycastle.jcajce.provider.symmetric.RC5$ECB32
+  aliases: [RC5-32]
+
+BC: Cipher.RC6 -> org.bouncycastle.jcajce.provider.symmetric.RC6$ECB
+
+BC: Mac.Skein-MAC-256-256 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMac_256_256
+  aliases: [Skein-MAC256/256]
+
+BC: KeyAgreement.ECCDHUWITHSHA224CKDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHUwithSHA224CKDF
+
+BC: AlgorithmParameters.SEED -> org.bouncycastle.jcajce.provider.symmetric.SEED$AlgParams
+  aliases: [1.2.410.200004.1.4]
+
+BC: Cipher.RC2 -> org.bouncycastle.jcajce.provider.symmetric.RC2$ECB
+
+BC: KeyGenerator.HMACSkein-256-224 -> org.bouncycastle.jcajce.provider.digest.Skein$HMacKeyGenerator_256_224
+  aliases: [HMAC-Skein-256-224, HMAC/Skein-256-224]
+
+BC: MessageDigest.SHA-512/224 -> org.bouncycastle.jcajce.provider.digest.SHA512$DigestT224
+  aliases: [SHA512/224, SHA512224, SHA-512(224), SHA512(224), 2.16.840.1.101.3.4.2.5]
+
+BC: Mac.HMACWHIRLPOOL -> org.bouncycastle.jcajce.provider.digest.Whirlpool$HashMac
+  aliases: [HMAC-WHIRLPOOL, HMAC/WHIRLPOOL]
+
+BC: Cipher.Threefish-256 -> org.bouncycastle.jcajce.provider.symmetric.Threefish$ECB_256
+
+BC: Signature.SHA1WITHRSAANDSHAKE256 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA1withRSAandSHAKE256
+  aliases: [SHA1withRSAandSHAKE256, SHA1WithRSAAndSHAKE256]
+
+BC: KeyAgreement.MQVWITHSHA224KDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$MQVwithSHA224KDF
+
+BC: Cipher.NOEKEON -> org.bouncycastle.jcajce.provider.symmetric.Noekeon$ECB
+
+BC: Cipher.SM2WITHBLAKE2B -> org.bouncycastle.jcajce.provider.asymmetric.ec.GMCipherSpi$SM2withBlake2b
+  aliases: [1.2.156.10197.1.301.3.2.9]
+
+BC: AlgorithmParameters.HC256 -> org.bouncycastle.jcajce.provider.symmetric.HC256$AlgParams
+
+BC: Cipher.SM2WITHWHIRLPOOL -> org.bouncycastle.jcajce.provider.asymmetric.ec.GMCipherSpi$SM2withWhirlpool
+  aliases: [1.2.156.10197.1.301.3.2.8]
+
+BC: Cipher.SM2WITHRIPEMD160 -> org.bouncycastle.jcajce.provider.asymmetric.ec.GMCipherSpi$SM2withRMD
+  aliases: [1.2.156.10197.1.301.3.2.7]
+
+BC: Cipher.SM2WITHSHA512 -> org.bouncycastle.jcajce.provider.asymmetric.ec.GMCipherSpi$SM2withSha512
+  aliases: [1.2.156.10197.1.301.3.2.6]
+
+BC: KeyGenerator.HMACGOST3411-2012-512 -> org.bouncycastle.jcajce.provider.digest.GOST3411$KeyGenerator2012_512
+  aliases: [HMAC-GOST3411-2012-512, HMAC/GOST3411-2012-512, 1.2.643.7.1.1.4.2]
+
+BC: KeyFactory.OID.1.3.6.1.4.1.18227.2.1 -> org.bouncycastle.jcajce.provider.asymmetric.COMPOSITE$KeyFactory
+
+BC: KeyGenerator.HMACGOST3411-2012-256 -> org.bouncycastle.jcajce.provider.digest.GOST3411$KeyGenerator2012_256
+  aliases: [HMAC-GOST3411-2012-256, HMAC/GOST3411-2012-256, 1.2.643.7.1.1.4.1]
+
+BC: Cipher.SM2WITHSHA256 -> org.bouncycastle.jcajce.provider.asymmetric.ec.GMCipherSpi$SM2withSha256
+  aliases: [1.2.156.10197.1.301.3.2.4]
+
+BC: KeyAgreement.0.4.0.127.0.7.1.1.5.1.1.1 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithSHA1KDF
+
+BC: Signature.RIPEMD160WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$RIPEMD160
+  aliases: [RIPEMD160withRSA, RIPEMD160WithRSA, RIPEMD160WITHRSAENCRYPTION, RIPEMD160withRSAEncryption, RIPEMD160WithRSAEncryption, RIPEMD160/RSA, 1.3.36.3.3.1.2, OID.1.3.36.3.3.1.2]
+
+BC: Cipher.SM2WITHSHA224 -> org.bouncycastle.jcajce.provider.asymmetric.ec.GMCipherSpi$SM2withSha224
+  aliases: [1.2.156.10197.1.301.3.2.3]
+
+BC: KeyAgreement.0.4.0.127.0.7.1.1.5.1.1.2 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithSHA224KDF
+
+BC: Cipher.SM2WITHSHA1 -> org.bouncycastle.jcajce.provider.asymmetric.ec.GMCipherSpi$SM2withSha1
+  aliases: [1.2.156.10197.1.301.3.2.2]
+
+BC: KeyAgreement.0.4.0.127.0.7.1.1.5.1.1.3 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithSHA256KDF
+
+BC: Cipher.SM2 -> org.bouncycastle.jcajce.provider.asymmetric.ec.GMCipherSpi$SM2
+  aliases: [SM2WITHSM3, 1.2.156.10197.1.301.3.2.1]
+
+BC: Mac.DESEDEMAC/CFB8 -> org.bouncycastle.jcajce.provider.symmetric.DESede$DESedeCFB8
+  aliases: [DESEDE/CFB8]
+
+BC: KeyAgreement.0.4.0.127.0.7.1.1.5.1.1.4 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithSHA384KDF
+
+BC: KeyAgreement.0.4.0.127.0.7.1.1.5.1.1.5 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithSHA512KDF
+
+BC: KeyAgreement.0.4.0.127.0.7.1.1.5.1.1.6 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithRIPEMD160KDF
+
+BC: KeyStore.BouncyCastle -> org.bouncycastle.jcajce.provider.keystore.bc.BcKeyStoreSpi$BouncyCastleStore
+  aliases: [UBER, BOUNCYCASTLE, bouncycastle]
+
+BC: Signature.SHA256WITHRSA/X9.31 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.X931SignatureSpi$SHA256WithRSAEncryption
+  aliases: [SHA256withRSA/X9.31, SHA256WithRSA/X9.31]
+
+BC: KeyGenerator.DESEDEWRAP -> org.bouncycastle.jcajce.provider.symmetric.DESede$KeyGenerator
+
+BC: Cipher.VMPC-KSA3 -> org.bouncycastle.jcajce.provider.symmetric.VMPCKSA3$Base
+
+BC: KeyGenerator.HMACSHA3-384 -> org.bouncycastle.jcajce.provider.digest.SHA3$KeyGenerator384
+  aliases: [HMAC-SHA3-384, HMAC/SHA3-384, 2.16.840.1.101.3.4.2.15]
+
+BC: Mac.DESWITHISO9797 -> org.bouncycastle.jcajce.provider.symmetric.DES$DES9797Alg3
+  aliases: [DESISO9797MAC]
+
+BC: AlgorithmParameters.ARIA -> org.bouncycastle.jcajce.provider.symmetric.ARIA$AlgParams
+  aliases: [1.2.410.200046.1.1.2, OID.1.2.410.200046.1.1.2, 1.2.410.200046.1.1.7, OID.1.2.410.200046.1.1.7, 1.2.410.200046.1.1.12, OID.1.2.410.200046.1.1.12]
+
+BC: AlgorithmParameters.SHACAL-2 -> org.bouncycastle.jcajce.provider.symmetric.Shacal2$AlgParams
+
+BC: AlgorithmParameterGenerator.SM4 -> org.bouncycastle.jcajce.provider.symmetric.SM4$AlgParamGen
+
+BC: KeyAgreement.MQVWITHSHA512KDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$MQVwithSHA512KDF
+
+BC: Signature.RIPEMD128WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$RIPEMD128
+  aliases: [RIPEMD128withRSA, RIPEMD128WithRSA, RIPEMD128WITHRSAENCRYPTION, RIPEMD128withRSAEncryption, RIPEMD128WithRSAEncryption, RIPEMD128/RSA, 1.3.36.3.3.1.3, OID.1.3.36.3.3.1.3]
+
+BC: Mac.IDEAMAC -> org.bouncycastle.jcajce.provider.symmetric.IDEA$Mac
+  aliases: [IDEA]
+
+BC: X509Store.CERTIFICATEPAIR/COLLECTION -> org.bouncycastle.jce.provider.X509StoreCertPairCollection
+
+BC: Mac.GOST3412MAC -> org.bouncycastle.jcajce.provider.symmetric.GOST3412_2015$Mac
+  aliases: [GOST3412-2015]
+
+BC: Cipher.Twofish -> org.bouncycastle.jcajce.provider.symmetric.Twofish$ECB
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.3.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen512
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.3.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen256
+
+BC: AlgorithmParameters.Tnepres -> org.bouncycastle.jcajce.provider.symmetric.Serpent$TAlgParams
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.3.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen128
+
+BC: Mac.NOEKEON-GMAC -> org.bouncycastle.jcajce.provider.symmetric.Noekeon$GMAC
+  aliases: [NOEKEONGMAC]
+
+BC: Cipher.DSTU7624-256KW -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$Wrap256
+  aliases: [1.2.804.2.1.1.1.1.1.3.10.2, DSTU7624-256WRAP]
+
+BC: Cipher.ECIESwithSHA512andAES-CBC -> org.bouncycastle.jcajce.provider.asymmetric.ec.IESCipher$ECIESwithSHA512andAESCBC
+
+BC: Signature.SHA256WITHECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDSA256
+  aliases: [SHA256withECDSA, SHA256WithECDSA, SHA256/ECDSA, 1.2.840.10045.4.3.2, OID.1.2.840.10045.4.3.2]
+
+BC: Signature.SHA3-256WITHRSAANDSHAKE256 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA3_256withRSAandSHAKE256
+  aliases: [SHA3-256withRSAandSHAKE256, SHA3-256WithRSAAndSHAKE256]
+
+BC: Cipher.OID.1.2.840.113549.1.1.7 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.CipherSpi$OAEPPadding
+
+BC: Cipher.OID.1.2.840.113549.1.1.1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.CipherSpi$PKCS1v1_5Padding
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.8.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen512
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.8.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen256
+
+BC: KeyAgreement.X448WITHSHA512KDF -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$X448withSHA512KDF
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.8.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen128
+
+BC: Signature.SHA3-512WITHPLAIN-ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecCVCDSA3_512
+  aliases: [SHA3-512withPLAIN-ECDSA, SHA3-512WithPLAIN-ECDSA, SHA3-512/PLAIN-ECDSA, 0.4.0.127.0.7.1.1.4.1.11, OID.0.4.0.127.0.7.1.1.4.1.11]
+
+BC: Cipher.Serpent -> org.bouncycastle.jcajce.provider.symmetric.Serpent$ECB
+
+BC: KeyGenerator.TNEPRES-GMAC -> org.bouncycastle.jcajce.provider.symmetric.Serpent$TKeyGen
+  aliases: [TNEPRESGMAC]
+
+BC: Mac.VMPCMAC -> org.bouncycastle.jcajce.provider.symmetric.VMPC$Mac
+  aliases: [VMPC, VMPC-MAC]
+
+BC: SecretKeyFactory.PBKDF2WITHHMACSM3 -> org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF2$PBKDF2withSM3
+
+BC: SecretKeyFactory.PBEWITHMD5AND128BITAES-CBC-OPENSSL -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithMD5And128BitAESCBCOpenSSL
+
+BC: KeyGenerator.HMACKECCAK512 -> org.bouncycastle.jcajce.provider.digest.Keccak$KeyGenerator512
+  aliases: [HMAC-KECCAK512, HMAC/KECCAK512]
+
+BC: AlgorithmParameters.CAMELLIA -> org.bouncycastle.jcajce.provider.symmetric.Camellia$AlgParams
+  aliases: [1.2.392.200011.61.1.1.1.2, OID.1.2.392.200011.61.1.1.1.2, 1.2.392.200011.61.1.1.1.3, OID.1.2.392.200011.61.1.1.1.3, 1.2.392.200011.61.1.1.1.4, OID.1.2.392.200011.61.1.1.1.4]
+
+BC: Signature.SHA224WITHECDDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDetDSA224
+  aliases: [SHA224WITHDETECDSA]
+
+BC: SecretKeyFactory.PBEWITHSHAANDTWOFISH-CBC -> org.bouncycastle.jcajce.provider.symmetric.Twofish$PBEWithSHAKeyFactory
+
+BC: KeyGenerator.POLY1305-SM4 -> org.bouncycastle.jcajce.provider.symmetric.SM4$Poly1305KeyGen
+  aliases: [POLY1305SM4]
+
+BC: Mac.HMACRIPEMD256 -> org.bouncycastle.jcajce.provider.digest.RIPEMD256$HashMac
+  aliases: [HMAC-RIPEMD256, HMAC/RIPEMD256]
+
+BC: KeyGenerator.HMACSM3 -> org.bouncycastle.jcajce.provider.digest.SM3$KeyGenerator
+  aliases: [HMAC-SM3, HMAC/SM3, 1.2.156.10197.1.401.2]
+
+BC: SecretKeyFactory.PBEWITHMD2ANDRC2 -> org.bouncycastle.jcajce.provider.symmetric.RC2$PBEWithMD2KeyFactory
+  aliases: [PBEWITHMD2ANDRC2-CBC, 1.2.840.113549.1.5.4, OID.1.2.840.113549.1.5.4]
+
+BC: Cipher.HC128 -> org.bouncycastle.jcajce.provider.symmetric.HC128$Base
+
+BC: Signature.SHA512(256)WITHRSAANDMGF1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA512_256withRSA
+  aliases: [SHA512(256)withRSA/PSS, SHA512(256)WithRSA/PSS, SHA512(256)withRSASSA-PSS, SHA512(256)WithRSASSA-PSS, SHA512(256)WITHRSASSA-PSS, SHA512(256)withRSAandMGF1, SHA512(256)WithRSAAndMGF1]
+
+BC: Cipher.Threefish-1024 -> org.bouncycastle.jcajce.provider.symmetric.Threefish$ECB_1024
+
+BC: Signature.SHA3-384WITHPLAIN-ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecCVCDSA3_384
+  aliases: [SHA3-384withPLAIN-ECDSA, SHA3-384WithPLAIN-ECDSA, SHA3-384/PLAIN-ECDSA, 0.4.0.127.0.7.1.1.4.1.10, OID.0.4.0.127.0.7.1.1.4.1.10]
+
+BC: KeyGenerator.Tnepres -> org.bouncycastle.jcajce.provider.symmetric.Serpent$TKeyGen
+
+BC: Mac.HMACRIPEMD160 -> org.bouncycastle.jcajce.provider.digest.RIPEMD160$HashMac
+  aliases: [HMAC-RIPEMD160, HMAC/RIPEMD160, 1.3.6.1.5.5.8.1.4]
+
+BC: Signature.ED25519 -> org.bouncycastle.jcajce.provider.asymmetric.edec.SignatureSpi$Ed25519
+  aliases: [1.3.101.112, OID.1.3.101.112]
+
+BC: SecretKeyFactory.TLS10KDF -> org.bouncycastle.jcajce.provider.symmetric.TLSKDF$TLS10
+
+BC: MessageDigest.SHA3-256 -> org.bouncycastle.jcajce.provider.digest.SHA3$Digest256
+
+BC: MessageDigest.OID.2.16.840.1.101.3.4.2.12 -> org.bouncycastle.jcajce.provider.digest.SHA3$DigestShake256_512
+
+BC: MessageDigest.OID.2.16.840.1.101.3.4.2.10 -> org.bouncycastle.jcajce.provider.digest.SHA3$Digest512
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.2.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CTR128
+
+BC: MessageDigest.OID.2.16.840.1.101.3.4.2.11 -> org.bouncycastle.jcajce.provider.digest.SHA3$DigestShake128_256
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.2.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CTR256
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.2.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CTR512
+
+BC: Signature.MD2WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$MD2
+  aliases: [MD2withRSA, MD2WithRSA, MD2WITHRSAENCRYPTION, MD2withRSAEncryption, MD2WithRSAEncryption, MD2/RSA, 1.2.840.113549.1.1.2, OID.1.2.840.113549.1.1.2]
+
+BC: Signature.ECGOST3410-2012-512 -> org.bouncycastle.jcajce.provider.asymmetric.ecgost12.ECGOST2012SignatureSpi512
+  aliases: [ECGOST3410-2012-512, GOST-3410-2012-512, GOST3411WITHECGOST3410-2012-512]
+
+BC: Mac.SM4-CMAC -> org.bouncycastle.jcajce.provider.symmetric.SM4$CMAC
+  aliases: [SM4CMAC]
+
+BC: Cipher.RSA/OAEP -> org.bouncycastle.jcajce.provider.asymmetric.rsa.CipherSpi$OAEPPadding
+  aliases: [RSA//OAEPPADDING]
+
+BC: Cipher.CHACHA20-POLY1305 -> org.bouncycastle.jcajce.provider.symmetric.ChaCha$BaseCC20P1305
+  aliases: [1.2.840.113549.1.9.16.3.18, OID.1.2.840.113549.1.9.16.3.18]
+
+BC: AlgorithmParameters.DSTU7624 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$AlgParams
+
+BC: SecretKeyFactory.PBEWITHSHA256AND192BITAES-CBC-BC -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithSHA256And192BitAESBC
+  aliases: [PBEWITHSHA-256AND192BITAES-CBC-BC, PBEWITHSHA-256AND192BITAES-BC, 1.3.6.1.4.1.22554.1.2.1.2.1.22, OID.1.3.6.1.4.1.22554.1.2.1.2.1.22]
+
+BC: Signature.RMD256WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$RIPEMD256
+  aliases: [RMD256withRSA, RMD256WithRSA, RMD256WITHRSAENCRYPTION, RMD256withRSAEncryption, RMD256WithRSAEncryption, RMD256/RSA]
+
+BC: Mac.Skein-MAC-1024-1024 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMac_1024_1024
+  aliases: [Skein-MAC1024/1024]
+
+BC: Cipher.OID.1.3.6.1.4.1.188.7.1.1.2 -> org.bouncycastle.jcajce.provider.symmetric.IDEA$CBC
+
+BC: KeyGenerator.DESEDE -> org.bouncycastle.jcajce.provider.symmetric.DESede$KeyGenerator
+  aliases: [TDEA]
+
+BC: AlgorithmParameters.DH -> org.bouncycastle.jcajce.provider.asymmetric.dh.AlgorithmParametersSpi
+  aliases: [DIFFIEHELLMAN]
+
+BC: AlgorithmParameterGenerator.Shacal2 -> org.bouncycastle.jcajce.provider.symmetric.Shacal2$AlgParamGen
+
+BC: KeyGenerator.POLY1305-CAMELLIA -> org.bouncycastle.jcajce.provider.symmetric.Camellia$Poly1305KeyGen
+  aliases: [POLY1305CAMELLIA]
+
+BC: KeyGenerator.AESWRAP -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen
+
+BC: KeyGenerator.HMACKECCAK288 -> org.bouncycastle.jcajce.provider.digest.Keccak$KeyGenerator288
+  aliases: [HMAC-KECCAK288, HMAC/KECCAK288]
+
+BC: AlgorithmParameterGenerator.GOST3410 -> org.bouncycastle.jcajce.provider.asymmetric.gost.AlgorithmParameterGeneratorSpi
+  aliases: [1.2.643.2.2.20, GOST-3410]
+
+BC: KeyGenerator.HMACTIGER -> org.bouncycastle.jcajce.provider.digest.Tiger$KeyGenerator
+  aliases: [HMAC-TIGER, HMAC/TIGER, 1.3.6.1.5.5.8.1.3]
+
+BC: SecretKeyFactory.PBEWITHSHA256AND256BITAES-CBC-BC -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithSHA256And256BitAESBC
+  aliases: [PBEWITHSHA-256AND256BITAES-CBC-BC, PBEWITHSHA-256AND256BITAES-BC, 1.3.6.1.4.1.22554.1.2.1.2.1.42, OID.1.3.6.1.4.1.22554.1.2.1.2.1.42]
+
+BC: Mac.HMACGOST3411-2012-256 -> org.bouncycastle.jcajce.provider.digest.GOST3411$HashMac2012_256
+  aliases: [HMAC-GOST3411-2012-256, HMAC/GOST3411-2012-256, 1.2.643.7.1.1.4.1]
+
+BC: Cipher.DESRFC3211WRAP -> org.bouncycastle.jcajce.provider.symmetric.DES$RFC3211
+
+BC: Signature.NONEWITHDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$noneDSA
+  aliases: [RAWDSA]
+
+BC: SecretKeyFactory.ARIA -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyFactory
+  aliases: [1.2.410.200046.1.1.2, OID.1.2.410.200046.1.1.2, 1.2.410.200046.1.1.7, OID.1.2.410.200046.1.1.7, 1.2.410.200046.1.1.12, OID.1.2.410.200046.1.1.12]
+
+BC: Signature.SHA512(224)WITHRSAANDSHAKE256 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA512_224withRSAandSHAKE256
+  aliases: [SHA512(224)withRSAandSHAKE256, SHA512(224)WithRSAAndSHAKE256]
+
+BC: SecretKeyFactory.1.3.6.1.4.1.11591.4.11 -> org.bouncycastle.jcajce.provider.symmetric.SCRYPT$ScryptWithUTF8
+
+BC: KeyAgreement.ECKAEGWITHSHA384KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithSHA384KDF
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.8 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen192
+
+BC: X509Store.CERTIFICATE/COLLECTION -> org.bouncycastle.jce.provider.X509StoreCertCollection
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.7 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen192
+
+BC: AlgorithmParameters.BLOWFISH -> org.bouncycastle.jcajce.provider.symmetric.Blowfish$AlgParams
+  aliases: [1.3.6.1.4.1.3029.1.1.2, OID.1.3.6.1.4.1.3029.1.1.2]
+
+BC: Signature.SHA256WITHSM2 -> org.bouncycastle.jcajce.provider.asymmetric.ec.GMSignatureSpi$sha256WithSM2
+  aliases: [1.2.156.10197.1.503]
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.9 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen192
+
+BC: Mac.HMACDSTU7564-256 -> org.bouncycastle.jcajce.provider.digest.DSTU7564$HashMac256
+  aliases: [HMAC-DSTU7564-256, HMAC/DSTU7564-256, 1.2.804.2.1.1.1.1.2.2.4]
+
+BC: Signature.SHA3-512WITHRSAANDSHAKE128 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA3_512withRSAandSHAKE128
+  aliases: [SHA3-512withRSAandSHAKE128, SHA3-512WithRSAAndSHAKE128]
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.4 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen128
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.3 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen128
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.6 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen192
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.2 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen128
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.1 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen128
+
+BC: Mac.POLY1305-ARIA -> org.bouncycastle.jcajce.provider.symmetric.ARIA$Poly1305
+  aliases: [POLY1305ARIA]
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.8.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen512
+
+BC: KeyAgreement.X448UWITHSHA512KDF -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$X448UwithSHA512KDF
+
+BC: KeyGenerator.RIJNDAEL -> org.bouncycastle.jcajce.provider.symmetric.Rijndael$KeyGen
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.8.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen256
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.8.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen128
+
+BC: KeyFactory.DSTU4145 -> org.bouncycastle.jcajce.provider.asymmetric.dstu.KeyFactorySpi
+  aliases: [DSTU-4145-2002, DSTU4145-3410, 1.2.804.2.1.1.1.1.3.1.1, 1.2.804.2.1.1.1.1.3.1.1.1.1]
+
+BC: KeyGenerator.1.2.410.200004.1.4 -> org.bouncycastle.jcajce.provider.symmetric.SEED$KeyGen
+
+BC: MessageDigest.Skein-256-256 -> org.bouncycastle.jcajce.provider.digest.Skein$Digest_256_256
+
+BC: KeyGenerator.AES-GMAC -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+  aliases: [AESGMAC]
+
+BC: KeyGenerator.HMACKECCAK384 -> org.bouncycastle.jcajce.provider.digest.Keccak$KeyGenerator384
+  aliases: [HMAC-KECCAK384, HMAC/KECCAK384]
+
+BC: Mac.HMACSkein-512-512 -> org.bouncycastle.jcajce.provider.digest.Skein$HashMac_512_512
+  aliases: [HMAC-Skein-512-512, HMAC/Skein-512-512]
+
+BC: KeyGenerator.SALSA20 -> org.bouncycastle.jcajce.provider.symmetric.Salsa20$KeyGen
+
+BC: X509StreamParser.CRL -> org.bouncycastle.jce.provider.X509CRLParser
+
+BC: KeyGenerator.DES -> org.bouncycastle.jcajce.provider.symmetric.DES$KeyGenerator
+  aliases: [1.3.14.3.2.7]
+
+BC: Signature.SHA1WITHCVC-ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecCVCDSA
+  aliases: [SHA1withCVC-ECDSA, SHA1WithCVC-ECDSA, SHA1/CVC-ECDSA, 0.4.0.127.0.7.2.2.2.2.1, OID.0.4.0.127.0.7.2.2.2.2.1]
+
+BC: Signature.SHA256WITHDETDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$detDSA256
+
+BC: MessageDigest.Skein-256-224 -> org.bouncycastle.jcajce.provider.digest.Skein$Digest_256_224
+
+BC: KeyGenerator.TEA -> org.bouncycastle.jcajce.provider.symmetric.TEA$KeyGen
+
+BC: Mac.DESMAC -> org.bouncycastle.jcajce.provider.symmetric.DES$CBCMAC
+  aliases: [DES]
+
+BC: Mac.HMACSHA3-512 -> org.bouncycastle.jcajce.provider.digest.SHA3$HashMac512
+  aliases: [HMAC-SHA3-512, HMAC/SHA3-512, 2.16.840.1.101.3.4.2.16]
+
+BC: KeyAgreement.ECMQVWITHSHA1CKDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$MQVwithSHA1CKDF
+
+BC: Mac.HMACKECCAK256 -> org.bouncycastle.jcajce.provider.digest.Keccak$HashMac256
+  aliases: [HMAC-KECCAK256, HMAC/KECCAK256]
+
+BC: Signature.SHA512(256)WITHRSAANDSHAKE256 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA512_256withRSAandSHAKE256
+  aliases: [SHA512(256)withRSAandSHAKE256, SHA512(256)WithRSAAndSHAKE256]
+
+BC: Signature.SHA3-224WITHRSAANDMGF1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA3_224withRSA
+  aliases: [SHA3-224withRSA/PSS, SHA3-224WithRSA/PSS, SHA3-224withRSASSA-PSS, SHA3-224WithRSASSA-PSS, SHA3-224WITHRSASSA-PSS, SHA3-224withRSAandMGF1, SHA3-224WithRSAAndMGF1]
+
+BC: AlgorithmParameters.ELGAMAL -> org.bouncycastle.jcajce.provider.asymmetric.elgamal.AlgorithmParametersSpi
+  aliases: [1.3.14.7.2.1.1]
+
+BC: KeyPairGenerator.ECDHC -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyPairGeneratorSpi$ECDHC
+
+BC: Mac.ISO9797ALG3MAC -> org.bouncycastle.jcajce.provider.symmetric.DES$DES9797Alg3
+  aliases: [ISO9797ALG3]
+
+BC: Mac.HMACSkein-256-128 -> org.bouncycastle.jcajce.provider.digest.Skein$HashMac_256_128
+  aliases: [HMAC-Skein-256-128, HMAC/Skein-256-128]
+
+BC: AlgorithmParameters.CHACHA20-POLY1305 -> org.bouncycastle.jcajce.provider.symmetric.ChaCha$AlgParamsCC1305
+  aliases: [1.2.840.113549.1.9.16.3.18, OID.1.2.840.113549.1.9.16.3.18]
+
+BC: KeyGenerator.Skein-MAC-512-384 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMacKeyGenerator_512_384
+  aliases: [Skein-MAC512/384]
+
+BC: AlgorithmParameterGenerator.DH -> org.bouncycastle.jcajce.provider.asymmetric.dh.AlgorithmParameterGeneratorSpi
+  aliases: [DIFFIEHELLMAN]
+
+BC: KeyGenerator.SIPHASH128 -> org.bouncycastle.jcajce.provider.symmetric.SipHash128$KeyGen
+  aliases: [SIPHASH128-2-4, SIPHASH128-4-8]
+
+BC: Cipher.RSA/2 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.CipherSpi$PKCS1v1_5Padding_PublicOnly
+
+BC: Cipher.RSA/1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.CipherSpi$PKCS1v1_5Padding_PrivateOnly
+
+BC: Cipher.DESEDE -> org.bouncycastle.jcajce.provider.symmetric.DESede$ECB
+  aliases: [TDEA]
+
+BC: Mac.Skein-MAC-1024-512 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMac_1024_512
+  aliases: [Skein-MAC1024/512]
+
+BC: Signature.SHA384WITHECDDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDetDSA384
+  aliases: [SHA384WITHDETECDSA]
+
+BC: AlgorithmParameters.CHACHA7539 -> org.bouncycastle.jcajce.provider.symmetric.ChaCha$AlgParams
+  aliases: [CHACHA20]
+
+BC: Mac.HMACSkein-512-224 -> org.bouncycastle.jcajce.provider.digest.Skein$HashMac_512_224
+  aliases: [HMAC-Skein-512-224, HMAC/Skein-512-224]
+
+BC: Signature.SHA384WITHRSAANDMGF1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA384withRSA
+  aliases: [SHA384withRSA/PSS, SHA384WithRSA/PSS, SHA384withRSASSA-PSS, SHA384WithRSASSA-PSS, SHA384WITHRSASSA-PSS, SHA384withRSAandMGF1, SHA384WithRSAAndMGF1]
+
+BC: KeyFactory.XDH -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyFactorySpi$XDH
+  aliases: [1.3.101.111, 1.3.101.110]
+
+BC: KeyAgreement.OID.1.2.840.113549.1.9.16.3.5 -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHwithRFC2631KDF
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.2 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: SecretKeyFactory.OID.1.3.6.1.4.1.11591.4.11 -> org.bouncycastle.jcajce.provider.symmetric.SCRYPT$ScryptWithUTF8
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.1 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.4 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: SecretKeyFactory.PBKDF2WITHHMACSHA384 -> org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF2$PBKDF2withSHA384
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.3 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: KeyGenerator.CAMELLIA -> org.bouncycastle.jcajce.provider.symmetric.Camellia$KeyGen
+
+BC: Cipher.BROKENPBEWITHSHA1ANDDES -> org.bouncycastle.jce.provider.BrokenJCEBlockCipher$BrokePBEWithSHA1AndDES
+
+BC: KeyGenerator.XSALSA20 -> org.bouncycastle.jcajce.provider.symmetric.XSalsa20$KeyGen
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.6 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.2.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CTR128
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.5 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.2.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CTR256
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.8 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.2.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CTR512
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.7 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: Mac.HMACSkein-1024-512 -> org.bouncycastle.jcajce.provider.digest.Skein$HashMac_1024_512
+  aliases: [HMAC-Skein-1024-512, HMAC/Skein-1024-512]
+
+BC: SecretKeyFactory.SEED -> org.bouncycastle.jcajce.provider.symmetric.SEED$KeyFactory
+  aliases: [1.2.410.200004.1.4, OID.1.2.410.200004.1.4]
+
+BC: Mac.DESEDECMAC -> org.bouncycastle.jcajce.provider.symmetric.DESede$CMAC
+
+BC: MessageDigest.BLAKE2B-160 -> org.bouncycastle.jcajce.provider.digest.Blake2b$Blake2b160
+  aliases: [1.3.6.1.4.1.1722.12.2.1.5]
+
+BC: Signature.RMD160WITHRSA/X9.31 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.X931SignatureSpi$RIPEMD160WithRSAEncryption
+  aliases: [RMD160withRSA/X9.31, RMD160WithRSA/X9.31]
+
+BC: Signature.SM3WITHSM2 -> org.bouncycastle.jcajce.provider.asymmetric.ec.GMSignatureSpi$sm3WithSM2
+  aliases: [1.2.156.10197.1.501]
+
+BC: Cipher.DSTU7624-512 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$ECB_512
+
+BC: Cipher.RSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.CipherSpi$NoPadding
+  aliases: [RSA//RAW, RSA//NOPADDING]
+  attributes: {SupportedKeyFormats=PKCS#8|X.509, SupportedKeyClasses=javax.crypto.interfaces.RSAPublicKey|javax.crypto.interfaces.RSAPrivateKey}
+
+BC: KeyGenerator.AESWRAPPAD -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen
+
+BC: Signature.SHA512(224)WITHRSAANDMGF1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA512_224withRSA
+  aliases: [SHA512(224)withRSA/PSS, SHA512(224)WithRSA/PSS, SHA512(224)withRSASSA-PSS, SHA512(224)WithRSASSA-PSS, SHA512(224)WITHRSASSA-PSS, SHA512(224)withRSAandMGF1, SHA512(224)WithRSAAndMGF1]
+
+BC: KeyGenerator.HMACSkein-512-512 -> org.bouncycastle.jcajce.provider.digest.Skein$HMacKeyGenerator_512_512
+  aliases: [HMAC-Skein-512-512, HMAC/Skein-512-512]
+
+BC: KeyAgreement.ECMQVWITHSHA256CKDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$MQVwithSHA256CKDF
+
+BC: Signature.SHA512WITHRSA/X9.31 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.X931SignatureSpi$SHA512WithRSAEncryption
+  aliases: [SHA512withRSA/X9.31, SHA512WithRSA/X9.31]
+
+BC: KeyAgreement.DHUWITHSHA256KDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHUwithSHA256KDF
+
+BC: KeyAgreement.ECCDHWITHSHA1CKDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA1CKDF
+
+BC: Mac.HMACTIGER -> org.bouncycastle.jcajce.provider.digest.Tiger$HashMac
+  aliases: [HMAC-TIGER, HMAC/TIGER, 1.3.6.1.5.5.8.1.3]
+
+BC: Mac.HMACKECCAK288 -> org.bouncycastle.jcajce.provider.digest.Keccak$HashMac288
+  aliases: [HMAC-KECCAK288, HMAC/KECCAK288]
+
+BC: Cipher.DESEDEWRAP -> org.bouncycastle.jcajce.provider.symmetric.DESede$Wrap
+  aliases: [DESEDERFC3217WRAP, TDEAWRAP]
+
+BC: KeyGenerator.HC128 -> org.bouncycastle.jcajce.provider.symmetric.HC128$KeyGen
+
+BC: Signature.SHA256WITHRSAANDMGF1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA256withRSA
+  aliases: [SHA256withRSA/PSS, SHA256WithRSA/PSS, SHA256withRSASSA-PSS, SHA256WithRSASSA-PSS, SHA256WITHRSASSA-PSS, SHA256withRSAandMGF1, SHA256WithRSAAndMGF1]
+
+BC: Signature.ECGOST3410-2012-256 -> org.bouncycastle.jcajce.provider.asymmetric.ecgost12.ECGOST2012SignatureSpi256
+  aliases: [ECGOST3410-2012-256, GOST-3410-2012-256, GOST3411WITHECGOST3410-2012-256]
+
+BC: KeyGenerator.SM4-CMAC -> org.bouncycastle.jcajce.provider.symmetric.SM4$KeyGen
+  aliases: [SM4CMAC]
+
+BC: Cipher.CAMELLIAWRAP -> org.bouncycastle.jcajce.provider.symmetric.Camellia$Wrap
+  aliases: [1.2.392.200011.61.1.1.3.2, OID.1.2.392.200011.61.1.1.3.2, 1.2.392.200011.61.1.1.3.3, OID.1.2.392.200011.61.1.1.3.3, 1.2.392.200011.61.1.1.3.4, OID.1.2.392.200011.61.1.1.3.4]
+
+BC: AlgorithmParameters.DES -> org.bouncycastle.jcajce.provider.symmetric.util.IvAlgorithmParameters
+  aliases: [1.3.14.3.2.7, OID.1.3.14.3.2.7]
+
+BC: AlgorithmParameterGenerator.CAST5 -> org.bouncycastle.jcajce.provider.symmetric.CAST5$AlgParamGen
+  aliases: [1.2.840.113533.7.66.10]
+
+BC: KeyPairGenerator.ED25519 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyPairGeneratorSpi$Ed25519
+
+BC: Cipher.OID.1.2.410.200004.1.4 -> org.bouncycastle.jcajce.provider.symmetric.SEED$CBC
+
+BC: AlgorithmParameters.GCM -> org.bouncycastle.jcajce.provider.symmetric.AES$AlgParamsGCM
+  aliases: [2.16.840.1.101.3.4.1.6, 2.16.840.1.101.3.4.1.26, 2.16.840.1.101.3.4.1.46]
+
+BC: AlgorithmParameters.CCM -> org.bouncycastle.jcajce.provider.symmetric.AES$AlgParamsCCM
+  aliases: [2.16.840.1.101.3.4.1.7, 2.16.840.1.101.3.4.1.27, 2.16.840.1.101.3.4.1.47]
+
+BC: Signature.SHA512WITHCVC-ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecCVCDSA512
+  aliases: [SHA512withCVC-ECDSA, SHA512WithCVC-ECDSA, SHA512/CVC-ECDSA, 0.4.0.127.0.7.2.2.2.2.5, OID.0.4.0.127.0.7.2.2.2.2.5]
+
+BC: MessageDigest.BLAKE2B-256 -> org.bouncycastle.jcajce.provider.digest.Blake2b$Blake2b256
+  aliases: [1.3.6.1.4.1.1722.12.2.1.8]
+
+BC: AlgorithmParameterGenerator.DESEDE -> org.bouncycastle.jcajce.provider.symmetric.DESede$AlgParamGen
+  aliases: [TDEA, 1.2.840.113549.3.7]
+
+BC: Mac.PBEWITHHMACSHA224 -> org.bouncycastle.jcajce.provider.digest.SHA224$HashMac
+
+BC: AlgorithmParameters.RC5-64 -> org.bouncycastle.jcajce.provider.symmetric.RC5$AlgParams
+
+BC: Signature.SHA3-512WITHRSAANDMGF1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA3_512withRSA
+  aliases: [SHA3-512withRSA/PSS, SHA3-512WithRSA/PSS, SHA3-512withRSASSA-PSS, SHA3-512WithRSASSA-PSS, SHA3-512WITHRSASSA-PSS, SHA3-512withRSAandMGF1, SHA3-512WithRSAAndMGF1]
+
+BC: Mac.HMACSkein-512-256 -> org.bouncycastle.jcajce.provider.digest.Skein$HashMac_512_256
+  aliases: [HMAC-Skein-512-256, HMAC/Skein-512-256]
+
+BC: Cipher.Shacal2 -> org.bouncycastle.jcajce.provider.symmetric.Shacal2$ECB
+
+BC: KeyGenerator.Grainv1 -> org.bouncycastle.jcajce.provider.symmetric.Grainv1$KeyGen
+
+BC: KeyGenerator.XTEA -> org.bouncycastle.jcajce.provider.symmetric.XTEA$KeyGen
+
+BC: AlgorithmParameters.XSALSA20 -> org.bouncycastle.jcajce.provider.symmetric.XSalsa20$AlgParams
+
+BC: AlgorithmParameters.RIJNDAEL -> org.bouncycastle.jcajce.provider.symmetric.Rijndael$AlgParams
+
+BC: CertPathBuilder.PKIX -> org.bouncycastle.jce.provider.PKIXCertPathBuilderSpi_8
+
+BC: Mac.GOST28147MAC -> org.bouncycastle.jcajce.provider.symmetric.GOST28147$Mac
+  aliases: [GOST28147]
+
+BC: KeyPairGenerator.OID.1.3.101.110 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyPairGeneratorSpi$X25519
+
+BC: Cipher.1.2.840.113549.3.2 -> org.bouncycastle.jcajce.provider.symmetric.RC2$CBC
+
+BC: Mac.PBEWITHHMACSHA256 -> org.bouncycastle.jcajce.provider.digest.SHA256$HashMac
+
+BC: Mac.Skein-MAC-512-160 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMac_512_160
+  aliases: [Skein-MAC512/160]
+
+BC: KeyGenerator.HMACSHA512 -> org.bouncycastle.jcajce.provider.digest.SHA512$KeyGenerator
+  aliases: [HMAC-SHA512, HMAC/SHA512, 1.2.840.113549.2.11]
+
+BC: Cipher.1.2.840.113549.3.7 -> org.bouncycastle.jcajce.provider.symmetric.DESede$CBC
+
+BC: Cipher.DSTU7624-512KW -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$Wrap512
+  aliases: [1.2.804.2.1.1.1.1.1.3.10.3, DSTU7624-512WRAP]
+
+BC: KeyAgreement.DHUWITHSHA384CKDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHUwithSHA384CKDF
+
+BC: KeyPairGenerator.EC -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyPairGeneratorSpi$EC
+  aliases: [1.2.840.10045.2.1, 1.3.133.16.840.63.0.3, 1.3.132.1.11.0, 1.3.132.1.14.0, 1.3.132.1.11.1, 1.3.132.1.14.1, 1.3.132.1.11.2, 1.3.132.1.14.2, 1.3.132.1.11.3, 1.3.132.1.14.3, 1.3.133.16.840.63.0.2]
+
+BC: Signature.ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDSA
+  aliases: [SHA1withECDSA, ECDSAwithSHA1, SHA1WITHECDSA, ECDSAWITHSHA1, SHA1WithECDSA, ECDSAWithSHA1, 1.2.840.10045.4.1, 1.3.36.3.3.2.1]
+
+BC: KeyAgreement.ECMQVWITHSHA224KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$MQVwithSHA224KDF
+
+BC: Signature.SHA3-224WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$SHA3_224
+  aliases: [SHA3-224withRSA, SHA3-224WithRSA, SHA3-224WITHRSAENCRYPTION, SHA3-224withRSAEncryption, SHA3-224WithRSAEncryption, SHA3-224/RSA, 2.16.840.1.101.3.4.3.13, OID.2.16.840.1.101.3.4.3.13]
+
+BC: Signature.WhirlpoolWITHRSA/ISO9796-2 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.ISOSignatureSpi$WhirlpoolWithRSAEncryption
+  aliases: [WhirlpoolwithRSA/ISO9796-2, WhirlpoolWithRSA/ISO9796-2, WHIRLPOOLwithRSA/ISO9796-2, WHIRLPOOLWithRSA/ISO9796-2]
+
+BC: Signature.SHA384WITHRSAANDSHAKE256 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA384withRSAandSHAKE256
+  aliases: [SHA384withRSAandSHAKE256, SHA384WithRSAAndSHAKE256]
+
+BC: Mac.HMACKECCAK512 -> org.bouncycastle.jcajce.provider.digest.Keccak$HashMac512
+  aliases: [HMAC-KECCAK512, HMAC/KECCAK512]
+
+BC: Cipher.DSTU7624-128KW -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$Wrap128
+  aliases: [1.2.804.2.1.1.1.1.1.3.10.1, DSTU7624-128WRAP]
+
+BC: Mac.POLY1305-NOEKEON -> org.bouncycastle.jcajce.provider.symmetric.Noekeon$Poly1305
+  aliases: [POLY1305NOEKEON]
+
+BC: KeyGenerator.HMACSkein-512-160 -> org.bouncycastle.jcajce.provider.digest.Skein$HMacKeyGenerator_512_160
+  aliases: [HMAC-Skein-512-160, HMAC/Skein-512-160]
+
+BC: Mac.HMACSHA384 -> org.bouncycastle.jcajce.provider.digest.SHA384$HashMac
+  aliases: [HMAC-SHA384, HMAC/SHA384, 1.2.840.113549.2.10]
+
+BC: KeyAgreement.DHUWITHSHA224KDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHUwithSHA224KDF
+
+BC: KeyAgreement.ECGOST3410-2012-256 -> org.bouncycastle.jcajce.provider.asymmetric.ecgost12.KeyAgreementSpi$ECVKO256
+  aliases: [1.2.643.7.1.1.6.1, 1.2.643.7.1.1.1.1]
+
+BC: Signature.RIPEMD160WITHDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$dsaRMD160
+  aliases: [RIPEMD160withDSA, RIPEMD160WithDSA, RIPEMD160/DSA]
+
+BC: Signature.SHAKE128WITHRSAPSS -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHAKE128WithRSAPSS
+  aliases: [SHAKE128withRSA/PSS, SHAKE128WithRSA/PSS, SHAKE128withRSASSA-PSS, SHAKE128WithRSASSA-PSS, SHAKE128WITHRSASSA-PSS]
+
+BC: Signature.SHA512WITHRSAANDMGF1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA512withRSA
+  aliases: [SHA512withRSA/PSS, SHA512WithRSA/PSS, SHA512withRSASSA-PSS, SHA512WithRSASSA-PSS, SHA512WITHRSASSA-PSS, SHA512withRSAandMGF1, SHA512WithRSAAndMGF1]
+
+BC: MessageDigest.SM3 -> org.bouncycastle.jcajce.provider.digest.SM3$Digest
+  aliases: [SM3, 1.2.156.197.1.401, 1.2.156.10197.1.401]
+
+BC: CertPathValidator.RFC3281 -> org.bouncycastle.jce.provider.PKIXAttrCertPathValidatorSpi
+
+BC: CertPathValidator.RFC3280 -> org.bouncycastle.jce.provider.PKIXCertPathValidatorSpi_8
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.3.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen512
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.3.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen256
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.3.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen128
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.48 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.47 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.46 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.45 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.44 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.43 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: KeyGenerator.CAMELLIA-GMAC -> org.bouncycastle.jcajce.provider.symmetric.Camellia$KeyGen
+  aliases: [CAMELLIAGMAC]
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.42 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.41 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: Mac.HMACKECCAK224 -> org.bouncycastle.jcajce.provider.digest.Keccak$HashMac224
+  aliases: [HMAC-KECCAK224, HMAC/KECCAK224]
+
+BC: KeyAgreement.1.3.133.16.840.63.0.16 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$MQVwithSHA1KDFAndSharedInfo
+
+BC: KeyPairGenerator.OID.1.3.101.112 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyPairGeneratorSpi$Ed25519
+
+BC: KeyPairGenerator.OID.1.3.101.111 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyPairGeneratorSpi$X448
+
+BC: KeyPairGenerator.OID.1.3.101.113 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyPairGeneratorSpi$Ed448
+
+BC: KeyGenerator.Skein-MAC-256-128 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMacKeyGenerator_256_128
+  aliases: [Skein-MAC256/128]
+
+BC: KeyGenerator.HMACSkein-512-128 -> org.bouncycastle.jcajce.provider.digest.Skein$HMacKeyGenerator_512_128
+  aliases: [HMAC-Skein-512-128, HMAC/Skein-512-128]
+
+BC: AlgorithmParameters.SM4 -> org.bouncycastle.jcajce.provider.symmetric.SM4$AlgParams
+
+BC: KeyGenerator.HMACSHA3-512 -> org.bouncycastle.jcajce.provider.digest.SHA3$KeyGenerator512
+  aliases: [HMAC-SHA3-512, HMAC/SHA3-512, 2.16.840.1.101.3.4.2.16]
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.28 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.27 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: KeyAgreement.X25519WITHSHA512CKDF -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$X25519withSHA512CKDF
+
+BC: Mac.Skein-MAC-512-128 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMac_512_128
+  aliases: [Skein-MAC512/128]
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.26 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: Cipher.SEEDWRAP -> org.bouncycastle.jcajce.provider.symmetric.SEED$Wrap
+  aliases: [1.2.410.200004.7.1.1.1, OID.1.2.410.200004.7.1.1.1, SEEDKW]
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.25 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: KeyGenerator.SIPHASH -> org.bouncycastle.jcajce.provider.symmetric.SipHash$KeyGen
+  aliases: [SIPHASH-2-4, SIPHASH-4-8]
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.24 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.23 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.22 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.21 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: AlgorithmParameterGenerator.DES -> org.bouncycastle.jcajce.provider.symmetric.DES$AlgParamGen
+  aliases: [1.3.14.3.2.7]
+
+BC: AlgorithmParameterGenerator.DSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.AlgorithmParameterGeneratorSpi
+  aliases: [1.2.840.10040.4.1, 1.3.14.3.2.27, 1.2.840.10040.4.3]
+
+BC: MessageDigest.BLAKE2B-384 -> org.bouncycastle.jcajce.provider.digest.Blake2b$Blake2b384
+  aliases: [1.3.6.1.4.1.1722.12.2.1.12]
+
+BC: MessageDigest.Skein-512-160 -> org.bouncycastle.jcajce.provider.digest.Skein$Digest_512_160
+
+BC: Mac.HMACSkein-256-160 -> org.bouncycastle.jcajce.provider.digest.Skein$HashMac_256_160
+  aliases: [HMAC-Skein-256-160, HMAC/Skein-256-160]
+
+BC: MessageDigest.BLAKE2B-512 -> org.bouncycastle.jcajce.provider.digest.Blake2b$Blake2b512
+  aliases: [1.3.6.1.4.1.1722.12.2.1.16]
+
+BC: Cipher.GOST3412-2015/OFB -> org.bouncycastle.jcajce.provider.symmetric.GOST3412_2015$OFB
+
+BC: SecretKeyFactory.PBEWITHSHAAND2-KEYTRIPLEDES-CBC -> org.bouncycastle.jcajce.provider.symmetric.DESede$PBEWithSHAAndDES2KeyFactory
+  aliases: [1.2.840.113549.1.12.1.4]
+
+BC: Cipher.ARIAGCM -> org.bouncycastle.jcajce.provider.symmetric.ARIA$GCM
+  aliases: [1.2.410.200046.1.1.34, OID.1.2.410.200046.1.1.34, 1.2.410.200046.1.1.35, OID.1.2.410.200046.1.1.35, 1.2.410.200046.1.1.36, OID.1.2.410.200046.1.1.36]
+
+BC: SecretKeyFactory.PBEWITHSHAAND40BITRC2-CBC -> org.bouncycastle.jcajce.provider.symmetric.RC2$PBEWithSHAAnd40BitKeyFactory
+  aliases: [1.2.840.113549.1.12.1.6]
+
+BC: Signature.SHA512WITHDDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$detDSA512
+
+BC: KeyFactory.ECMQV -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyFactorySpi$ECMQV
+  aliases: [1.3.133.16.840.63.0.16, 1.3.132.1.15.0, 1.3.132.1.15.1, 1.3.132.1.15.2, 1.3.132.1.15.3]
+
+BC: Mac.HMACSkein-512-384 -> org.bouncycastle.jcajce.provider.digest.Skein$HashMac_512_384
+  aliases: [HMAC-Skein-512-384, HMAC/Skein-512-384]
+
+BC: Signature.SHA256WITHRSAANDSHAKE128 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA256withRSAandSHAKE128
+  aliases: [SHA256withRSAandSHAKE128, SHA256WithRSAAndSHAKE128]
+
+BC: Signature.SHA1WITHRSAANDSHAKE128 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA1withRSAandSHAKE128
+  aliases: [SHA1withRSAandSHAKE128, SHA1WithRSAAndSHAKE128]
+
+BC: Signature.SHA512WITHECNR -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecNR512
+
+BC: AlgorithmParameterGenerator.DSTU7624 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$AlgParamGen128
+
+BC: KeyGenerator.POLY1305-CAST6 -> org.bouncycastle.jcajce.provider.symmetric.CAST6$Poly1305KeyGen
+  aliases: [POLY1305CAST6]
+
+BC: KeyFactory.ECDH -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyFactorySpi$ECDH
+
+BC: AlgorithmParameters.XTEA -> org.bouncycastle.jcajce.provider.symmetric.XTEA$AlgParams
+
+BC: Cipher.DSTU7624-128 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$ECB_128
+
+BC: Mac.RC2MAC -> org.bouncycastle.jcajce.provider.symmetric.RC2$CBCMAC
+  aliases: [RC2]
+
+BC: Mac.BLOWFISHCMAC -> org.bouncycastle.jcajce.provider.symmetric.Blowfish$CMAC
+
+BC: SecretKeyFactory.PBEWITHSHAAND40BITRC4 -> org.bouncycastle.jcajce.provider.symmetric.ARC4$PBEWithSHAAnd40BitKeyFactory
+  aliases: [1.2.840.113549.1.12.1.2, OID.1.2.840.113549.1.12.1.2]
+
+BC: KeyGenerator.Threefish-256 -> org.bouncycastle.jcajce.provider.symmetric.Threefish$KeyGen_256
+
+BC: KeyAgreement.DHUWITHSHA1CKDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHUwithSHA1CKDF
+
+BC: Cipher.SM2WITHBLAKE2S -> org.bouncycastle.jcajce.provider.asymmetric.ec.GMCipherSpi$SM2withBlake2s
+  aliases: [1.2.156.10197.1.301.3.2.10]
+
+BC: AlgorithmParameterGenerator.ELGAMAL -> org.bouncycastle.jcajce.provider.asymmetric.elgamal.AlgorithmParameterGeneratorSpi
+  aliases: [1.3.14.7.2.1.1]
+
+BC: Signature.DDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$detDSA
+
+BC: KeyGenerator.Skein-MAC-256-160 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMacKeyGenerator_256_160
+  aliases: [Skein-MAC256/160]
+
+BC: KeyGenerator.VMPC-KSA3 -> org.bouncycastle.jcajce.provider.symmetric.VMPCKSA3$KeyGen
+
+BC: Signature.ED448 -> org.bouncycastle.jcajce.provider.asymmetric.edec.SignatureSpi$Ed448
+  aliases: [1.3.101.113, OID.1.3.101.113]
+
+BC: AlgorithmParameters.Grainv1 -> org.bouncycastle.jcajce.provider.symmetric.Grainv1$AlgParams
+
+BC: AlgorithmParameterGenerator.SEED -> org.bouncycastle.jcajce.provider.symmetric.SEED$AlgParamGen
+  aliases: [1.2.410.200004.1.4]
+
+BC: KeyAgreement.X448WITHSHA512CKDF -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$X448withSHA512CKDF
+
+BC: KeyAgreement.ECDHWITHSHA224KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA224KDFAndSharedInfo
+
+BC: KeyGenerator.HMACSHA3-224 -> org.bouncycastle.jcajce.provider.digest.SHA3$KeyGenerator224
+  aliases: [HMAC-SHA3-224, HMAC/SHA3-224, 2.16.840.1.101.3.4.2.13]
+
+BC: MessageDigest.Skein-512-128 -> org.bouncycastle.jcajce.provider.digest.Skein$Digest_512_128
+
+BC: KeyGenerator.Twofish -> org.bouncycastle.jcajce.provider.symmetric.Twofish$KeyGen
+
+BC: Cipher.ECIESwithSHA256andDESEDE-CBC -> org.bouncycastle.jcajce.provider.asymmetric.ec.IESCipher$ECIESwithSHA256andDESedeCBC
+
+BC: Cipher.ECIESwithSHA512andDESEDE-CBC -> org.bouncycastle.jcajce.provider.asymmetric.ec.IESCipher$ECIESwithSHA512andDESedeCBC
+
+BC: Cipher.ARIAWRAP -> org.bouncycastle.jcajce.provider.symmetric.ARIA$Wrap
+  aliases: [1.2.410.200046.1.1.40, OID.1.2.410.200046.1.1.40, 1.2.410.200046.1.1.41, OID.1.2.410.200046.1.1.41, 1.2.410.200046.1.1.42, OID.1.2.410.200046.1.1.42, ARIAKW]
+
+BC: KeyAgreement.DHWITHSHA512KDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHwithSHA512KDF
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.3.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CFB128
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.3.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CFB256
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.3.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CFB512
+
+BC: Cipher.ECIESwithSHA512 -> org.bouncycastle.jcajce.provider.asymmetric.ec.IESCipher$ECIESwithSHA512
+
+BC: KeyGenerator.SM4-GMAC -> org.bouncycastle.jcajce.provider.symmetric.SM4$KeyGen
+  aliases: [SM4GMAC]
+
+BC: Signature.SHA512WITHRSAANDSHAKE128 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA512withRSAandSHAKE128
+  aliases: [SHA512withRSAandSHAKE128, SHA512WithRSAAndSHAKE128]
+
+BC: Cipher.RC5-64 -> org.bouncycastle.jcajce.provider.symmetric.RC5$ECB64
+
+BC: KeyStore.IBCFKS -> org.bouncycastle.jcajce.provider.keystore.bcfks.BcFKSKeyStoreSpi$StdShared
+
+BC: KeyAgreement.ECCDHUWITHSHA256CKDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHUwithSHA256CKDF
+
+BC: Cipher.CAMELLIA -> org.bouncycastle.jcajce.provider.symmetric.Camellia$ECB
+
+BC: KeyAgreement.ECMQVWITHSHA256KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$MQVwithSHA256KDF
+
+BC: Cipher.RC2WRAP -> org.bouncycastle.jcajce.provider.symmetric.RC2$Wrap
+  aliases: [1.2.840.113549.1.9.16.3.7, OID.1.2.840.113549.1.9.16.3.7]
+
+BC: Cipher.1.2.840.113549.1.9.16.3.6 -> org.bouncycastle.jcajce.provider.symmetric.DESede$Wrap
+
+BC: KeyGenerator.HMACSkein-512-384 -> org.bouncycastle.jcajce.provider.digest.Skein$HMacKeyGenerator_512_384
+  aliases: [HMAC-Skein-512-384, HMAC/Skein-512-384]
+
+BC: AlgorithmParameters.TEA -> org.bouncycastle.jcajce.provider.symmetric.TEA$AlgParams
+
+BC: KeyGenerator.SM4 -> org.bouncycastle.jcajce.provider.symmetric.SM4$KeyGen
+
+BC: KeyAgreement.ECCDHWITHSHA512CKDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA512CKDF
+
+BC: KeyStore.BCFKS-DEF -> org.bouncycastle.jcajce.provider.keystore.bcfks.BcFKSKeyStoreSpi$Def
+
+BC: Signature.SHA3-384WITHRSAANDSHAKE256 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA3_384withRSAandSHAKE256
+  aliases: [SHA3-384withRSAandSHAKE256, SHA3-384WithRSAAndSHAKE256]
+
+BC: MessageDigest.GOST3411-2012-256 -> org.bouncycastle.jcajce.provider.digest.GOST3411$Digest2012_256
+  aliases: [GOST-2012-256, GOST-3411-2012-256, 1.2.643.7.1.1.2.2]
+
+BC: KeyAgreement.ECCDHWITHSHA224KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$CDHwithSHA224KDFAndSharedInfo
+
+BC: Mac.DSTU7624GMAC -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$GMAC
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.7.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen512
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.7.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen256
+
+BC: Signature.SHA384WITHDDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$detDSA384
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.7.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen128
+
+BC: KeyStore.BCPKCS12 -> org.bouncycastle.jcajce.provider.keystore.pkcs12.PKCS12KeyStoreSpi$BCPKCS12KeyStore
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.10.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen256
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.10.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen128
+
+BC: Signature.SHA384WITHECNR -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecNR384
+
+BC: KeyAgreement.ECCDHUWITHSHA384CKDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHUwithSHA384CKDF
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.10.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen512
+
+BC: Signature.SHA1WITHRSAANDMGF1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA1withRSA
+  aliases: [SHA1withRSA/PSS, SHA1WithRSA/PSS, SHA1withRSASSA-PSS, SHA1WithRSASSA-PSS, SHA1WITHRSASSA-PSS, SHA1withRSAandMGF1, SHA1WithRSAAndMGF1]
+
+BC: KeyPairGenerator.ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyPairGeneratorSpi$ECDSA
+
+BC: Signature.GOST3411WITHDSTU4145 -> org.bouncycastle.jcajce.provider.asymmetric.dstu.SignatureSpi
+  aliases: [GOST3411withDSTU4145, GOST3411WithDSTU4145, GOST3411/DSTU4145, 1.2.804.2.1.1.1.1.3.1.1.1.1, OID.1.2.804.2.1.1.1.1.3.1.1.1.1]
+
+BC: KeyStore.BCFKS -> org.bouncycastle.jcajce.provider.keystore.bcfks.BcFKSKeyStoreSpi$Std
+
+BC: Mac.HMACSkein-1024-1024 -> org.bouncycastle.jcajce.provider.digest.Skein$HashMac_1024_1024
+  aliases: [HMAC-Skein-1024-1024, HMAC/Skein-1024-1024]
+
+BC: AlgorithmParameterGenerator.IDEA -> org.bouncycastle.jcajce.provider.symmetric.IDEA$AlgParamGen
+
+BC: AlgorithmParameters.DSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.AlgorithmParametersSpi
+  aliases: [1.2.840.10040.4.1, 1.3.14.3.2.27, 1.2.840.10040.4.3]
+
+BC: Cipher.AESRFC5649WRAP -> org.bouncycastle.jcajce.provider.symmetric.AES$RFC5649Wrap
+
+BC: Cipher.GOST3412-2015 -> org.bouncycastle.jcajce.provider.symmetric.GOST3412_2015$ECB
+
+BC: Cipher.GOST3412-2015/CFB -> org.bouncycastle.jcajce.provider.symmetric.GOST3412_2015$GCFB
+
+BC: Cipher.ARIARFC3211WRAP -> org.bouncycastle.jcajce.provider.symmetric.ARIA$RFC3211Wrap
+
+BC: KeyAgreement.ECDHWITHSHA512KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA512KDFAndSharedInfo
+
+BC: Signature.SHA3-256WITHECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDSASha3_256
+  aliases: [SHA3-256withECDSA, SHA3-256WithECDSA, SHA3-256/ECDSA, 2.16.840.1.101.3.4.3.10, OID.2.16.840.1.101.3.4.3.10]
+
+BC: SecretKeyFactory.PBEWITHMD5AND192BITAES-CBC-OPENSSL -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithMD5And192BitAESCBCOpenSSL
+
+BC: AlgorithmParameters.Shacal2 -> org.bouncycastle.jcajce.provider.symmetric.Shacal2$AlgParams
+
+BC: KeyGenerator.HMACSHA3-256 -> org.bouncycastle.jcajce.provider.digest.SHA3$KeyGenerator256
+  aliases: [HMAC-SHA3-256, HMAC/SHA3-256, 2.16.840.1.101.3.4.2.14]
+
+BC: Signature.SHA3-384WITHECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDSASha3_384
+  aliases: [SHA3-384withECDSA, SHA3-384WithECDSA, SHA3-384/ECDSA, 2.16.840.1.101.3.4.3.11, OID.2.16.840.1.101.3.4.3.11]
+
+BC: AlgorithmParameters.ECGOST3410-2012 -> org.bouncycastle.jcajce.provider.asymmetric.ec.AlgorithmParametersSpi
+  aliases: [1.2.643.7.1.1.1.1, 1.2.643.7.1.1.1.2]
+
+BC: KeyGenerator.POLY1305-Twofish -> org.bouncycastle.jcajce.provider.symmetric.Twofish$Poly1305KeyGen
+  aliases: [POLY1305Twofish]
+
+BC: MessageDigest.KECCAK-384 -> org.bouncycastle.jcajce.provider.digest.Keccak$Digest384
+
+BC: KeyAgreement.OID.1.2.840.113549.1.9.16.3.10 -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHwithRFC2631KDF
+
+BC: KeyGenerator.VMPC -> org.bouncycastle.jcajce.provider.symmetric.VMPC$KeyGen
+
+BC: Mac.DESEDEMAC64 -> org.bouncycastle.jcajce.provider.symmetric.DESede$DESede64
+  aliases: [DESEDE64]
+
+BC: KeyPairGenerator.ECMQV -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyPairGeneratorSpi$ECMQV
+  aliases: [1.3.133.16.840.63.0.16, 1.3.132.1.15.0, 1.3.132.1.15.1, 1.3.132.1.15.2, 1.3.132.1.15.3]
+
+BC: KeyAgreement.ECCDHUWITHSHA512KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHUwithSHA512KDF
+
+BC: KeyAgreement.DHUWITHSHA512KDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHUwithSHA512KDF
+
+BC: KeyAgreement.ECMQV -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$MQV
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.4 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.3 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.2 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.1 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.8 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.7 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.6 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: KeyGenerator.OID.2.16.840.1.101.3.4.1.5 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen128
+
+BC: KeyAgreement.ECCDHUWITHSHA1CKDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHUwithSHA1CKDF
+
+BC: Cipher.OID.1.3.6.1.4.1.11591.13.2.43 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$OFB
+
+BC: Cipher.OID.1.3.6.1.4.1.11591.13.2.44 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$CFB
+
+BC: Cipher.OID.1.3.6.1.4.1.11591.13.2.41 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$ECB
+
+BC: Signature.SHA1WITHECDDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDetDSA
+  aliases: [SHA1WITHDETECDSA]
+
+BC: KeyFactory.EDDSA -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyFactorySpi$EdDSA
+  aliases: [1.3.101.113, 1.3.101.112]
+
+BC: Cipher.OID.1.3.6.1.4.1.11591.13.2.42 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$CBC
+
+BC: Mac.SIPHASH-2-4 -> org.bouncycastle.jcajce.provider.symmetric.SipHash$Mac24
+  aliases: [SIPHASH]
+
+BC: KeyAgreement.ECCDHWITHSHA512KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$CDHwithSHA512KDFAndSharedInfo
+
+BC: Cipher.GOST3412-2015/CBC -> org.bouncycastle.jcajce.provider.symmetric.GOST3412_2015$CBC
+
+BC: Cipher.DESEDERFC3211WRAP -> org.bouncycastle.jcajce.provider.symmetric.DESede$RFC3211
+
+BC: Cipher.ECIESwithSHA256andAES-CBC -> org.bouncycastle.jcajce.provider.asymmetric.ec.IESCipher$ECIESwithSHA256andAESCBC
+
+BC: AlgorithmParameters.HC128 -> org.bouncycastle.jcajce.provider.symmetric.HC128$AlgParams
+
+BC: KeyGenerator.POLY1305-AES -> org.bouncycastle.jcajce.provider.symmetric.AES$Poly1305KeyGen
+  aliases: [POLY1305AES]
+
+BC: Cipher.SALSA20 -> org.bouncycastle.jcajce.provider.symmetric.Salsa20$Base
+
+BC: Cipher.1.2.410.200046.1.1.7 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$CBC
+
+BC: Cipher.1.2.410.200046.1.1.6 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$ECB
+
+BC: Cipher.1.2.410.200046.1.1.9 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$OFB
+
+BC: Cipher.1.2.410.200046.1.1.8 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$CFB
+
+BC: Signature.SHA3-256WITHRSAANDSHAKE128 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA3_256withRSAandSHAKE128
+  aliases: [SHA3-256withRSAandSHAKE128, SHA3-256WithRSAAndSHAKE128]
+
+BC: Cipher.1.2.410.200046.1.1.1 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$ECB
+
+BC: KeyAgreement.X448 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$X448
+
+BC: Cipher.1.2.410.200046.1.1.3 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$CFB
+
+BC: Cipher.1.2.410.200046.1.1.2 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$CBC
+
+BC: Cipher.1.2.410.200046.1.1.4 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$OFB
+
+BC: MessageDigest.Skein-512-512 -> org.bouncycastle.jcajce.provider.digest.Skein$Digest_512_512
+
+BC: Cipher.OID.1.3.6.1.4.1.11591.13.2.21 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$ECB
+
+BC: Cipher.OID.1.3.6.1.4.1.11591.13.2.22 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$CBC
+
+BC: Cipher.OID.1.3.6.1.4.1.11591.13.2.23 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$OFB
+
+BC: Cipher.OID.1.3.6.1.4.1.11591.13.2.24 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$CFB
+
+BC: Mac.PBEWITHHMACRIPEMD160 -> org.bouncycastle.jcajce.provider.digest.RIPEMD160$PBEWithHmac
+
+BC: AlgorithmParameterGenerator.OID.1.2.804.2.1.1.1.1.1.3.5.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$AlgParamGen128
+
+BC: AlgorithmParameterGenerator.OID.1.2.804.2.1.1.1.1.1.3.5.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$AlgParamGen256
+
+BC: SecretKeyFactory.TLS12WITHSHA512KDF -> org.bouncycastle.jcajce.provider.symmetric.TLSKDF$TLS12withSHA512
+
+BC: Cipher.PBEWITHMD5AND192BITAES-CBC-OPENSSL -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithAESCBC
+
+BC: AlgorithmParameterGenerator.OID.1.2.804.2.1.1.1.1.1.3.5.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$AlgParamGen512
+
+BC: KeyAgreement.ECCDHUWITHSHA256KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHUwithSHA256KDF
+
+BC: Signature.RIPEMD160WITHRSA/X9.31 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.X931SignatureSpi$RIPEMD160WithRSAEncryption
+  aliases: [RIPEMD160withRSA/X9.31, RIPEMD160WithRSA/X9.31]
+
+BC: KeyAgreement.ECDHWITHSHA256KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA256KDFAndSharedInfo
+
+BC: KeyGenerator.HMACSHA512/224 -> org.bouncycastle.jcajce.provider.digest.SHA512$KeyGeneratorT224
+  aliases: [HMAC-SHA512/224, HMAC/SHA512/224]
+
+BC: Cipher.1.2.392.200011.61.1.1.1.2 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$CBC
+
+BC: Signature.SHA224WITHRSA/X9.31 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.X931SignatureSpi$SHA224WithRSAEncryption
+  aliases: [SHA224withRSA/X9.31, SHA224WithRSA/X9.31]
+
+BC: Cipher.1.2.392.200011.61.1.1.1.4 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$CBC
+
+BC: Cipher.1.2.392.200011.61.1.1.1.3 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$CBC
+
+BC: Cipher.Threefish-512 -> org.bouncycastle.jcajce.provider.symmetric.Threefish$ECB_512
+
+BC: Mac.DSTU7624-128GMAC -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$GMAC128
+  aliases: [1.2.804.2.1.1.1.1.1.3.7.1]
+
+BC: KeyAgreement.OID.1.3.133.16.840.63.0.3 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$CDHwithSHA1KDFAndSharedInfo
+
+BC: KeyAgreement.OID.1.3.133.16.840.63.0.2 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA1KDFAndSharedInfo
+
+BC: MessageDigest.SHA3-384 -> org.bouncycastle.jcajce.provider.digest.SHA3$Digest384
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.6.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$OFB256
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.6.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$OFB128
+
+BC: Mac.DSTU7624-256GMAC -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$GMAC256
+  aliases: [1.2.804.2.1.1.1.1.1.3.7.2]
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.6.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$OFB512
+
+BC: Cipher.OID.1.2.410.200046.1.1.14 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$OFB
+
+BC: KeyPairGenerator.ELGAMAL -> org.bouncycastle.jcajce.provider.asymmetric.elgamal.KeyPairGeneratorSpi
+  aliases: [1.3.14.7.2.1.1]
+
+BC: Cipher.OID.1.2.410.200046.1.1.13 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$CFB
+
+BC: KeyGenerator.HMACSHA512/256 -> org.bouncycastle.jcajce.provider.digest.SHA512$KeyGeneratorT256
+  aliases: [HMAC-SHA512/256, HMAC/SHA512/256]
+
+BC: SecretKeyFactory.TLS11KDF -> org.bouncycastle.jcajce.provider.symmetric.TLSKDF$TLS11
+
+BC: SecretKeyFactory.DESEDE -> org.bouncycastle.jcajce.provider.symmetric.DESede$KeyFactory
+  aliases: [TDEA]
+
+BC: AlgorithmParameters.EC -> org.bouncycastle.jcajce.provider.asymmetric.ec.AlgorithmParametersSpi
+  aliases: [1.2.840.10045.2.1, 1.3.133.16.840.63.0.2, 1.3.133.16.840.63.0.3, 1.3.132.1.11.0, 1.3.132.1.14.0, 1.3.132.1.11.1, 1.3.132.1.14.1, 1.3.132.1.11.2, 1.3.132.1.14.2, 1.3.132.1.11.3, 1.3.132.1.14.3, 1.3.133.16.840.63.0.16, 1.3.132.1.15.1, 1.3.132.1.15.0, 1.3.132.1.15.2, 1.3.132.1.15.3]
+
+BC: KeyPairGenerator.RSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.KeyPairGeneratorSpi
+  aliases: [1.2.840.113549.1.1.1, 2.5.8.1.1, 1.2.840.113549.1.1.7, 1.2.840.113549.1.1.10]
+
+BC: Cipher.OID.1.2.410.200046.1.1.12 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$CBC
+
+BC: Cipher.2.5.8.1.1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.CipherSpi$PKCS1v1_5Padding
+
+BC: Cipher.OID.1.2.410.200046.1.1.11 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$ECB
+
+BC: SecretKeyFactory.PBKDF-OPENSSL -> org.bouncycastle.jcajce.provider.symmetric.OpenSSLPBKDF$PBKDF
+
+BC: Mac.PBEWITHHMACSHA -> org.bouncycastle.jcajce.provider.digest.SHA1$SHA1Mac
+  aliases: [1.3.14.3.2.26]
+
+BC: Signature.RIPEMD160withRSA/ISO9796-2 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.ISOSignatureSpi$RIPEMD160WithRSAEncryption
+  aliases: [RIPEMD160WithRSA/ISO9796-2]
+
+BC: KeyAgreement.ECCDHWITHSHA256KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$CDHwithSHA256KDFAndSharedInfo
+
+BC: AlgorithmParameters.Twofish -> org.bouncycastle.jcajce.provider.symmetric.Twofish$AlgParams
+
+BC: KeyPairGenerator.ECIES -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyPairGeneratorSpi$ECDH
+
+BC: MessageDigest.RIPEMD320 -> org.bouncycastle.jcajce.provider.digest.RIPEMD320$Digest
+
+BC: Mac.POLY1305-SERPENT -> org.bouncycastle.jcajce.provider.symmetric.Serpent$Poly1305
+  aliases: [POLY1305SERPENT]
+
+BC: KeyAgreement.ECMQVWITHSHA512KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$MQVwithSHA512KDF
+
+BC: Cipher.OID.1.3.6.1.4.1.3029.1.1.2 -> org.bouncycastle.jcajce.provider.symmetric.Blowfish$CBC
+
+BC: Cipher.1.3.6.1.4.1.188.7.1.1.2 -> org.bouncycastle.jcajce.provider.symmetric.IDEA$CBC
+
+BC: Cipher.RSA/PKCS1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.CipherSpi$PKCS1v1_5Padding
+  aliases: [RSA//PKCS1PADDING]
+
+BC: CertStore.LDAP -> org.bouncycastle.jce.provider.X509LDAPCertStoreSpi
+  aliases: [X509LDAP]
+
+BC: KeyGenerator.SEED-CMAC -> org.bouncycastle.jcajce.provider.symmetric.SEED$KeyGen
+  aliases: [SEEDCMAC]
+
+BC: Cipher.1.3.6.1.4.1.3029.1.1.2 -> org.bouncycastle.jcajce.provider.symmetric.Blowfish$CBC
+
+BC: Cipher.CHACHA7539 -> org.bouncycastle.jcajce.provider.symmetric.ChaCha$Base7539
+  aliases: [CHACHA20]
+
+BC: Mac.SIPHASH128-4-8 -> org.bouncycastle.jcajce.provider.symmetric.SipHash128$Mac48
+
+BC: KeyAgreement.ECMQVWITHSHA384CKDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$MQVwithSHA384CKDF
+
+BC: MessageDigest.Skein-256-128 -> org.bouncycastle.jcajce.provider.digest.Skein$Digest_256_128
+
+BC: Cipher.VMPC -> org.bouncycastle.jcajce.provider.symmetric.VMPC$Base
+
+BC: Cipher.OID.2.16.840.1.101.3.4.1.1 -> org.bouncycastle.jcajce.provider.symmetric.AES$ECB
+
+BC: SecretKeyFactory.PBEWITHSHA1ANDDES -> org.bouncycastle.jcajce.provider.symmetric.DES$PBEWithSHA1KeyFactory
+  aliases: [PBEWITHSHA1ANDDES-CBC, 1.2.840.113549.1.5.10]
+
+BC: Cipher.OID.2.16.840.1.101.3.4.1.3 -> org.bouncycastle.jcajce.provider.symmetric.AES$OFB
+
+BC: Cipher.OID.2.16.840.1.101.3.4.1.2 -> org.bouncycastle.jcajce.provider.symmetric.AES$CBC
+
+BC: Cipher.OID.2.16.840.1.101.3.4.1.4 -> org.bouncycastle.jcajce.provider.symmetric.AES$CFB
+
+BC: Signature.SHA512(224)WITHRSA/X9.31 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.X931SignatureSpi$SHA512_224WithRSAEncryption
+  aliases: [SHA512(224)withRSA/X9.31, SHA512(224)WithRSA/X9.31]
+
+BC: SecretKeyFactory.AES -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyFactory
+
+BC: AlgorithmParameterGenerator.RC2 -> org.bouncycastle.jcajce.provider.symmetric.RC2$AlgParamGen
+
+BC: KeyAgreement.DHUWITHSHA384KDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHUwithSHA384KDF
+
+BC: Signature.SHA3-512WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$SHA3_512
+  aliases: [SHA3-512withRSA, SHA3-512WithRSA, SHA3-512WITHRSAENCRYPTION, SHA3-512withRSAEncryption, SHA3-512WithRSAEncryption, SHA3-512/RSA, 2.16.840.1.101.3.4.3.16, OID.2.16.840.1.101.3.4.3.16]
+
+BC: X509Store.ATTRIBUTECERTIFICATE/LDAP -> org.bouncycastle.jce.provider.X509StoreLDAPAttrCerts
+
+BC: Cipher.ECIESwithSHA384andDESEDE-CBC -> org.bouncycastle.jcajce.provider.asymmetric.ec.IESCipher$ECIESwithSHA384andDESedeCBC
+
+BC: KeyStore.PKCS12-3DES-3DES -> org.bouncycastle.jcajce.provider.keystore.pkcs12.PKCS12KeyStoreSpi$BCPKCS12KeyStore3DES
+
+BC: KeyGenerator.1.2.840.113549.3.7 -> org.bouncycastle.jcajce.provider.symmetric.DESede$KeyGenerator3
+
+BC: KeyGenerator.1.2.840.113549.3.2 -> org.bouncycastle.jcajce.provider.symmetric.RC2$KeyGenerator
+
+BC: KeyGenerator.ARC4 -> org.bouncycastle.jcajce.provider.symmetric.ARC4$KeyGen
+  aliases: [RC4, 1.2.840.113549.3.4]
+
+BC: Mac.SEED-GMAC -> org.bouncycastle.jcajce.provider.symmetric.SEED$GMAC
+  aliases: [SEEDGMAC]
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.43 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: Mac.Threefish-512CMAC -> org.bouncycastle.jcajce.provider.symmetric.Threefish$CMAC_512
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.44 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: KeyAgreement.DHUWITHSHA512CKDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHUwithSHA512CKDF
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.41 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.42 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: Signature.SHA3-224WITHRSAANDSHAKE128 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA3_224withRSAandSHAKE128
+  aliases: [SHA3-224withRSAandSHAKE128, SHA3-224WithRSAAndSHAKE128]
+
+BC: KeyGenerator.CHACHA -> org.bouncycastle.jcajce.provider.symmetric.ChaCha$KeyGen
+
+BC: KeyGenerator.Shacal2 -> org.bouncycastle.jcajce.provider.symmetric.Shacal2$KeyGen
+
+BC: Signature.DETDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$detDSA
+
+BC: KeyAgreement.OID.0.4.0.127.0.7.1.1.5.1.1.6 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithRIPEMD160KDF
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.1.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$ECB128
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.1.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$ECB256
+
+BC: KeyGenerator.HMACWHIRLPOOL -> org.bouncycastle.jcajce.provider.digest.Whirlpool$KeyGenerator
+  aliases: [HMAC-WHIRLPOOL, HMAC/WHIRLPOOL]
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.1.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$ECB512
+
+BC: KeyPairGenerator.XDH -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyPairGeneratorSpi$XDH
+  aliases: [1.3.101.111, 1.3.101.110]
+
+BC: KeyAgreement.OID.0.4.0.127.0.7.1.1.5.1.1.1 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithSHA1KDF
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.47 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: KeyAgreement.OID.0.4.0.127.0.7.1.1.5.1.1.2 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithSHA224KDF
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.48 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: KeyAgreement.ECCDHUWITHSHA224KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHUwithSHA224KDF
+
+BC: KeyAgreement.OID.0.4.0.127.0.7.1.1.5.1.1.3 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithSHA256KDF
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.45 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: Cipher.XSALSA20 -> org.bouncycastle.jcajce.provider.symmetric.XSalsa20$Base
+
+BC: KeyAgreement.OID.0.4.0.127.0.7.1.1.5.1.1.4 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithSHA384KDF
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.46 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen256
+
+BC: KeyAgreement.OID.0.4.0.127.0.7.1.1.5.1.1.5 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithSHA512KDF
+
+BC: KeyGenerator.OID.1.3.6.1.4.1.188.7.1.1.2 -> org.bouncycastle.jcajce.provider.symmetric.IDEA$KeyGen
+
+BC: KeyGenerator.POLY1305-RC6 -> org.bouncycastle.jcajce.provider.symmetric.RC6$Poly1305KeyGen
+  aliases: [POLY1305RC6]
+
+BC: MessageDigest.Skein-256-160 -> org.bouncycastle.jcajce.provider.digest.Skein$Digest_256_160
+
+BC: KeyStore.PKCS12 -> org.bouncycastle.jcajce.provider.keystore.pkcs12.PKCS12KeyStoreSpi$BCPKCS12KeyStore
+
+BC: KeyGenerator.RC6-GMAC -> org.bouncycastle.jcajce.provider.symmetric.RC6$KeyGen
+  aliases: [RC6GMAC]
+
+BC: KeyFactory.ECDHC -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyFactorySpi$ECDHC
+
+BC: KeyAgreement.X25519WITHSHA384CKDF -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$X25519withSHA384CKDF
+
+BC: Cipher.1.2.410.200046.1.1.12 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$CBC
+
+BC: Cipher.1.2.410.200046.1.1.11 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$ECB
+
+BC: Mac.RC5MAC -> org.bouncycastle.jcajce.provider.symmetric.RC5$Mac32
+  aliases: [RC5]
+
+BC: Cipher.1.2.410.200046.1.1.14 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$OFB
+
+BC: Cipher.1.2.410.200046.1.1.13 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$CFB
+
+BC: Cipher.OID.1.3.14.3.2.7 -> org.bouncycastle.jcajce.provider.symmetric.DES$CBC
+
+BC: KeyGenerator.HMACSkein-1024-1024 -> org.bouncycastle.jcajce.provider.digest.Skein$HMacKeyGenerator_1024_1024
+  aliases: [HMAC-Skein-1024-1024, HMAC/Skein-1024-1024]
+
+BC: Signature.SHA3-512WITHECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDSASha3_512
+  aliases: [SHA3-512withECDSA, SHA3-512WithECDSA, SHA3-512/ECDSA, 2.16.840.1.101.3.4.3.12, OID.2.16.840.1.101.3.4.3.12]
+
+BC: KeyAgreement.1.3.132.1.14.0 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$CDHwithSHA224KDFAndSharedInfo
+
+BC: KeyAgreement.1.3.132.1.14.1 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$CDHwithSHA256KDFAndSharedInfo
+
+BC: KeyAgreement.OID.1.3.101.111 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$X448
+
+BC: KeyAgreement.OID.1.3.101.110 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$X25519
+
+BC: KeyAgreement.ECMQVWITHSHA224CKDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$MQVwithSHA224CKDF
+
+BC: KeyAgreement.DHWITHSHA256KDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHwithSHA256KDF
+
+BC: Signature.SHA1WITHRSA/X9.31 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.X931SignatureSpi$SHA1WithRSAEncryption
+  aliases: [SHA1withRSA/X9.31, SHA1WithRSA/X9.31]
+
+BC: KeyAgreement.1.3.132.1.14.2 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$CDHwithSHA384KDFAndSharedInfo
+
+BC: KeyAgreement.1.3.132.1.14.3 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$CDHwithSHA512KDFAndSharedInfo
+
+BC: KeyGenerator.1.2.410.200004.7.1.1.1 -> org.bouncycastle.jcajce.provider.symmetric.SEED$KeyGen
+
+BC: KeyAgreement.ECKAEGWITHRIPEMD160KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithRIPEMD160KDF
+
+BC: KeyAgreement.1.3.133.16.840.63.0.3 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$CDHwithSHA1KDFAndSharedInfo
+
+BC: KeyFactory.COMPOSITE -> org.bouncycastle.jcajce.provider.asymmetric.COMPOSITE$KeyFactory
+
+BC: KeyAgreement.1.3.133.16.840.63.0.2 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA1KDFAndSharedInfo
+
+BC: Cipher.1.3.6.1.4.1.11591.13.2.2 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$CBC
+
+BC: Cipher.1.3.6.1.4.1.11591.13.2.1 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$ECB
+
+BC: Cipher.1.3.6.1.4.1.11591.13.2.4 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$CFB
+
+BC: Cipher.1.3.6.1.4.1.11591.13.2.3 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$OFB
+
+BC: KeyGenerator.NOEKEON-GMAC -> org.bouncycastle.jcajce.provider.symmetric.Noekeon$KeyGen
+  aliases: [NOEKEONGMAC]
+
+BC: MessageDigest.OID.2.16.840.1.101.3.4.2.9 -> org.bouncycastle.jcajce.provider.digest.SHA3$Digest384
+
+BC: MessageDigest.OID.2.16.840.1.101.3.4.2.8 -> org.bouncycastle.jcajce.provider.digest.SHA3$Digest256
+
+BC: Signature.SHA384WITHRSAANDSHAKE128 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA384withRSAandSHAKE128
+  aliases: [SHA384withRSAandSHAKE128, SHA384WithRSAAndSHAKE128]
+
+BC: MessageDigest.OID.2.16.840.1.101.3.4.2.7 -> org.bouncycastle.jcajce.provider.digest.SHA3$Digest224
+
+BC: KeyAgreement.ECMQVWITHSHA384KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$MQVwithSHA384KDF
+
+BC: Signature.MD4WITHRSA -> org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$MD4
+  aliases: [MD4withRSA, MD4WithRSA, MD4WITHRSAENCRYPTION, MD4withRSAEncryption, MD4WithRSAEncryption, MD4/RSA, 1.2.840.113549.1.1.3, OID.1.2.840.113549.1.1.3]
+
+BC: KeyGenerator.Skein-MAC-256-224 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMacKeyGenerator_256_224
+  aliases: [Skein-MAC256/224]
+
+BC: KeyFactory.ECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyFactorySpi$ECDSA
+
+BC: AlgorithmParameters.SKIPJACK -> org.bouncycastle.jcajce.provider.symmetric.Skipjack$AlgParams
+
+BC: Cipher.GOST3412-2015/CTR -> org.bouncycastle.jcajce.provider.symmetric.GOST3412_2015$CTR
+
+BC: Signature.OID.1.2.840.113549.1.1.10 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$PSSwithRSA
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.8.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CCM256
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.8.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CCM128
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.8.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CCM512
+
+BC: Cipher.PBEWITHMD5AND128BITAES-CBC-OPENSSL -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithAESCBC
+
+BC: X509StreamParser.CERTIFICATEPAIR -> org.bouncycastle.jce.provider.X509CertPairParser
+
+BC: Signature.SHA256WITHDDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$detDSA256
+
+BC: Signature.GOST3411WITHDSTU4145LE -> org.bouncycastle.jcajce.provider.asymmetric.dstu.SignatureSpiLe
+  aliases: [GOST3411withDSTU4145LE, GOST3411WithDSTU4145LE, GOST3411/DSTU4145LE, 1.2.804.2.1.1.1.1.3.1.1, OID.1.2.804.2.1.1.1.1.3.1.1]
+
+BC: KeyGenerator.ARIA -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen
+
+BC: Signature.SHA256WITHECNR -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecNR256
+
+BC: Cipher.RIJNDAEL -> org.bouncycastle.jcajce.provider.symmetric.Rijndael$ECB
+
+BC: AlgorithmParameters.1.2.840.113549.3.2 -> org.bouncycastle.jcajce.provider.symmetric.RC2$AlgParams
+
+BC: KeyGenerator.HMACSHA256 -> org.bouncycastle.jcajce.provider.digest.SHA256$KeyGenerator
+  aliases: [HMAC-SHA256, HMAC/SHA256, 1.2.840.113549.2.9, 2.16.840.1.101.3.4.2.1]
+
+BC: KeyGenerator.HMACRIPEMD128 -> org.bouncycastle.jcajce.provider.digest.RIPEMD128$KeyGenerator
+  aliases: [HMAC-RIPEMD128, HMAC/RIPEMD128]
+
+BC: Mac.Skein-MAC-512-512 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMac_512_512
+  aliases: [Skein-MAC512/512]
+
+BC: Cipher.ARIACCM -> org.bouncycastle.jcajce.provider.symmetric.ARIA$CCM
+
+BC: SecretKeyFactory.PBEWITHMD5ANDDES -> org.bouncycastle.jcajce.provider.symmetric.DES$PBEWithMD5KeyFactory
+  aliases: [PBEWITHMD5ANDDES-CBC, 1.2.840.113549.1.5.3]
+
+BC: Cipher.2.16.840.1.101.3.4.1.2 -> org.bouncycastle.jcajce.provider.symmetric.AES$CBC
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.21 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: Cipher.2.16.840.1.101.3.4.1.3 -> org.bouncycastle.jcajce.provider.symmetric.AES$OFB
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.22 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: Cipher.2.16.840.1.101.3.4.1.1 -> org.bouncycastle.jcajce.provider.symmetric.AES$ECB
+
+BC: KeyGenerator.HMACSkein-1024-512 -> org.bouncycastle.jcajce.provider.digest.Skein$HMacKeyGenerator_1024_512
+  aliases: [HMAC-Skein-1024-512, HMAC/Skein-1024-512]
+
+BC: Signature.SHA384WITHDETDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$detDSA384
+
+BC: Cipher.2.16.840.1.101.3.4.1.4 -> org.bouncycastle.jcajce.provider.symmetric.AES$CFB
+
+BC: Cipher.OID.1.2.840.113549.1.9.16.3.6 -> org.bouncycastle.jcajce.provider.symmetric.DESede$Wrap
+
+BC: Signature.NONEwithECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDSAnone
+
+BC: Cipher.1.3.6.1.4.1.11591.13.2.21 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$ECB
+
+BC: Cipher.1.3.6.1.4.1.11591.13.2.22 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$CBC
+
+BC: Cipher.1.3.6.1.4.1.11591.13.2.23 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$OFB
+
+BC: Cipher.1.3.6.1.4.1.11591.13.2.24 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$CFB
+
+BC: Signature.SHA3-512WITHDDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$detDSASha3_512
+
+BC: KeyAgreement.DHWITHSHA224KDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHwithSHA224KDF
+
+BC: X509Store.CERTIFICATEPAIR/LDAP -> org.bouncycastle.jce.provider.X509StoreLDAPCertPairs
+
+BC: KeyGenerator.HMACSHA224 -> org.bouncycastle.jcajce.provider.digest.SHA224$KeyGenerator
+  aliases: [HMAC-SHA224, HMAC/SHA224, 1.2.840.113549.2.8]
+
+BC: Cipher.OID.1.3.6.1.4.1.11591.13.2.1 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$ECB
+
+BC: Cipher.OID.1.3.6.1.4.1.11591.13.2.2 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$CBC
+
+BC: Cipher.OID.1.3.6.1.4.1.11591.13.2.3 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$OFB
+
+BC: Cipher.OID.1.3.6.1.4.1.11591.13.2.4 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$CFB
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.27 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.28 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.25 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.26 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.23 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: KeyGenerator.2.16.840.1.101.3.4.1.24 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen192
+
+BC: Mac.SEED-CMAC -> org.bouncycastle.jcajce.provider.symmetric.SEED$CMAC
+  aliases: [SEEDCMAC]
+
+BC: Cipher.1.3.6.1.4.1.11591.13.2.41 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$ECB
+
+BC: Cipher.1.3.6.1.4.1.11591.13.2.42 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$CBC
+
+BC: Cipher.SM4 -> org.bouncycastle.jcajce.provider.symmetric.SM4$ECB
+
+BC: Cipher.1.3.6.1.4.1.11591.13.2.43 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$OFB
+
+BC: Cipher.1.3.6.1.4.1.11591.13.2.44 -> org.bouncycastle.jcajce.provider.symmetric.Serpent$CFB
+
+BC: Cipher.ECIESwithAES-CBC -> org.bouncycastle.jcajce.provider.asymmetric.ec.IESCipher$ECIESwithAESCBC
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.2.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen512
+
+BC: Signature.ECDDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDetDSA
+  aliases: [DETECDSA]
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.2.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen256
+
+BC: KeyGenerator.SKIPJACK -> org.bouncycastle.jcajce.provider.symmetric.Skipjack$KeyGen
+
+BC: SecretKeyFactory.OID.2.16.840.1.101.3.4.1 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyFactory
+
+BC: SecretKeyFactory.PBKDF2WITHHMACSHA3-512 -> org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF2$PBKDF2withSHA3_512
+
+BC: Cipher.ZUC-256 -> org.bouncycastle.jcajce.provider.symmetric.Zuc$Zuc256
+
+BC: KeyAgreement.X25519WITHSHA256KDF -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$X25519withSHA256KDF
+
+BC: KeyGenerator.HMACRIPEMD160 -> org.bouncycastle.jcajce.provider.digest.RIPEMD160$KeyGenerator
+  aliases: [HMAC-RIPEMD160, HMAC/RIPEMD160, 1.3.6.1.5.5.8.1.4]
+
+BC: Mac.SKIPJACKMAC -> org.bouncycastle.jcajce.provider.symmetric.Skipjack$Mac
+  aliases: [SKIPJACK]
+
+BC: KeyGenerator.Skein-MAC-256-256 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMacKeyGenerator_256_256
+  aliases: [Skein-MAC256/256]
+
+BC: Cipher.ECIES -> org.bouncycastle.jcajce.provider.asymmetric.ec.IESCipher$ECIES
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.2.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen128
+
+BC: Mac.CAST6-GMAC -> org.bouncycastle.jcajce.provider.symmetric.CAST6$GMAC
+  aliases: [CAST6GMAC]
+
+BC: MessageDigest.SHAKE256-512 -> org.bouncycastle.jcajce.provider.digest.SHA3$DigestShake256_512
+  aliases: [SHAKE256]
+
+BC: Mac.DESMAC/CFB8 -> org.bouncycastle.jcajce.provider.symmetric.DES$DESCFB8
+  aliases: [DES/CFB8]
+
+BC: KeyPairGenerator.ED448 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyPairGeneratorSpi$Ed448
+
+BC: KeyPairGenerator.ECDHWITHSHA1KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyPairGeneratorSpi$ECDH
+
+BC: Cipher.DSTU7624-256 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$ECB_256
+
+BC: Mac.ISO9797ALG3WITHISO7816-4PADDING -> org.bouncycastle.jcajce.provider.symmetric.DES$DES9797Alg3with7816d4
+  aliases: [ISO9797ALG3MACWITHISO7816-4PADDING]
+
+BC: CertStore.Multi -> org.bouncycastle.jce.provider.MultiCertStoreSpi
+
+BC: Mac.POLY1305-SEED -> org.bouncycastle.jcajce.provider.symmetric.SEED$Poly1305
+  aliases: [POLY1305SEED]
+
+BC: Signature.SHA3-224WITHECDDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDetDSASha3_224
+
+BC: Mac.OLDHMACSHA512 -> org.bouncycastle.jcajce.provider.digest.SHA512$OldSHA512
+
+BC: SecretKeyFactory.PBKDF2WITHHMACSHA512 -> org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF2$PBKDF2withSHA512
+
+BC: MessageDigest.MD5 -> org.bouncycastle.jcajce.provider.digest.MD5$Digest
+  aliases: [1.2.840.113549.2.5]
+
+BC: MessageDigest.TIGER -> org.bouncycastle.jcajce.provider.digest.Tiger$Digest
+
+BC: MessageDigest.MD4 -> org.bouncycastle.jcajce.provider.digest.MD4$Digest
+  aliases: [1.2.840.113549.2.4]
+
+BC: Mac.ZUC-128 -> org.bouncycastle.jcajce.provider.symmetric.Zuc$ZucMac128
+
+BC: MessageDigest.MD2 -> org.bouncycastle.jcajce.provider.digest.MD2$Digest
+  aliases: [1.2.840.113549.2.2]
+
+BC: AlgorithmParameters.1.3.6.1.4.1.188.7.1.1.2 -> org.bouncycastle.jcajce.provider.symmetric.IDEA$AlgParams
+
+BC: KeyAgreement.ECDHC -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHC
+  attributes: {SupportedKeyFormats=PKCS#8|X.509, SupportedKeyClasses=java.security.interfaces.ECPublicKey|java.security.interfaces.ECPrivateKey}
+
+BC: SecretKeyFactory.PBEWITHSHA256AND128BITAES-CBC-BC -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithSHA256And128BitAESBC
+  aliases: [PBEWITHSHA-256AND128BITAES-CBC-BC, PBEWITHSHA-256AND128BITAES-BC, 1.3.6.1.4.1.22554.1.2.1.2.1.2, OID.1.3.6.1.4.1.22554.1.2.1.2.1.2]
+
+BC: KeyAgreement.ECKAEGWITHSHA1KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithSHA1KDF
+
+BC: Signature.DSTU4145 -> org.bouncycastle.jcajce.provider.asymmetric.dstu.SignatureSpi
+  aliases: [DSTU-4145, DSTU-4145-2002]
+
+BC: KeyGenerator.ARIA-GMAC -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen
+  aliases: [ARIAGMAC]
+
+BC: AlgorithmParameters.OID.1.2.804.2.1.1.1.1.1.3.5.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$AlgParams
+
+BC: AlgorithmParameters.OID.1.2.804.2.1.1.1.1.1.3.5.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$AlgParams
+
+BC: AlgorithmParameters.OID.1.2.804.2.1.1.1.1.1.3.5.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$AlgParams
+
+BC: Cipher.DHIESWITHDESEDE-CBC -> org.bouncycastle.jcajce.provider.asymmetric.dh.IESCipher$IESwithDESedeCBC
+
+BC: MessageDigest.Skein-512-256 -> org.bouncycastle.jcajce.provider.digest.Skein$Digest_512_256
+
+BC: KeyAgreement.MQVWITHSHA256CKDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$MQVwithSHA256CKDF
+
+BC: Signature.SHA224WITHRSAANDSHAKE256 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA224withRSAandSHAKE256
+  aliases: [SHA224withRSAandSHAKE256, SHA224WithRSAAndSHAKE256]
+
+BC: Cipher.RSA/RAW -> org.bouncycastle.jcajce.provider.asymmetric.rsa.CipherSpi$NoPadding
+
+BC: Signature.SHA384WITHECDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDSA384
+  aliases: [SHA384withECDSA, SHA384WithECDSA, SHA384/ECDSA, 1.2.840.10045.4.3.3, OID.1.2.840.10045.4.3.3]
+
+BC: Mac.Skein-MAC-1024-384 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMac_1024_384
+  aliases: [Skein-MAC1024/384]
+
+BC: CertPathBuilder.RFC3281 -> org.bouncycastle.jce.provider.PKIXAttrCertPathBuilderSpi
+
+BC: CertPathBuilder.RFC3280 -> org.bouncycastle.jce.provider.PKIXCertPathBuilderSpi_8
+
+BC: Cipher.XTEA -> org.bouncycastle.jcajce.provider.symmetric.XTEA$ECB
+
+BC: Mac.POLY1305-SM4 -> org.bouncycastle.jcajce.provider.symmetric.SM4$Poly1305
+  aliases: [POLY1305SM4]
+
+BC: SecretKeyFactory.PBEWITHHMACSHA1 -> org.bouncycastle.jcajce.provider.digest.SHA1$PBEWithMacKeyFactory
+  aliases: [PBEWITHHMACSHA, 1.3.14.3.2.26]
+
+BC: Cipher.BROKENPBEWITHMD5ANDDES -> org.bouncycastle.jce.provider.BrokenJCEBlockCipher$BrokePBEWithMD5AndDES
+
+BC: MessageDigest.OID.1.2.804.2.1.1.1.1.2.2.2 -> org.bouncycastle.jcajce.provider.digest.DSTU7564$Digest384
+
+BC: MessageDigest.OID.1.2.804.2.1.1.1.1.2.2.1 -> org.bouncycastle.jcajce.provider.digest.DSTU7564$Digest256
+
+BC: MessageDigest.OID.1.2.804.2.1.1.1.1.2.2.3 -> org.bouncycastle.jcajce.provider.digest.DSTU7564$Digest512
+
+BC: MessageDigest.Skein-512-224 -> org.bouncycastle.jcajce.provider.digest.Skein$Digest_512_224
+
+BC: Mac.PBEWITHHMACSHA384 -> org.bouncycastle.jcajce.provider.digest.SHA384$HashMac
+
+BC: Cipher.ECIESwithDESEDE-CBC -> org.bouncycastle.jcajce.provider.asymmetric.ec.IESCipher$ECIESwithDESedeCBC
+
+BC: Signature.SHA3-384WITHRSAANDSHAKE128 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA3_384withRSAandSHAKE128
+  aliases: [SHA3-384withRSAandSHAKE128, SHA3-384WithRSAAndSHAKE128]
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.43 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen128
+
+BC: Cipher.PBEWITHSHAANDTWOFISH-CBC -> org.bouncycastle.jcajce.provider.symmetric.Twofish$PBEWithSHA
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.1.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen256
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.44 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen192
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.1.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen128
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.45 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen256
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.40 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen128
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.41 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen192
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.42 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen256
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.1.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen512
+
+BC: Signature.SHA3-384WITHDDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$detDSASha3_384
+
+BC: Mac.RC6-GMAC -> org.bouncycastle.jcajce.provider.symmetric.RC6$GMAC
+  aliases: [RC6GMAC]
+
+BC: KeyGenerator.POLY1305 -> org.bouncycastle.jcajce.provider.symmetric.Poly1305$KeyGen
+
+BC: Mac.SKIPJACKMAC/CFB8 -> org.bouncycastle.jcajce.provider.symmetric.Skipjack$MacCFB8
+  aliases: [SKIPJACK/CFB8]
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.36 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen256
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.37 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen128
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.38 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen192
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.39 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen256
+
+BC: Mac.SERPENT-GMAC -> org.bouncycastle.jcajce.provider.symmetric.Serpent$SerpentGMAC
+  aliases: [SERPENTGMAC]
+
+BC: KeyPairGenerator.EDDSA -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyPairGeneratorSpi$EdDSA
+  aliases: [1.3.101.113, 1.3.101.112]
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.6.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen128
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.34 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen128
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.35 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen192
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.6.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen512
+
+BC: Mac.DESEDEMAC -> org.bouncycastle.jcajce.provider.symmetric.DESede$CBCMAC
+  aliases: [DESEDE]
+
+BC: Mac.Threefish-1024CMAC -> org.bouncycastle.jcajce.provider.symmetric.Threefish$CMAC_1024
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.6.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen256
+
+BC: MessageDigest.SHA-384 -> org.bouncycastle.jcajce.provider.digest.SHA384$Digest
+  aliases: [SHA384, 2.16.840.1.101.3.4.2.2]
+
+BC: KeyStore.IFIPS -> org.bouncycastle.jcajce.provider.keystore.bcfks.BcFKSKeyStoreSpi$StdSharedCompat
+
+BC: KeyAgreement.DHUWITHSHA224CKDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHUwithSHA224CKDF
+
+BC: Signature.RIPEMD128WITHRSA/X9.31 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.X931SignatureSpi$RIPEMD128WithRSAEncryption
+  aliases: [RIPEMD128withRSA/X9.31, RIPEMD128WithRSA/X9.31]
+
+BC: MessageDigest.HARAKA-512 -> org.bouncycastle.jcajce.provider.digest.Haraka$Digest512
+
+BC: X509StreamParser.CERTIFICATE -> org.bouncycastle.jce.provider.X509CertParser
+
+BC: MessageDigest.KECCAK-256 -> org.bouncycastle.jcajce.provider.digest.Keccak$Digest256
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.14 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen256
+
+BC: KeyAgreement.DHWITHSHA1KDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHwithSHA1KDF
+
+BC: KeyFactory.ELGAMAL -> org.bouncycastle.jcajce.provider.asymmetric.elgamal.KeyFactorySpi
+  aliases: [1.3.14.7.2.1.1]
+
+BC: KeyAgreement.MQVWITHSHA1CKDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$MQVwithSHA1CKDF
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.11 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen256
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.12 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen256
+
+BC: KeyGenerator.OID.1.2.410.200046.1.1.13 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen256
+
+BC: KeyGenerator.OID.1.2.410.200004.7.1.1.1 -> org.bouncycastle.jcajce.provider.symmetric.SEED$KeyGen
+
+BC: CertStore.Collection -> org.bouncycastle.jce.provider.CertStoreCollectionSpi
+
+BC: Cipher.TEA -> org.bouncycastle.jcajce.provider.symmetric.TEA$ECB
+
+BC: KeyGenerator.1.3.6.1.4.1.188.7.1.1.2 -> org.bouncycastle.jcajce.provider.symmetric.IDEA$KeyGen
+
+BC: KeyGenerator.1.2.392.200011.61.1.1.3.2 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$KeyGen128
+
+BC: KeyGenerator.1.2.392.200011.61.1.1.3.3 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$KeyGen192
+
+BC: KeyGenerator.1.2.392.200011.61.1.1.3.4 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$KeyGen256
+
+BC: MessageDigest.KECCAK-288 -> org.bouncycastle.jcajce.provider.digest.Keccak$Digest288
+
+BC: KeyGenerator.Twofish-GMAC -> org.bouncycastle.jcajce.provider.symmetric.Twofish$KeyGen
+  aliases: [TwofishGMAC]
+
+BC: Cipher.ECIESwithSHA1andAES-CBC -> org.bouncycastle.jcajce.provider.asymmetric.ec.IESCipher$ECIESwithAESCBC
+
+BC: MessageDigest.DSTU7564-512 -> org.bouncycastle.jcajce.provider.digest.DSTU7564$Digest512
+
+BC: KeyGenerator.IDEA -> org.bouncycastle.jcajce.provider.symmetric.IDEA$KeyGen
+
+BC: Signature.RMD128WITHRSA/X9.31 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.X931SignatureSpi$RIPEMD128WithRSAEncryption
+  aliases: [RMD128withRSA/X9.31, RMD128WithRSA/X9.31]
+
+BC: KeyAgreement.1.2.840.113549.1.9.16.3.5 -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHwithRFC2631KDF
+
+BC: KeyGenerator.Threefish-512 -> org.bouncycastle.jcajce.provider.symmetric.Threefish$KeyGen_512
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.5.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CBC128
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.5.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CBC256
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.5.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CBC512
+
+BC: AlgorithmParameterGenerator.NOEKEON -> org.bouncycastle.jcajce.provider.symmetric.Noekeon$AlgParamGen
+
+BC: KeyGenerator.SEED -> org.bouncycastle.jcajce.provider.symmetric.SEED$KeyGen
+
+BC: KeyGenerator.SHACAL-2 -> org.bouncycastle.jcajce.provider.symmetric.Shacal2$KeyGen
+
+BC: Cipher.ECIESwithSHA256 -> org.bouncycastle.jcajce.provider.asymmetric.ec.IESCipher$ECIESwithSHA256
+
+BC: KeyGenerator.POLY1305-NOEKEON -> org.bouncycastle.jcajce.provider.symmetric.Noekeon$Poly1305KeyGen
+  aliases: [POLY1305NOEKEON]
+
+BC: MessageDigest.KECCAK-224 -> org.bouncycastle.jcajce.provider.digest.Keccak$Digest224
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.5.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen256
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.5.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen128
+
+BC: Signature.SHA3-256WITHECDDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDetDSASha3_256
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.5.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen512
+
+BC: MessageDigest.2.16.840.1.101.3.4.2.8 -> org.bouncycastle.jcajce.provider.digest.SHA3$Digest256
+
+BC: MessageDigest.2.16.840.1.101.3.4.2.7 -> org.bouncycastle.jcajce.provider.digest.SHA3$Digest224
+
+BC: MessageDigest.2.16.840.1.101.3.4.2.9 -> org.bouncycastle.jcajce.provider.digest.SHA3$Digest384
+
+BC: AlgorithmParameters.Threefish-512 -> org.bouncycastle.jcajce.provider.symmetric.Threefish$AlgParams_512
+
+BC: SecretKeyFactory.SCRYPT -> org.bouncycastle.jcajce.provider.symmetric.SCRYPT$ScryptWithUTF8
+
+BC: Signature.SHA512(224)WITHRSAANDSHAKE128 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA512_224withRSAandSHAKE128
+  aliases: [SHA512(224)withRSAandSHAKE128, SHA512(224)WithRSAAndSHAKE128]
+
+BC: AlgorithmParameters.IDEA -> org.bouncycastle.jcajce.provider.symmetric.IDEA$AlgParams
+
+BC: Mac.POLY1305-Twofish -> org.bouncycastle.jcajce.provider.symmetric.Twofish$Poly1305
+  aliases: [POLY1305Twofish]
+
+BC: SecretKeyFactory.1.3.14.3.2.17 -> org.bouncycastle.jcajce.provider.symmetric.DESede$KeyFactory
+
+BC: Cipher.IDEA -> org.bouncycastle.jcajce.provider.symmetric.IDEA$ECB
+
+BC: SecretKeyFactory.PBEWITHHMACGOST3411 -> org.bouncycastle.jcajce.provider.digest.GOST3411$PBEWithMacKeyFactory
+  aliases: [1.2.643.2.2.9]
+
+BC: Signature.SHA224WITHRSA/ISO9796-2 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.ISOSignatureSpi$SHA224WithRSAEncryption
+  aliases: [SHA224withRSA/ISO9796-2, SHA224WithRSA/ISO9796-2]
+
+BC: Mac.Shacal-2CMAC -> org.bouncycastle.jcajce.provider.symmetric.Shacal2$CMAC
+
+BC: KeyAgreement.ECDHWITHSHA1KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA1KDFAndSharedInfo
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.10.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen512
+
+BC: KeyAgreement.ECCDHUWITHSHA384KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHUwithSHA384KDF
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.10.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen256
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.10.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen128
+
+BC: KeyAgreement.ECCDHWITHSHA1KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$CDHwithSHA1KDFAndSharedInfo
+
+BC: SecretKeyFactory.PBEWITHMD5AND256BITAES-CBC-OPENSSL -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithMD5And256BitAESCBCOpenSSL
+
+BC: KeyAgreement.X25519WITHSHA256CKDF -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$X25519withSHA256CKDF
+
+BC: Signature.SHA1WITHRSA/ISO9796-2 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.ISOSignatureSpi$SHA1WithRSAEncryption
+  aliases: [SHA1withRSA/ISO9796-2, SHA1WithRSA/ISO9796-2]
+
+BC: Mac.HMACSHA512 -> org.bouncycastle.jcajce.provider.digest.SHA512$HashMac
+  aliases: [HMAC-SHA512, HMAC/SHA512, 1.2.840.113549.2.11]
+
+BC: Cipher.DHIESwithAES-CBC -> org.bouncycastle.jcajce.provider.asymmetric.dh.IESCipher$IESwithAESCBC
+
+BC: X509Store.CERTIFICATE/LDAP -> org.bouncycastle.jce.provider.X509StoreLDAPCerts
+
+BC: MessageDigest.Skein-1024-1024 -> org.bouncycastle.jcajce.provider.digest.Skein$Digest_1024_1024
+
+BC: MessageDigest.OID.1.0.10118.3.0.55 -> org.bouncycastle.jcajce.provider.digest.Whirlpool$Digest
+
+BC: AlgorithmParameters.IES -> org.bouncycastle.jcajce.provider.asymmetric.ies.AlgorithmParametersSpi
+
+BC: SecretKeyFactory.PBEWITHSHAANDIDEA-CBC -> org.bouncycastle.jcajce.provider.symmetric.IDEA$PBEWithSHAAndIDEAKeyGen
+
+BC: Cipher.ECIESwithSHA1andDESEDE-CBC -> org.bouncycastle.jcajce.provider.asymmetric.ec.IESCipher$ECIESwithDESedeCBC
+
+BC: Cipher.2.16.840.1.101.3.4.1.24 -> org.bouncycastle.jcajce.provider.symmetric.AES$CFB
+
+BC: Cipher.2.16.840.1.101.3.4.1.23 -> org.bouncycastle.jcajce.provider.symmetric.AES$OFB
+
+BC: Cipher.2.16.840.1.101.3.4.1.22 -> org.bouncycastle.jcajce.provider.symmetric.AES$CBC
+
+BC: Cipher.2.16.840.1.101.3.4.1.21 -> org.bouncycastle.jcajce.provider.symmetric.AES$ECB
+
+BC: KeyAgreement.OID.1.3.132.1.14.3 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$CDHwithSHA512KDFAndSharedInfo
+
+BC: KeyAgreement.OID.1.3.132.1.14.2 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$CDHwithSHA384KDFAndSharedInfo
+
+BC: KeyAgreement.OID.1.3.132.1.14.1 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$CDHwithSHA256KDFAndSharedInfo
+
+BC: KeyAgreement.OID.1.3.132.1.14.0 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$CDHwithSHA224KDFAndSharedInfo
+
+BC: SecretKeyFactory.TLS12WITHSHA384KDF -> org.bouncycastle.jcajce.provider.symmetric.TLSKDF$TLS12withSHA384
+
+BC: Mac.ZUC-256-64 -> org.bouncycastle.jcajce.provider.symmetric.Zuc$ZucMac256_64
+
+BC: KeyAgreement.1.3.132.1.15.0 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$MQVwithSHA224KDFAndSharedInfo
+
+BC: SecretKeyFactory.2.16.840.1.101.3.4.1 -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyFactory
+
+BC: Cipher.SKIPJACK -> org.bouncycastle.jcajce.provider.symmetric.Skipjack$ECB
+
+BC: MessageDigest.RIPEMD160 -> org.bouncycastle.jcajce.provider.digest.RIPEMD160$Digest
+  aliases: [1.3.36.3.2.1]
+
+BC: KeyAgreement.1.3.132.1.15.3 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$MQVwithSHA512KDFAndSharedInfo
+
+BC: KeyAgreement.1.3.132.1.15.1 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$MQVwithSHA256KDFAndSharedInfo
+
+BC: MessageDigest.RIPEMD128 -> org.bouncycastle.jcajce.provider.digest.RIPEMD128$Digest
+  aliases: [1.3.36.3.2.2]
+
+BC: Cipher.SEED -> org.bouncycastle.jcajce.provider.symmetric.SEED$ECB
+
+BC: KeyAgreement.1.3.132.1.15.2 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$MQVwithSHA384KDFAndSharedInfo
+
+BC: AlgorithmParameterGenerator.GOST28147 -> org.bouncycastle.jcajce.provider.symmetric.GOST28147$AlgParamGen
+  aliases: [1.2.643.2.2.21]
+
+BC: SecretKeyFactory.OID.1.3.14.3.2.17 -> org.bouncycastle.jcajce.provider.symmetric.DESede$KeyFactory
+
+BC: KeyGenerator.Threefish-1024 -> org.bouncycastle.jcajce.provider.symmetric.Threefish$KeyGen_1024
+
+BC: Signature.SHA3-224WITHRSAANDSHAKE256 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA3_224withRSAandSHAKE256
+  aliases: [SHA3-224withRSAandSHAKE256, SHA3-224WithRSAAndSHAKE256]
+
+BC: AlgorithmParameterGenerator.1.2.840.113549.3.2 -> org.bouncycastle.jcajce.provider.symmetric.RC2$AlgParamGen
+
+BC: AlgorithmParameters.Serpent -> org.bouncycastle.jcajce.provider.symmetric.Serpent$AlgParams
+
+BC: Signature.SHA512(256)WITHRSA/ISO9796-2 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.ISOSignatureSpi$SHA512_256WithRSAEncryption
+  aliases: [SHA512(256)withRSA/ISO9796-2, SHA512(256)WithRSA/ISO9796-2]
+
+BC: Signature.WhirlpoolWITHRSA/X9.31 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.X931SignatureSpi$WhirlpoolWithRSAEncryption
+  aliases: [WhirlpoolwithRSA/X9.31, WhirlpoolWithRSA/X9.31, WHIRLPOOLwithRSA/X9.31, WHIRLPOOLWithRSA/X9.31]
+
+BC: Signature.SHA384WITHRSA/ISO9796-2 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.ISOSignatureSpi$SHA384WithRSAEncryption
+  aliases: [SHA384withRSA/ISO9796-2, SHA384WithRSA/ISO9796-2]
+
+BC: Signature.EDDSA -> org.bouncycastle.jcajce.provider.asymmetric.edec.SignatureSpi$EdDSA
+
+BC: MessageDigest.KECCAK-512 -> org.bouncycastle.jcajce.provider.digest.Keccak$Digest512
+
+BC: KeyAgreement.ECKAEGWITHSHA512KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$ECKAEGwithSHA512KDF
+
+BC: Mac.ZUC-256-32 -> org.bouncycastle.jcajce.provider.symmetric.Zuc$ZucMac256_32
+
+BC: Cipher.Grain128 -> org.bouncycastle.jcajce.provider.symmetric.Grain128$Base
+
+BC: Mac.POLY1305-CAST6 -> org.bouncycastle.jcajce.provider.symmetric.CAST6$Poly1305
+  aliases: [POLY1305CAST6]
+
+BC: KeyGenerator.AES -> org.bouncycastle.jcajce.provider.symmetric.AES$KeyGen
+
+BC: Cipher.OID.2.5.8.1.1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.CipherSpi$PKCS1v1_5Padding
+
+BC: KeyGenerator.1.2.410.200046.1.1.38 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen192
+
+BC: KeyGenerator.1.2.410.200046.1.1.39 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen256
+
+BC: KeyGenerator.1.2.410.200046.1.1.36 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen256
+
+BC: KeyGenerator.1.2.410.200046.1.1.37 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen128
+
+BC: KeyGenerator.1.2.410.200046.1.1.34 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen128
+
+BC: KeyGenerator.1.2.410.200046.1.1.35 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen192
+
+BC: KeyGenerator.1.2.410.200046.1.1.41 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen192
+
+BC: KeyGenerator.1.2.410.200046.1.1.42 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen256
+
+BC: KeyGenerator.1.2.410.200046.1.1.40 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen128
+
+BC: Mac.Skein-MAC-512-384 -> org.bouncycastle.jcajce.provider.digest.Skein$SkeinMac_512_384
+  aliases: [Skein-MAC512/384]
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.1.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen512
+
+BC: KeyStore.FIPS -> org.bouncycastle.jcajce.provider.keystore.bcfks.BcFKSKeyStoreSpi$StdCompat
+
+BC: Mac.SM4-GMAC -> org.bouncycastle.jcajce.provider.symmetric.SM4$GMAC
+  aliases: [SM4GMAC]
+
+BC: AlgorithmParameters.ECIES -> org.bouncycastle.jcajce.provider.asymmetric.ies.AlgorithmParametersSpi
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.1.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen256
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.1.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen128
+
+BC: Cipher.CHACHA -> org.bouncycastle.jcajce.provider.symmetric.ChaCha$Base
+
+BC: KeyGenerator.1.2.410.200046.1.1.14 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen256
+
+BC: KeyAgreement.DHWITHSHA384KDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHwithSHA384KDF
+
+BC: KeyGenerator.1.2.410.200046.1.1.12 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen256
+
+BC: KeyGenerator.1.2.410.200046.1.1.13 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen256
+
+BC: Signature.SHA224WITHDDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$detDSA224
+
+BC: KeyGenerator.1.2.410.200046.1.1.11 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen256
+
+BC: Signature.SHA224WITHECNR -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecNR224
+
+BC: KeyStore.IBCFKS-DEF -> org.bouncycastle.jcajce.provider.keystore.bcfks.BcFKSKeyStoreSpi$DefShared
+
+BC: MessageDigest.WHIRLPOOL -> org.bouncycastle.jcajce.provider.digest.Whirlpool$Digest
+
+BC: AlgorithmParameters.CAST6 -> org.bouncycastle.jcajce.provider.symmetric.CAST6$AlgParams
+
+BC: SecretKeyFactory.DES -> org.bouncycastle.jcajce.provider.symmetric.DES$KeyFactory
+
+BC: Mac.POLY1305-AES -> org.bouncycastle.jcajce.provider.symmetric.AES$Poly1305
+  aliases: [POLY1305AES]
+
+BC: KeyFactory.1.3.6.1.4.1.18227.2.1 -> org.bouncycastle.jcajce.provider.asymmetric.COMPOSITE$KeyFactory
+
+BC: Signature.SHA3-256WITHDDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$detDSASha3_256
+
+BC: Cipher.1.2.840.113549.1.1.1 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.CipherSpi$PKCS1v1_5Padding
+
+BC: Cipher.1.2.840.113549.1.1.7 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.CipherSpi$OAEPPadding
+
+BC: Mac.POLY1305-RC6 -> org.bouncycastle.jcajce.provider.symmetric.RC6$Poly1305
+  aliases: [POLY1305RC6]
+
+BC: Cipher.IESWITHDESEDE-CBC -> org.bouncycastle.jcajce.provider.asymmetric.dh.IESCipher$IESwithDESedeCBC
+
+BC: KeyAgreement.ECMQVWITHSHA512CKDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$MQVwithSHA512CKDF
+
+BC: AlgorithmParameterGenerator.1.2.804.2.1.1.1.1.1.3.5.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$AlgParamGen128
+
+BC: X509Store.CRL/COLLECTION -> org.bouncycastle.jce.provider.X509StoreCRLCollection
+
+BC: AlgorithmParameterGenerator.1.2.804.2.1.1.1.1.1.3.5.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$AlgParamGen256
+
+BC: KeyGenerator.RC6 -> org.bouncycastle.jcajce.provider.symmetric.RC6$KeyGen
+
+BC: AlgorithmParameterGenerator.1.2.804.2.1.1.1.1.1.3.5.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$AlgParamGen512
+
+BC: KeyAgreement.ECCDHU -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHUC
+  attributes: {SupportedKeyFormats=PKCS#8|X.509, SupportedKeyClasses=java.security.interfaces.ECPublicKey|java.security.interfaces.ECPrivateKey}
+
+BC: KeyGenerator.RC2 -> org.bouncycastle.jcajce.provider.symmetric.RC2$KeyGenerator
+
+BC: MessageDigest.DSTU7564-256 -> org.bouncycastle.jcajce.provider.digest.DSTU7564$Digest256
+
+BC: Cipher.2.16.840.1.101.3.4.1.44 -> org.bouncycastle.jcajce.provider.symmetric.AES$CFB
+
+BC: KeyAgreement.ECCDHUWITHSHA1KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHUwithSHA1KDF
+
+BC: Cipher.2.16.840.1.101.3.4.1.43 -> org.bouncycastle.jcajce.provider.symmetric.AES$OFB
+
+BC: Signature.SHA256WITHRSA/ISO9796-2 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.ISOSignatureSpi$SHA256WithRSAEncryption
+  aliases: [SHA256withRSA/ISO9796-2, SHA256WithRSA/ISO9796-2]
+
+BC: Cipher.2.16.840.1.101.3.4.1.42 -> org.bouncycastle.jcajce.provider.symmetric.AES$CBC
+
+BC: Cipher.2.16.840.1.101.3.4.1.41 -> org.bouncycastle.jcajce.provider.symmetric.AES$ECB
+
+BC: Cipher.PBEWITHSHAANDIDEA-CBC -> org.bouncycastle.jcajce.provider.symmetric.IDEA$PBEWithSHAAndIDEA
+
+BC: Cipher.ZUC-128 -> org.bouncycastle.jcajce.provider.symmetric.Zuc$Zuc128
+
+BC: AlgorithmParameters.ZUC-256 -> org.bouncycastle.jcajce.provider.symmetric.Zuc$AlgParams
+
+BC: MessageDigest.Skein-1024-384 -> org.bouncycastle.jcajce.provider.digest.Skein$Digest_1024_384
+
+BC: Cipher.BLOWFISH -> org.bouncycastle.jcajce.provider.symmetric.Blowfish$ECB
+
+BC: KeyGenerator.1.2.410.200046.1.1.45 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen256
+
+BC: KeyGenerator.1.2.410.200046.1.1.43 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen128
+
+BC: KeyGenerator.1.2.410.200046.1.1.44 -> org.bouncycastle.jcajce.provider.symmetric.ARIA$KeyGen192
+
+BC: Signature.1.2.840.113549.1.1.10 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$PSSwithRSA
+
+BC: AlgorithmParameters.GOST28147 -> org.bouncycastle.jcajce.provider.symmetric.GOST28147$AlgParams
+  aliases: [1.2.643.2.2.21]
+
+BC: KeyGenerator.Serpent -> org.bouncycastle.jcajce.provider.symmetric.Serpent$KeyGen
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.8.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CCM512
+
+BC: Signature.SHA512WITHDETDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$detDSA512
+
+BC: AlgorithmParameters.PBKDF2 -> org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF2$AlgParams
+  aliases: [1.2.840.113549.1.5.12]
+
+BC: Cipher.ARIA -> org.bouncycastle.jcajce.provider.symmetric.ARIA$ECB
+
+BC: KeyAgreement.XDH -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$XDH
+
+BC: Cipher.1.2.840.113533.7.66.10 -> org.bouncycastle.jcajce.provider.symmetric.CAST5$CBC
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.5.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen256
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.5.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen128
+
+BC: KeyAgreement.DHUWITHSHA1KDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHUwithSHA1KDF
+
+BC: SecretKeyFactory.PBKDF2WITHHMACSHA3-256 -> org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF2$PBKDF2withSHA3_256
+
+BC: KeyGenerator.1.2.804.2.1.1.1.1.1.3.5.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen512
+
+BC: MessageDigest.Skein-512-384 -> org.bouncycastle.jcajce.provider.digest.Skein$Digest_512_384
+
+BC: AlgorithmParameters.NOEKEON -> org.bouncycastle.jcajce.provider.symmetric.Noekeon$AlgParams
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.8.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CCM256
+
+BC: AlgorithmParameters.GOST3410 -> org.bouncycastle.jcajce.provider.asymmetric.gost.AlgorithmParametersSpi
+  aliases: [1.2.643.2.2.20, GOST-3410]
+
+BC: Cipher.1.2.804.2.1.1.1.1.1.3.8.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CCM128
+
+BC: KeyAgreement.ECCDHWITHSHA384KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$CDHwithSHA384KDFAndSharedInfo
+
+BC: KeyAgreement.MQVWITHSHA224CKDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$MQVwithSHA224CKDF
+
+BC: KeyFactory.X25519 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyFactorySpi$X25519
+
+BC: Cipher.CAST5 -> org.bouncycastle.jcajce.provider.symmetric.CAST5$ECB
+
+BC: Cipher.CAST6 -> org.bouncycastle.jcajce.provider.symmetric.CAST6$ECB
+
+BC: Cipher.ECIESwithSHA1 -> org.bouncycastle.jcajce.provider.asymmetric.ec.IESCipher$ECIES
+
+BC: KeyGenerator.ZUC-128 -> org.bouncycastle.jcajce.provider.symmetric.Zuc$KeyGen128
+
+BC: Cipher.SM2WITHMD5 -> org.bouncycastle.jcajce.provider.asymmetric.ec.GMCipherSpi$SM2withMD5
+  aliases: [1.2.156.10197.1.301.3.2.11]
+
+BC: Cipher.OID.1.2.840.113533.7.66.10 -> org.bouncycastle.jcajce.provider.symmetric.CAST5$CBC
+
+BC: KeyAgreement.ECCDH -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHC
+  attributes: {SupportedKeyFormats=PKCS#8|X.509, SupportedKeyClasses=java.security.interfaces.ECPublicKey|java.security.interfaces.ECPrivateKey}
+
+BC: Cipher.AESRFC3211WRAP -> org.bouncycastle.jcajce.provider.symmetric.AES$RFC3211Wrap
+
+BC: MessageDigest.1.2.804.2.1.1.1.1.2.2.1 -> org.bouncycastle.jcajce.provider.digest.DSTU7564$Digest256
+
+BC: MessageDigest.1.2.804.2.1.1.1.1.2.2.2 -> org.bouncycastle.jcajce.provider.digest.DSTU7564$Digest384
+
+BC: MessageDigest.1.2.804.2.1.1.1.1.2.2.3 -> org.bouncycastle.jcajce.provider.digest.DSTU7564$Digest512
+
+BC: Cipher.OLDPBEWITHSHAANDTWOFISH-CBC -> org.bouncycastle.jce.provider.BrokenJCEBlockCipher$OldPBEWithSHAAndTwofish
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.2.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen128
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.2.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen512
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.2.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen256
+
+BC: SecretKeyFactory.PBKDF2WITHHMACSHA3-224 -> org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF2$PBKDF2withSHA3_224
+
+BC: KeyAgreement.1.2.840.113549.1.9.16.3.10 -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$DHwithRFC2631KDF
+
+BC: AlgorithmParameters.ECGOST3410 -> org.bouncycastle.jcajce.provider.asymmetric.ec.AlgorithmParametersSpi
+  aliases: [1.2.643.2.2.19, GOST-3410-2001]
+
+BC: Mac.AESCMAC -> org.bouncycastle.jcajce.provider.symmetric.AES$AESCMAC
+
+BC: Signature.SHA224WITHRSAANDSHAKE128 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHA224withRSAandSHAKE128
+  aliases: [SHA224withRSAandSHAKE128, SHA224WithRSAAndSHAKE128]
+
+BC: KeyAgreement.MQVWITHSHA1KDF -> org.bouncycastle.jcajce.provider.asymmetric.dh.KeyAgreementSpi$MQVwithSHA1KDF
+
+BC: Signature.OID.1.3.6.1.5.5.7.6.30 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHAKE128WithRSAPSS
+
+BC: Cipher.IESwithAES-CBC -> org.bouncycastle.jcajce.provider.asymmetric.dh.IESCipher$IESwithAESCBC
+
+BC: Signature.OID.1.3.6.1.5.5.7.6.31 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.PSSSignatureSpi$SHAKE256WithRSAPSS
+
+BC: AlgorithmParameters.RC5 -> org.bouncycastle.jcajce.provider.symmetric.RC5$AlgParams
+
+BC: AlgorithmParameters.RC6 -> org.bouncycastle.jcajce.provider.symmetric.RC6$AlgParams
+
+BC: KeyStore.PKCS12-3DES-40RC2 -> org.bouncycastle.jcajce.provider.keystore.pkcs12.PKCS12KeyStoreSpi$BCPKCS12KeyStore
+
+BC: AlgorithmParameters.RC2 -> org.bouncycastle.jcajce.provider.symmetric.RC2$AlgParams
+
+BC: Mac.DESCMAC -> org.bouncycastle.jcajce.provider.symmetric.DES$CMAC
+
+BC: CertPathValidator.PKIX -> org.bouncycastle.jce.provider.PKIXCertPathValidatorSpi_8
+
+BC: Cipher.Tnepres -> org.bouncycastle.jcajce.provider.symmetric.Serpent$TECB
+
+BC: Mac.SIPHASH-4-8 -> org.bouncycastle.jcajce.provider.symmetric.SipHash$Mac48
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.5.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CBC256
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.5.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CBC512
+
+BC: MessageDigest.SHA3-512 -> org.bouncycastle.jcajce.provider.digest.SHA3$Digest512
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.5.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$CBC128
+
+BC: KeyStore.FIPS-DEF -> org.bouncycastle.jcajce.provider.keystore.bcfks.BcFKSKeyStoreSpi$DefCompat
+
+BC: Cipher.DHIES -> org.bouncycastle.jcajce.provider.asymmetric.dh.IESCipher$IES
+
+BC: X509StreamParser.ATTRIBUTECERTIFICATE -> org.bouncycastle.jce.provider.X509AttrCertParser
+
+BC: KeyAgreement.ECCDHWITHSHA256CKDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA256CKDF
+
+BC: Signature.MD5WITHRSA/ISO9796-2 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.ISOSignatureSpi$MD5WithRSAEncryption
+  aliases: [MD5withRSA/ISO9796-2, MD5WithRSA/ISO9796-2]
+
+BC: Signature.SHA384WITHRSA/X9.31 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.X931SignatureSpi$SHA384WithRSAEncryption
+  aliases: [SHA384withRSA/X9.31, SHA384WithRSA/X9.31]
+
+BC: CertificateFactory.X.509 -> org.bouncycastle.jcajce.provider.asymmetric.x509.CertificateFactory
+  aliases: [X509]
+
+BC: Signature.SHA512WITHRSA/ISO9796-2 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.ISOSignatureSpi$SHA512WithRSAEncryption
+  aliases: [SHA512withRSA/ISO9796-2, SHA512WithRSA/ISO9796-2]
+
+BC: Cipher.DES -> org.bouncycastle.jcajce.provider.symmetric.DES$ECB
+
+BC: AlgorithmParameters.Threefish-1024 -> org.bouncycastle.jcajce.provider.symmetric.Threefish$AlgParams_1024
+
+BC: AlgorithmParameters.1.2.804.2.1.1.1.1.1.3.5.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$AlgParams
+
+BC: AlgorithmParameters.1.2.804.2.1.1.1.1.1.3.5.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$AlgParams
+
+BC: AlgorithmParameters.1.2.804.2.1.1.1.1.1.3.5.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$AlgParams
+
+BC: KeyStore.PKCS12-DEF -> org.bouncycastle.jcajce.provider.keystore.pkcs12.PKCS12KeyStoreSpi$DefPKCS12KeyStore
+
+BC: KeyAgreement.1.3.101.111 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$X448
+
+BC: KeyAgreement.1.3.101.110 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$X25519
+
+BC: Mac.DSTU7624-512GMAC -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$GMAC512
+  aliases: [1.2.804.2.1.1.1.1.1.3.7.3]
+
+BC: AlgorithmParameterGenerator.SHACAL-2 -> org.bouncycastle.jcajce.provider.symmetric.Shacal2$AlgParamGen
+
+BC: KeyPairGenerator.ECDH -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyPairGeneratorSpi$ECDH
+
+BC: Signature.SHA1WITHDETDSA -> org.bouncycastle.jcajce.provider.asymmetric.dsa.DSASigner$detDSA
+
+BC: KeyFactory.X448 -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyFactorySpi$X448
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.6.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen128
+
+BC: Signature.SHA3-512WITHECDDSA -> org.bouncycastle.jcajce.provider.asymmetric.ec.SignatureSpi$ecDetDSASha3_512
+
+BC: KeyAgreement.1.3.132.1.11.3 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA512KDFAndSharedInfo
+
+BC: Cipher.ECIESwithSHA384 -> org.bouncycastle.jcajce.provider.asymmetric.ec.IESCipher$ECIESwithSHA384
+
+BC: KeyAgreement.1.3.132.1.11.1 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA256KDFAndSharedInfo
+
+BC: KeyAgreement.1.3.132.1.11.2 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA384KDFAndSharedInfo
+
+BC: KeyAgreement.1.3.132.1.11.0 -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA224KDFAndSharedInfo
+
+BC: Cipher.CAMELLIARFC3211WRAP -> org.bouncycastle.jcajce.provider.symmetric.Camellia$RFC3211Wrap
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.6.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen512
+
+BC: KeyGenerator.OID.1.2.804.2.1.1.1.1.1.3.6.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$KeyGen256
+
+BC: KeyAgreement.X448WITHSHA384CKDF -> org.bouncycastle.jcajce.provider.asymmetric.edec.KeyAgreementSpi$X448withSHA384CKDF
+
+BC: KeyGenerator.OID.1.2.392.200011.61.1.1.1.2 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$KeyGen128
+
+BC: KeyGenerator.OID.1.2.392.200011.61.1.1.1.3 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$KeyGen192
+
+BC: KeyStore.BKS -> org.bouncycastle.jcajce.provider.keystore.bc.BcKeyStoreSpi$Std
+
+BC: KeyGenerator.OID.1.2.392.200011.61.1.1.1.4 -> org.bouncycastle.jcajce.provider.symmetric.Camellia$KeyGen256
+
+BC: SecureRandom.DEFAULT -> org.bouncycastle.jcajce.provider.drbg.DRBG$Default
+
+BC: Cipher.HC256 -> org.bouncycastle.jcajce.provider.symmetric.HC256$Base
+
+BC: Cipher.GOST3412-2015/CFB8 -> org.bouncycastle.jcajce.provider.symmetric.GOST3412_2015$GCFB8
+
+BC: KeyAgreement.ECDH -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DH
+  attributes: {SupportedKeyFormats=PKCS#8|X.509, SupportedKeyClasses=java.security.interfaces.ECPublicKey|java.security.interfaces.ECPrivateKey}
+
+BC: MessageDigest.1.0.10118.3.0.55 -> org.bouncycastle.jcajce.provider.digest.Whirlpool$Digest
+
+BC: X509Store.CRL/LDAP -> org.bouncycastle.jce.provider.X509StoreLDAPCRLs
+
+BC: KeyGenerator.NOEKEON -> org.bouncycastle.jcajce.provider.symmetric.Noekeon$KeyGen
+
+BC: MessageDigest.2.16.840.1.101.3.4.2.11 -> org.bouncycastle.jcajce.provider.digest.SHA3$DigestShake128_256
+
+BC: MessageDigest.2.16.840.1.101.3.4.2.10 -> org.bouncycastle.jcajce.provider.digest.SHA3$Digest512
+
+BC: KeyStore.IFIPS-DEF -> org.bouncycastle.jcajce.provider.keystore.bcfks.BcFKSKeyStoreSpi$DefSharedCompat
+
+BC: Signature.SHA512(256)WITHRSA/X9.31 -> org.bouncycastle.jcajce.provider.asymmetric.rsa.X931SignatureSpi$SHA512_256WithRSAEncryption
+  aliases: [SHA512(256)withRSA/X9.31, SHA512(256)WithRSA/X9.31]
+
+BC: MessageDigest.2.16.840.1.101.3.4.2.12 -> org.bouncycastle.jcajce.provider.digest.SHA3$DigestShake256_512
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.1.1 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$ECB128
+
+BC: KeyAgreement.ECDHWITHSHA384KDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA384KDFAndSharedInfo
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.1.2 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$ECB256
+
+BC: Cipher.OID.1.2.804.2.1.1.1.1.1.3.1.3 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$ECB512
+
+BC: Cipher.PBEWITHMD5AND256BITAES-CBC-OPENSSL -> org.bouncycastle.jcajce.provider.symmetric.AES$PBEWithAESCBC
+
+BC: KeyAgreement.ECCDHWITHSHA384CKDF -> org.bouncycastle.jcajce.provider.asymmetric.ec.KeyAgreementSpi$DHwithSHA384CKDF
+
+BC: Cipher.DSTU7624 -> org.bouncycastle.jcajce.provider.symmetric.DSTU7624$ECB_128
+
+BUILD SUCCESSFUL in 16s
+5 actionable tasks: 1 executed, 4 up-to-date
+5:00:26 下午: Task execution finished ':test --tests "com.cas.encryption.sm4.HutoolSm4Test.test33"'.

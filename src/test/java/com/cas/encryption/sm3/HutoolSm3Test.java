@@ -19,7 +19,7 @@ public class HutoolSm3Test {
 
     @Test
     public void test() {
-        String digestHex = SmUtil.sm3("aaaaa");
+        String digestHex = SmUtil.sm3("31313131313131313131313131313131");
         System.out.println(digestHex);
     }
 

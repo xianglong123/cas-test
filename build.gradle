@@ -46,7 +46,7 @@ dependencies {
 
     //hutool
     testImplementation("cn.hutool:hutool-all:5.7.7")
-    testImplementation 'org.bouncycastle:bcprov-jdk15to18:1.69'
+    testImplementation 'org.bouncycastle:bcprov-jdk15on:1.68'
 
     // excel
     implementation 'com.alibaba:easyexcel:3.0.5'

@@ -154,7 +154,7 @@ public class Sm4Util {
 
 
     public static void main(String[] args) throws Exception {
-        String text = "nihao1234567890342342342342";
+        String text = "31313131313131313131313131313131";
         System.out.println(generateKeyString());
         String enc = protectMsg("e294af4cd043cacdfe7263e9a961e6e0", text);
         System.out.println("密文为：" + enc);
