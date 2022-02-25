@@ -4,9 +4,9 @@ import java.io.IOException;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
- 
+
 import org.springframework.core.annotation.Order;
- 
+
 @Order(1)
 @WebFilter(filterName="firstFilter", urlPatterns="/*")
 public class FirstFilter implements Filter {
@@ -28,6 +28,5 @@ public class FirstFilter implements Filter {
  
 	@Override
 	public void destroy() {
-		
 	}
 }

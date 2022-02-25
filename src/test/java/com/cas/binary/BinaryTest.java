@@ -14,6 +14,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.regex.Matcher;
@@ -292,6 +293,71 @@ public class BinaryTest {
         String substring = data.substring(i + 4, i + 4 + 128);
         System.out.println(i);
         System.out.println(substring);
+
+    }
+
+    @Test
+    public void test21() {
+        String data = "1";
+        System.out.println(data.getBytes());
+    }
+
+
+    /**
+     * 查看源码
+     */
+    @Test
+    public void test22() {
+        List<String> list = new ArrayList<>();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        list.add("d");
+        list.add("e");
+        list.add("f");
+        list.add("g");
+        list.add("d");
+        list.add("i");
+        list.add("j");
+        list.add("k");
+        System.out.println(list.get(2));
+        list.remove(2);
+        System.out.println(list.get(2));
+    }
+
+    /**
+     * 查看源码
+     */
+    @Test
+    public void test23() {
+        List<String> list = new LinkedList<>();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        list.add("d");
+        list.add("e");
+        list.add("f");
+        list.add("g");
+        list.add("d");
+        list.add("i");
+        list.add("j");
+        list.add("k");
+        System.out.println(list.get(2));
+        list.remove(2);
+        System.out.println(list.get(2));
+    }
+
+    /**
+     * 写操作在一个复制的数组上进行，读操作还是在原始数组中进行，读写分离，互不影响。
+     */
+    @Test
+    public void test24() {
+        List<String> list = new CopyOnWriteArrayList<>();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        list.add("d");
+        list.get(0);
 
     }
 
