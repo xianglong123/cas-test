@@ -1,6 +1,7 @@
 package com.cas;
 
 import com.cas.autoconfiguration.MyService;
+import com.cas.common.JmjProperties;
 import com.cas.util.ByteUtil;
 import com.cas.util.HexConverter;
 import lombok.extern.slf4j.Slf4j;
@@ -21,7 +22,7 @@ import java.util.Arrays;
  */
 @Slf4j
 @ServletComponentScan
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.cas")
 @RestController
 public class TestApplication {
     @Autowired

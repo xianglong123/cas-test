@@ -1,8 +1,10 @@
 package com.cas.controller;
 
 import com.alibaba.excel.EasyExcel;
+import com.cas.common.JmjProperties;
 import com.cas.po.DemoData;
 import com.cas.service.Impl.CommonServiceImpl;
+import com.cas.service.Impl.WeightRandom;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,8 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -34,6 +38,12 @@ public class SingleController {
 
     @Autowired
     private CommonServiceImpl commonService;
+
+    @Resource
+    private JmjProperties jmjProperties;
+
+    @Resource
+    private WeightRandom<String, Integer> weightRandom;
 
 
     @GetMapping("single")
@@ -88,5 +98,13 @@ public class SingleController {
         }
         return property;
     }
+
+    @PostMapping("/jmj")
+    public String jmj() {
+        String random = weightRandom.random();
+        System.out.println(random);
+        return "ok";
+    }
+
 
 }

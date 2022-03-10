@@ -18,6 +18,7 @@ dependencies {
     testImplementation group: 'com.belerweb', name: 'pinyin4j', version: '2.5.1'
     testImplementation 'org.apache.lucene:lucene-core:8.8.2'
     testImplementation 'org.apache.lucene:lucene-highlighter:8.8.2'
+    compileOnly 'org.springframework.boot:spring-boot-configuration-processor'
 
     // webservice + springboot
     implementation 'org.springframework.boot:spring-boot-starter-web-services:2.5.0'
