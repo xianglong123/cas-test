@@ -61,6 +61,9 @@ dependencies {
     testImplementation group: 'cn.afterturn', name: 'easypoi-annotation', version: '4.0.0'
     testImplementation group: 'cn.afterturn', name: 'easypoi-web', version: '4.0.0'
 
+//    compileOnly 'org.springframework.boot:spring-boot-configuration-processor'
+
+
 }
 
 test {

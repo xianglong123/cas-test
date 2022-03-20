@@ -361,4 +361,19 @@ public class BinaryTest {
 
     }
 
+    @Test
+    public void test25() {
+        byte[] bytes = "xianglong2123456".getBytes();
+        System.out.println(HexConverter.byteArray2HexString(bytes));
+    }
+
+
+    @Test
+    public void test26() {
+        for (int i = 0; i < 1000; i ++) {
+            System.out.println((byte)i);
+        }
+
+    }
+
 }

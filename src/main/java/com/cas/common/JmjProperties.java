@@ -11,8 +11,8 @@ import java.util.List;
  * @date 2022/3/7 9:37 上午
  * @desc
  */
-@Component
-@ConfigurationProperties(prefix = "jmj")
+//@Component
+//@ConfigurationProperties(prefix = "jmj")
 public class JmjProperties {
 
     private List<String> ips;

@@ -39,11 +39,11 @@ public class SingleController {
     @Autowired
     private CommonServiceImpl commonService;
 
-    @Resource
-    private JmjProperties jmjProperties;
-
-    @Resource
-    private WeightRandom<String, Integer> weightRandom;
+//    @Resource
+//    private JmjProperties jmjProperties;
+//
+//    @Resource
+//    private WeightRandom<String, Integer> weightRandom;
 
 
     @GetMapping("single")
@@ -99,12 +99,12 @@ public class SingleController {
         return property;
     }
 
-    @PostMapping("/jmj")
-    public String jmj() {
-        String random = weightRandom.random();
-        System.out.println(random);
-        return "ok";
-    }
+//    @PostMapping("/jmj")
+//    public String jmj() {
+//        String random = weightRandom.random();
+//        System.out.println(random);
+//        return "ok";
+//    }
 
 
 }

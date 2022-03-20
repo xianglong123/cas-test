@@ -14,7 +14,7 @@ import java.util.List;
  * @date 2022/3/7 2:56 下午
  * @desc
  */
-@Configuration
+//@Configuration
 public class JmjConfig {
     
     @Bean
