@@ -154,12 +154,18 @@ public class Sm4Util {
 
 
     public static void main(String[] args) throws Exception {
-        String text = "31313131313131313131313131313131";
-        System.out.println(generateKeyString());
-        String key = "101112131415161718191A1B1C1D1E1F";
-        String enc = protectMsg(key, text);
-        System.out.println("密文为：" + enc);
-        System.out.println("解密后明文为：" + uncoverMsg(key, enc));
+//        String text = "31313131313131313131313131313131";
+        System.out.println("79296E44C28173A82D017646235D6AB5");
+        System.out.println(generateKeyString().toUpperCase());
+        System.out.println(generateKeyString().toUpperCase());
+        System.out.println(generateKeyString().toUpperCase());
+        System.out.println(generateKeyString().toUpperCase());
+//        String key = "101112131415161718191A1B1C1D1E1F";
+//        String enc = protectMsg(key, text);
+//        System.out.println("密文为：" + enc);
+//        System.out.println("解密后明文为：" + uncoverMsg(key, enc));
+        // C0 D1 67 6E E0 99 34 23 B3 AB 61 AB 8D 59 F7 B4 2E E3 AE AC A3 17 8A 3C 13 1B 00 E0 A3 0F AF E8 E7 D4 05 4D 72 46 F2 19 83 8B 66 4E 33 86 D9 A3
+        // 60edf059154c03c418f2732d829570ff56999c52810a71f417a31c584f248ca680339511fdd9213615947d3cff816010
     }
     
 }

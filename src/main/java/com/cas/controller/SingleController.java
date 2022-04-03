@@ -1,29 +1,27 @@
 package com.cas.controller;
 
 import com.alibaba.excel.EasyExcel;
-import com.cas.common.JmjProperties;
 import com.cas.po.DemoData;
 import com.cas.service.Impl.CommonServiceImpl;
-import com.cas.service.Impl.WeightRandom;
+import com.cas.util.StringUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
 import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /**
  * @author xiang_long
@@ -99,12 +97,17 @@ public class SingleController {
         return property;
     }
 
-//    @PostMapping("/jmj")
-//    public String jmj() {
-//        String random = weightRandom.random();
-//        System.out.println(random);
-//        return "ok";
-//    }
+    @PostMapping("/jmj2")
+    public String jmj2() {
+        StringUtil.put();
+        return "ok";
+    }
+
+    @PostMapping("/jmj")
+    public String jmj() {
+        System.out.println(StringUtil.get());
+        return "ok";
+    }
 
 
 }
