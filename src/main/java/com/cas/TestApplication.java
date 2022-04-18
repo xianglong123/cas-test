@@ -22,7 +22,7 @@ import java.util.Arrays;
  */
 @Slf4j
 @ServletComponentScan
-@SpringBootApplication(scanBasePackages = {"com.cas", "cn.hutool"})
+@SpringBootApplication(scanBasePackages = "com.cas")
 @RestController
 public class TestApplication {
     @Autowired

@@ -47,8 +47,8 @@ dependencies {
     implementation 'cn.wanghaomiao:JsoupXpath:2.5.0'
 
     //hutool
-    implementation("cn.hutool:hutool-all:5.7.7")
-    implementation 'org.bouncycastle:bcprov-jdk15on:1.68'
+    testImplementation("cn.hutool:hutool-all:5.7.7")
+    testImplementation 'org.bouncycastle:bcprov-jdk15on:1.68'
 
     // excel
     implementation 'com.alibaba:easyexcel:3.0.5'
