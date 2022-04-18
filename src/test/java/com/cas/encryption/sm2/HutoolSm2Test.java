@@ -214,7 +214,6 @@ public class HutoolSm2Test {
     @Test
     public void test22() {
         String text = "我是一段测试aaaa";
-        KeyPair pair = SecureUtil.generateKeyPair("SM2");
         byte[] privateKey = HexConverter.hexString2ByteArray("308193020100301306072a8648ce3d020106082a811ccf5501822d047930770201010420e435d2097d0bdb91310380a35a24d215d18b5a8f3ac8f144dedb9e2bfdeaaca9a00a06082a811ccf5501822da1440342000456ee688a4205d1003485fa486add1d058ea245f536c72fb74f395990dca33f72a32e73445eee8a8ade4798068d1623fc5d94e0305b9f96130c0567eb8f1b34b9");
         byte[] publicKey = HexConverter.hexString2ByteArray("3059301306072a8648ce3d020106082a811ccf5501822d0342000456ee688a4205d1003485fa486add1d058ea245f536c72fb74f395990dca33f72a32e73445eee8a8ade4798068d1623fc5d94e0305b9f96130c0567eb8f1b34b9");
 
@@ -259,9 +258,11 @@ public class HutoolSm2Test {
          * privateKey == MIGTAgEAMBMGByqGSM49AgEGCCqBHM9VAYItBHkwdwIBAQQgf+D/qe1w942MyuI5lB1lSk3zcD+WDeo3w+V0njAj+digCgYIKoEcz1UBgi2hRANCAARbvdX02XoVRTrcvGz3cCYml+I+EVkI+prkRgX+5SzYzLMYQqL5MmMQHe/cq4nNUIELUiWjDqXWO8cYURr+iKO3
          * BKZ8bs6POIjawn45BwmReSQqQ5Rk9LLGNhRNzQr4tEnJB6LcFzij8AvbqYJdr/D6isnJ4OMpalfWkbflbjIkeGeUiyxrLpSfw3oPwz2MJ4ivCzNsuE/HrBviRGNjZRedM2L7vVl6IkwZEOj4utQ5w0k=
          */
-        Cipher cipher = Cipher.getInstance("SM2WITHSM3", BouncyCastleProvider.PROVIDER_NAME);
+        byte[] privateKey = HexConverter.hexString2ByteArray("308193020100301306072a8648ce3d020106082a811ccf5501822d047930770201010420e435d2097d0bdb91310380a35a24d215d18b5a8f3ac8f144dedb9e2bfdeaaca9a00a06082a811ccf5501822da1440342000456ee688a4205d1003485fa486add1d058ea245f536c72fb74f395990dca33f72a32e73445eee8a8ade4798068d1623fc5d94e0305b9f96130c0567eb8f1b34b9");
+        byte[] publicKey = HexConverter.hexString2ByteArray("3059301306072a8648ce3d020106082a811ccf5501822d0342000456ee688a4205d1003485fa486add1d058ea245f536c72fb74f395990dca33f72a32e73445eee8a8ade4798068d1623fc5d94e0305b9f96130c0567eb8f1b34b9");
 
-        Key sm2 = new SecretKeySpec(HexUtil.decodeHex("MFkwEwYHKoZIzj0CAQYIKoEcz1UBgi0DQgAEW73V9Nl6FUU63Lxs93AmJpfiPhFZCPqa5EYF/uUs2MyzGEKi+TJjEB3v3KuJzVCBC1Ilow6l1jvHGFEa/oijtw=="), "SM2");
+        Cipher cipher = Cipher.getInstance("SM2", new BouncyCastleProvider());
+        Key sm2 = new SecretKeySpec(privateKey, "SM2");
         cipher.init(Cipher.ENCRYPT_MODE, sm2);
         byte[] decryptedData = cipher.doFinal(Hex.decodeHex("31313131313131313131313131313131"));
         System.out.println(HexConverter.byteArray2HexString(decryptedData));
