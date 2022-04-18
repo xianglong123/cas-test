@@ -46,7 +46,7 @@ public class SingleController {
 //
 //    @Resource
 //    private WeightRandom<String, Integer> weightRandom;
-
+    // w a n
 
     @PostMapping("notify")
     public NotifyRes notifyMessage(@RequestBody SyncNotifyResultBO syncNotifyResultBO) {
