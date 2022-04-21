@@ -1,6 +1,6 @@
-package com.cas.设计模式.原型模式.impl;
+package com.cas.设计模式.创建型.原型模式.impl;
 
-import com.cas.设计模式.原型模式.Shape;
+import com.cas.设计模式.创建型.原型模式.Shape;
 
 public class Square extends Shape {
  

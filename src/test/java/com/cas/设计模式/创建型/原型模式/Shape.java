@@ -1,4 +1,4 @@
-package com.cas.设计模式.原型模式;
+package com.cas.设计模式.创建型.原型模式;
 
 /**
  * @author xiang_long

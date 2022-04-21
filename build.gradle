@@ -41,7 +41,7 @@ dependencies {
 
     // 本地jar,测试springboot-starter
     implementation 'com.cas:cas-springboot-starter:0.0.5-SNAPSHOT'
-    implementation 'com.cas:dicp-ec-decry:0.0.1-SNAPSHOT'
+//    implementation 'com.cas:dicp-ec-decry:0.0.1-SNAPSHOT'
 
     // HTML解析器
     implementation 'cn.wanghaomiao:JsoupXpath:2.5.0'

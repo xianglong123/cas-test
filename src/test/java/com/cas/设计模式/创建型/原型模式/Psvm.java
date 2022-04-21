@@ -1,7 +1,7 @@
-package com.cas.设计模式.原型模式;
+package com.cas.设计模式.创建型.原型模式;
 
-import com.cas.设计模式.原型模式.impl.Rectangle;
-import com.cas.设计模式.原型模式.impl.Square;
+import com.cas.设计模式.创建型.原型模式.impl.Rectangle;
+import com.cas.设计模式.创建型.原型模式.impl.Square;
 
 /**
  * @author xiang_long
