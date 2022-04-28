@@ -3,6 +3,7 @@ package com.cas.encryption.rsa;
 import com.cas.des.des3_ecb.HexConverter;
 
 import java.io.FileInputStream;
+import java.nio.charset.StandardCharsets;
 import java.security.*;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
@@ -141,7 +142,7 @@ public class RSAUtils {
     public static String sign(PrivateKey privateKey, String message, String algorithm) throws Exception {
         Signature sign = Signature.getInstance(algorithm);
         sign.initSign(privateKey);
-        sign.update(message.getBytes("UTF-8"));
+        sign.update(message.getBytes(StandardCharsets.UTF_8));
         return new String(Base64.getEncoder().encodeToString(sign.sign()));
     }
 
@@ -153,7 +154,7 @@ public class RSAUtils {
     public static boolean verify(PublicKey publicKey, String message, String signature, String algorithm)throws Exception {
         Signature sign = Signature.getInstance(algorithm);
         sign.initVerify(publicKey);
-        sign.update(message.getBytes("UTF-8"));
+        sign.update(message.getBytes(StandardCharsets.UTF_8));
         return sign.verify(Base64.getDecoder().decode(signature));
     }
 

@@ -1,7 +1,9 @@
 package com.cas.encryption.sm2;
 
 import cn.hutool.core.util.HexUtil;
+import cn.hutool.core.util.StrUtil;
 import cn.hutool.crypto.BCUtil;
+import cn.hutool.crypto.SmUtil;
 import cn.hutool.crypto.asymmetric.KeyType;
 import cn.hutool.crypto.asymmetric.SM2;
 import com.cas.des.des3_ecb.HexConverter;
@@ -73,6 +75,43 @@ public class HutoolSm2Test2 {
             System.out.println("原数据长度:" + data.length() + "加密数据长度" + HexConverter.byteArray2HexString(encrypt).length());
 
         }
+    }
+
+
+    /**
+     * 密钥生成流程,pkcs#8格式私钥pem文件：
+     *
+     * 1 生成sm2私钥: openssl ecparam -genkey -name SM2 -out sm2PriKey.pem
+     * 2 sm2私钥导出公钥: openssl ec -in sm2PriKey.pem -pubout -out sm2PubKey.pem
+     * 3 查看私钥: openssl ec -in sm2PriKey.pem -text
+     * 4 私钥pkcs#1转pkcs#8: openssl pkcs8 -topk8 -inform PEM -in sm2PriKey.pem -outform pem -nocrypt -out sm2PriKeyPkcs8.pem
+     */
+    @Test
+    public void pu() throws UnsupportedEncodingException {
+        String privateKe = "MIGHAgEAMBMGByqGSM49AgEGCCqBHM9VAYItBG0wawIBAQQgqQy68p3XDNWrx0I3YmOIg2aJKaZRhVxZF5/U2DPqYpKhRANCAAQFi/001xgWzxzrsdc9IG0F8oK0mObPg2lxx3SkxFk0BrY9iX+Odp03C5+cK1ZbOK7ua5KnnR8m9lby4czOScVi";
+        String publicKe = "MFkwEwYHKoZIzj0CAQYIKoEcz1UBgi0DQgAEBYv9NNcYFs8c67HXPSBtBfKCtJjmz4Npccd0pMRZNAa2PYl/jnadNwufnCtWWziu7muSp50fJvZW8uHMzknFYg==";
+
+        byte[] privateKey = Base64Utils.decode(privateKe);
+        byte[] publicKey = Base64Utils.decode(publicKe);
+
+        System.out.println(HexUtil.encodeHexStr(privateKey));
+        System.out.println(HexUtil.encodeHexStr(publicKey));
+
+        String privateKeyHex = "ECA65A95757D3C97ACBBBD4034DFE8B0EEB9819A9F3A77EA0CB9DB870C55E38E";
+        String publicKeyHex = "A9721CB8C91EE248B60CC7C912B403A97903487DE0464F4F9FE797B33F83C732495F815DA6060F1B6A73705ACC37FBF00DC6F103DC81C4ABDC729CB7D4B89034";
+
+        ECPrivateKeyParameters privateKeyParameters = BCUtil.toSm2Params(privateKeyHex);
+        String xhex = publicKeyHex.substring(0, 64);
+        String yhex = publicKeyHex.substring(64, 128);
+        ECPublicKeyParameters ecPublicKeyParameters = BCUtil.toSm2Params(xhex, yhex);
+        //创建sm2 对象
+//        SM2 sm2 = new SM2(privateKeyParameters, ecPublicKeyParameters);
+//        SM2 sm2 = new SM2(privateKeyHex, publicKeyHex.substring(0, 64), publicKeyHex.substring(64, 128));
+        SM2 sm2 = SmUtil.sm2(privateKey,publicKey);
+         String encryptStr = sm2.encryptBcd("123456789", KeyType.PublicKey);
+        System.out.println(encryptStr); // 105 - 96 = 9
+        String decryptStr = StrUtil.utf8Str(sm2.decryptFromBcd(encryptStr, KeyType.PrivateKey));
+        System.out.println(decryptStr);
     }
 
 
