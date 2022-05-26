@@ -38,7 +38,6 @@ public class PoiTest {
         FileOutputStream fos = new FileOutputStream("/Users/xianglong/IdeaProjects/cas-test/src/test/java/com/cas/easypoi/test.xlsx");
         book.write(fos);
         fos.close();
-
     }
 
 }
