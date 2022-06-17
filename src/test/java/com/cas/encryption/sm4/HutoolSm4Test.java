@@ -114,12 +114,13 @@ public class HutoolSm4Test extends BaseTest {
 
     @Test
     public void test() {
-        String content = "953C098366BF7418D0BB1E2DC591AEC4C1A4BC4739ED3F1DE657258E54D8DFF0202268958759dedbd72827b73350fdaaa838e6fa4f35e5cc3b839450636f71464e907c9c522003111234567890123456000006EIC20220311180331000003002";
-        SymmetricCrypto sm4 = SmUtil.sm4(HexUtil.decodeHex("03030303030303030303030303030303"));
-        String encryptHex = sm4.encryptHex(content);
-        String decryptStr = sm4.decryptStr(encryptHex, CharsetUtil.CHARSET_UTF_8);
-        System.out.println("加密结果： " + encryptHex);
+        String content = "McuobQD3TzS5gyl/1cFykw==";
+        SymmetricCrypto sm4 = SmUtil.sm4(HexUtil.decodeHex("0e00bca58b4b9243e0550dd9d22ff785"));
+//        String encryptHex = sm4.encryptHex(content);
+        String decryptStr = sm4.decryptStr(content, CharsetUtil.CHARSET_UTF_8);
+//        System.out.println("加密结果： " + encryptHex);
         System.out.println("解密结果： " + decryptStr);
-
     }
+
+
 }

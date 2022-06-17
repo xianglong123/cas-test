@@ -2,6 +2,7 @@ package com.cas.binary;
 
 import cn.hutool.core.util.RandomUtil;
 import com.alibaba.fastjson.JSONObject;
+import com.cas.clazz.Son;
 import com.cas.des.DesEncTest;
 import com.cas.io.byteIO.I.User;
 import com.cas.util.HexConverter;
@@ -12,6 +13,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Field;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
@@ -414,6 +416,17 @@ public class BinaryTest {
 
     }
 
+    /**
+     * 注释的unicode逃逸
+     */
+    @Test
+    public void test32() {
+        String str = "你好";
+        //\u000d str="Hello";
+        //\u000d str+=" world";
+        System.out.println(str);
+    }
+
 
 //    public static void main(String[] args) {
 //        String privateKey = "ECA65A95757D3C97ACBBBD4034DFE8B0EEB9819A9F3A77EA0CB9DB870C55E38E";
@@ -422,6 +435,27 @@ public class BinaryTest {
 //        EcCardInfo ecCardInfo = EcDecryUtil.decryptEcData(privateKey, enc, dom);
 //        System.out.println("" + JSONObject.toJSONString(ecCardInfo));
 //    }
+
+    @Test
+    public void test30() throws IllegalAccessException {
+        Son son = new Son();
+        Class<? extends Son> aClass = son.getClass();
+        Field[] declaredFields = aClass.getDeclaredFields();
+        for (Field field : declaredFields) {
+            field.setAccessible(true);
+            field.set(son, "123");
+            System.out.println(field.get(son));
+        }
+    }
+
+    @Test
+    public void test31() {
+        HashSet<String> set = new HashSet<>(Arrays.asList("19852874544", "17826017665", "13912987520", "15850031474", "15261454938", "15261459536"));
+        boolean flag = set.contains("19852874544");
+        boolean flag2 = set.contains("17826017665");
+        boolean flag3 = set.contains("19852874542");
+        System.out.println("是否包含：" + flag + " " + flag2 + " " + flag3);
+    }
 
 
     @Before
