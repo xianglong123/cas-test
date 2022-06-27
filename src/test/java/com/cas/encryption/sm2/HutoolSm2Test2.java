@@ -7,6 +7,7 @@ import cn.hutool.crypto.SmUtil;
 import cn.hutool.crypto.asymmetric.KeyType;
 import cn.hutool.crypto.asymmetric.SM2;
 import com.cas.des.des3_ecb.HexConverter;
+import org.bouncycastle.crypto.engines.SM2Engine;
 import org.bouncycastle.crypto.params.ECPrivateKeyParameters;
 import org.bouncycastle.crypto.params.ECPublicKeyParameters;
 import org.junit.Test;
@@ -88,30 +89,29 @@ public class HutoolSm2Test2 {
      */
     @Test
     public void pu() throws UnsupportedEncodingException {
-        String privateKe = "MIGHAgEAMBMGByqGSM49AgEGCCqBHM9VAYItBG0wawIBAQQgqQy68p3XDNWrx0I3YmOIg2aJKaZRhVxZF5/U2DPqYpKhRANCAAQFi/001xgWzxzrsdc9IG0F8oK0mObPg2lxx3SkxFk0BrY9iX+Odp03C5+cK1ZbOK7ua5KnnR8m9lby4czOScVi";
-        String publicKe = "MFkwEwYHKoZIzj0CAQYIKoEcz1UBgi0DQgAEBYv9NNcYFs8c67HXPSBtBfKCtJjmz4Npccd0pMRZNAa2PYl/jnadNwufnCtWWziu7muSp50fJvZW8uHMzknFYg==";
-
+        String privateKe = "MIGTAgEAMBMGByqGSM49AgEGCCqBHM9VAYItBHkwdwIBAQQgWQRf/UMRed26VOm23gWZcbfCeoYTeOChEfjzTApPEGWgCgYIKoEcz1UBgi2hRANCAASYfDrZBZ9xp7dkT+Uwn5is1JISMdE6dDb3FfrcWy8lHc6aDj1KeOJZSI1y36f35D3uOUBcK/OErNyAOetAlQeZ";
+        String publicKe = "MFkwEwYHKoZIzj0CAQYIKoEcz1UBgi0DQgAEmHw62QWfcae3ZE/lMJ+YrNSSEjHROnQ29xX63FsvJR3Omg49SnjiWUiNct+n9+Q97jlAXCvzhKzcgDnrQJUHmQ==";
         byte[] privateKey = Base64Utils.decode(privateKe);
         byte[] publicKey = Base64Utils.decode(publicKe);
-
-        System.out.println(HexUtil.encodeHexStr(privateKey));
-        System.out.println(HexUtil.encodeHexStr(publicKey));
-
-        String privateKeyHex = "ECA65A95757D3C97ACBBBD4034DFE8B0EEB9819A9F3A77EA0CB9DB870C55E38E";
-        String publicKeyHex = "A9721CB8C91EE248B60CC7C912B403A97903487DE0464F4F9FE797B33F83C732495F815DA6060F1B6A73705ACC37FBF00DC6F103DC81C4ABDC729CB7D4B89034";
-
-        ECPrivateKeyParameters privateKeyParameters = BCUtil.toSm2Params(privateKeyHex);
-        String xhex = publicKeyHex.substring(0, 64);
-        String yhex = publicKeyHex.substring(64, 128);
-        ECPublicKeyParameters ecPublicKeyParameters = BCUtil.toSm2Params(xhex, yhex);
-        //创建sm2 对象
-//        SM2 sm2 = new SM2(privateKeyParameters, ecPublicKeyParameters);
-//        SM2 sm2 = new SM2(privateKeyHex, publicKeyHex.substring(0, 64), publicKeyHex.substring(64, 128));
         SM2 sm2 = SmUtil.sm2(privateKey,publicKey);
-         String encryptStr = sm2.encryptBcd("123456789", KeyType.PublicKey);
-        System.out.println(encryptStr); // 105 - 96 = 9
-        String decryptStr = StrUtil.utf8Str(sm2.decryptFromBcd(encryptStr, KeyType.PrivateKey));
-        System.out.println(decryptStr);
+         String encryptStr = sm2.encryptBase64("F50690B52636C58899FCF7E0043B6EF2", KeyType.PublicKey);
+         sm2.setMode(SM2Engine.Mode.C1C3C2);
+        String decryptStr = StrUtil.utf8Str(sm2.decrypt(encryptStr, KeyType.PrivateKey));
+        System.out.println("加密：" + encryptStr);
+        System.out.println("解密：" + decryptStr);
+    }
+
+
+    @Test
+    public void pu_old() throws UnsupportedEncodingException {
+        String privateKe = "MIGTAgEAMBMGByqGSM49AgEGCCqBHM9VAYItBHkwdwIBAQQgWQRf/UMRed26VOm23gWZcbfCeoYTeOChEfjzTApPEGWgCgYIKoEcz1UBgi2hRANCAASYfDrZBZ9xp7dkT+Uwn5is1JISMdE6dDb3FfrcWy8lHc6aDj1KeOJZSI1y36f35D3uOUBcK/OErNyAOetAlQeZ";
+        String publicKe = "MFkwEwYHKoZIzj0CAQYIKoEcz1UBgi0DQgAEmHw62QWfcae3ZE/lMJ+YrNSSEjHROnQ29xX63FsvJR3Omg49SnjiWUiNct+n9+Q97jlAXCvzhKzcgDnrQJUHmQ==";
+        byte[] privateKey = Base64Utils.decode(privateKe);
+        byte[] publicKey = Base64Utils.decode(publicKe);
+        SM2 sm2 = SmUtil.sm2(privateKey,publicKey);
+        sm2.setMode(SM2Engine.Mode.C1C2C3);
+        String decryptStr = StrUtil.utf8Str(sm2.decrypt("BPq5Hdhu0d1T9X++yUD26KZaTpgr23FmMjBHv8UTebwK/oF6b1mu47L40D2WdhjxsVz4Q1EIYio3z3l/cvX7ujVpdcAuDi5Mp4xY3fu/WALyIHJ9o/XWGSKrdLZ3IHq8RTB3x7d90rt+MvxMWLr1EDYZmqaNSpVjAWF8dv+Qc+F2", KeyType.PrivateKey));
+        System.out.println("解密：" + decryptStr);
     }
 
 

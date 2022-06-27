@@ -1,8 +1,6 @@
 package com.cas.service.Impl;
 
-import com.cas.common.JmjProperties;
 import com.cas.service.CommonService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;

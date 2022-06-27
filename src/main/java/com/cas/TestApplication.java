@@ -1,9 +1,6 @@
 package com.cas;
 
 import com.cas.autoconfiguration.MyService;
-import com.cas.common.JmjProperties;
-import com.cas.util.ByteUtil;
-import com.cas.util.HexConverter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -11,8 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Arrays;
 
 /**
  * @author: xianglong[1391086179@qq.com]

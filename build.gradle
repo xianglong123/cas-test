@@ -41,7 +41,7 @@ dependencies {
 
     // 本地jar,测试springboot-starter
     implementation 'com.cas:cas-springboot-starter:0.0.5-SNAPSHOT'
-    implementation 'com.cas:mybatis-pagination:0.0.6-SNAPSHOT'
+//    implementation 'com.cas:mybatis-pagination:0.0.6-SNAPSHOT'
 //    implementation 'com.cas:dicp-ec-decry:0.0.1-SNAPSHOT'
 
     // HTML解析器
@@ -64,7 +64,7 @@ dependencies {
     testImplementation group: 'cn.afterturn', name: 'easypoi-web', version: '4.0.0'
 
 //    compileOnly 'org.springframework.boot:spring-boot-configuration-processor'
-    implementation fileTree(dir:'lib',includes:['*jar'])
+//    implementation fileTree(dir:'lib',includes:['*jar'])
 
 }
 

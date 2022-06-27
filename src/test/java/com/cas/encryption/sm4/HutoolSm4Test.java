@@ -114,7 +114,7 @@ public class HutoolSm4Test extends BaseTest {
 
     @Test
     public void test() {
-        String content = "McuobQD3TzS5gyl/1cFykw==";
+        String content = "oeW3w4t4tUNBsAhgL1_Sdw7s2Hjc";
         SymmetricCrypto sm4 = SmUtil.sm4(HexUtil.decodeHex("0e00bca58b4b9243e0550dd9d22ff785"));
 //        String encryptHex = sm4.encryptHex(content);
         String decryptStr = sm4.decryptStr(content, CharsetUtil.CHARSET_UTF_8);
