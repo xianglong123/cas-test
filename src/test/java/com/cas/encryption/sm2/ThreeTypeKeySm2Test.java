@@ -9,6 +9,7 @@ import org.bouncycastle.crypto.engines.SM2Engine;
 import org.bouncycastle.crypto.params.ECPrivateKeyParameters;
 import org.bouncycastle.crypto.params.ECPublicKeyParameters;
 
+import java.nio.charset.StandardCharsets;
 import java.security.KeyPair;
 import java.util.Base64;
 
@@ -34,12 +35,16 @@ public class ThreeTypeKeySm2Test {
         System.out.println("======================原始格式=========================");
         System.out.println("公钥 = " + HexConverter.byteArray2HexString(publicKey));
         System.out.println("私钥 = " + HexConverter.byteArray2HexString(privateKey));
-        System.out.println(new String(decryData_ys(encryDate_ys(DATA, HexConverter.byteArray2HexString(publicKey)), HexConverter.byteArray2HexString(privateKey))));;
+        byte[] data = encryDate_ys(DATA, HexConverter.byteArray2HexString(publicKey));
+        System.out.println("密文：" + HexConverter.byteArray2HexString(data));
+        System.out.println("明文：" + new String(decryData_ys(data, HexConverter.byteArray2HexString(privateKey))));;
 
         System.out.println("======================bas64格式=========================");
         System.out.println("公钥 = " + Base64.getEncoder().encodeToString(publicKey));
         System.out.println("私钥 = " + Base64.getEncoder().encodeToString(privateKey));
-        System.out.println(new String(decryData_base64(encryDate_base64(DATA, HexConverter.byteArray2HexString(publicKey)), HexConverter.byteArray2HexString(privateKey))));;
+        byte[] data_base64 = encryDate_base64(DATA, Base64.getEncoder().encodeToString(publicKey));
+        System.out.println("密文：" + HexConverter.byteArray2HexString(data_base64));
+        System.out.println("明文：" + new String(decryData_base64(data_base64, Base64.getEncoder().encodeToString(privateKey))));;
 
         // 私钥 36 - 68
         byte[] outPrivateKey = new byte[32];
@@ -50,8 +55,9 @@ public class ThreeTypeKeySm2Test {
         System.out.println("======================简短格式=========================");
         System.out.println("公钥 = " + HexConverter.byteArray2HexString(outPublicKey));
         System.out.println("私钥 = " + HexConverter.byteArray2HexString(outPrivateKey));
-        System.out.println(new String(decryData_jd(encryDate_jd(DATA, HexConverter.byteArray2HexString(outPublicKey)), HexConverter.byteArray2HexString(outPrivateKey))));
-        ;
+        byte[] date_jd = encryDate_jd(DATA, HexConverter.byteArray2HexString(outPublicKey));
+        System.out.println("密文：" + HexConverter.byteArray2HexString(date_jd));
+        System.out.println("明文：" + new String(decryData_jd(date_jd, HexConverter.byteArray2HexString(outPrivateKey))));
     }
 
     // --------------------------------- 原始模式加解密方法 ------------------------------------
