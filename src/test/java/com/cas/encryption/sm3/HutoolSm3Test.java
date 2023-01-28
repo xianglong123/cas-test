@@ -1,6 +1,7 @@
 package com.cas.encryption.sm3;
 
 import cn.hutool.crypto.SmUtil;
+import com.cas.des.des3_ecb.HexConverter;
 import org.junit.Test;
 
 /**
@@ -19,8 +20,22 @@ public class HutoolSm3Test {
 
     @Test
     public void test() {
-        String digestHex = SmUtil.sm3("SM3Test");
-        System.out.println(digestHex);
+        String digestHex = SmUtil.sm3("hello");
+        System.out.println(digestHex.toUpperCase());
+    }
+
+    // becbbfaae6548b8bf0cfcad5a27183cd1be6093b1cceccc303d9c61d0a645268
+    // becbbfaae6548b8bf0cfcad5a27183cd1be6093b1cceccc303d9c61d0a645268
+    // BECBBFAAE6548B8BF0CFCAD5A27183CD1BE6093B1CCECCC303D9C61D0A645268
+
+    @Test
+    public void test1() {
+        String data = "80E640002200000AA0000006320101060C020012EF10A10EA10C4F0AA0000006320101050C0200";
+        System.out.println(HexConverter.int2HexString(HexConverter.hexString2ByteArray(data).length));
+        System.out.println(HexConverter.byteArray2HexString(HexConverter.int2ByteArray(39, 1)));
+        System.out.println(HexConverter.byteArray2HexString(HexConverter.int2ByteArray(39, 2)));
+        System.out.println(HexConverter.byteArray2HexString(HexConverter.int2ByteArray(256, 2)));
+        System.out.println(HexConverter.toHexString(256, 2));
     }
 
 

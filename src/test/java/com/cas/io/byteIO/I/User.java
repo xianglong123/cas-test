@@ -8,6 +8,45 @@ public class User implements Serializable {
 
     private String age;
 
+    private String b;
+    private String ci;
+    private String dpp;
+    private String eoo;
+
+    public User() {}
+
+    public String getB() {
+        return b;
+    }
+
+    public void setB(String b) {
+        this.b = b;
+    }
+
+    public String getCi() {
+        return ci;
+    }
+
+    public void setCi(String ci) {
+        this.ci = ci;
+    }
+
+    public String getDpp() {
+        return dpp;
+    }
+
+    public void setDpp(String dpp) {
+        this.dpp = dpp;
+    }
+
+    public String getEoo() {
+        return eoo;
+    }
+
+    public void setEoo(String eoo) {
+        this.eoo = eoo;
+    }
+
     public User(String name, String age) {
         this.name = name;
         this.age = age;

@@ -64,7 +64,7 @@ dependencies {
     testImplementation group: 'cn.afterturn', name: 'easypoi-web', version: '4.0.0'
 
 //    compileOnly 'org.springframework.boot:spring-boot-configuration-processor'
-//    implementation fileTree(dir:'lib',includes:['*jar'])
+    implementation fileTree(dir:'lib',includes:['*jar'])
 
 }
 

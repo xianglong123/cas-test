@@ -1,16 +1,16 @@
 package com.cas.controller;
 
 import com.alibaba.excel.EasyExcel;
-import com.cas.po.DemoData;
-import com.cas.service.Impl.CommonServiceImpl;
-import com.cas.util.StringUtil;
+import com.alibaba.excel.annotation.ExcelIgnore;
+import com.alibaba.excel.annotation.ExcelProperty;
+import com.alibaba.excel.annotation.write.style.ColumnWidth;
+import com.alibaba.excel.annotation.write.style.ContentStyle;
+import com.alibaba.excel.annotation.write.style.HeadStyle;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.ServletOutputStream;
@@ -34,21 +34,6 @@ public class SingleController {
 
     private static final Logger log = LoggerFactory.getLogger(SingleController.class);
 
-    @Autowired
-    private CommonServiceImpl commonService;
-
-//    @Resource
-//    private JmjProperties jmjProperties;
-//
-//    @Resource
-//    private WeightRandom<String, Integer> weightRandom;
-    // w a n
-
-    @GetMapping("single")
-    public void single() throws InterruptedException {
-        commonService.say();
-    }
-
 
     @GetMapping("export")
     public void export(HttpServletResponse response) throws IOException {
@@ -65,16 +50,16 @@ public class SingleController {
             e.printStackTrace();
         }
         response.setHeader("Content-disposition", "attachment;filename=" + name + ".xlsx");
-        EasyExcel.write(out, DemoData.class)
+        EasyExcel.write(out, ExcelData.class)
                 .sheet("近一周拨测数据统计")
                 .doWrite(data());
     }
 
 
-    private List<DemoData> data() {
-        List<DemoData> list = new ArrayList<DemoData>();
+    private List<ExcelData> data() {
+        List<ExcelData> list = new ArrayList<ExcelData>();
         for (int i = 0; i < 10; i++) {
-            DemoData data = new DemoData();
+            ExcelData data = new ExcelData();
             data.setString("字符串" + i);
             data.setDate(new Date());
             data.setDoubleData(0.56);
@@ -97,17 +82,55 @@ public class SingleController {
         return property;
     }
 
-    @PostMapping("/jmj2")
-    public String jmj2() {
-        StringUtil.put();
-        return "ok";
-    }
 
-    @PostMapping("/jmj")
-    public String jmj() {
-        System.out.println(StringUtil.get());
-        return "ok";
-    }
+    @HeadStyle//表头样式
+    @ContentStyle//内容样式
+    @ColumnWidth(20)
+    public static class ExcelData {
+        @ExcelProperty("字符串标题")
+        private String string;
+        @ExcelProperty("日期标题")
+        private Date date;
+        @ExcelProperty("数字标题")
+        private Double doubleData;
+        /**
+         * 忽略这个字段
+         */
+        @ExcelIgnore
+        private String ignore;
 
+
+        public String getString() {
+            return string;
+        }
+
+        public void setString(String string) {
+            this.string = string;
+        }
+
+        public Date getDate() {
+            return date;
+        }
+
+        public void setDate(Date date) {
+            this.date = date;
+        }
+
+        public Double getDoubleData() {
+            return doubleData;
+        }
+
+        public void setDoubleData(Double doubleData) {
+            this.doubleData = doubleData;
+        }
+
+        public String getIgnore() {
+            return ignore;
+        }
+
+        public void setIgnore(String ignore) {
+            this.ignore = ignore;
+        }
+    }
 
 }

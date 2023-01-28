@@ -8,15 +8,16 @@ import com.cas.io.byteIO.I.User;
 import com.cas.util.HexConverter;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.bouncycastle.util.encoders.Hex;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.platform.commons.util.StringUtils;
 
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
+import java.time.Duration;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
@@ -36,6 +37,25 @@ import java.util.stream.Collectors;
  * @review: 二进制操作测试
  */
 public class BinaryTest {
+
+
+
+
+    public static void main(String[] args) {
+        // 0101
+        byte data = 0x3F;
+        System.out.println((int) data);
+        int y = data >> 2 ;
+        System.out.println(data & 0x01);
+        System.out.println(data >> 1 & 0x01);
+        System.out.println(data >> 2 & 0x01);
+        System.out.println(data >> 3 & 0x01);
+        System.out.println(data >> 4 & 0x01);
+        System.out.println(data >> 5 & 0x01);
+        System.out.println(data >> 6 & 0x01);
+        System.out.println(data >> 7 & 0x01);
+    }
+
 
     /**
      * 进行异或运行
@@ -458,14 +478,89 @@ public class BinaryTest {
     }
 
 
-    @Before
+    @Test
+    public void test33() throws IllegalAccessException {
+        Map<String, String> map = new TreeMap<>();
+        User user = new User("向龙", "18");
+        Field[] declaredFields = User.class.getDeclaredFields();
+        for (Field field : declaredFields) {
+            field.setAccessible(true);
+            map.put(field.getName(), (String) field.get(user));
+        }
+
+        Collection<String> values = map.keySet();
+        for (String key : values) {
+            System.out.println("key=" + key + " val= " + map.get(key));
+        }
+    }
+
+    @Test
+    public void test34() {
+        String data = "017fe4Zz9b820740000000000000000000000000";
+        System.out.println(HexConverter.byteArray2HexString(data.getBytes(StandardCharsets.UTF_8)));
+    }
+
+    @Test
+    public void test35() {
+        String data = "{\"name\":\"xl\",\"age\":\"18\",\"hignt\":null,\"signature\":\"123444444\"}";
+        JSONObject parseObject = JSONObject.parseObject(data);
+        Map<String, Object> innerMap = parseObject.getInnerMap();
+        TreeMap<String, Object> treeMap = new TreeMap<>(innerMap);
+        String signature = (String) treeMap.remove("signature");
+        treeMap.put("a", null);
+        System.out.println(signature);
+        for (Object va : treeMap.values()) {
+            if (StringUtils.isNotBlank((String) va)) {
+                System.out.println(va);
+            }
+        }
+    }
+
+    @Test
+    public void test36() {
+        String data = "123ABC";
+        System.out.println(HexConverter.byteArray2HexString(data.getBytes()));
+    }
+
+    @Test
+    public void test37() {
+        LocalDateTime start = LocalDateTime.of(2022, 5, 7, 1, 1);
+        LocalDateTime end = LocalDateTime.of(2022, 5, 8, 1, 1);
+        System.out.println("相差的天数: " + Duration.between(start, end).toDays() + "天");
+        System.out.println("相差的小时数: " + Duration.between(start, end).toHours() + "小时");
+        System.out.println("相差的分钟数: " + Duration.between(start, end).toMinutes() + "分钟");
+        System.out.println("相差的毫秒数: " + Duration.between(start, end).toMillis() + "毫秒");
+    }
+
+
+    @Test
+    public void test38() {
+        StringBuilder sb1 = new StringBuilder("Duck");
+        String str1 = sb1.toString().intern();
+        String str2 = sb1.toString().intern();
+        System.out.println(str1 == str2);
+    }
+
+    @Test
+    public void test39() {
+        LocalDate beginDateTime = LocalDate.parse("20221011", DateTimeFormatter.ofPattern("yyyyMMdd"));
+        String format = beginDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        System.out.println(format);
+    }
+
+
+//    @Before
     public void before() {
         System.out.println("before");
     }
 
-    @After
+//    @After
     public void after() {
         System.out.println("after");
     }
+
+
+
+
 
 }

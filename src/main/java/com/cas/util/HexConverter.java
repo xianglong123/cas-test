@@ -22,6 +22,11 @@ public class HexConverter {
 
     public HexConverter() {
     }
+    // 15811317734
+    // 123@qq.com
+    // 123@164.com
+    // 123@164.com
+    // 123@histecher.com
 
     public static String encode(byte[] src) {
         return Hex.encodeHexString(src);

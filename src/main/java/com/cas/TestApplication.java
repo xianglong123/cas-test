@@ -20,13 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication(scanBasePackages = "com.cas")
 @RestController
 public class TestApplication {
-    @Autowired
-    MyService myService;
-
-    @GetMapping("/")
-    String testStarter(){
-        return myService.getName()+":"+myService.getAge();
-    }
 
     public static void main(String[] args) {
         try{

@@ -15,7 +15,7 @@ import java.util.Objects;
 public class XorTest {
 
     public static void main(String[] args) {
-        String a = "32323232323232323232323232323232";
+        String a = "272BA8F00BCA43F57093CBC17AA15DB4";
         String b = "31313131313131313131313131313131";
         byte[] bytes = ByteUtil.arrayXOR(Objects.requireNonNull(HexConverter.hexString2ByteArray(a)), Objects.requireNonNull(HexConverter.hexString2ByteArray(b)));
         System.out.println(HexConverter.byteArray2HexString(bytes)); // 03030303030303030303030303030303

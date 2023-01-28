@@ -9,6 +9,7 @@ import cn.hutool.crypto.asymmetric.KeyType;
 import cn.hutool.crypto.asymmetric.SM2;
 import com.cas.util.HexConverter;
 import org.apache.commons.codec.DecoderException;
+import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.Hex;
 import org.bouncycastle.crypto.engines.SM2Engine;
 import org.bouncycastle.crypto.params.ECPrivateKeyParameters;
@@ -23,14 +24,9 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.UnsupportedEncodingException;
-import java.security.InvalidKeyException;
-import java.security.Key;
-import java.security.KeyPair;
-import java.security.KeyPairGenerator;
-import java.security.NoSuchAlgorithmException;
-import java.security.NoSuchProviderException;
-import java.security.SecureRandom;
-import java.security.Security;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+import java.security.*;
 
 /**
  * @author xiang_long
@@ -48,7 +44,11 @@ public class HutoolSm2Test {
     public void test4() {
         String content = "我是Hanley";
         KeyPair pair = SecureUtil.generateKeyPair("SM2");
-        final SM2 sm2 = new SM2(pair.getPrivate(), pair.getPublic());
+        PrivateKey aPrivate = pair.getPrivate();
+        PublicKey aPublic = pair.getPublic();
+        System.out.println(HexConverter.byteArray2HexString(aPrivate.getEncoded()));
+        System.out.println(HexConverter.byteArray2HexString(aPublic.getEncoded()));
+        final SM2 sm2 = new SM2(aPrivate, aPublic);
         byte[] sign = sm2.sign(content.getBytes());
         // true
         boolean verify = sm2.verify(content.getBytes(), sign);
@@ -69,8 +69,6 @@ public class HutoolSm2Test {
         System.out.println("sign= " + sign);
 //        System.out.println("验签结果：" + verifyHex);
         System.out.println("结束时间：" + System.currentTimeMillis());
-        // 1643081953417
-        // 1643081952694
     }
 
     /**
@@ -85,6 +83,38 @@ public class HutoolSm2Test {
         byte[] sign = sm2.sign(content.getBytes());
         boolean verifyHex = sm2.verify(content.getBytes(), sign);
         System.out.println("签名: " + HexConverter.byteArray2HexString(sign) +" -- 验签结果：" + verifyHex);
+    }
+
+    @Test
+    public void test34() {
+//        String content = "\"id\":\"YM010AW0J03TI\",\"my\":\"JG\"";
+        String content = "\"xm\":\"张明远\",\"gb\":\"CHN111\",\"zm\":\"440107198809020756\",\"zx\":\"d227a2ed-72b5-401a-a093-2627ed199c1a,3\",\"sj\":\"sLDFX2\"";
+//        String content = "\"xm\":\"张*\",\"gb\":\"CHN111\",\"zx\":\"d227a2ed-72b5-401a-a093-2627ed199c1a,3\",\"sj\":\"sLDFX2\"";
+//        String content = "{\"id\":\"YM010AW0J03TI\",\"my\":\"JG\",\"nr\":{\"xm\":\"张*\",\"gb\":\"CHN111\",\"zx\":\"d227a2ed-72b5-401a-a093-2627ed199c1a,3\",\"sj\":\"sLDFX2\"},\"qm\":\"MEUCIQD3Y3+0IWusW7gugffidvWVOdmjlcxs7j/00kUWDc2VUwIgDaf/5HJbtW4vYoi+vHU87EYIyntr6y18RQO4OXRxpDk=\"}";
+        String privateKeyHex = "AB70FD6FC119BF1BE1EC07B8D5EB9473B5CF6D0333DCE4C6E945A39048A6BF6C";
+        String publicKeyHex = "2FD2CA80F6DADEE9E24EA66E438393C88EC2D3ED1C8184AB4BED8696CC4AFCA9503452A000097A73CF07D802896FB8E40F0B9D43CBE9D27C6C19C52D77C8B6B8";
+        // 要添加解密标示04，读取出来的数据不带"04"【加标示加标示加标示，重要的事情说三遍】
+        ECPrivateKeyParameters privateKeyParameters = BCUtil.toSm2Params(privateKeyHex);
+        String xhex = publicKeyHex.substring(0, 64);
+        String yhex = publicKeyHex.substring(64, 128);
+        ECPublicKeyParameters ecPublicKeyParameters = BCUtil.toSm2Params(xhex, yhex);
+        //创建sm2 对象
+        SM2 sm2 = new SM2(privateKeyParameters, ecPublicKeyParameters);
+        System.out.println(HexConverter.byteArray2HexString(content.getBytes(StandardCharsets.UTF_8)));
+        byte[] sign = sm2.sign(content.getBytes());
+        String signs = "3044021FEE2036654B294F5CE79CAD858CD500AC2862D4569C86F18B68C8E1B31A4FB8022100859DE82C71CEF4C3F0D55C522EFB30CB380B9A37A9D1FC6A9B7E3E3A7904072B";
+        boolean verify = sm2.verify(content.getBytes(), HexConverter.hexString2ByteArray(signs));
+        System.out.println("签名：" + signs + " -- 签名结果：" + verify);
+//        System.out.println("签名：" + HexConverter.byteArray2HexString(sign) + " -- 签名结果：" + verify);
+        System.out.println("base64：" + Base64.encodeBase64String(sign));
+        System.out.println(new String(HexConverter.hexString2ByteArray("7B226964223A22594D3031304157304A30335449222C226D79223A224A47222C226E72223A7B22786D223A22E5BCA0E6988EE8BF9C222C226762223A2243484E313131222C227A6D223A22343430313037313938383039303230373536222C227A78223A2264323237613265642D373262352D343031612D613039332D3236323765643139396331612C33222C22736A223A22734C44465832227D2C22716D223A22472B34674E6D564C4B5539633535797468597A56414B776F597452576E49627869326A4934624D61543769466E65677363633730772F4456584649752B7A444C4F4175614E366E522F477162666A3436655151484B773D3D227D")));
+    }
+
+    @Test
+    public void base() {
+        String str = "abcde";
+        System.out.println(Base64.encodeBase64String(str.getBytes()));
+
     }
 
     /**
@@ -104,10 +134,10 @@ public class HutoolSm2Test {
     public void signTest() {
         //指定的私钥
         String privateKeyHex = "ECA65A95757D3C97ACBBBD4034DFE8B0EEB9819A9F3A77EA0CB9DB870C55E38E";
-
         String publicKeyHex = "A9721CB8C91EE248B60CC7C912B403A97903487DE0464F4F9FE797B33F83C732495F815DA6060F1B6A73705ACC37FBF00DC6F103DC81C4ABDC729CB7D4B89034";
+//        String publicKeyHex = "061759A7EDE9BC6F691F066F6DF457A75A431DF7D0E46E709FC14D3791854C997B3064AD5D5D7F063713D2D23DE1A1F6A89B352512273BA561609186DC4D7BD5";
         //需要加密的明文,得到明文对应的字节数组
-        String data = "31313131313131313131313131313131";
+        String data = "B786411E54BBCE6879A234DE8E4C083100000000000000000000";
         byte[] dataBytes = HexConverter.hexString2ByteArray(data);
         ECPrivateKeyParameters privateKeyParameters = BCUtil.toSm2Params(privateKeyHex);
         String xhex = publicKeyHex.substring(0, 64);
@@ -117,16 +147,47 @@ public class HutoolSm2Test {
         SM2 sm2 = new SM2(privateKeyParameters, ecPublicKeyParameters);
         //这里需要手动设置，sm2 对象的默认值与我们期望的不一致 , 使用明文编码
         sm2.usePlainEncoding();
-        sm2.setMode(SM2Engine.Mode.C1C2C3);
+        sm2.setMode(SM2Engine.Mode.C1C3C2);
+        byte[] encrypt1 = sm2.encrypt(dataBytes, KeyType.PublicKey);
 //        byte[] encrypt = sm2.encrypt(dataBytes, KeyType.PublicKey);
 //        byte[] encrypt = HexConverter.hexString2ByteArray("0C5ADD8755EED8A55B7A1A01315316EB5EB86D2E68243CE22B3501362FEDD62C562665703E41BF77F97B4ACDC80A24647B7B696C335FCD875915FD4F7C3B82EE74430181902961797D3D4986DA26C8DA3757DC9E4655369290CA456FBCBCE81CC57B4C972C2406FC9ACDFD1E186FC775");
-        byte[] encrypt = HexConverter.hexString2ByteArray("045bce594725149735f24b8efb0c6aa046469d63c16c49b9f2bbc3deaf3c8f940df3f9455bc12b80f40745b7783954c3a4e820355671ce0073ddb8af4e579252574a741ecb2f7ee9520933644925b6cc9f3c7f011acfe668c6e8c3178c142c9fe820684062c36eb014ec1761527e2baa32");
-        byte[] decryptStr = sm2.decrypt(encrypt, KeyType.PrivateKey);
-        System.out.println("加密: " + HexUtil.encodeHexStr(encrypt));
-        System.out.println("解密: " + HexConverter.byteArray2HexString(decryptStr));
-        System.out.println("解密: " + decryptStr);
+//        byte[] encrypt = HexConverter.hexString2ByteArray("045bce594725149735f24b8efb0c6aa046469d63c16c49b9f2bbc3deaf3c8f940df3f9455bc12b80f40745b7783954c3a4e820355671ce0073ddb8af4e579252574a741ecb2f7ee9520933644925b6cc9f3c7f011acfe668c6e8c3178c142c9fe820684062c36eb014ec1761527e2baa32");
+//        byte[] encrypt = HexConverter.hexString2ByteArray("0480A83F5ABF97AF18685FBCB3103D615697D7BEB35B1CF0CB66D9540C5CEC5C00E0387C5A268A42363AC9305B5371E6243623F97AAEC207AEAFA670A16B74B76C73FC0B50F57C1208634CDC87092D7D30EBB1192933A7810D9BE301D42778C6D6E42C1ED41D90CC395EA0CCF3BE88F132");
+//        byte[] encrypt = HexConverter.hexString2ByteArray("047379DC83CB531DA1E49AB87106C1D71B0614E6DB91441B3322D72A242613E156293FC6044285D5DA6A28760DD658CF7C8B266290AE05652F207D03D3DADB0ECC72A1D30A2D759DE90F8FDF3E9D47A135C7C7471AAFA3DB219F07B25AE702A839FD37551E6C3A785196B8CFA5AF0CED0CD23C5711");
+        byte[] encrypt = HexConverter.hexString2ByteArray("04E7ADD8D7728B0E4C929AACAC6228241FB8FA84A18D129CF5F544359C18AE6277F31791C4C02E7C3D1971E4DDFE446FC8C6B2F3D3C536F9C06E3E574B7D02D2CEB4F12B9454044FDD760FBC10EDF6580D57185028BA5F43C19B6256B24DF15C39F4426306BD2125A5D5210D15AB5D06326F72D537B5CBB41B3AF715CAF431");
+        byte[] decryptStr = sm2.decrypt(encrypt1, KeyType.PrivateKey);
+//        byte[] encrypt1 = sm2.encrypt("017fe4049Zz20740000000000000000000000000".getBytes(StandardCharsets.UTF_8), KeyType.PublicKey);
+        System.out.println("" + HexConverter.byteArray2HexString(encrypt));
+        System.out.println("加密: " + HexConverter.byteArray2HexString(encrypt1));
+        System.out.println("解密" + HexConverter.byteArray2HexString(decryptStr));
+        System.out.println("解密: " + new String(decryptStr));
 //        System.out.println("数据: " + HexUtil.encodeHexStr(dataBytes));
 //        System.out.println("签名: " + HexUtil.encodeHexStr(sign));
+    }
+
+
+    @Test
+    public void szt() {
+        //指定的私钥
+        String privateKeyHex = "";
+        String publicKeyHex = "061759A7EDE9BC6F691F066F6DF457A75A431DF7D0E46E709FC14D3791854C997B3064AD5D5D7F063713D2D23DE1A1F6A89B352512273BA561609186DC4D7BD5";
+        //需要加密的明文,得到明文对应的字节数组
+        String data = "B786411E54BBCE6879A234DE8E4C0831";
+        byte[] dataBytes = HexConverter.hexString2ByteArray(data);
+        ECPrivateKeyParameters privateKeyParameters = BCUtil.toSm2Params(privateKeyHex);
+        String xhex = publicKeyHex.substring(0, 64);
+        String yhex = publicKeyHex.substring(64, 128);
+        ECPublicKeyParameters ecPublicKeyParameters = BCUtil.toSm2Params(xhex, yhex);
+        //创建sm2 对象
+        SM2 sm2 = new SM2(privateKeyParameters, ecPublicKeyParameters);
+        //这里需要手动设置，sm2 对象的默认值与我们期望的不一致 , 使用明文编码
+        sm2.usePlainEncoding();
+        sm2.setMode(SM2Engine.Mode.C1C3C2);
+        byte[] encrypt1 = sm2.encrypt(dataBytes, KeyType.PublicKey);
+        // todo 私钥平台未知
+        byte[] decryptStr = sm2.decrypt(encrypt1, KeyType.PrivateKey);
+        System.out.println("加密: " + HexConverter.byteArray2HexString(encrypt1));
+        System.out.println("解密" + HexConverter.byteArray2HexString(decryptStr));
     }
 
     @Test
@@ -310,6 +371,16 @@ public class HutoolSm2Test {
         keyPairGenerator.initialize(1024, random);// or 2048
         KeyPair keyPair = keyPairGenerator.generateKeyPair();
         return keyPair.getPrivate().getEncoded();
+    }
+
+
+    @Test
+    public void test67() {
+//        byte[] bytes = SmUtil.rsAsn1ToPlain(HexConverter.hexString2ByteArray("304402202549ACB340B3A929939B3D7C6705E41C045436DAF07B1107A62FE9A65F5783F9022001001195E291DE288739DF13662E3530402C63C95AFF5FD1469F56B65459BC6F"));
+//        System.out.println(HexConverter.byteArray2HexString(bytes));
+        byte[] bytes1 = SmUtil.rsPlainToAsn1(HexConverter.hexString2ByteArray("1F2ABE2F0FED91B098CEE2A6AF54A9086B28C447A07D04B8E1EA7395F541AB89590F14B1A09EE5A292E23E6CF264D7BDE260C5352DB84FE7D8745625910D3C71"));
+        System.out.println(HexConverter.byteArray2HexString(bytes1));
+
     }
 
 

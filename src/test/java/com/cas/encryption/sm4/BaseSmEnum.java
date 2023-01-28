@@ -8,7 +8,8 @@ public enum BaseSmEnum {
      */
     ENCODING("UTF-8"),
     ALGORITHM_NAME("SM4"),
-    ALGORITHM_NAME_CBC_PADDING("SM4/CBC/PKCS5Padding"),
+    ALGORITHM_NAME_CBC_PADDING("SM4/CBC/NoPadding"),
+    ALGORITHM_NAME_ECB_NO_PADDING("SM4/ECB/NoPadding"),
 
     ;
 

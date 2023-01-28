@@ -103,14 +103,15 @@ public class HutoolSm2Test2 {
 
 
     @Test
-    public void pu_old() throws UnsupportedEncodingException {
+    public void pu_old() {
         String privateKe = "MIGTAgEAMBMGByqGSM49AgEGCCqBHM9VAYItBHkwdwIBAQQgWQRf/UMRed26VOm23gWZcbfCeoYTeOChEfjzTApPEGWgCgYIKoEcz1UBgi2hRANCAASYfDrZBZ9xp7dkT+Uwn5is1JISMdE6dDb3FfrcWy8lHc6aDj1KeOJZSI1y36f35D3uOUBcK/OErNyAOetAlQeZ";
         String publicKe = "MFkwEwYHKoZIzj0CAQYIKoEcz1UBgi0DQgAEmHw62QWfcae3ZE/lMJ+YrNSSEjHROnQ29xX63FsvJR3Omg49SnjiWUiNct+n9+Q97jlAXCvzhKzcgDnrQJUHmQ==";
         byte[] privateKey = Base64Utils.decode(privateKe);
         byte[] publicKey = Base64Utils.decode(publicKe);
         SM2 sm2 = SmUtil.sm2(privateKey,publicKey);
         sm2.setMode(SM2Engine.Mode.C1C2C3);
-        String decryptStr = StrUtil.utf8Str(sm2.decrypt("BPq5Hdhu0d1T9X++yUD26KZaTpgr23FmMjBHv8UTebwK/oF6b1mu47L40D2WdhjxsVz4Q1EIYio3z3l/cvX7ujVpdcAuDi5Mp4xY3fu/WALyIHJ9o/XWGSKrdLZ3IHq8RTB3x7d90rt+MvxMWLr1EDYZmqaNSpVjAWF8dv+Qc+F2", KeyType.PrivateKey));
+//        String decryptStr = StrUtil.utf8Str(sm2.decrypt("BPq5Hdhu0d1T9X++yUD26KZaTpgr23FmMjBHv8UTebwK/oF6b1mu47L40D2WdhjxsVz4Q1EIYio3z3l/cvX7ujVpdcAuDi5Mp4xY3fu/WALyIHJ9o/XWGSKrdLZ3IHq8RTB3x7d90rt+MvxMWLr1EDYZmqaNSpVjAWF8dv+Qc+F2", KeyType.PrivateKey));
+        String decryptStr = StrUtil.utf8Str(sm2.decrypt("BJ6nht1jqQ7yytnnPEQR/FPoCGDRcCLf/kWBJM9FBDKyTrAFT9rAkx4UE0qTA+9feoFNzX2MpnJ+oVMGXwKXoHihqAWoMOx4Nb2Iwnmry/9dioNRnPp8+ecwR0YwKc21pQKFPWxNkEsg2Y2FDjXRQU1NBanHVb5BHhuMlXwa5brO", KeyType.PrivateKey));
         System.out.println("解密：" + decryptStr);
     }
 

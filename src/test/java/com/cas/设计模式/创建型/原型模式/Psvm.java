@@ -17,6 +17,8 @@ public class Psvm {
         System.out.println(square);
         Rectangle rectangle = new Rectangle(square);
         Rectangle clone = (Rectangle) rectangle.clone();
+        System.out.println(rectangle);
+        System.out.println(clone);
         System.out.println(rectangle.getSquare().getType());
         System.out.println(clone.getSquare().getType());
         rectangle.getSquare().setType("123");
