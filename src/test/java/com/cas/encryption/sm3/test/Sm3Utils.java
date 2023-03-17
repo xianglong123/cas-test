@@ -1,8 +1,10 @@
 package com.cas.encryption.sm3.test;
 
+import com.cas.des.des3_ecb.HexConverter;
 import org.bouncycastle.crypto.digests.SM3Digest;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.pqc.math.linearalgebra.ByteUtils;
+import org.junit.Test;
 
 import java.io.UnsupportedEncodingException;
 import java.security.Security;
@@ -81,6 +83,13 @@ public class Sm3Utils {
         return flag;
     }
 
+    @Test
+    public void test() {
+        String data = "00002780E640002200000AA0000006320101060C020012EF10A10EA10C4F0AA0000006320101050C0200";
+        byte[] hash = hash(HexConverter.hexString2ByteArray(data));
+        System.out.println(HexConverter.byteArray2HexString(hash));
+
+    }
 
     public static void main(String[] args) {
         String text = "hello";

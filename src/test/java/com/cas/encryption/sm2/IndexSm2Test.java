@@ -4,12 +4,13 @@ import cn.hutool.crypto.BCUtil;
 import cn.hutool.crypto.SecureUtil;
 import cn.hutool.crypto.asymmetric.KeyType;
 import cn.hutool.crypto.asymmetric.SM2;
+import com.alibaba.fastjson.JSONObject;
 import com.cas.des.des3_ecb.HexConverter;
-import com.cas.util.ByteUtil;
 import org.bouncycastle.crypto.engines.SM2Engine;
 import org.bouncycastle.crypto.params.ECPrivateKeyParameters;
 import org.bouncycastle.crypto.params.ECPublicKeyParameters;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.security.KeyPair;
 import java.util.HashMap;
@@ -35,7 +36,7 @@ public class IndexSm2Test {
         }
     };
 
-    // 数字身份平台持有
+    // 设备方持有
     static Map<Integer, String> szsfMap = new HashMap<Integer, String>() {
         {
             put(0, "9C535AF6F02540D262952FF40148E1849721845AB27D202401703A2839469C34");
@@ -48,20 +49,13 @@ public class IndexSm2Test {
 
 
     public static void main(String[] args) {
-        String data = "529D27F4703C49BE";
+        String data = "81CBB51B640D450B";
         int index = getIndexByXor(Objects.requireNonNull(HexConverter.hexString2ByteArray(data)), 5);
-        String yjmData = "{\"id\":\"yjm123\"}";
-        // 粤居码信息加密
-        byte[] encryDate = encryDate(yjmData.getBytes(), yjmMap.get(index));
-//        String hexString = HexConverter.byteArray2HexString(encryDate);
-//        System.out.println("粤居码密文信息：" + hexString);
-//        String yjmResponse = "{\"data\":{\"radomNum\":\"DE1F38878FD90211\", \"yjmData\":\"" + hexString + "\"}}";
-//        System.out.println("粤居码传输信息：" + yjmResponse);
-        // 数字身份云平台解密
-        String hexString = "04D77AF868D84F1653E2BA19963084D2C91E3DE1425B966DC27817A256942E9CA61F6579181EE7BAC8B15320EAC015A5576BBBAC8B59383A8EE3EA60C122642F1ED6068354C1C10F468BA5FEF7DC8844146D92EB92FD957C23A129D5845BB74D64AD6B0B68C56333A5B9E106533355B54822B730B314638FF710B0D6928E999AD14809268082675107D0BD9C18A4D763EE4263A70E392C4D3535AD5C458E497913BD722541645BA4A61A59155D4BB6077DDC73307725808B061C7C214982659918B6E248793825EAC813D19B58D25B3AE43B29EA7D8DACDEF3A2B26E04D7FD10D9F326B056E19A05BB2D0A35B53C5831A349D0285B0DCF18DE890DE5A5A37167F761B84CE2C5B9AE18E450DA0D3C7F7135B6CBFD805D9D30C9CFFC1C49DEE9B7A705CF429806E4C997F5D00E3C0AB13BCD06A2BF03E22441D25708964E2FE32099E07E1511D2E7ED33DC07CB94A5E8048FD7F9B1";
+        String hexString = "0422A1A4D69A5CF45D5A408F3164E65BFE7D88AE313A554144957B1739554E514C09901717B71CB14B297D8F4A476D9E2D96F17149ADEB78B55F8D2B8F25DD6CD1712ECCFD90EDFFE934E7DB2BAA1F67438BC144FDD5A079208B9E4F6CAF98C818A45A02D9E89CB943C2E3DFC85BFF26F2C2A705E617A0586901073CA3C91B76AC771D838F8BF9496760E1E1FB32C29CE537903C5444C27F478E19139CE8CB2B7CE14A0D626F503D370E03021DFE843B6FA4F5AFEBD9B9CEE56A6D8AD389307DEAA38031904A8D67C4CAB636DF88D49FD9926690C82C2F73E1211C95A0AA3E1FBC0EBCC316AF79B5A6C99557483F0D8545AAED44BD1A61F478A2D3EC6579653D7D4CF74DDD1AEF23C02010E2D87A3AB80BB53D9730D0E5E394AD86DACC3F50278B13CA4BEF325DF3132AF3C7CB0DA3A306A0C648514094";
         int szsfIndex = getIndexByXor(Objects.requireNonNull(HexConverter.hexString2ByteArray(data)), 5);
         byte[] decryData = decryData(HexConverter.hexString2ByteArray(hexString), szsfMap.get(szsfIndex));
         System.out.println(data + " 索引: " + index + " 数据解密：" + new String(decryData));
+
     }
 
     private static int getIndexByXor(byte[] data, int size) {
@@ -70,10 +64,6 @@ public class IndexSm2Test {
         for (int i = 1; i < len; i++) {
             index ^= data[i];
         }
-        BigInteger sint = new BigInteger(HexConverter.byte2HexString(index), 16);
-        //10进制转2进制
-        String result = sint.toString(2);
-        System.out.println(result);
         return (index & 0xff) % size;
     }
 

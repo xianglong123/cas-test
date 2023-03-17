@@ -18,8 +18,8 @@ public class HutoolSm4MobileTest {
     }
 
     private static void test1() throws UnsupportedEncodingException {
-        String eic = "C5RMRDIchdgUjdwUPae/Hkvm3TJPXSafB3vhdu54XpJ1MDAwMDExMDUyMDIyMDgwODIwMjMwMjA4MQEAAAEBqRoxE6aF0f/n70RsIp2SAFTZ8Y12/E/TtAkrpYfNzY6a6rGFCR29MXc72IlVwJt5feQDsfwRQmNU30R0FEWgiJePfN+XL8Qb1T1VOS0tczA2NTc5NDBFMEUCIQCYD+L/5XK4njd3vqSlr1FmTEqvpF7FqCs3oiTgWM1f1gIgCwiygqob0ayQUf5VbIsDO7thK64q1Yh7hJtTKor+06AA";
-        String pid = "C80B37362358C952F77B5646D1D842C23A41628C2701ED7D47D64FFD19DEB212";
+        String eic = "kRX9EVF5gc1kF92nW/4YgpcXiFJ7hrEmkGn7rPudwkvrGYecABR2MQlwD9pw7nsiONcAGicRIbYeldiPHxIvT4LA4SJB51YNsjisVx4EmkcddsrcBk0lqS3EcCxQWkV5/XFnGvCntPNqH5Ttehe8wpW6tPsC4LElfhKdgwC6Gl4VLzK4NVd2a7hBtjVqT6lqdl2/z0gyMwoMZCEcCKB5pnsFjXPqR76HRggo0V5GR75rJmqyzx1/JK3WRL35qK3D0000000000000000000000000000000000000000";
+        String pid = "EE4BC75E0E075B099C375209AF3B945DB6BAC6A436330608F64E861A38704127";
         System.out.println(HexConverter.hexEncode(eic.getBytes("UTF-8")));
         System.out.println(HexConverter.hexEncode(pid.getBytes("UTF-8")));
     }

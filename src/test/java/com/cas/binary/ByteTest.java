@@ -1,4 +1,4 @@
-package com.cas.common;
+package com.cas.binary;
 
 import com.alibaba.fastjson.JSONObject;
 import com.cas.des.des3_ecb.HexConverter;

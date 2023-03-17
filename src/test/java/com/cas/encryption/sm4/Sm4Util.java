@@ -1,10 +1,24 @@
 package com.cas.encryption.sm4;
 
+import cn.hutool.core.util.HexUtil;
+import cn.hutool.crypto.SmUtil;
+import cn.hutool.crypto.symmetric.SymmetricCrypto;
+import com.cas.des.des3_ecb.HexConverter;
+import org.bouncycastle.crypto.CipherParameters;
+import org.bouncycastle.crypto.engines.DESEngine;
+import org.bouncycastle.crypto.engines.SM4Engine;
+import org.bouncycastle.crypto.macs.CBCBlockCipherMac;
+import org.bouncycastle.crypto.macs.CMac;
+import org.bouncycastle.crypto.macs.ISO9797Alg3Mac;
+import org.bouncycastle.crypto.paddings.BlockCipherPadding;
+import org.bouncycastle.crypto.params.KeyParameter;
+import org.bouncycastle.jcajce.provider.asymmetric.rsa.CipherSpi;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.pqc.math.linearalgebra.ByteUtils;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
+import javax.crypto.Mac;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import java.security.AlgorithmParameters;
@@ -12,6 +26,7 @@ import java.security.Key;
 import java.security.SecureRandom;
 import java.security.Security;
 import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * @description:
@@ -31,6 +46,7 @@ public class Sm4Util {
     // 定义分组加密模式使用：PKCS5Padding
 
     public static final String ALGORITHM_NAME_CBC_PADDING = BaseSmEnum.ALGORITHM_NAME_CBC_PADDING.getMsg();
+    public static final String ALGORITHM_NAME_ECB_PADDING = BaseSmEnum.ALGORITHM_NAME_ECB_NO_PADDING.getMsg();
     // 128-32位16进制；256-64位16进制
     public static final int DEFAULT_KEY_SIZE = 128;
 
@@ -85,13 +101,15 @@ public class Sm4Util {
     }
 
     /**
+     * 加密模式之ECB
+     */
+    public static byte[] encrypt_Ecb_Padding(byte[] key, byte[] data) throws Exception {
+        Cipher cipher = generateEcbCipher(ALGORITHM_NAME_ECB_PADDING, Cipher.ENCRYPT_MODE, key);
+        return cipher.doFinal(data);
+    }
+
+    /**
      * 加密模式之CBC
-     *
-     * @param key
-     * @param data
-     * @return
-     * @throws Exception
-     * @explain
      */
     public static byte[] encrypt_Cbc_Padding(byte[] key, byte[] data) throws Exception {
         Cipher cipher = generateCbcCipher(ALGORITHM_NAME_CBC_PADDING, Cipher.ENCRYPT_MODE, key);
@@ -102,6 +120,13 @@ public class Sm4Util {
         Cipher cipher = Cipher.getInstance(algorithmName, BouncyCastleProvider.PROVIDER_NAME);
         Key sm4Key = new SecretKeySpec(key, ALGORITHM_NAME);
         cipher.init(mode, sm4Key, generateIV());
+        return cipher;
+    }
+
+    private static Cipher generateEcbCipher(String algorithmName, int mode, byte[] key) throws Exception {
+        Cipher cipher = Cipher.getInstance(algorithmName, BouncyCastleProvider.PROVIDER_NAME);
+        Key sm4Key = new SecretKeySpec(key, ALGORITHM_NAME);
+        cipher.init(mode, sm4Key);
         return cipher;
     }
 
@@ -140,33 +165,62 @@ public class Sm4Util {
 
     /**
      * 解密
-     *
-     * @param key
-     * @param cipherText
-     * @return
-     * @throws Exception
-     * @explain
      */
     public static byte[] decrypt_Cbc_Padding(byte[] key, byte[] cipherText) throws Exception {
         Cipher cipher = generateCbcCipher(ALGORITHM_NAME_CBC_PADDING, Cipher.DECRYPT_MODE, key);
         return cipher.doFinal(cipherText);
     }
 
+    /**
+     * 解密
+     */
+    public static byte[] decrypt_Ecb_Padding(byte[] key, byte[] cipherText) throws Exception {
+        Cipher cipher = generateEcbCipher(ALGORITHM_NAME_ECB_PADDING, Cipher.DECRYPT_MODE, key);
+        return cipher.doFinal(cipherText);
+    }
+
 
     public static void main(String[] args) throws Exception {
-//        String text = "31313131313131313131313131313131";
-        System.out.println("79296E44C28173A82D017646235D6AB5");
-        System.out.println(generateKeyString().toUpperCase());
-        System.out.println(generateKeyString().toUpperCase());
-        System.out.println(generateKeyString().toUpperCase());
-        System.out.println(generateKeyString().toUpperCase());
-//        String key = "101112131415161718191A1B1C1D1E1F";
-//        String enc = protectMsg(key, text);
-//        System.out.println("密文为：" + enc);
-//        System.out.println("解密后明文为：" + uncoverMsg(key, enc));
-        // C0 D1 67 6E E0 99 34 23 B3 AB 61 AB 8D 59 F7 B4 2E E3 AE AC A3 17 8A 3C 13 1B 00 E0 A3 0F AF E8 E7 D4 05 4D 72 46 F2 19 83 8B 66 4E 33 86 D9 A3
-        // 60edf059154c03c418f2732d829570ff56999c52810a71f417a31c584f248ca680339511fdd9213615947d3cff816010
+        String key = "31313131313131313131313131313131";
+        String data = "31313131313131313131313131313131313131313131313131313131";
+        String xorData = "161A99C13AFB72C441A2FAF04B906C85";
+        String padding = "00000000000000000000000000000000";
+        String dataPadding = "3131313131313131313131313131313131313131313131313131313131313131" + padding;
+        System.out.println(HexConverter.byteArray2HexString(encrypt_Ecb_Padding(HexConverter.hexString2ByteArray(key), HexConverter.hexString2ByteArray(data))));
+        System.out.println(HexConverter.byteArray2HexString(encrypt_Ecb_Padding(HexConverter.hexString2ByteArray(key), HexConverter.hexString2ByteArray(xorData))));
+        System.out.println(HexConverter.byteArray2HexString(encrypt_Ecb_Padding(HexConverter.hexString2ByteArray(key), HexConverter.hexString2ByteArray(dataPadding))));
+        System.out.println(HexConverter.byteArray2HexString(encrypt_Ecb_Padding(HexConverter.hexString2ByteArray(key), HexConverter.hexString2ByteArray(padding))));
+        System.out.println(HexConverter.byteArray2HexString(encrypt_Cbc_Padding(HexConverter.hexString2ByteArray(key), HexConverter.hexString2ByteArray(data))));
+//        test();
+
+        SymmetricCrypto sm4 = SmUtil.sm4(HexUtil.decodeHex(key));
+        System.out.println(sm4.encryptHex(HexConverter.hexString2ByteArray(data)));
     }
-    
+
+
+    private static void test() throws Exception{
+        byte[] data = Objects.requireNonNull(HexConverter.hexString2ByteArray("2C1D61049D22939F4A94F22049BA99C395536BE253D14A1669F836ED07800000"));
+        SM4Engine engine = new SM4Engine();
+        org.bouncycastle.crypto.Mac mac = new CMac(engine, engine.getBlockSize() * 8);
+        CipherParameters cipherParameters = new KeyParameter(Objects.requireNonNull(HexConverter.hexString2ByteArray("6FA6C49C159BA1E7BFC2A1D2CAA19528")));
+        mac.init(cipherParameters);
+        mac.update(data, 0, data.length);
+        byte[] result = new byte[mac.getMacSize()];
+        mac.doFinal(result, 0);
+        System.out.println(HexConverter.byteArray2HexString(result));
+    }
+
+
+    private static void testMac() throws Exception{
+        byte[] data = Objects.requireNonNull(HexConverter.hexString2ByteArray("2C1D61049D22939F4A94F22049BA99C395536BE253D14A1669F836ED07800000"));
+        Mac mac = Mac.getInstance("SM4-CMAC", BouncyCastleProvider.PROVIDER_NAME);
+        Key key = new SecretKeySpec(Objects.requireNonNull(HexConverter.hexString2ByteArray("6FA6C49C159BA1E7BFC2A1D2CAA19528")), ALGORITHM_NAME);
+        mac.init(key);
+        mac.update(data);
+        byte[] bytes = mac.doFinal();
+        System.out.println(HexConverter.byteArray2HexString(bytes));
+    }
+
+
 }
 

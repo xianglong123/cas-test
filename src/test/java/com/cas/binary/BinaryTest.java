@@ -1,16 +1,20 @@
 package com.cas.binary;
 
+import cn.hutool.core.map.MapUtil;
 import cn.hutool.core.util.RandomUtil;
+import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSONObject;
-import com.cas.clazz.Son;
+import com.alibaba.fastjson.annotation.JSONField;
 import com.cas.des.DesEncTest;
 import com.cas.io.byteIO.I.User;
 import com.cas.util.HexConverter;
+import lombok.Data;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.bouncycastle.util.encoders.Hex;
 import org.junit.Test;
 import org.junit.platform.commons.util.StringUtils;
 
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
 import java.nio.ByteBuffer;
@@ -43,17 +47,22 @@ public class BinaryTest {
 
     public static void main(String[] args) {
         // 0101
-        byte data = 0x3F;
-        System.out.println((int) data);
-        int y = data >> 2 ;
-        System.out.println(data & 0x01);
-        System.out.println(data >> 1 & 0x01);
-        System.out.println(data >> 2 & 0x01);
-        System.out.println(data >> 3 & 0x01);
-        System.out.println(data >> 4 & 0x01);
-        System.out.println(data >> 5 & 0x01);
-        System.out.println(data >> 6 & 0x01);
-        System.out.println(data >> 7 & 0x01);
+//        byte data = 0x3F;
+//        System.out.println((int) data);
+//        int y = data >> 2 ;
+//        System.out.println(data & 0x01);
+//        System.out.println(data >> 1 & 0x01);
+//        System.out.println(data >> 2 & 0x01);
+//        System.out.println(data >> 3 & 0x01);
+//        System.out.println(data >> 4 & 0x01);
+//        System.out.println(data >> 5 & 0x01);
+//        System.out.println(data >> 6 & 0x01);
+//        System.out.println(data >> 7 & 0x01);
+
+        LocalDate today = LocalDate.now();
+        System.out.println("LocalDate.now() = " + today);
+        boolean a = LocalDate.of(2022, 06, 10).isBefore(LocalDate.now());
+        System.out.println(a);
     }
 
 
@@ -456,17 +465,6 @@ public class BinaryTest {
 //        System.out.println("" + JSONObject.toJSONString(ecCardInfo));
 //    }
 
-    @Test
-    public void test30() throws IllegalAccessException {
-        Son son = new Son();
-        Class<? extends Son> aClass = son.getClass();
-        Field[] declaredFields = aClass.getDeclaredFields();
-        for (Field field : declaredFields) {
-            field.setAccessible(true);
-            field.set(son, "123");
-            System.out.println(field.get(son));
-        }
-    }
 
     @Test
     public void test31() {
@@ -548,6 +546,172 @@ public class BinaryTest {
         System.out.println(format);
     }
 
+
+    @Test
+    public void test41() {
+
+        Map<String, String> map = new HashMap<>();
+        map.put("age", "24");
+        map.put("name", "xl");
+        map.put("val", "13");
+
+        App app = new App();
+        app.setAge("24");
+        app.setName("xl");
+        app.setVal("13");
+
+        String json = JSONObject.toJSONString(map);
+
+        App bean = JSONUtil.toBean(json, App.class);
+
+        System.out.println(JSONObject.toJSONString(bean));
+
+    }
+
+
+    @Test
+    public void main() {
+
+
+    }
+
+    public static class YjmQrCodeBO {
+        /**
+         * 识别码
+         */
+        private String id;
+
+        /**
+         * 密钥对标识
+         */
+        private String my;
+
+        /**
+         * SM2 私钥生成的签
+         * 名
+         */
+        private String qm;
+        /**
+         * 粤居码内容
+         */
+        private YjmQrCodeBaseBO nr;
+
+        public String getId() {
+            return id;
+        }
+
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        public String getMy() {
+            return my;
+        }
+
+        public void setMy(String my) {
+            this.my = my;
+        }
+
+        public String getQm() {
+            return qm;
+        }
+
+        public void setQm(String qm) {
+            this.qm = qm;
+        }
+
+        public YjmQrCodeBaseBO getNr() {
+            return nr;
+        }
+
+        public void setNr(YjmQrCodeBaseBO nr) {
+            this.nr = nr;
+        }
+
+        private static class YjmQrCodeBaseBO {
+            /**
+             * 姓名
+             */
+            private String xm;
+            /**
+             * 国别
+             */
+            private String gb;
+            /**
+             *
+             */
+            private String zm;
+            /**
+             * 记录生成时间
+             */
+            private String sj;
+
+            public String getXm() {
+                return xm;
+            }
+
+            public void setXm(String xm) {
+                this.xm = xm;
+            }
+
+            public String getGb() {
+                return gb;
+            }
+
+            public void setGb(String gb) {
+                this.gb = gb;
+            }
+
+            public String getZm() {
+                return zm;
+            }
+
+            public void setZm(String zm) {
+                this.zm = zm;
+            }
+
+            public String getSj() {
+                return sj;
+            }
+
+            public void setSj(String sj) {
+                this.sj = sj;
+            }
+        }
+
+    }
+
+    static class App implements Serializable {
+
+//        @JSONField(serialize = false)
+        private String name;
+        private String val;
+        private String age;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getVal() {
+            return val;
+        }
+
+        public void setVal(String val) {
+            this.val = val;
+        }
+
+        public String getAge() {
+            return age;
+        }
+
+        public void setAge(String age) {
+            this.age = age;
+        }
+    }
 
 //    @Before
     public void before() {
