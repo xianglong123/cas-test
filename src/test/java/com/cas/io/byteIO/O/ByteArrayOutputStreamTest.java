@@ -10,7 +10,7 @@ public class ByteArrayOutputStreamTest {
     private static final String path = "/Users/xianglong/IdeaProjects/cas-test/src/test/java/com/cas/io/fileIO/O/out.txt";
 
     public static void main(String[] args) {
-//        test();
+//        agwBodyDec();
 //        test1();
         test2();
     }

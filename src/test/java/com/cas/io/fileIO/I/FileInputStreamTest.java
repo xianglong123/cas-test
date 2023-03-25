@@ -15,7 +15,7 @@ import java.util.Arrays;
  */
 public class FileInputStreamTest {
 
-    private static final String path = "/Users/xianglong/IdeaProjects/cas-test/src/test/java/com/cas/io/fileIO/I/hello.txt";
+    private static final String path = "/Users/xianglong/IdeaProjects/cas-agwBodyDec/src/agwBodyDec/java/com/cas/io/fileIO/I/hello.txt";
 
     public static void main(String[] args) {
 //            test1();

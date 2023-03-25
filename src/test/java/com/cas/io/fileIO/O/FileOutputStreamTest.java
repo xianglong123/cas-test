@@ -15,7 +15,7 @@ public class FileOutputStreamTest {
     private static final String path2 = "/Users/xianglong/IdeaProjects/cas-test/src/test/java/com/cas/io/fileIO/O/out2.txt";
 
     public static void main(String[] args) {
-//        test();
+//        agwBodyDec();
         test2();
     }
 

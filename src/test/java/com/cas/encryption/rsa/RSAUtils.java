@@ -32,7 +32,7 @@ public class RSAUtils {
     public static final String SIGNATURE_ALGORITHM = "SHA256withRSA";
     public static final String SHA1withRSA = "SHA1withRSA";
     public static final String ENCODE_ALGORITHM = "SHA-256";
-    public static final String PLAIN_TEXT = "test string";
+    public static final String PLAIN_TEXT = "agwBodyDec string";
 
     /**
      * 生成密钥对
@@ -223,14 +223,14 @@ public class RSAUtils {
         //testJava();
 
         // 3、简单测试
-        //test();
+        //agwBodyDec();
 
         // 4、我自己写的测试完整性代码
         testVerifySign();
     }
 
     private static void testVerifySign() throws Exception {
-        String sj = "test";
+        String sj = "agwBodyDec";
 
         List<Map<String, String>> list = new ArrayList<>();
 
@@ -289,7 +289,7 @@ public class RSAUtils {
     }
 
     private static void testFile() {
-        // 这里会有一个问题就是路径太长或者是这个项目的问题，导致用长的路径会报错，源对应文件在[/Users/xianglong/IdeaProjects/cas-test/src/main/resources/static/**]
+        // 这里会有一个问题就是路径太长或者是这个项目的问题，导致用长的路径会报错，源对应文件在[/Users/xianglong/IdeaProjects/cas-agwBodyDec/src/main/resources/static/**]
         String rootPath = "/Users/xianglong/Desktop/bip/other/key/";
         Base64.Encoder encoder = Base64.getEncoder();
         System.out.println(encoder.encodeToString(publicCrt(rootPath + "dim2Test_uat.crt").getEncoded()));

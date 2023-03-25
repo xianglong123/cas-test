@@ -376,8 +376,8 @@ public class HutoolSm2Test {
 
     @Test
     public void test67() {
-//        byte[] bytes = SmUtil.rsAsn1ToPlain(HexConverter.hexString2ByteArray("304402202549ACB340B3A929939B3D7C6705E41C045436DAF07B1107A62FE9A65F5783F9022001001195E291DE288739DF13662E3530402C63C95AFF5FD1469F56B65459BC6F"));
-//        System.out.println(HexConverter.byteArray2HexString(bytes));
+        byte[] bytes = SmUtil.rsAsn1ToPlain(HexConverter.hexString2ByteArray("304402202549ACB340B3A929939B3D7C6705E41C045436DAF07B1107A62FE9A65F5783F9022001001195E291DE288739DF13662E3530402C63C95AFF5FD1469F56B65459BC6F"));
+        System.out.println(HexConverter.byteArray2HexString(bytes));
         byte[] bytes1 = SmUtil.rsPlainToAsn1(HexConverter.hexString2ByteArray("1F2ABE2F0FED91B098CEE2A6AF54A9086B28C447A07D04B8E1EA7395F541AB89590F14B1A09EE5A292E23E6CF264D7BDE260C5352DB84FE7D8745625910D3C71"));
         System.out.println(HexConverter.byteArray2HexString(bytes1));
 
