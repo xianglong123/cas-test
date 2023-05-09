@@ -1,20 +1,16 @@
 package com.cas.binary;
 
-import cn.hutool.core.map.MapUtil;
 import cn.hutool.core.util.RandomUtil;
-import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.annotation.JSONField;
 import com.cas.des.DesEncTest;
 import com.cas.io.byteIO.I.User;
 import com.cas.util.HexConverter;
-import lombok.Data;
+import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.bouncycastle.util.encoders.Hex;
 import org.junit.Test;
 import org.junit.platform.commons.util.StringUtils;
 
-import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
 import java.nio.ByteBuffer;
@@ -41,8 +37,6 @@ import java.util.stream.Collectors;
  * @review: 二进制操作测试
  */
 public class BinaryTest {
-
-
 
 
     public static void main(String[] args) {
@@ -265,7 +259,7 @@ public class BinaryTest {
     public void test17() {
         ArrayList<User> list = getUsers();
         list.stream().filter(distinctByKey(User::getName))
-                .forEach(b -> System.out.println(b.getName()+ "," + b.getAge()));
+                .forEach(b -> System.out.println(b.getName() + "," + b.getAge()));
     }
 
     private ArrayList<User> getUsers() {
@@ -414,11 +408,11 @@ public class BinaryTest {
     @Test
     public void test27() {
         String data = "您当前机型暂不支持应用操作，请选择其他业务体验";
-         if (data.startsWith("您当前机型暂不支持应用操作")) {
+        if (data.startsWith("您当前机型暂不支持应用操作")) {
             System.out.println(2);
         } else if (data.contains("您")) {
-             System.out.println(1);
-         }
+            System.out.println(1);
+        }
 
         System.out.println(data.startsWith("您当前机型暂不支持应用操作"));
         System.out.println(data.startsWith("您当前机型暂不支持应用操作2"));
@@ -439,9 +433,9 @@ public class BinaryTest {
     @Test
     public void test29() {
         String seid = "21960009100000275049";
-        System.out.println(seid.substring(7,8));
-        System.out.println(seid.substring(8,10));
-        System.out.println(seid.substring(5,7));
+        System.out.println(seid.substring(7, 8));
+        System.out.println(seid.substring(8, 10));
+        System.out.println(seid.substring(5, 7));
 
     }
 
@@ -451,8 +445,10 @@ public class BinaryTest {
     @Test
     public void test32() {
         String str = "你好";
-        //\u000d str="Hello";
-        //\u000d str+=" world";
+        //
+        str = "Hello";
+        //
+        str += " world";
         System.out.println(str);
     }
 
@@ -546,27 +542,38 @@ public class BinaryTest {
         System.out.println(format);
     }
 
-
     @Test
-    public void test41() {
+    public void test40() throws DecoderException {
+        String data = "100615521198344F";
+        byte[] buffer = Hex.decode(data);
+        try {
+            ByteBuffer byteBuffer = ByteBuffer.wrap(buffer);
+            byte tag;
+            int len;
+            while (byteBuffer.position() < buffer.length - 1) {
+                tag = byteBuffer.get();
+                len = byteBuffer.get();
+                byte[] tagInfo = new byte[len];
+                byteBuffer.get(tagInfo);
+                switch (tag) {
+                    case 0x10:
+                        System.out.println("手机号: " + HexConverter.byteArray2HexString(tagInfo).substring(0,11));
+                        break;
+                    case 0x12:
+                        break;
+                    default:
+                        System.out.println("error");
+//                        throw  new RuntimeException();
+                }
+            }
+        } catch (Exception e) {
+//            throw  new RuntimeException();
+        }
 
-        Map<String, String> map = new HashMap<>();
-        map.put("age", "24");
-        map.put("name", "xl");
-        map.put("val", "13");
-
-        App app = new App();
-        app.setAge("24");
-        app.setName("xl");
-        app.setVal("13");
-
-        String json = JSONObject.toJSONString(map);
-
-        App bean = JSONUtil.toBean(json, App.class);
-
-        System.out.println(JSONObject.toJSONString(bean));
 
     }
+
+
 
 
     @Test
@@ -575,156 +582,16 @@ public class BinaryTest {
 
     }
 
-    public static class YjmQrCodeBO {
-        /**
-         * 识别码
-         */
-        private String id;
 
-        /**
-         * 密钥对标识
-         */
-        private String my;
-
-        /**
-         * SM2 私钥生成的签
-         * 名
-         */
-        private String qm;
-        /**
-         * 粤居码内容
-         */
-        private YjmQrCodeBaseBO nr;
-
-        public String getId() {
-            return id;
-        }
-
-        public void setId(String id) {
-            this.id = id;
-        }
-
-        public String getMy() {
-            return my;
-        }
-
-        public void setMy(String my) {
-            this.my = my;
-        }
-
-        public String getQm() {
-            return qm;
-        }
-
-        public void setQm(String qm) {
-            this.qm = qm;
-        }
-
-        public YjmQrCodeBaseBO getNr() {
-            return nr;
-        }
-
-        public void setNr(YjmQrCodeBaseBO nr) {
-            this.nr = nr;
-        }
-
-        private static class YjmQrCodeBaseBO {
-            /**
-             * 姓名
-             */
-            private String xm;
-            /**
-             * 国别
-             */
-            private String gb;
-            /**
-             *
-             */
-            private String zm;
-            /**
-             * 记录生成时间
-             */
-            private String sj;
-
-            public String getXm() {
-                return xm;
-            }
-
-            public void setXm(String xm) {
-                this.xm = xm;
-            }
-
-            public String getGb() {
-                return gb;
-            }
-
-            public void setGb(String gb) {
-                this.gb = gb;
-            }
-
-            public String getZm() {
-                return zm;
-            }
-
-            public void setZm(String zm) {
-                this.zm = zm;
-            }
-
-            public String getSj() {
-                return sj;
-            }
-
-            public void setSj(String sj) {
-                this.sj = sj;
-            }
-        }
-
-    }
-
-    static class App implements Serializable {
-
-//        @JSONField(serialize = false)
-        private String name;
-        private String val;
-        private String age;
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public String getVal() {
-            return val;
-        }
-
-        public void setVal(String val) {
-            this.val = val;
-        }
-
-        public String getAge() {
-            return age;
-        }
-
-        public void setAge(String age) {
-            this.age = age;
-        }
-    }
-
-//    @Before
+    //    @Before
     public void before() {
         System.out.println("before");
     }
 
-//    @After
+    //    @After
     public void after() {
         System.out.println("after");
     }
-
-
-
 
 
 }

@@ -40,7 +40,7 @@ dependencies {
     implementation 'org.jdom:com.springsource.org.jdom:2.0.1'
 
     // 本地jar,测试springboot-starter
-    implementation 'com.cas:cas-springboot-starter:0.0.5-SNAPSHOT'
+//    implementation 'com.cas:cas-springboot-starter:0.0.5-SNAPSHOT'
 //    implementation 'com.cas:mybatis-pagination:0.0.6-SNAPSHOT'
 //    implementation 'com.cas:dicp-ec-decry:0.0.1-SNAPSHOT'
 
