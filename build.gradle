@@ -66,6 +66,9 @@ dependencies {
 //    compileOnly 'org.springframework.boot:spring-boot-configuration-processor'
     implementation fileTree(dir:'lib',includes:['*jar'])
 
+//    testImplementation 'org.ofdrw:ofdrw-full:2.0.5'
+
+//    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
 }
 
 test {

@@ -299,3 +299,16 @@ com.cas.controller.SingleController
         缺点：加密需要串行处理  误差传递
 
 [HashMap底层原理剖析](https://blog.csdn.net/qq_36005199/article/details/120214711)
+
+
+## 批量测连通性telnet脚本
+```shell
+    for ip in "127.0.0.1 80" "127.0.0.1 8202" ;do
+    output=$(timeout 2 telnet $ip < /dev/null 2>&1)
+    if echo "$output" | grep -q "Connected"; then
+    echo "Telnet successful: $ip"
+    else
+    echo "Telnet failed: $ip"
+    fi
+    done
+```
